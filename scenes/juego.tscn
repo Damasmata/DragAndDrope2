@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://ulqwuvf2oaqb"]
+
+[ext_resource type="Script" uid="uid://csx7bx61imisa" path="res://juego.gd" id="1_iq6uk"]
+[ext_resource type="PackedScene" uid="uid://bymhj1k3rsj7p" path="res://scenes/item_generator.tscn" id="1_x4n2o"]
+[ext_resource type="PackedScene" uid="uid://civho5vfk2eni" path="res://scenes/freidora.tscn" id="2_uc3sl"]
+[ext_resource type="PackedScene" uid="uid://dreeoq3frd3v4" path="res://scenes/place_generator.tscn" id="4_pew7j"]
+[ext_resource type="PackedScene" uid="uid://c1ycifxx8cs0g" path="res://scenes/Extra_generator.tscn" id="6_ervc2"]
+[ext_resource type="PackedScene" uid="uid://vrrmg8qlmu5c" path="res://scenes/basura.tscn" id="7_ebtnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ervc2"]
+
+[node name="Juego" type="Node2D" unique_id=1739707445]
+script = ExtResource("1_iq6uk")
+
+[node name="Button" parent="." unique_id=2117601305 instance=ExtResource("4_pew7j")]
+offset_left = 251.0
+offset_top = 127.00001
+offset_right = 259.0
+offset_bottom = 135.0
+
+[node name="Button2" parent="." unique_id=1927514313 instance=ExtResource("4_pew7j")]
+offset_left = 420.0
+offset_top = 141.0
+offset_right = 428.0
+offset_bottom = 149.0
+select_place = 1
+
+[node name="Button3" parent="." unique_id=1610284366 instance=ExtResource("4_pew7j")]
+offset_left = 588.0
+offset_top = 137.0
+offset_right = 596.0
+offset_bottom = 145.0
+select_place = 2
+
+[node name="Button4" parent="." unique_id=140983226 instance=ExtResource("4_pew7j")]
+offset_left = 799.0
+offset_top = 144.00002
+offset_right = 807.0
+offset_bottom = 152.00002
+select_place = 3
+
+[node name="Button5" parent="." unique_id=1161850180 instance=ExtResource("4_pew7j")]
+offset_left = 951.0
+offset_top = 146.99998
+offset_right = 959.0
+offset_bottom = 154.99998
+scale = Vector2(3.6798182, 3.6585507)
+select_place = 4
+
+[node name="StaticBody2D2" parent="." unique_id=1251641922 instance=ExtResource("2_uc3sl")]
+position = Vector2(884.00006, 336)
+scale = Vector2(0.18518592, 0.17228031)
+
+[node name="StaticBody2D4" parent="." unique_id=1990810203 instance=ExtResource("2_uc3sl")]
+position = Vector2(280, 318)
+scale = Vector2(0.18518592, 0.17228031)
+
+[node name="StaticBody2D5" parent="." unique_id=1511711841 instance=ExtResource("2_uc3sl")]
+position = Vector2(468, 334)
+scale = Vector2(0.18518592, 0.17228031)
+
+[node name="StaticBody2D6" parent="." unique_id=2010853964 instance=ExtResource("2_uc3sl")]
+position = Vector2(711.00006, 337)
+scale = Vector2(0.18518592, 0.17228031)
+
+[node name="ItemGenerator" parent="." unique_id=1494356346 instance=ExtResource("1_x4n2o")]
+offset_left = 204.0
+offset_top = 420.0
+offset_right = 294.0
+offset_bottom = 510.0
+action_mode = 1
+
+[node name="ItemGenerator2" parent="." unique_id=1282123815 instance=ExtResource("1_x4n2o")]
+offset_left = 390.0
+offset_top = 432.0
+offset_right = 480.0
+offset_bottom = 522.0
+action_mode = 1
+select_item = 1
+
+[node name="ItemGenerator3" parent="." unique_id=1021011363 instance=ExtResource("1_x4n2o")]
+offset_left = 559.0
+offset_top = 444.0
+offset_right = 649.0
+offset_bottom = 534.0
+action_mode = 1
+select_item = 2
+
+[node name="ItemGenerator4" parent="." unique_id=110145799 instance=ExtResource("1_x4n2o")]
+offset_left = 736.0
+offset_top = 442.0
+offset_right = 826.0
+offset_bottom = 532.0
+action_mode = 1
+select_item = 3
+
+[node name="ItemGenerator5" parent="." unique_id=73376100 instance=ExtResource("1_x4n2o")]
+offset_left = 914.0
+offset_top = 448.0
+offset_right = 1004.0
+offset_bottom = 538.0
+action_mode = 1
+select_item = 4
+
+[node name="Label" type="Label" parent="." unique_id=1924811994]
+offset_left = 102.0
+offset_top = 316.0
+offset_right = 175.0
+offset_bottom = 339.0
+text = "Freidoras"
+
+[node name="Label2" type="Label" parent="." unique_id=2100536049]
+offset_left = 95.0
+offset_top = 450.0
+offset_right = 180.0
+offset_bottom = 473.0
+text = "Chilaquiles"
+
+[node name="Label3" type="Label" parent="." unique_id=869259528]
+offset_left = 45.0
+offset_top = 136.0
+offset_right = 130.0
+offset_bottom = 159.0
+text = "destructor"
+
+[node name="Label4" type="Label" parent="." unique_id=705885208]
+offset_left = 42.0
+offset_top = 72.0
+offset_right = 139.0
+offset_bottom = 95.0
+text = "plato/bolilos"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=130336574]
+position = Vector2(576, 324)
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1510416788]
+position = Vector2(1732, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1003624904]
+
+[node name="Button6" type="Button" parent="CanvasLayer" unique_id=2123809219]
+offset_left = 341.0
+offset_top = 581.0
+offset_right = 349.0
+offset_bottom = 589.0
+scale = Vector2(12.642605, 5.6476307)
+
+[node name="Button7" type="Button" parent="CanvasLayer" unique_id=1138429598]
+offset_left = 481.0
+offset_top = 581.0
+offset_right = 489.0
+offset_bottom = 589.0
+scale = Vector2(12.642605, 5.6476307)
+
+[node name="extras_generator" parent="." unique_id=2032205595 instance=ExtResource("6_ervc2")]
+offset_left = 1277.0
+offset_top = 441.0
+offset_right = 1304.0
+offset_bottom = 467.99997
+
+[node name="extras_generator2" parent="." unique_id=1939425519 instance=ExtResource("6_ervc2")]
+offset_left = 2092.0
+offset_top = 433.00003
+offset_right = 2119.0
+offset_bottom = 460.0
+select_extra = 1
+
+[node name="extras_generator3" parent="." unique_id=725604011 instance=ExtResource("6_ervc2")]
+offset_left = 1368.0001
+offset_top = 121.00001
+offset_right = 1395.0001
+offset_bottom = 148.0
+select_extra = 3
+
+[node name="extras_generator4" parent="." unique_id=505164212 instance=ExtResource("6_ervc2")]
+offset_left = 1611.0
+offset_top = 123.0
+offset_right = 1638.0
+offset_bottom = 150.0
+select_extra = 4
+
+[node name="extras_generator5" parent="." unique_id=1712950436 instance=ExtResource("6_ervc2")]
+offset_left = 1764.0
+offset_top = 128.0
+offset_right = 1791.0
+offset_bottom = 155.0
+select_extra = 5
+
+[node name="extras_generator6" parent="." unique_id=636465303 instance=ExtResource("6_ervc2")]
+offset_left = 1983.0002
+offset_top = 122.0
+offset_right = 2010.0002
+offset_bottom = 149.0
+select_extra = 6
+
+[node name="extras_generator7" parent="." unique_id=431614026 instance=ExtResource("6_ervc2")]
+offset_left = 2092.0
+offset_top = 248.0
+offset_right = 2119.0
+offset_bottom = 275.0
+select_extra = 7
+
+[node name="extras_generator9" parent="." unique_id=6121037 instance=ExtResource("6_ervc2")]
+offset_left = 1285.0
+offset_top = 254.0
+offset_right = 1312.0
+offset_bottom = 281.0
+select_extra = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=852681481]
+position = Vector2(1730.9999, 282.00003)
+scale = Vector2(13.212475, 6.9352245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1952108765]
+shape = SubResource("RectangleShape2D_ervc2")
+
+[node name="StaticBody2D" parent="." unique_id=1610546547 instance=ExtResource("7_ebtnq")]
+position = Vector2(96, 241)
+
+[connection signal="pressed" from="CanvasLayer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button7" to="." method="_on_button_7_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Extras" format=3 uid="uid://x0wig6abwlyi"]
+
+[ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://extras data/data_extras.gd" id="1_q40w7"]
+
+[resource]
+script = ExtResource("1_q40w7")
+name = "Nopales"
+groupname = "soltable"
+colorextra = Color(0, 0.3529412, 0, 1)
+metadata/_custom_type_script = "uid://5qvuip1x0dga"

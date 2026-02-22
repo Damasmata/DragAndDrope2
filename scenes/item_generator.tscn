@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bymhj1k3rsj7p"]
+
+[ext_resource type="Script" uid="uid://drwuw30rckvd" path="res://item_generator.gd" id="1_abfgj"]
+[ext_resource type="PackedScene" uid="uid://chpe5fim08ihd" path="res://scenes/item_scene.tscn" id="2_ehwey"]
+[ext_resource type="Resource" uid="uid://bt71f4d7tde02" path="res://items data/chilaquil 1.tres" id="3_p1ybn"]
+[ext_resource type="Resource" uid="uid://c3iobnfjqkluv" path="res://items data/chilaquil 2.tres" id="4_luynn"]
+[ext_resource type="Resource" uid="uid://dw6sp4q1ytfch" path="res://items data/chilaquil 3.tres" id="5_anpnv"]
+[ext_resource type="Resource" uid="uid://csd7wsw87bgjc" path="res://items data/chilaquil 4.tres" id="6_cjvq8"]
+[ext_resource type="Resource" uid="uid://cr40j1l5m1pk0" path="res://items data/chilaquil 5.tres" id="7_7avfy"]
+
+[node name="ItemGenerator" type="Button" unique_id=1494356346]
+custom_minimum_size = Vector2(90, 90)
+action_mode = 0
+script = ExtResource("1_abfgj")
+item_scene = ExtResource("2_ehwey")
+item_to_generate = Array[Resource]([ExtResource("4_luynn"), ExtResource("3_p1ybn"), ExtResource("5_anpnv"), ExtResource("6_cjvq8"), ExtResource("7_7avfy")])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

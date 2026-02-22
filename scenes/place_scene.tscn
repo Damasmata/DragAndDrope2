@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://diri1ug5xo3ll"]
+
+[ext_resource type="Script" uid="uid://0uq7ahmptj7m" path="res://place_scene.gd" id="1_ruttr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dixhf"]
+
+[node name="PlaceScene" type="StaticBody2D" unique_id=1597217337 groups=["servidores"]]
+scale = Vector2(0.56949854, 0.56949854)
+script = ExtResource("1_ruttr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=734285464]
+scale = Vector2(2.0452492, 2.0452492)
+shape = SubResource("RectangleShape2D_dixhf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1010060144]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1793271363]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2046772041]
+scale = Vector2(2.0452492, 2.0452492)
+shape = SubResource("RectangleShape2D_dixhf")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

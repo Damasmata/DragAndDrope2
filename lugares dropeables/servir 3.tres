@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Places" format=3 uid="uid://cdlwapx3dyhdb"]
+
+[ext_resource type="Script" uid="uid://bvii4xwuaj3yd" path="res://lugares dropeables/data places.gd" id="1_e7glr"]
+
+[resource]
+script = ExtResource("1_e7glr")
+name = "Telera"
+groupname = "servidores"
+colorrect = Color(0.5724792, 0.49395907, 0.793564, 1)
+metadata/_custom_type_script = "uid://bvii4xwuaj3yd"
