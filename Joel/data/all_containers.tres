@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://d1vb36ba86msx"]
+
+[ext_resource type="Script" uid="uid://bkuuutktqtijg" path="res://addons/godot_resource_groups/resource_group.gd" id="1_v36jd"]
+
+[resource]
+script = ExtResource("1_v36jd")
+base_folder = "res://data/lugares dropeables"
+paths = Array[String](["res://data/lugares dropeables/servir 1.tres", "res://data/lugares dropeables/servir 2.tres", "res://data/lugares dropeables/servir 3.tres", "res://data/lugares dropeables/servir 4.tres", "res://data/lugares dropeables/servir 5.tres"])
+metadata/_custom_type_script = "uid://bkuuutktqtijg"

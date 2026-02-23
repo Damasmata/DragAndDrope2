@@ -32,5 +32,11 @@ scale = Vector2(1.2103347, 1.2103347)
 position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_qe365")
 
+[node name="Label" type="Label" parent="." unique_id=1950914878]
+offset_left = -0.8136265
+offset_top = -25.014803
+offset_right = 48.71304
+offset_bottom = -2.014803
+
 [connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bjgyv00sehepr"]
+
+[ext_resource type="PackedScene" uid="uid://c667rxvr4jdgh" path="res://Joel/scenes/generator.tscn" id="1_80ykp"]
+[ext_resource type="PackedScene" uid="uid://cdseqkfxigxbm" path="res://Joel/scenes/item_spawner.tscn" id="2_14sds"]
+[ext_resource type="Resource" uid="uid://csd7wsw87bgjc" path="res://data/items data/chilaquil 4.tres" id="3_cl3t6"]
+[ext_resource type="PackedScene" uid="uid://civho5vfk2eni" path="res://scenes/freidora.tscn" id="3_r4pg6"]
+[ext_resource type="PackedScene" uid="uid://vrrmg8qlmu5c" path="res://scenes/basura.tscn" id="4_hvm2o"]
+[ext_resource type="Resource" uid="uid://c3iobnfjqkluv" path="res://data/items data/chilaquil 2.tres" id="6_egwv0"]
+[ext_resource type="Script" uid="uid://ce485i7v2wsx1" path="res://Joel/scenes/game_camera.gd" id="6_hr27k"]
+
+[node name="Test" type="Node2D" unique_id=1005686427]
+
+[node name="Containers" type="Node2D" parent="." unique_id=572234013]
+unique_name_in_owner = true
+
+[node name="ContainerGenerator" parent="Containers" unique_id=1167277551 instance=ExtResource("1_80ykp")]
+position = Vector2(136, 105)
+
+[node name="Freidora" parent="." unique_id=1990810203 instance=ExtResource("3_r4pg6")]
+position = Vector2(838, 457)
+
+[node name="Basura" parent="." unique_id=627287397 instance=ExtResource("4_hvm2o")]
+position = Vector2(108, 280)
+
+[node name="Items" type="Node2D" parent="." unique_id=418422926]
+
+[node name="ItemSpawner" parent="Items" unique_id=1900992696 instance=ExtResource("2_14sds")]
+position = Vector2(276, 496)
+
+[node name="ItemSpawner2" parent="Items" unique_id=378561328 instance=ExtResource("2_14sds")]
+position = Vector2(398, 496)
+item_to_spawn = ExtResource("3_cl3t6")
+
+[node name="ItemSpawner3" parent="Items" unique_id=1766254263 instance=ExtResource("2_14sds")]
+position = Vector2(520, 496)
+item_to_spawn = ExtResource("6_egwv0")
+
+[node name="GameCamera" type="Camera2D" parent="." unique_id=237577396]
+position = Vector2(576, 0)
+script = ExtResource("6_hr27k")
+speed = 2000.0

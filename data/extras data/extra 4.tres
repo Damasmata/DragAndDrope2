@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Extras" format=3 uid="uid://dxwe3180jfylq"]
+
+[ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_50w2n"]
+
+
+[resource]
+script = ExtResource("1_50w2n")
+name = "Queso"
+groupname = "conTiempo"
+colorextra = Color(1, 1, 0.54509807, 1)
+metadata/_custom_type_script = "uid://5qvuip1x0dga"

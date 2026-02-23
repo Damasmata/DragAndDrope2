@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c667rxvr4jdgh"]
+
+[ext_resource type="Script" uid="uid://bbxk1ixyx4y3q" path="res://Joel/scenes/container_generator.gd" id="1_b5gej"]
+[ext_resource type="PackedScene" uid="uid://bv7t4uda3bsjy" path="res://Joel/scenes/container.tscn" id="2_ilu1h"]
+[ext_resource type="Resource" uid="uid://d1vb36ba86msx" path="res://Joel/data/all_containers.tres" id="3_etma8"]
+
+[node name="Generator" type="Node2D" unique_id=1167277551]
+script = ExtResource("1_b5gej")
+container_scene = ExtResource("2_ilu1h")
+all_containers = ExtResource("3_etma8")

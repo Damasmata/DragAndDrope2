@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://c6ce5hc0c1eh" path="res://extras_generator.gd" id="1_4465e"]
 [ext_resource type="PackedScene" uid="uid://be12egrjaw4hs" path="res://scenes/extra_scene.tscn" id="2_8o3h2"]
-[ext_resource type="Resource" uid="uid://cwr0mwtl00tpw" path="res://extras data/extra 1.tres" id="3_myjva"]
-[ext_resource type="Resource" uid="uid://ddq30xefwqf51" path="res://extras data/extra 2.tres" id="4_u7lf8"]
-[ext_resource type="Resource" uid="uid://cblqsyl6ub38u" path="res://extras data/extra 3.tres" id="5_ilmkx"]
-[ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://extras data/extra 4.tres" id="6_4ax8h"]
-[ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://extras data/extra 5.tres" id="7_x7cus"]
-[ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://extras data/extra 6.tres" id="8_fqfmr"]
-[ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://extras data/extra 7.tres" id="9_5wd0d"]
-[ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://extras data/extra 8.tres" id="10_qqrop"]
+[ext_resource type="Resource" uid="uid://cwr0mwtl00tpw" path="res://data/extras data/extra 1.tres" id="3_myjva"]
+[ext_resource type="Resource" uid="uid://ddq30xefwqf51" path="res://data/extras data/extra 2.tres" id="4_u7lf8"]
+[ext_resource type="Resource" uid="uid://cblqsyl6ub38u" path="res://data/extras data/extra 3.tres" id="5_ilmkx"]
+[ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://data/extras data/extra 4.tres" id="6_4ax8h"]
+[ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://data/extras data/extra 5.tres" id="7_x7cus"]
+[ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://data/extras data/extra 6.tres" id="8_fqfmr"]
+[ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="9_5wd0d"]
+[ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://data/extras data/extra 8.tres" id="10_qqrop"]
 
 [node name="extras_generator" type="Button" unique_id=2032205595]
 offset_right = 27.0

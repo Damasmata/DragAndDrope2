@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://fsdb30hxphw5"]
+
+[ext_resource type="Script" uid="uid://bkuuutktqtijg" path="res://addons/godot_resource_groups/resource_group.gd" id="1_vyk58"]
+
+[resource]
+script = ExtResource("1_vyk58")
+base_folder = "res://data/items data"
+paths = Array[String](["res://data/items data/chilaquil 1.tres", "res://data/items data/chilaquil 2.tres", "res://data/items data/chilaquil 3.tres", "res://data/items data/chilaquil 4.tres", "res://data/items data/chilaquil 5.tres"])
+metadata/_custom_type_script = "uid://bkuuutktqtijg"

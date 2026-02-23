@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Extras" format=3 uid="uid://cwr0mwtl00tpw"]
+
+[ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_bx4v5"]
+
+
+[resource]
+script = ExtResource("1_bx4v5")
+name = "Salsa roja"
+groupname = "conTiempo"
+colorextra = Color(0.6862745, 0, 0, 1)
+metadata/_custom_type_script = "uid://5qvuip1x0dga"

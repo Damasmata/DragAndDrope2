@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://br7y403t6akac" path="res://place_generator.gd" id="1_kak4h"]
 [ext_resource type="PackedScene" uid="uid://diri1ug5xo3ll" path="res://scenes/place_scene.tscn" id="2_ur8bh"]
-[ext_resource type="Resource" uid="uid://c5gyb2waaabqe" path="res://lugares dropeables/servir 1.tres" id="3_6mtcu"]
-[ext_resource type="Resource" uid="uid://nj3m4oddi7xa" path="res://lugares dropeables/servir 2.tres" id="4_exsj1"]
-[ext_resource type="Resource" uid="uid://cdlwapx3dyhdb" path="res://lugares dropeables/servir 3.tres" id="5_aatjv"]
-[ext_resource type="Resource" uid="uid://dep0cdk18bkfc" path="res://lugares dropeables/servir 4.tres" id="6_m4cbm"]
-[ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://lugares dropeables/servir 5.tres" id="7_3k0rq"]
+[ext_resource type="Resource" uid="uid://c5gyb2waaabqe" path="res://data/lugares dropeables/servir 1.tres" id="3_6mtcu"]
+[ext_resource type="Resource" uid="uid://nj3m4oddi7xa" path="res://data/lugares dropeables/servir 2.tres" id="4_exsj1"]
+[ext_resource type="Resource" uid="uid://cdlwapx3dyhdb" path="res://data/lugares dropeables/servir 3.tres" id="5_aatjv"]
+[ext_resource type="Resource" uid="uid://dep0cdk18bkfc" path="res://data/lugares dropeables/servir 4.tres" id="6_m4cbm"]
+[ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://data/lugares dropeables/servir 5.tres" id="7_3k0rq"]
 
 [node name="Place_Generator" type="Button" unique_id=2117601305]
 offset_right = 23.098969

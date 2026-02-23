@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4jiht80nyacp"]
+
+[ext_resource type="Script" uid="uid://lb60cokiw7bk" path="res://Joel/scenes/extra_generator.gd" id="1_robh7"]
+[ext_resource type="PackedScene" uid="uid://be12egrjaw4hs" path="res://scenes/extra_scene.tscn" id="2_1p1xw"]
+[ext_resource type="Resource" uid="uid://g1kiustcelgp" path="res://Joel/data/all_extras.tres" id="2_jwm7q"]
+
+[node name="ExtraGenerator" type="Node2D" unique_id=764108221]
+script = ExtResource("1_robh7")
+extra_scene = ExtResource("2_1p1xw")
+all_extras = ExtResource("2_jwm7q")

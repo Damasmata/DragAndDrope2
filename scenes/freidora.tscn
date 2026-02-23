@@ -3,30 +3,30 @@
 [ext_resource type="Script" uid="uid://bj4gr8baxqrg5" path="res://freidora.gd" id="1_ruttr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dixhf"]
-size = Vector2(15.141109, 15.548418)
+size = Vector2(80, 80)
 
-[node name="Freidora" type="StaticBody2D" unique_id=1990810203 groups=["freidora"]]
-scale = Vector2(0.19001094, 0.19001094)
+[node name="Freidora" type="Node2D" unique_id=719853384 groups=["freidora"]]
 script = ExtResource("1_ruttr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=420852115]
-position = Vector2(-0.913269, -0.913269)
-scale = Vector2(25.842083, 25.842083)
-shape = SubResource("RectangleShape2D_dixhf")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=588861116]
-offset_left = 257.3089
-offset_top = 257.3089
-offset_right = 337.1754
-offset_bottom = 337.1754
-scale = Vector2(-6.477168, -6.477168)
-metadata/_edit_use_anchors_ = true
+[node name="Placeholder" type="ColorRect" parent="." unique_id=588861116]
+custom_minimum_size = Vector2(90, 90)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2084666113]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=720977388]
-position = Vector2(-0.91326904, -0.91326904)
-scale = Vector2(25.842083, 25.842083)
 shape = SubResource("RectangleShape2D_dixhf")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
