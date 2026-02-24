@@ -13,10 +13,8 @@ func destruir():
 	objeto.queue_free()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	#Aqui elimino la parte del "and" porque el bote de basura no necesita comprobar si
-	#el objeto es droppeable
-	#if area.get_parent().is_in_group("items dropeables") and area.get_parent().dropped==true:
-	if area.get_parent().is_in_group("item"):
+	var _item_node = area.get_parent()
+	if _item_node.is_in_group("item") and _item_node.item_resource.cooked_time != _item_node.item_resource.cooking_time:
 		objeto = area.get_parent()
 		print(objeto)
 

@@ -55,6 +55,7 @@ func color_grade():
 	base_color.color = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
 
 
+
 func update_resource(_item_resource:Resource):
 	item_resource = _item_resource
 

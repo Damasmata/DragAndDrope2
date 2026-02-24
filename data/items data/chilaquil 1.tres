@@ -9,4 +9,5 @@ name = "Frio"
 raw_color = Color(0.434, 0.7, 0.434, 1)
 cooked_color = Color(0.12574999, 0.15, 0.004499996, 1)
 group = "items dropeables"
+sprites = Array[Texture2D]([null])
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

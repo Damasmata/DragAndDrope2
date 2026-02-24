@@ -11,7 +11,7 @@ func _ready() -> void:
 	modulate=Color(Color.YELLOW,0.7)
 
 func _process(delta: float) -> void:
-	if friendo:
+	if friendo and !item_node.follow_mouse:
 		var timer = _item_resource.cooked_time
 		timer -= delta
 		_item_resource.cooked_time = timer

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7x4l77bm16pr"]
+
+[ext_resource type="Script" uid="uid://dlfbxpju4o6p2" path="res://Joel/basura/particulas.gd" id="1_btmce"]
+
+[node name="Particulasg" type="GPUParticles2D" unique_id=722385798]
+script = ExtResource("1_btmce")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1734590301]

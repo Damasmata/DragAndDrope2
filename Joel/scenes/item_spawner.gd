@@ -8,15 +8,17 @@ var item_scene:PackedScene = preload("res://scenes/item_scene.tscn")
 var item_in_spawner:bool = false
 
 func spawn_item():
-	var duplicate_res = item_to_spawn.duplicate()
-	var new_item = item_scene.instantiate() 
-	add_child(new_item)
-	new_item.global_position = spawn_pos.global_position + spawn_pos.pivot_offset
-	new_item.initialpos = new_item.global_position
-	new_item.new_pos = new_item.initialpos
-	new_item.set_info(duplicate_res)
-	print("asd: ", new_item.initialpos)
-	
+	if item_to_spawn.group == "items dropeables":
+		var duplicate_res = item_to_spawn.duplicate()
+		var new_item = item_scene.instantiate() 
+		add_child(new_item)
+		new_item.global_position = spawn_pos.global_position + spawn_pos.pivot_offset
+		new_item.initialpos = new_item.global_position
+		new_item.new_pos = new_item.initialpos
+		new_item.set_info(duplicate_res)
+		print("asd: ", new_item.initialpos)
+	else:
+		print(item_to_spawn.name)
 
 func _on_spawn_pressed() -> void:
 	if item_in_spawner:

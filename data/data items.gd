@@ -9,3 +9,11 @@ extends Resource #es un recurso
 @export var group:String #a que grupo puede ser asignado 
 
 var cooked_time:float 
+var extras_en_platillo:Array[Resource] = []
+
+@export var sprites:Array[Texture2D] = []
+
+func agregar_extra(nuevo_extra:Resource):
+	if !extras_en_platillo.has(nuevo_extra):
+		extras_en_platillo.append(nuevo_extra)
+	

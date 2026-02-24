@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chpe5fim08ihd"]
 
 [ext_resource type="Script" uid="uid://dhwa13mkgrrw5" path="res://item_scene.gd" id="1_a127h"]
+[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_p1nqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
 size = Vector2(77, 77)
@@ -34,7 +35,6 @@ flat = true
 
 [node name="ButtonStopper" type="PanelContainer" parent="BaseColor" unique_id=966444943]
 unique_name_in_owner = true
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -42,6 +42,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Extras" type="Node2D" parent="." unique_id=929427142]
+visible = false
+
+[node name="Extra1" type="Sprite2D" parent="Extras" unique_id=1035395557]
+self_modulate = Color(0.6091666, 1, 0.32999998, 1)
+rotation = 0.116937056
+texture = ExtResource("2_p1nqj")
+
+[node name="Extra2" type="Sprite2D" parent="Extras" unique_id=569937883]
+self_modulate = Color(1, 0.17000002, 0.17000002, 1)
+rotation = 0.74700093
+texture = ExtResource("2_p1nqj")
+
+[node name="Extra3" type="Sprite2D" parent="Extras" unique_id=1008421227]
+
+[node name="Extra4" type="Sprite2D" parent="Extras" unique_id=326664719]
+
+[node name="Extra5" type="Sprite2D" parent="Extras" unique_id=1259782660]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1013802270]
 

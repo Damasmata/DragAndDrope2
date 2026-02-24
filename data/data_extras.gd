@@ -6,3 +6,4 @@ extends Resource
 @export var colorextra:Color
 @export var textura:Texture2D
 @export var time:float
+@export var group:String
