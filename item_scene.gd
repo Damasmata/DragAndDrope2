@@ -28,16 +28,6 @@ var dropped:bool=false
 #region setting the object
 
 
-func set_info(resource): #establece la info en base al resource
-	if resource.cooked_time == 0.0:
-		resource.cooked_time = resource.cooking_time
-	item_resource = resource #el item pasa a ser el resource
-	base_color.color = resource.raw_color #color del resource 
-	add_to_group(resource.group) #el grupo de donde esta el resource
-	color_grade()
-
-#endregion
-
 
 func _process(delta: float) -> void:
 	if can_be_dropped and dropped:
