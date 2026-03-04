@@ -2,7 +2,6 @@ extends Node2D
 
 @export var container_scene:PackedScene
 
-
 @export var all_containers:ResourceGroup
 var _all_containers:Array[Resource]
 

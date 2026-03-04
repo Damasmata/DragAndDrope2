@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://btpn8ossyybhc" path="res://data/data items.gd" id="1_jc7ue"]
 
-
 [resource]
 script = ExtResource("1_jc7ue")
 cooking_time = 10.0
 name = "Deshidratado"
-random_color = Color(0.06666667, 0.33333334, 0.4, 1)
+raw_color = Color(0.715428, 0.8009272, 0.9810068, 1)
+cooked_color = Color(0.1168, 0.13048, 0.16, 1)
 group = "items dropeables"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://35ib1dtcrltq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwo5l"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2035067485 groups=["destructor"]]
+scale = Vector2(0.31339744, 0.31339744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1317386546]
+position = Vector2(-0.913269, -0.913269)
+scale = Vector2(25.842083, 25.842083)
+shape = SubResource("RectangleShape2D_fwo5l")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1143924915]
+offset_left = 257.3089
+offset_top = 257.3089
+offset_right = 337.1754
+offset_bottom = 337.1754
+scale = Vector2(-6.477168, -6.477168)
+metadata/_edit_use_anchors_ = true

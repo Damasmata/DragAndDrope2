@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://0q6qhjcs8w8s"]
+
+[ext_resource type="Script" uid="uid://cowp1x6nbbcmo" path="res://toppings_scene.gd" id="1_7ipdg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0g5o"]
+size = Vector2(36, 36)
+
+[node name="Toppings_scene" type="Node2D" unique_id=666755212 groups=["items dropeables"]]
+script = ExtResource("1_7ipdg")
+
+[node name="colorrect" type="ColorRect" parent="." unique_id=1118187874]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="colorrect" unique_id=387364934]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonStopper" type="PanelContainer" parent="colorrect" unique_id=1701004582]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1582970450]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2114239178]
+shape = SubResource("RectangleShape2D_a0g5o")
+
+[connection signal="button_down" from="colorrect/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="colorrect/Button" to="." method="_on_button_button_up"]

@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bvii4xwuaj3yd" path="res://data/data places.gd" id="1_3hmwf"]
 
-
 [resource]
 script = ExtResource("1_3hmwf")
 name = "Virote"
-groupname = "servidores"
+group = "servidores"
 colorrect = Color(0.21937385, 8.471012e-06, 0.9189504, 1)
 metadata/_custom_type_script = "uid://bvii4xwuaj3yd"

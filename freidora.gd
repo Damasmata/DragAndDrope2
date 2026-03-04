@@ -7,8 +7,8 @@ var item_node:Node2D
 var _item_resource:Resource
 var coccion:int
 
-func _ready() -> void:
-	modulate=Color(Color.YELLOW,0.7)
+#func _ready() -> void:
+	#modulate=Color(Color.YELLOW,0.7)
 
 func _process(delta: float) -> void:
 	if friendo and !item_node.follow_mouse:
@@ -43,7 +43,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		_item_node.can_be_dropped = true
 		_item_node.new_pos = self.global_position
 		item_node = _item_node
-
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	var _item_node = area.get_parent()

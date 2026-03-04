@@ -9,7 +9,6 @@ var next_pos
 func _ready() -> void:
 	global_position = camera_positions[0]
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if !moving_camera:

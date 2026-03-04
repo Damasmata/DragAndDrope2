@@ -1,49 +1,122 @@
 [gd_scene format=3 uid="uid://bjgyv00sehepr"]
 
 [ext_resource type="PackedScene" uid="uid://c667rxvr4jdgh" path="res://Joel/scenes/generator.tscn" id="1_80ykp"]
+[ext_resource type="Script" uid="uid://bweouuol0mxoc" path="res://Joel/scenes/juego.gd" id="1_jexln"]
 [ext_resource type="PackedScene" uid="uid://cdseqkfxigxbm" path="res://Joel/scenes/item_spawner.tscn" id="2_14sds"]
+[ext_resource type="Resource" uid="uid://c5gyb2waaabqe" path="res://data/lugares dropeables/servir 1.tres" id="2_wdn7o"]
 [ext_resource type="Resource" uid="uid://csd7wsw87bgjc" path="res://data/items data/chilaquil 4.tres" id="3_cl3t6"]
 [ext_resource type="PackedScene" uid="uid://civho5vfk2eni" path="res://scenes/freidora.tscn" id="3_r4pg6"]
 [ext_resource type="PackedScene" uid="uid://vrrmg8qlmu5c" path="res://scenes/basura.tscn" id="4_hvm2o"]
+[ext_resource type="Resource" uid="uid://ddq30xefwqf51" path="res://data/extras data/extra 2.tres" id="4_m8cnu"]
 [ext_resource type="Resource" uid="uid://cwr0mwtl00tpw" path="res://data/extras data/extra 1.tres" id="5_3hgyu"]
+[ext_resource type="Resource" uid="uid://nj3m4oddi7xa" path="res://data/lugares dropeables/servir 2.tres" id="5_ub0h2"]
 [ext_resource type="Resource" uid="uid://c3iobnfjqkluv" path="res://data/items data/chilaquil 2.tres" id="6_egwv0"]
 [ext_resource type="Script" uid="uid://ce485i7v2wsx1" path="res://Joel/scenes/game_camera.gd" id="6_hr27k"]
+[ext_resource type="Resource" uid="uid://cdlwapx3dyhdb" path="res://data/lugares dropeables/servir 3.tres" id="6_m8cnu"]
+[ext_resource type="Resource" uid="uid://dw6sp4q1ytfch" path="res://data/items data/chilaquil 3.tres" id="6_nw7gm"]
+[ext_resource type="Resource" uid="uid://dep0cdk18bkfc" path="res://data/lugares dropeables/servir 4.tres" id="7_jexln"]
+[ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://data/lugares dropeables/servir 5.tres" id="8_e07ha"]
+[ext_resource type="Resource" uid="uid://cr40j1l5m1pk0" path="res://data/items data/chilaquil 5.tres" id="8_wdn7o"]
+[ext_resource type="PackedScene" uid="uid://s13j14hw64ph" path="res://scenes/guarda_objetos.tscn" id="9_t23jg"]
 
 [node name="Test" type="Node2D" unique_id=1005686427]
+script = ExtResource("1_jexln")
 
-[node name="Containers" type="Node2D" parent="." unique_id=572234013]
-unique_name_in_owner = true
+[node name="camara1" type="Node2D" parent="." unique_id=196732181]
 
-[node name="ContainerGenerator" parent="Containers" unique_id=1167277551 instance=ExtResource("1_80ykp")]
-position = Vector2(136, 105)
-
-[node name="Freidora" parent="." unique_id=1990810203 instance=ExtResource("3_r4pg6")]
-position = Vector2(838, 457)
-
-[node name="Basura" parent="." unique_id=627287397 instance=ExtResource("4_hvm2o")]
-position = Vector2(108, 280)
-
-[node name="ItemsPantallaUno" type="Node2D" parent="." unique_id=418422926]
-
-[node name="ItemSpawner" parent="ItemsPantallaUno" unique_id=1900992696 instance=ExtResource("2_14sds")]
-position = Vector2(276, 496)
-item_to_spawn = ExtResource("5_3hgyu")
-
-[node name="ItemSpawner2" parent="ItemsPantallaUno" unique_id=378561328 instance=ExtResource("2_14sds")]
-position = Vector2(398, 496)
-item_to_spawn = ExtResource("3_cl3t6")
-
-[node name="ItemSpawner3" parent="ItemsPantallaUno" unique_id=1766254263 instance=ExtResource("2_14sds")]
-position = Vector2(520, 496)
-item_to_spawn = ExtResource("6_egwv0")
-
-[node name="GameCamera" type="Camera2D" parent="." unique_id=237577396]
+[node name="GameCamera" type="Camera2D" parent="camara1" unique_id=237577396]
 position = Vector2(576, 0)
 script = ExtResource("6_hr27k")
 speed = 500.0
 
-[node name="ItemsPantallaDos" type="Node2D" parent="." unique_id=1157931577]
+[node name="Estacion1" type="Node2D" parent="." unique_id=1079284251]
 
-[node name="ItemSpawner" parent="ItemsPantallaDos" unique_id=1681765797 instance=ExtResource("2_14sds")]
-position = Vector2(1318, 122)
+[node name="freidoras" type="Node2D" parent="Estacion1" unique_id=2034035170]
+
+[node name="Freidora" parent="Estacion1/freidoras" unique_id=1990810203 instance=ExtResource("3_r4pg6")]
+position = Vector2(378, 317)
+
+[node name="Freidora2" parent="Estacion1/freidoras" unique_id=719853384 instance=ExtResource("3_r4pg6")]
+position = Vector2(577, 317)
+
+[node name="Freidora3" parent="Estacion1/freidoras" unique_id=415786442 instance=ExtResource("3_r4pg6")]
+position = Vector2(775, 317)
+
+[node name="Freidora4" parent="Estacion1/freidoras" unique_id=946599085 instance=ExtResource("3_r4pg6")]
+position = Vector2(987, 317)
+
+[node name="Containers1" type="Node2D" parent="Estacion1" unique_id=572234013]
+unique_name_in_owner = true
+visible = false
+position = Vector2(34, -189)
+
+[node name="ContainerGenerator" parent="Estacion1/Containers1" unique_id=1167277551 instance=ExtResource("1_80ykp")]
+visible = false
+position = Vector2(136, 105)
+
+[node name="Containers2" type="Node2D" parent="Estacion1" unique_id=261127337]
+
+[node name="ItemSpawner6" parent="Estacion1/Containers2" unique_id=1897312858 instance=ExtResource("2_14sds")]
+position = Vector2(151, 103)
+item_to_spawn = ExtResource("2_wdn7o")
+
+[node name="ItemSpawner7" parent="Estacion1/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
+position = Vector2(350, 103)
+item_to_spawn = ExtResource("5_ub0h2")
+
+[node name="ItemSpawner8" parent="Estacion1/Containers2" unique_id=1809689769 instance=ExtResource("2_14sds")]
+position = Vector2(559, 103)
+item_to_spawn = ExtResource("6_m8cnu")
+
+[node name="ItemSpawner9" parent="Estacion1/Containers2" unique_id=1350545268 instance=ExtResource("2_14sds")]
+position = Vector2(756, 103)
+item_to_spawn = ExtResource("7_jexln")
+
+[node name="ItemSpawner10" parent="Estacion1/Containers2" unique_id=572210886 instance=ExtResource("2_14sds")]
+position = Vector2(937, 103)
+item_to_spawn = ExtResource("8_e07ha")
+
+[node name="Basura" parent="Estacion1" unique_id=627287397 instance=ExtResource("4_hvm2o")]
+position = Vector2(111, 317)
+
+[node name="ItemsPantallaUno" type="Node2D" parent="Estacion1" unique_id=418422926]
+
+[node name="ItemSpawner" parent="Estacion1/ItemsPantallaUno" unique_id=171770150 instance=ExtResource("2_14sds")]
+position = Vector2(548, 499)
+
+[node name="ItemSpawner2" parent="Estacion1/ItemsPantallaUno" unique_id=378561328 instance=ExtResource("2_14sds")]
+position = Vector2(670, 499)
+item_to_spawn = ExtResource("6_egwv0")
+
+[node name="ItemSpawner3" parent="Estacion1/ItemsPantallaUno" unique_id=1766254263 instance=ExtResource("2_14sds")]
+position = Vector2(792, 499)
+item_to_spawn = ExtResource("6_nw7gm")
+
+[node name="ItemSpawner4" parent="Estacion1/ItemsPantallaUno" unique_id=1058998379 instance=ExtResource("2_14sds")]
+position = Vector2(914, 499)
+item_to_spawn = ExtResource("3_cl3t6")
+
+[node name="ItemSpawner5" parent="Estacion1/ItemsPantallaUno" unique_id=1363502271 instance=ExtResource("2_14sds")]
+position = Vector2(1036, 499)
+item_to_spawn = ExtResource("8_wdn7o")
+
+[node name="Counters" type="Node2D" parent="Estacion1" unique_id=1466729372]
+unique_name_in_owner = true
+
+[node name="Guarda_objetos" parent="Estacion1/Counters" unique_id=2119187363 instance=ExtResource("9_t23jg")]
+position = Vector2(111, 502)
+
+[node name="Guarda_objetos2" parent="Estacion1/Counters" unique_id=1838289423 instance=ExtResource("9_t23jg")]
+position = Vector2(327, 502)
+
+[node name="Estacion2" type="Node2D" parent="." unique_id=347656830]
+
+[node name="ItemsPantallaDos" type="Node2D" parent="Estacion2" unique_id=1157931577]
+
+[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos" unique_id=1681765797 instance=ExtResource("2_14sds")]
+position = Vector2(1270, 542)
 item_to_spawn = ExtResource("5_3hgyu")
+
+[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos" unique_id=1900992696 instance=ExtResource("2_14sds")]
+position = Vector2(2010, 536)
+item_to_spawn = ExtResource("4_m8cnu")

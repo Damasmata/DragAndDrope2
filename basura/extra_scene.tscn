@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://be12egrjaw4hs"]
+
+[ext_resource type="Script" uid="uid://b1f2h46fxd6ye" path="res://basura/extra_scene.gd" id="1_53f6s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe365"]
+size = Vector2(40.247578, 40)
+
+[node name="extra_scene" type="Node2D" unique_id=887770596]
+scale = Vector2(0.7595502, 0.7595502)
+script = ExtResource("1_53f6s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1694452861]
+offset_left = -25.014803
+offset_top = -23.698235
+offset_right = 14.985197
+offset_bottom = 16.301765
+scale = Vector2(1.2103347, 1.2103347)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=280541724]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1441573588]
+scale = Vector2(1.2103347, 1.2103347)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=923629171]
+position = Vector2(-0.5438862, 0)
+shape = SubResource("RectangleShape2D_qe365")
+
+[node name="Label" type="Label" parent="." unique_id=1950914878]
+offset_left = -25.014803
+offset_top = -48.71304
+offset_right = 24.511862
+offset_bottom = -25.71304
+
+[connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]

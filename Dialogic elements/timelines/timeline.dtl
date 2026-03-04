@@ -1,0 +1,32 @@
+# Esta es la prueba de la introduccion y prueba de todo lo que podemos usar en dialogic
+[clear time="1.0"]
+Las mañanas frescas de Guanajuato, solitarias y calmadas
+Antes del ruido de la ciudad despierte, hay un breve momento de calma
+Y en en un callejon estrecho, pintado por tendederos de listones y paredes coloridas
+Hay un local de comida.
+Chilovequiles.
+Frente a la entrada, ando esperando a que habran
+join character leftmost [animation="Fade In Down"]
+character: la neta camuoneta patineta estoy algo nervioso
+character: hoy es mi primer dia como cocinero.
+character: Es raro pensar que quiero que ya empiece a chambear, tal vez luego me harte, quien sabe
+character: pero ocupo que ya abran, no me gusta quedarme afuera y esperar mucho
+tras unos minutos empiezo a escuchar unos pasos
+y a esras horas pues mejor no arrisegarse
+ME ANDO CAGANDO DE MIEDO Y FRIO, QUE HAGO???
+- No hacer nada y esperar a que todo salga bien
+	Simon, esperar, voy a hacerme aca como que estoy en mi pedo
+	Igual me pongo trucha por si pasa algo
+- Correr y sin chamba
+	prefieron vivir sin chamba o no vivir (con chamba quien sabe, pero muerto)
+	Empiezo a guardar mis cosas y me preparo para correr
+Hasta que...
+"character 2": Disculpa...
+"character 2": ES MI FIN YA VALIO, YA AQUI QUEDE, VALIO VERGA TODO, YA MAME, ADIOS AAAAAAAAAAA
+...
+Que raro, sigo vivo
+join "character 2" rightmost [animation="Fade In Down"]
+"character 2": Calmantes montes, no te voy a hacer nada, relaja la raja y disfruta la fruta
+intento que se me pase el susto, pero aun asi algo nervioso por la chamba
+"character 2": tu debes de ser -prota-
+<Empty Text Event>
