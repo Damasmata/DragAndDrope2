@@ -26,6 +26,7 @@ var new_pos:Vector2 #la nueva posicion
 #region bools
 
 var follow_mouse:bool #siga el mouse
+var mouse_in:bool #siga el mouse
 
 var can_be_dropped:bool = false
 var dropped:bool=false
@@ -33,6 +34,9 @@ var dropped:bool=false
 var with_sauce:bool=false
 
 #endregion
+
+func _ready() -> void:
+	$Menu.hide()
 
 #region setting the object
 
@@ -53,7 +57,7 @@ func _process(delta: float) -> void:
 		dropped = false
 	if follow_mouse: #si sigue al mouse, se mueve
 		movement() 
-	else:
+	elif !follow_mouse and mouse_in:
 		if Input.is_action_just_released("click_derecho"):
 			$Menu.show()
 
@@ -137,3 +141,10 @@ func _on_to_counter_pressed() -> void:
 		get_parent().global_position = counter.global_position
 		DishManager.dish_on_second_screen = false
 	$Menu.hide()
+
+
+func _on_button_stopper_mouse_entered() -> void:
+	mouse_in = true
+
+func _on_button_stopper_mouse_exited() -> void:
+	mouse_in = false

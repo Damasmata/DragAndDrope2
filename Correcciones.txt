@@ -1,0 +1,16 @@
+Dentro del script item_scene:
+
+Se agrego una variable bool llamada "mouse_in"
+
+Agregue dos señales del ButtonStopper [mouse entered, mouse exited] estas señales cambian "mouse_in" a verdadero o falso respectivamente
+
+
+la linea 60 se cambio el "else" por un "elif" que solo sea valido si "follow_mouse" es negativo y si "mouse_in" es positive
+
+agregue una función _ready solo para ocultar el menu en caso de que se nos olvide por estar debbugueando.
+
+-----------------------------------------------------
+
+COSAS POR REVISAR:
+
+Cuando se le agrega la salsa al platillo y este ultimo se mueve a un counter, la salsa no se mueve con el.

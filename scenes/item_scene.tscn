@@ -71,7 +71,6 @@ shape = SubResource("RectangleShape2D_a127h")
 debug_color = Color(3.85046e-06, 0.55265814, 0.20658872, 0.41960785)
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -96,6 +95,8 @@ text = "Borrar"
 [connection signal="button_up" from="BaseColor/Button" to="." method="_on_button_button_up"]
 [connection signal="mouse_entered" from="BaseColor/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="BaseColor/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="mouse_entered" from="BaseColor/ButtonStopper" to="." method="_on_button_stopper_mouse_entered"]
+[connection signal="mouse_exited" from="BaseColor/ButtonStopper" to="." method="_on_button_stopper_mouse_exited"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/toCounter" to="." method="_on_to_counter_pressed"]
