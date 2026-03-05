@@ -13,7 +13,7 @@ func spawn_item():
 	if item_to_spawn.group == "items dropeables":
 		var duplicate_res = item_to_spawn.duplicate()
 		var new_item = item_scene.instantiate()
-		add_child(new_item.duplicate())
+		add_child(new_item)
 		new_item.global_position = spawn_pos.global_position + spawn_pos.pivot_offset
 		new_item.initialpos = new_item.global_position
 		new_item.new_pos = new_item.initialpos
