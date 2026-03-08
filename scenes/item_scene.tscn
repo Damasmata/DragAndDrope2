@@ -78,9 +78,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -45.0
-offset_top = -101.0
+offset_top = -196.0
 offset_right = 45.0
-offset_bottom = 45.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -89,7 +89,19 @@ layout_mode = 2
 
 [node name="toCounter" type="Button" parent="Menu/VBoxContainer" unique_id=372995041]
 layout_mode = 2
+text = "Guardar"
+
+[node name="toErase" type="Button" parent="Menu/VBoxContainer" unique_id=634951618]
+layout_mode = 2
 text = "Borrar"
+
+[node name="toContinue" type="Button" parent="Menu/VBoxContainer" unique_id=311493308]
+layout_mode = 2
+text = "Siguiente"
+
+[node name="toBack" type="Button" parent="Menu/VBoxContainer" unique_id=41344991]
+layout_mode = 2
+text = "Poner en medio"
 
 [connection signal="button_down" from="BaseColor/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="BaseColor/Button" to="." method="_on_button_button_up"]
@@ -100,3 +112,5 @@ text = "Borrar"
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Menu/VBoxContainer/toCounter" to="." method="_on_to_counter_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]

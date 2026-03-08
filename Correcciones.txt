@@ -14,3 +14,29 @@ agregue una función _ready solo para ocultar el menu en caso de que se nos olvi
 COSAS POR REVISAR:
 
 Cuando se le agrega la salsa al platillo y este ultimo se mueve a un counter, la salsa no se mueve con el.
+-SOLUCIONADO-
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cambios hechos:
+
+item_scene script:
+-Fue arreglado la salsa para que su posicion sea la misma que la del item cuando se mueve
+-Para activar el panel, se puso la condicion que tenia que tener primero salsa para ponerlo
+-Que se borre container, item y salsa al presionar un boton
+
+container_scene script
+-Se muestra el pannel stop del item una vez que se coloca en el conteiner
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR:
+
+Que en la segunda estacion, el item se mueva dentro de esos dos conteiners y no en los anteriores
+
+Bloquear la opcion de moverlo a un guarda objetos si ya esta en uno
+
+Volver a poner el objeto en medio
+
+Cuando se sale del guarda objetos, se detiene, marca el mismo error que tenia los container
+"Invalid access to property or key 'item_resource' on a base object of type 'ColorRect'"

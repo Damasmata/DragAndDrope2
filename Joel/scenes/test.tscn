@@ -109,6 +109,12 @@ position = Vector2(111, 502)
 [node name="Guarda_objetos2" parent="Estacion1/Counters" unique_id=1838289423 instance=ExtResource("9_t23jg")]
 position = Vector2(327, 502)
 
+[node name="Guarda_objetos3" parent="Estacion1/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
+position = Vector2(1476, 266)
+
+[node name="Guarda_objetos4" parent="Estacion1/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
+position = Vector2(1847, 264)
+
 [node name="Estacion2" type="Node2D" parent="." unique_id=347656830]
 
 [node name="ItemsPantallaDos" type="Node2D" parent="Estacion2" unique_id=1157931577]
@@ -118,5 +124,5 @@ position = Vector2(1270, 542)
 item_to_spawn = ExtResource("5_3hgyu")
 
 [node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos" unique_id=1900992696 instance=ExtResource("2_14sds")]
-position = Vector2(2010, 536)
+position = Vector2(1999, 547)
 item_to_spawn = ExtResource("4_m8cnu")

@@ -42,10 +42,6 @@ func _process(delta: float) -> void:
 	if follow_mouse: #si sigue al mouse, se mueve
 		movement() 
 
-#func color_grade():
-	#var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
-	#base_color.color = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
-
 func update_resource(_item_resource:Resource):
 	item_resource = _item_resource
 

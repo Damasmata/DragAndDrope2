@@ -31,7 +31,6 @@ func set_info(resource): #establece la info en base al resource
 	item_resource = resource #el item pasa a ser el resource
 	colorrect.color = resource.colorextra #color del resource 
 	add_to_group(resource.group) #el grupo de donde esta el resource
-	#color_grade()
 
 #endregion
 

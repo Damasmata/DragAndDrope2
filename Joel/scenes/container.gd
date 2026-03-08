@@ -12,8 +12,6 @@ var item_node:Node2D
 
 var item_duplicated:Node2D
 
-var item_on:Node2D
-
 func _ready() -> void:
 	color_rect.color = container_resource.colorrect
 
@@ -25,13 +23,12 @@ func _process(delta: float) -> void:
 
 func set_info(resource:Resource):
 	container_resource = resource
-	#color_r.color = resource.colorrect
-	#add_to_group(resource.group)
 
 func puede_duplicar():
 	if !ocupado:
 		duplicar = true
 		ocupado = true
+		item_node.button_stopper.show()
 
 func segunda_pantalla(item_to_duplicate:Resource):
 	var child_node = item_node
@@ -41,10 +38,6 @@ func segunda_pantalla(item_to_duplicate:Resource):
 	add_child(child_node)
 	global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
 	child_node.global_position = global_position
-	#item_node.global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
-	#self.global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
-	item_node.button_stopper.show()
-	item_on=item_node
 	
 	#Codigo para duplicar el obj y mandarlo a la segunda pantalla
 	
@@ -62,6 +55,7 @@ func _on_area_container_area_entered(area: Area2D) -> void:
 		print(_item_resource.cooked_time, " ", _item_resource.cooking_time)
 		if _item_resource.cooked_time < _item_resource.cooking_time:
 			_item_node.connect("duplicar",puede_duplicar)
+			
 			_item_node.can_be_dropped = true
 			_item_node.new_pos = self.global_position
 			item_node = _item_node
@@ -78,13 +72,7 @@ func _on_area_container_area_exited(area: Area2D) -> void:
 			_item_node.disconnect("duplicar",puede_duplicar)
 			_item_resource = null
 			item_node = null
-
-		if item_duplicated == null:
-			return
-		else:
-			item_duplicated.queue_free()
-
-#arreglar el error marcado ahi
-#parece ser relacionado al resource, que por alguna razon detecta un colorrect
-#se puede arreglar modificando todo los _item_node por item_node, quitarle el guion
-#buscar otras soluciones
+		#if item_duplicated == null:
+			#return
+		#else:
+			#item_duplicated.queue_free()

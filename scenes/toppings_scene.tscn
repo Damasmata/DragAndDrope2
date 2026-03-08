@@ -23,6 +23,7 @@ offset_bottom = 40.0
 
 [node name="ButtonStopper" type="PanelContainer" parent="colorrect" unique_id=1701004582]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

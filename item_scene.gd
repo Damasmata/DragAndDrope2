@@ -7,13 +7,13 @@ extends Node2D
 var item_resource:Resource #el resource del objeto
 
 var _salsa_resource: Resource
-var salsa_node:Node2D
+var salsa_node:Node2D #este es para instanciar el objeto
 
 signal freir
 signal duplicar
 
+
 var extras: Array[Node2D]
-var dropped_sauce: Node2D
 
 #region posiciones
 
@@ -31,7 +31,7 @@ var mouse_in:bool #siga el mouse
 var can_be_dropped:bool = false
 var dropped:bool=false
 
-var with_sauce:bool=false
+var en_guardaobjetos:bool
 
 #endregion
 
@@ -58,8 +58,10 @@ func _process(delta: float) -> void:
 	if follow_mouse: #si sigue al mouse, se mueve
 		movement() 
 	elif !follow_mouse and mouse_in:
-		if Input.is_action_just_released("click_derecho"):
+		if Input.is_action_just_released("click_derecho") and salsa_node:
 			$Menu.show()
+	if duplicar:
+		pass
 
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
@@ -75,10 +77,12 @@ func movement(): #moverse
 		global_position = get_global_mouse_position()-offset #obtener la posicion global del mouse
 
 func consalsa():
-	with_sauce=true
+	var child_node=salsa_node
+	if child_node.get_parent():
+		child_node.get_parent().remove_child(child_node)
+	add_child(child_node)
+	child_node.global_position=global_position
 	salsa_node.button_stopper.show()
-	salsa_node.global_position=self.global_position
-	dropped_sauce=salsa_node
 
 #region button down/up-posiciones
 
@@ -110,7 +114,7 @@ func _on_button_mouse_exited() -> void: #escalar si no esta el mouse
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var _salsa_node=area.get_parent()
-	if _salsa_node.is_in_group("salsa") and with_sauce==false:
+	if _salsa_node.is_in_group("salsa") and !salsa_node:
 		_salsa_node.can_be_dropped = true
 		_salsa_node.new_pos = self.global_position
 		_salsa_node.connect("droppedsauce",consalsa)
@@ -119,21 +123,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	var _salsa_node=area.get_parent()
-	if _salsa_node.is_in_group("salsa") and with_sauce==false:
+	if _salsa_node.is_in_group("salsa") and !salsa_node:
 		_salsa_node.can_be_dropped = false
 		_salsa_node.disconnect("droppedsauce",consalsa)
 		_salsa_resource=null
 		salsa_node=null
 
 #endregion
-
-#añadir extras
-#que detecte que tenga extras
-
-#no se puede copiar el codigo de la freidora adaptado a la salsa---
-#---if _salsa_node.item_resource == _salsa_resource:
-#no lo detecta/no es igual/no se cumple
-
 
 func _on_to_counter_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
@@ -142,6 +138,14 @@ func _on_to_counter_pressed() -> void:
 		DishManager.dish_on_second_screen = false
 	$Menu.hide()
 
+func _on_to_erase_pressed() -> void:
+	if get_parent().is_in_group("servidores"):
+		get_parent().queue_free()
+		DishManager.dish_on_second_screen = false
+	$Menu.hide()
+
+func _on_to_continue_pressed() -> void:
+	pass # Replace with function body.
 
 func _on_button_stopper_mouse_entered() -> void:
 	mouse_in = true
