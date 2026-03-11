@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://3bqjcsb4ctlb"]
+
+[ext_resource type="Texture2D" uid="uid://b3by6t83dhn7a" path="res://Dialogic elements/estilos/cuadros de texto/cuadro de dialogo 2.png" id="1_loag3"]
+
+[resource]
+content_margin_left = 105.0
+content_margin_top = 53.0
+texture = ExtResource("1_loag3")
