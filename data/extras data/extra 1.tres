@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_bx4v5")
 name = "Salsa roja"
-groupname = "conTiempo"
 colorextra = Color(0.6862745, 0, 0, 1)
-group = "Extra"
+group = "salsa"
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

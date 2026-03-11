@@ -22,7 +22,7 @@ offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(1, 0, 0, 1)
+color = Color(0.78431374, 0.78431374, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2084666113]
 

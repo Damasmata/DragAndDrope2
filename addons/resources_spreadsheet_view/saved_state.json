@@ -1,5 +1,49 @@
 {
   "column_properties": {
+    "res://addons/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
+    "res://data/extras data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
+    "res://data/items data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
+    "res://data/lugares dropeables/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
     "res://extras data/": {
       "metadata/_custom_type_script": {
         "visibility": 0.0
@@ -37,7 +81,11 @@
   "recent_paths": [
     "res://items data/",
     "res://lugares dropeables/",
-    "res://extras data/"
+    "res://extras data/",
+    "res://data/extras data/",
+    "res://data/items data/",
+    "res://data/lugares dropeables/",
+    "res://addons/"
   ],
   "table_functions": {
     "filter": [

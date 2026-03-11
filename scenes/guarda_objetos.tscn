@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://s13j14hw64ph"]
+
+[ext_resource type="Script" uid="uid://dgvedindke223" path="res://guarda_objetos.gd" id="1_8eo2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yadd2"]
+
+[node name="Guarda_objetos" type="Node2D" unique_id=2119187363]
+script = ExtResource("1_8eo2p")
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=225945095]
+custom_minimum_size = Vector2(90, 90)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.90588236, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=772691595]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1363557172]
+scale = Vector2(4.309715, 4.309715)
+shape = SubResource("RectangleShape2D_yadd2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

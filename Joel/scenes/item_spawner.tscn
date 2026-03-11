@@ -44,12 +44,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
 
-[node name="SpawnArea" type="Area2D" parent="Spawn/SpawnPos" unique_id=31324838]
-position = Vector2(45, 45)
+[node name="SpawnArea" type="Area2D" parent="." unique_id=31324838]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn/SpawnPos/SpawnArea" unique_id=165845619]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea" unique_id=165845619]
 shape = SubResource("RectangleShape2D_6quaa")
+debug_color = Color(0.9954594, 0, 0.21283907, 0.41960785)
 
 [connection signal="pressed" from="Spawn" to="." method="_on_spawn_pressed"]
-[connection signal="area_entered" from="Spawn/SpawnPos/SpawnArea" to="." method="_on_spawn_area_area_entered"]
-[connection signal="area_exited" from="Spawn/SpawnPos/SpawnArea" to="." method="_on_spawn_area_area_exited"]
+[connection signal="area_entered" from="SpawnArea" to="." method="_on_spawn_area_area_entered"]
+[connection signal="area_exited" from="SpawnArea" to="." method="_on_spawn_area_area_exited"]
