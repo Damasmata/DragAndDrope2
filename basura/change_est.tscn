@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://mchh1ikwi7jj"]
+
+[node name="ChangeEst" type="Node2D" unique_id=1421491969]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1119797577]
+offset_left = -45.0
+offset_top = -22.5
+offset_right = 45.0
+offset_bottom = 22.5
+
+[node name="ButtonEst" type="Button" parent="ColorRect" unique_id=1517090071]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 45.0

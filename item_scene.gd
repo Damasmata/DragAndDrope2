@@ -1,8 +1,13 @@
 extends Node2D
 
+@onready var to_counter: Button = %toCounter
+
 @onready var base_color: ColorRect = %BaseColor #que reaccione el color(0,0)
 @onready var button_stopper: PanelContainer = %ButtonStopper
-#@onready var menu: PanelContainer = %Menu
+
+@onready var to_continue: Button = %toContinue
+
+@onready var to_back: Button = %toBack
 
 var item_resource:Resource #el resource del objeto
 
@@ -11,9 +16,11 @@ var salsa_node:Node2D #este es para instanciar el objeto
 
 signal freir
 signal duplicar
+signal ocupar
 
-
-var extras: Array[Node2D]
+var _toppings_resource:Resource
+var topping_node: Node2D
+var toppings_nodes: Array[Node2D]
 
 #region posiciones
 
@@ -33,10 +40,15 @@ var dropped:bool=false
 
 var en_guardaobjetos:bool
 
+var with_sauce:bool = false
+
+var en_tercera:bool = false
+
 #endregion
 
 func _ready() -> void:
 	$Menu.hide()
+
 
 #region setting the object
 
@@ -54,14 +66,27 @@ func _process(delta: float) -> void:
 	if can_be_dropped and dropped:
 		freir.emit()
 		duplicar.emit()
+		ocupar.emit()
 		dropped = false
 	if follow_mouse: #si sigue al mouse, se mueve
 		movement() 
 	elif !follow_mouse and mouse_in:
-		if Input.is_action_just_released("click_derecho") and salsa_node:
-			$Menu.show()
-	if duplicar:
-		pass
+		%ClickDer.show()
+	#if duplicar:
+		#pass
+	if DishManager.dish_on_second_screen:
+		to_back.disabled=true
+	else:
+		to_back.disabled=false
+	if en_guardaobjetos:
+		to_counter.disabled=true
+		to_continue.disabled=true
+	else:
+		to_counter.disabled=false
+		if DishManager.dish_on_third_screen:
+			to_continue.disabled=true
+		else:
+			to_continue.disabled=false
 
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
@@ -83,6 +108,24 @@ func consalsa():
 	add_child(child_node)
 	child_node.global_position=global_position
 	salsa_node.button_stopper.show()
+	with_sauce=true
+
+func contopping():
+	var child_node=topping_node
+	if child_node.get_parent():
+		child_node.get_parent().remove_child(child_node)
+	add_child(child_node)
+	child_node.global_position=global_position
+	child_node.button_stopper.show()
+	#for topping in topping_node:
+		#toppings_nodes.append(topping)
+		#hacer un for para que almacene los datos de los toppings
+
+func show_container():
+	if $Menu.visible:
+		$Menu.hide()
+	else:
+		$Menu.show()
 
 #region button down/up-posiciones
 
@@ -113,42 +156,70 @@ func _on_button_mouse_exited() -> void: #escalar si no esta el mouse
 #region extras y salsas
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	var _salsa_node=area.get_parent()
-	if _salsa_node.is_in_group("salsa") and !salsa_node:
-		_salsa_node.can_be_dropped = true
-		_salsa_node.new_pos = self.global_position
-		_salsa_node.connect("droppedsauce",consalsa)
-		salsa_node=_salsa_node
-		
+	var _extra_node=area.get_parent()
+	if _extra_node.is_in_group("salsa") and !salsa_node and !with_sauce:
+		print("FUNCIONA AL ENTRAR")
+		_extra_node.can_be_dropped = true
+		_extra_node.new_pos = self.global_position
+		_extra_node.connect("droppedsauce",consalsa)
+		salsa_node=_extra_node
+	if _extra_node.is_in_group("items dropeables") and salsa_node and !en_guardaobjetos:
+		_extra_node.can_be_dropped = true
+		_extra_node.new_pos = self.global_position
+		_extra_node.connect("droppedtoping",contopping)
+		topping_node=_extra_node
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	var _salsa_node=area.get_parent()
-	if _salsa_node.is_in_group("salsa") and !salsa_node:
-		_salsa_node.can_be_dropped = false
-		_salsa_node.disconnect("droppedsauce",consalsa)
+	var _extra_node=area.get_parent()
+	if _extra_node.is_in_group("salsa") and salsa_node and !with_sauce:
+		print("FUNCIONA AL SALIR")
+		_extra_node.can_be_dropped = false
+		_extra_node.disconnect("droppedsauce",consalsa)
 		_salsa_resource=null
 		salsa_node=null
+	if _extra_node.is_in_group("items dropeables") and salsa_node and !en_guardaobjetos:
+		_extra_node.can_be_dropped = false
+		_extra_node.disconnect("droppedtoping",contopping)
+		_toppings_resource=null
+		topping_node=null
 
 #endregion
-
-func _on_to_counter_pressed() -> void:
-	if get_parent().is_in_group("servidores"):
-		var counter = DishManager.counters_in_level.pop_front()
-		get_parent().global_position = counter.global_position
-		DishManager.dish_on_second_screen = false
-	$Menu.hide()
-
-func _on_to_erase_pressed() -> void:
-	if get_parent().is_in_group("servidores"):
-		get_parent().queue_free()
-		DishManager.dish_on_second_screen = false
-	$Menu.hide()
-
-func _on_to_continue_pressed() -> void:
-	pass # Replace with function body.
 
 func _on_button_stopper_mouse_entered() -> void:
 	mouse_in = true
 
 func _on_button_stopper_mouse_exited() -> void:
 	mouse_in = false
+
+func _on_to_counter_pressed() -> void:
+	if get_parent().is_in_group("servidores"):
+		var counter = DishManager.counters_in_level.pop_front()
+		get_parent().global_position = counter.global_position
+		DishManager.dish_on_second_screen = false
+		en_guardaobjetos=true
+	show_container()
+
+func _on_to_erase_pressed() -> void:
+	if get_parent().is_in_group("servidores"):
+		get_parent().queue_free()
+		DishManager.dish_on_second_screen = false
+	show_container()
+
+func _on_to_continue_pressed() -> void:
+	if get_parent().is_in_group("servidores"):
+		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
+		DishManager.dish_on_second_screen = false
+		DishManager.dish_on_third_screen = true
+		en_tercera=true
+	show_container()
+
+func _on_to_back_pressed() -> void:
+	if get_parent().is_in_group("servidores"):
+		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
+		DishManager.dish_on_second_screen = true
+		en_guardaobjetos=false
+	show_container()
+
+func _on_click_der_pressed() -> void:
+	if salsa_node and !en_tercera:
+		show_container()

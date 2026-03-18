@@ -28,7 +28,6 @@ run/main_scene="uid://bjgyv00sehepr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
-
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
@@ -84,13 +83,9 @@ audio/channel_defaults={
 glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogic elements/estilos/estilo visual 1.tres"]
 layout/default_style="res://Dialogic elements/estilos/estilo visual 1.tres"
-
-
 variables={
 "sucio": false
 }
-
-
 
 [editor_plugins]
 
@@ -109,6 +104,7 @@ conTiempo=""
 dropingZone=""
 item=""
 salsa=""
+Bebida=""
 
 [godot_resource_groups]
 

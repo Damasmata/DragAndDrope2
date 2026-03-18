@@ -8,5 +8,5 @@ cooking_time = 10.0
 name = "Grande"
 raw_color = Color(0.77, 0.62678, 0.5313, 1)
 cooked_color = Color(0.25, 0.060041666, 0.007499993, 1)
-group = "items dropeables"
+group = "item"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

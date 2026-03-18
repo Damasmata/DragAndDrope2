@@ -70,6 +70,16 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_a127h")
 debug_color = Color(3.85046e-06, 0.55265814, 0.20658872, 0.41960785)
 
+[node name="ClickDer" type="Button" parent="." unique_id=380927829]
+unique_name_in_owner = true
+visible = false
+offset_left = -45.0
+offset_top = -46.0
+offset_right = 45.0
+offset_bottom = 44.0
+button_mask = 2
+flat = true
+
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
@@ -77,9 +87,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -45.0
+offset_left = -65.5
 offset_top = -196.0
-offset_right = 45.0
+offset_right = 65.5
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -88,18 +98,22 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="toCounter" type="Button" parent="Menu/VBoxContainer" unique_id=372995041]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Guardar"
 
 [node name="toErase" type="Button" parent="Menu/VBoxContainer" unique_id=634951618]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Borrar"
 
 [node name="toContinue" type="Button" parent="Menu/VBoxContainer" unique_id=311493308]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Siguiente"
 
 [node name="toBack" type="Button" parent="Menu/VBoxContainer" unique_id=41344991]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Poner en medio"
 
@@ -111,6 +125,8 @@ text = "Poner en medio"
 [connection signal="mouse_exited" from="BaseColor/ButtonStopper" to="." method="_on_button_stopper_mouse_exited"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="ClickDer" to="." method="_on_click_der_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toCounter" to="." method="_on_to_counter_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]

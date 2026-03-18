@@ -8,5 +8,5 @@ cooking_time = 10.0
 name = "Nixtamalizado"
 raw_color = Color(0.4514, 0.74, 0.67746997, 1)
 cooked_color = Color(0.002199998, 0.016719982, 0.22, 1)
-group = "items dropeables"
+group = "item"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

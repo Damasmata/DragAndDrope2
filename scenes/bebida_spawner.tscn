@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://40bffydya6p2"]
+
+[ext_resource type="Script" uid="uid://bbl84db6yn6d0" path="res://bebida_spawner.gd" id="1_x8aco"]
+[ext_resource type="Resource" uid="uid://6mdg1xrgeqyc" path="res://data/drinks data/drink 1.tres" id="2_ddyrr"]
+[ext_resource type="Resource" uid="uid://c041svdml0f8u" path="res://data/drinks data/drink 2.tres" id="3_y2g20"]
+[ext_resource type="Resource" uid="uid://bmd7grgu7x3ak" path="res://data/drinks data/drink 3.tres" id="4_vw1s8"]
+[ext_resource type="Resource" uid="uid://bkv00c47vfvua" path="res://data/drinks data/drink 4.tres" id="5_rt0mj"]
+[ext_resource type="Resource" uid="uid://di408m58foiyy" path="res://data/drinks data/drink 5.tres" id="6_npfkl"]
+[ext_resource type="Resource" uid="uid://cw278ahvfc1xm" path="res://data/drinks data/drink 6.tres" id="7_gl3yf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuqne"]
+size = Vector2(95, 94)
+
+[node name="BebidaSpawner" type="Node2D" unique_id=21786761]
+script = ExtResource("1_x8aco")
+drink_resource = Array[Resource]([ExtResource("2_ddyrr"), ExtResource("3_y2g20"), ExtResource("4_vw1s8"), ExtResource("5_rt0mj"), ExtResource("6_npfkl"), ExtResource("7_gl3yf")])
+timers = Array[float]([5.0, 10.0, 15.0])
+
+[node name="PanelTipo" type="PanelContainer" parent="." unique_id=967652169]
+visible = false
+offset_left = -70.0
+offset_top = -103.0
+offset_right = 70.0
+offset_bottom = 103.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelTipo" unique_id=130136932]
+layout_mode = 2
+
+[node name="Bebida1" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1373022155]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+
+[node name="Bebida2" type="Button" parent="PanelTipo/VBoxContainer" unique_id=410058213]
+unique_name_in_owner = true
+layout_mode = 2
+text = "2"
+
+[node name="Bebida3" type="Button" parent="PanelTipo/VBoxContainer" unique_id=127563396]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3"
+
+[node name="Bebida4" type="Button" parent="PanelTipo/VBoxContainer" unique_id=186903355]
+unique_name_in_owner = true
+layout_mode = 2
+text = "4"
+
+[node name="Bebida5" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1684697909]
+unique_name_in_owner = true
+layout_mode = 2
+text = "5"
+
+[node name="Bebida6" type="Button" parent="PanelTipo/VBoxContainer" unique_id=852327079]
+unique_name_in_owner = true
+layout_mode = 2
+text = "6"
+
+[node name="PanelSize" type="PanelContainer" parent="." unique_id=789242813]
+visible = false
+offset_left = -70.0
+offset_top = -50.5
+offset_right = 70.0
+offset_bottom = 50.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelSize" unique_id=1647154145]
+layout_mode = 2
+
+[node name="sizeS" type="Button" parent="PanelSize/VBoxContainer" unique_id=78045089]
+unique_name_in_owner = true
+layout_mode = 2
+text = "S"
+
+[node name="SizeM" type="Button" parent="PanelSize/VBoxContainer" unique_id=1917881776]
+unique_name_in_owner = true
+layout_mode = 2
+text = "M"
+
+[node name="SizeB" type="Button" parent="PanelSize/VBoxContainer" unique_id=2133694359]
+layout_mode = 2
+text = "B"
+
+[node name="PanelReady" type="PanelContainer" parent="." unique_id=1152291176]
+visible = false
+offset_left = -70.0
+offset_top = -50.5
+offset_right = 70.0
+offset_bottom = 50.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelReady" unique_id=920920939]
+layout_mode = 2
+
+[node name="Stop" type="Button" parent="PanelReady/VBoxContainer" unique_id=385076829]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Stop"
+
+[node name="Continue" type="Button" parent="PanelReady/VBoxContainer" unique_id=1410083300]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continue"
+
+[node name="Ready" type="Button" parent="PanelReady/VBoxContainer" unique_id=373567009]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ready"
+
+[node name="SpawnPos" type="ColorRect" parent="." unique_id=1275559422]
+unique_name_in_owner = true
+offset_left = -50.0
+offset_top = 135.0
+offset_right = 50.0
+offset_bottom = 235.0
+pivot_offset = Vector2(50, 50)
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1354661732]
+position = Vector2(-50, 135)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1244124790]
+position = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_iuqne")
+
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida1" to="." method="_on_bebida_1_pressed"]
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida2" to="." method="_on_bebida_2_pressed"]
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida3" to="." method="_on_bebida_3_pressed"]
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida4" to="." method="_on_bebida_4_pressed"]
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida5" to="." method="_on_bebida_5_pressed"]
+[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida6" to="." method="_on_bebida_6_pressed"]
+[connection signal="pressed" from="PanelSize/VBoxContainer/sizeS" to="." method="_on_size_s_pressed"]
+[connection signal="pressed" from="PanelSize/VBoxContainer/SizeM" to="." method="_on_size_m_pressed"]
+[connection signal="pressed" from="PanelSize/VBoxContainer/SizeB" to="." method="_on_size_b_pressed"]
+[connection signal="pressed" from="PanelReady/VBoxContainer/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="PanelReady/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PanelReady/VBoxContainer/Ready" to="." method="_on_ready_pressed"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

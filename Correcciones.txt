@@ -33,10 +33,82 @@ container_scene script
 COSAS POR REVISAR:
 
 Que en la segunda estacion, el item se mueva dentro de esos dos conteiners y no en los anteriores
+-SOLUCIONADO-
 
 Bloquear la opcion de moverlo a un guarda objetos si ya esta en uno
+-SOLUCIONADO-
 
 Volver a poner el objeto en medio
+-SOLUCIONADO-
 
 Cuando se sale del guarda objetos, se detiene, marca el mismo error que tenia los container
 "Invalid access to property or key 'item_resource' on a base object of type 'ColorRect'"
+-SOLUCIONADO-
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cambios hechos:
+
+item_spawner scene:
+-se añadio que pueda generar toppings (el resto de extras por ahora)
+-solucionado un error con los grupos al momento de crear items y toppings (estaban en el mismo grupo)
+
+item_scene script:
+-se corrigeron los errores por revisar
+-esta configurado para que los toppings se puedan poner, similar a la salsa, y solo
+se pueden poner en medio
+-se configuro el boton para el click derecho
+-se puede mostrar y ocultar si se vuelve a dar click derecho dentro del area
+
+test scene:
+-el counter solo tiene los dos lugares dropeables de la segunda estacion
+-se acomodaron en nodos los spawners de salsas y extras
+-se crearon 3 botones para cada ir a cada estacion, incluyendo una tercera posicion
+
+guarda_objetos script:
+-fue mejorado con una señal de item, la anterior version presentaba fallos, funciona igual que
+el container
+
+game_camera script:
+-se le añadio una tercera posicion de camara en el array
+-si se presiona uno de los botones de las estaciones se cambia de posicion de inmediato
+
+data_drinks script/resource:
+-se creo un script y resources para las bebidas, las cuales almacenan los datos de las bebidas
+
+refresco->Bebida scene:
+-se creo un grupo de bebida y esta en ese grupo
+-contiene ahora un script
+
+Bebida script:
+-el script permite llenarse automaticamente
+-tiene variables de tipo bool para que se pueda detener
+-una vez establecida como lista, se puede mover similar a los demas objetos movibles
+
+Bebida_spawner scene
+-contiene 3 paneles con botones:
+	asignar un tipo de bebida (sprites/color)
+	asignar un tamaño (tiempo de llenado)
+	detener, continuar o establecer como lista la bebida
+-contiene un lugar de spawn para las bebidas
+
+basurero script:
+-sirve para elminar tambien objetos del grupo de bebidas
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR:
+
+Al guardar un objeto en la segunda estacion, ya no se puede volver a usar, usa el siguiente
+y si se han usado las dos previamente, ya no funciona
+
+configurar los toppings en el item, para que almacene el nodo del toppin 
+(se me ocurre que un array puede funcionar)
+
+el boton para mostrar el panel del script, tiene menos espacio si tiene un objeto encima
+hay que ponerlo hasta delante de todos lo que tenga encima
+
+Encontrar una forma para que los botones de bebidas_spawner funcionen para detener y servir la bebida
+
+Tambien para que al acabar de llenarse, el panel pueda mostrar la opcion de llenarse de nuevo
+si es que ya se sirvio la bebida

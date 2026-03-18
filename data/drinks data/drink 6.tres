@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="drink" format=3 uid="uid://cw278ahvfc1xm"]
+
+[ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_c04jb"]
+[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_rggnd"]
+
+[resource]
+script = ExtResource("1_c04jb")
+name = "Piña"
+colordrink = Color(2.8642855, 2.8642855, 0, 1)
+texture_progress = ExtResource("2_rggnd")
+metadata/_custom_type_script = "uid://dpik8c0i45d6m"

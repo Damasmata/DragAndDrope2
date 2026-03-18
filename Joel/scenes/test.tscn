@@ -18,6 +18,13 @@
 [ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://data/lugares dropeables/servir 5.tres" id="8_e07ha"]
 [ext_resource type="Resource" uid="uid://cr40j1l5m1pk0" path="res://data/items data/chilaquil 5.tres" id="8_wdn7o"]
 [ext_resource type="PackedScene" uid="uid://s13j14hw64ph" path="res://scenes/guarda_objetos.tscn" id="9_t23jg"]
+[ext_resource type="Resource" uid="uid://cblqsyl6ub38u" path="res://data/extras data/extra 3.tres" id="19_84ufs"]
+[ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://data/extras data/extra 4.tres" id="20_x1dsp"]
+[ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://data/extras data/extra 5.tres" id="21_vhtwk"]
+[ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://data/extras data/extra 6.tres" id="22_xano8"]
+[ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="23_todrt"]
+[ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://data/extras data/extra 8.tres" id="24_12c6b"]
+[ext_resource type="PackedScene" uid="uid://40bffydya6p2" path="res://scenes/bebida_spawner.tscn" id="25_x1dsp"]
 
 [node name="Test" type="Node2D" unique_id=1005686427]
 script = ExtResource("1_jexln")
@@ -79,6 +86,14 @@ item_to_spawn = ExtResource("8_e07ha")
 [node name="Basura" parent="Estacion1" unique_id=627287397 instance=ExtResource("4_hvm2o")]
 position = Vector2(111, 317)
 
+[node name="Guardadores" type="Node2D" parent="Estacion1" unique_id=1384179656]
+position = Vector2(111, 497)
+
+[node name="Guarda_objetos" parent="Estacion1/Guardadores" unique_id=2119187363 instance=ExtResource("9_t23jg")]
+
+[node name="Guarda_objetos2" parent="Estacion1/Guardadores" unique_id=1838289423 instance=ExtResource("9_t23jg")]
+position = Vector2(216, 0)
+
 [node name="ItemsPantallaUno" type="Node2D" parent="Estacion1" unique_id=418422926]
 
 [node name="ItemSpawner" parent="Estacion1/ItemsPantallaUno" unique_id=171770150 instance=ExtResource("2_14sds")]
@@ -100,29 +115,86 @@ item_to_spawn = ExtResource("3_cl3t6")
 position = Vector2(1036, 499)
 item_to_spawn = ExtResource("8_wdn7o")
 
-[node name="Counters" type="Node2D" parent="Estacion1" unique_id=1466729372]
-unique_name_in_owner = true
-
-[node name="Guarda_objetos" parent="Estacion1/Counters" unique_id=2119187363 instance=ExtResource("9_t23jg")]
-position = Vector2(111, 502)
-
-[node name="Guarda_objetos2" parent="Estacion1/Counters" unique_id=1838289423 instance=ExtResource("9_t23jg")]
-position = Vector2(327, 502)
-
-[node name="Guarda_objetos3" parent="Estacion1/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
-position = Vector2(1476, 266)
-
-[node name="Guarda_objetos4" parent="Estacion1/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
-position = Vector2(1847, 264)
-
 [node name="Estacion2" type="Node2D" parent="." unique_id=347656830]
 
 [node name="ItemsPantallaDos" type="Node2D" parent="Estacion2" unique_id=1157931577]
 
-[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos" unique_id=1681765797 instance=ExtResource("2_14sds")]
-position = Vector2(1270, 542)
+[node name="salsas" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=727389297]
+
+[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos/salsas" unique_id=1681765797 instance=ExtResource("2_14sds")]
+position = Vector2(1270, 497)
 item_to_spawn = ExtResource("5_3hgyu")
 
-[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos" unique_id=1900992696 instance=ExtResource("2_14sds")]
-position = Vector2(1999, 547)
+[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos/salsas" unique_id=1900992696 instance=ExtResource("2_14sds")]
+position = Vector2(1999, 502)
 item_to_spawn = ExtResource("4_m8cnu")
+
+[node name="Counters" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=1466729372]
+unique_name_in_owner = true
+
+[node name="Guarda_objetos3" parent="Estacion2/ItemsPantallaDos/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
+position = Vector2(1476, 266)
+
+[node name="Guarda_objetos4" parent="Estacion2/ItemsPantallaDos/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
+position = Vector2(1895, 264)
+
+[node name="Toppings" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=424987789]
+
+[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=1131100626 instance=ExtResource("2_14sds")]
+position = Vector2(1270, 103)
+item_to_spawn = ExtResource("19_84ufs")
+
+[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=351036151 instance=ExtResource("2_14sds")]
+position = Vector2(1399, 103)
+item_to_spawn = ExtResource("20_x1dsp")
+
+[node name="ItemSpawner3" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=224362303 instance=ExtResource("2_14sds")]
+position = Vector2(1529, 103)
+item_to_spawn = ExtResource("21_vhtwk")
+
+[node name="ItemSpawner4" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=1612673092 instance=ExtResource("2_14sds")]
+position = Vector2(1665, 103)
+item_to_spawn = ExtResource("22_xano8")
+
+[node name="ItemSpawner5" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=964519219 instance=ExtResource("2_14sds")]
+position = Vector2(1801, 103)
+item_to_spawn = ExtResource("23_todrt")
+
+[node name="ItemSpawner6" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=169958800 instance=ExtResource("2_14sds")]
+position = Vector2(1927, 103)
+item_to_spawn = ExtResource("24_12c6b")
+
+[node name="Estacion 3" type="Node2D" parent="." unique_id=1173739083]
+
+[node name="Basura" parent="Estacion 3" unique_id=1166065893 instance=ExtResource("4_hvm2o")]
+position = Vector2(2454, 296)
+
+[node name="BebidaSpawner" parent="Estacion 3" unique_id=21786761 instance=ExtResource("25_x1dsp")]
+position = Vector2(2906, 247)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2099921199]
+
+[node name="Est1" type="Button" parent="CanvasLayer" unique_id=1496833201]
+offset_left = 284.0
+offset_top = 566.0
+offset_right = 422.0
+offset_bottom = 627.0
+text = "Estacion 1"
+
+[node name="Est2" type="Button" parent="CanvasLayer" unique_id=1991317480]
+offset_left = 558.0
+offset_top = 566.0
+offset_right = 696.0
+offset_bottom = 627.0
+text = "Estacion 2"
+
+[node name="Est3" type="Button" parent="CanvasLayer" unique_id=1067223243]
+offset_left = 805.0
+offset_top = 566.0
+offset_right = 943.0
+offset_bottom = 627.0
+text = "Estacion 3"
+
+[connection signal="pressed" from="CanvasLayer/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]

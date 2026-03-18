@@ -6,6 +6,7 @@
 size = Vector2(36, 36)
 
 [node name="Toppings_scene" type="Node2D" unique_id=666755212 groups=["items dropeables"]]
+z_index = 3
 script = ExtResource("1_7ipdg")
 
 [node name="colorrect" type="ColorRect" parent="." unique_id=1118187874]

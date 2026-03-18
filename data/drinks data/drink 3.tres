@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="drink" format=3 uid="uid://bmd7grgu7x3ak"]
+
+[ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_nwfal"]
+[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_7fmdi"]
+
+[resource]
+script = ExtResource("1_nwfal")
+name = "Horchata"
+colordrink = Color(0.4383134, 0.4364797, 0.4383134, 1)
+texture_progress = ExtResource("2_7fmdi")
+metadata/_custom_type_script = "uid://dpik8c0i45d6m"

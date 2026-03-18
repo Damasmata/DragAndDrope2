@@ -90,8 +90,8 @@ Cada cosa con su lugar. La freidora, los utensilios, los ingredientes…
 todo parece formar parte de una rutina perfectamente organizada.
 Me muestra cada rincón, explicando con paciencia, como si el lugar fuera completamente suyo.
 Mientras recorremos el lugar, una puerta al fondo se abre lentamente.
-desconocido: AHHHHHHH, YA ESAN AQUI
-Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar \
+desconocido: AHHHHHHH, YA ESTAN AQUI
+Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar
 “EL PATRÓN”
 Viste sencillamente, me observa de pies a cabeza, aunque no de una forma hostil.
 if {sucio} == true:
@@ -109,7 +109,6 @@ Bienvenido. Espero mucho de ti, así que no me decepciones.
 Despues del comentario, veo que cynthia suelta una pequeña risa y me
 No le hagas caso, siempre dice eso el primer día.
 El hombre solo se encoge de hombros antes de volver a lo suyo.
-<Empty Text Event>
 Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir.
 "character 2": Oye...
 Igual si se te fue algo no te apures, yo te voy guiando por hoy
