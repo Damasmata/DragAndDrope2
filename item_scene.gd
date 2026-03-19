@@ -193,10 +193,16 @@ func _on_button_stopper_mouse_exited() -> void:
 
 func _on_to_counter_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
-		var counter = DishManager.counters_in_level.pop_front()
-		get_parent().global_position = counter.global_position
-		DishManager.dish_on_second_screen = false
-		en_guardaobjetos=true
+		var _counter:Node2D
+		for counter in DishManager.counters_in_level:
+			if !counter.ocupado:
+				_counter = counter
+				get_parent().reparent(_counter)
+				get_parent().global_position = counter.global_position
+				DishManager.dish_on_second_screen = false
+				en_guardaobjetos=true
+				counter.ocupado = true
+				break
 	show_container()
 
 func _on_to_erase_pressed() -> void:
@@ -218,6 +224,9 @@ func _on_to_back_pressed() -> void:
 		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
 		DishManager.dish_on_second_screen = true
 		en_guardaobjetos=false
+		get_parent().get_parent().ocupado = false
+		get_parent().reparent(get_parent().get_parent().get_parent())
+		DishManager.counters_in_level.append(get_parent())
 	show_container()
 
 func _on_click_der_pressed() -> void:

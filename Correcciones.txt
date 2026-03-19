@@ -101,6 +101,7 @@ COSAS POR REVISAR:
 
 Al guardar un objeto en la segunda estacion, ya no se puede volver a usar, usa el siguiente
 y si se han usado las dos previamente, ya no funciona
+-SOLUCIONADO-
 
 configurar los toppings en el item, para que almacene el nodo del toppin 
 (se me ocurre que un array puede funcionar)

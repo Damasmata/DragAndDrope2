@@ -8,6 +8,3 @@ func _ready() -> void:
 	for counter in counters.get_children():
 		counters_in_level.append(counter)
 	DishManager.counters_in_level = counters_in_level.duplicate()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
