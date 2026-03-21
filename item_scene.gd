@@ -1,5 +1,9 @@
 extends Node2D
 
+@onready var extras: Node2D = %Extras
+@onready var tops: Node2D = %Tops
+
+
 @onready var to_counter: Button = %toCounter
 
 @onready var base_color: ColorRect = %BaseColor #que reaccione el color(0,0)
@@ -21,6 +25,13 @@ signal ocupar
 var _toppings_resource:Resource
 var topping_node: Node2D
 var toppings_nodes: Array[Node2D]
+
+
+#region array
+
+var toppings:Array[Node2D] = []
+
+#endregion
 
 #region posiciones
 
@@ -105,21 +116,35 @@ func consalsa():
 	var child_node=salsa_node
 	if child_node.get_parent():
 		child_node.get_parent().remove_child(child_node)
-	add_child(child_node)
+	extras.add_child(child_node)
 	child_node.global_position=global_position
 	salsa_node.button_stopper.show()
 	with_sauce=true
 
 func contopping():
 	var child_node=topping_node
-	if child_node.get_parent():
-		child_node.get_parent().remove_child(child_node)
-	add_child(child_node)
-	child_node.global_position=global_position
-	child_node.button_stopper.show()
+	if check_topping(child_node):
+		if child_node.get_parent():
+			child_node.get_parent().remove_child(child_node)
+		tops.add_child(child_node)
+		child_node.global_position=global_position
+		child_node.button_stopper.show()
+		toppings.append(child_node)
+	else:
+		return
+	print(toppings)
 	#for topping in topping_node:
 		#toppings_nodes.append(topping)
 		#hacer un for para que almacene los datos de los toppings
+
+func check_topping(new_topping:Node2D) -> bool:
+	if !toppings.is_empty():
+		for topping in toppings:
+			print(topping.item_resource.name, " ", new_topping.item_resource.name)
+			if topping.item_resource.name == new_topping.item_resource.name:
+				return false
+	toppings.append(new_topping)
+	return true
 
 func show_container():
 	if $Menu.visible:
@@ -153,26 +178,33 @@ func _on_button_mouse_exited() -> void: #escalar si no esta el mouse
 
 #endregion
 
+
+
 #region extras y salsas
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var _extra_node=area.get_parent()
 	if _extra_node.is_in_group("salsa") and !salsa_node and !with_sauce:
-		print("FUNCIONA AL ENTRAR")
+		#print("FUNCIONA AL ENTRAR")
 		_extra_node.can_be_dropped = true
 		_extra_node.new_pos = self.global_position
 		_extra_node.connect("droppedsauce",consalsa)
 		salsa_node=_extra_node
 	if _extra_node.is_in_group("items dropeables") and salsa_node and !en_guardaobjetos:
-		_extra_node.can_be_dropped = true
-		_extra_node.new_pos = self.global_position
-		_extra_node.connect("droppedtoping",contopping)
 		topping_node=_extra_node
+		_extra_node.can_be_dropped = true
+		_extra_node.connect("droppedtoping",contopping)
+
+		
+		
+		#if toppings.has(topping_node):
+			#toppings.erase(topping_node)
+		
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	var _extra_node=area.get_parent()
 	if _extra_node.is_in_group("salsa") and salsa_node and !with_sauce:
-		print("FUNCIONA AL SALIR")
+		#print("FUNCIONA AL SALIR")
 		_extra_node.can_be_dropped = false
 		_extra_node.disconnect("droppedsauce",consalsa)
 		_salsa_resource=null

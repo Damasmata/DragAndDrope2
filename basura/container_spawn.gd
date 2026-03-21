@@ -15,7 +15,7 @@ func spawn_container():
 		new_container.set_info(duplicate_res)
 
 func _on_spawn_pressed() -> void:
-	print("CLICK")
+	#print("CLICK")
 	if container_in_spawner:
 		return
 	else:

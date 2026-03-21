@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://chpe5fim08ihd"]
 
 [ext_resource type="Script" uid="uid://dhwa13mkgrrw5" path="res://item_scene.gd" id="1_a127h"]
-[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_p1nqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
 size = Vector2(77, 77)
@@ -45,23 +44,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Extras" type="Node2D" parent="." unique_id=929427142]
-visible = false
+unique_name_in_owner = true
 
-[node name="Extra1" type="Sprite2D" parent="Extras" unique_id=1035395557]
-self_modulate = Color(0.6091666, 1, 0.32999998, 1)
-rotation = 0.116937056
-texture = ExtResource("2_p1nqj")
-
-[node name="Extra2" type="Sprite2D" parent="Extras" unique_id=569937883]
-self_modulate = Color(1, 0.17000002, 0.17000002, 1)
-rotation = 0.74700093
-texture = ExtResource("2_p1nqj")
-
-[node name="Extra3" type="Sprite2D" parent="Extras" unique_id=1008421227]
-
-[node name="Extra4" type="Sprite2D" parent="Extras" unique_id=326664719]
-
-[node name="Extra5" type="Sprite2D" parent="Extras" unique_id=1259782660]
+[node name="Tops" type="Node2D" parent="." unique_id=941940472]
+unique_name_in_owner = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1013802270]
 
@@ -73,14 +59,16 @@ debug_color = Color(3.85046e-06, 0.55265814, 0.20658872, 0.41960785)
 [node name="ClickDer" type="Button" parent="." unique_id=380927829]
 unique_name_in_owner = true
 visible = false
-offset_left = -45.0
-offset_top = -46.0
-offset_right = 45.0
-offset_bottom = 44.0
+modulate = Color(0, 0.7666669, 1, 1)
+z_index = 20
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 button_mask = 2
-flat = true
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = 8

@@ -52,7 +52,7 @@ func _on_area_container_area_entered(area: Area2D) -> void:
 	var _item_node = area.get_parent()
 	if _item_node.is_in_group("item") and !ocupado:
 		_item_resource = _item_node.item_resource
-		print(_item_resource.cooked_time, " ", _item_resource.cooking_time)
+		#print(_item_resource.cooked_time, " ", _item_resource.cooking_time)
 		if _item_resource.cooked_time < _item_resource.cooking_time:
 			_item_node.connect("duplicar",puede_duplicar)
 			
@@ -62,7 +62,7 @@ func _on_area_container_area_entered(area: Area2D) -> void:
 
 func _on_area_container_area_exited(area: Area2D) -> void:
 	var _item_node = area.get_parent()
-	print(_item_node.name)
+	#print(_item_node.name)
 	#print(_item_node.item_resource)
 	#print(_item_resource)
 	if _item_node.is_in_group("item"):

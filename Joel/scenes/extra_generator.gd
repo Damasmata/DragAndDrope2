@@ -17,5 +17,5 @@ func create_extras(extra:Resource):
 	var new_extra_scene = extra_scene.instantiate()
 	add_child(new_extra_scene)
 	new_extra_scene.set_info(extra)
-	print(extra.name)
+	#print(extra.name)
 		
