@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var extras: Node2D = %Extras
 @onready var tops: Node2D = %Tops
+@onready var bebida: Node2D = %Bebida
 
 
 @onready var to_counter: Button = %toCounter
@@ -24,8 +25,9 @@ signal ocupar
 
 var _toppings_resource:Resource
 var topping_node: Node2D
-var toppings_nodes: Array[Node2D]
 
+var _drink_resource: Resource
+var drink_node: Node2D
 
 #region array
 
@@ -53,13 +55,18 @@ var en_guardaobjetos:bool
 
 var with_sauce:bool = false
 
+var with_drink:bool = false
+
 var en_tercera:bool = false
+
+var en_segunda:bool = false
 
 #endregion
 
 func _ready() -> void:
 	$Menu.hide()
-
+	%DrinkPlace.hide()
+	
 
 #region setting the object
 
@@ -90,15 +97,16 @@ func _process(delta: float) -> void:
 	else:
 		to_back.disabled=false
 	if en_guardaobjetos:
-		to_counter.disabled=true
+		#to_counter.disabled=true
 		to_continue.disabled=true
 	else:
-		to_counter.disabled=false
-		if DishManager.dish_on_third_screen:
+		#to_counter.disabled=false
+		if DishManager.dish_on_third_screen or !with_sauce:
 			to_continue.disabled=true
 		else:
 			to_continue.disabled=false
-
+	if en_tercera:
+		%DrinkPlace.show()
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
 	base_color.color = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
@@ -129,13 +137,17 @@ func contopping():
 		tops.add_child(child_node)
 		child_node.global_position=global_position
 		child_node.button_stopper.show()
-		toppings.append(child_node)
 	else:
 		return
 	print(toppings)
-	#for topping in topping_node:
-		#toppings_nodes.append(topping)
-		#hacer un for para que almacene los datos de los toppings
+
+func conbebida():
+	var child_node=drink_node
+	if child_node.get_parent():
+		child_node.get_parent().remove_child(child_node)
+	bebida.add_child(child_node)
+	child_node.global_position=%DrinkPlace.global_position
+	with_drink=true
 
 func check_topping(new_topping:Node2D) -> bool:
 	if !toppings.is_empty():
@@ -178,42 +190,58 @@ func _on_button_mouse_exited() -> void: #escalar si no esta el mouse
 
 #endregion
 
+#region extras, salsas y bebidasd
 
-
-#region extras y salsas
-
+#salsas y toppings, primer area
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var _extra_node=area.get_parent()
-	if _extra_node.is_in_group("salsa") and !salsa_node and !with_sauce:
-		#print("FUNCIONA AL ENTRAR")
+	if _extra_node.is_in_group("salsa") and !salsa_node and !with_sauce and !en_guardaobjetos:
 		_extra_node.can_be_dropped = true
-		_extra_node.new_pos = self.global_position
 		_extra_node.connect("droppedsauce",consalsa)
 		salsa_node=_extra_node
 	if _extra_node.is_in_group("items dropeables") and salsa_node and !en_guardaobjetos:
 		topping_node=_extra_node
 		_extra_node.can_be_dropped = true
 		_extra_node.connect("droppedtoping",contopping)
-
+		
 		
 		
 		#if toppings.has(topping_node):
 			#toppings.erase(topping_node)
-		
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	var _extra_node=area.get_parent()
 	if _extra_node.is_in_group("salsa") and salsa_node and !with_sauce:
-		#print("FUNCIONA AL SALIR")
 		_extra_node.can_be_dropped = false
 		_extra_node.disconnect("droppedsauce",consalsa)
 		_salsa_resource=null
 		salsa_node=null
 	if _extra_node.is_in_group("items dropeables") and salsa_node and !en_guardaobjetos:
 		_extra_node.can_be_dropped = false
-		_extra_node.disconnect("droppedtoping",contopping)
+		if _extra_node.is_connected("droppedtoping",contopping):
+			_extra_node.disconnect("droppedtoping",contopping)
 		_toppings_resource=null
 		topping_node=null
+
+
+#la bebida, segunda area
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	var drink_in_area=area.get_parent()
+	if drink_in_area.is_in_group("Bebida") and !with_drink:
+		print("ENTRA LA BEBIDA")
+		drink_in_area.can_be_dropped = true
+		drink_in_area.connect("placed",conbebida)
+		drink_node=drink_in_area
+
+func _on_area_2d_2_area_exited(area: Area2D) -> void:
+	var drink_in_area=area.get_parent()
+	if drink_in_area.is_in_group("Bebida") and !with_drink:
+		print("SALE LA BEBIDA")
+		drink_in_area.can_be_dropped = false
+		drink_in_area.disconnect("placed",conbebida)
+		with_drink=false
+		_drink_resource=null
+		drink_node=null
 
 #endregion
 
@@ -223,7 +251,11 @@ func _on_button_stopper_mouse_entered() -> void:
 func _on_button_stopper_mouse_exited() -> void:
 	mouse_in = false
 
+#region panel clck derecho 
+
 func _on_to_counter_pressed() -> void:
+
+	
 	if get_parent().is_in_group("servidores"):
 		var _counter:Node2D
 		for counter in DishManager.counters_in_level:
@@ -246,8 +278,10 @@ func _on_to_erase_pressed() -> void:
 func _on_to_continue_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
 		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
+		get_parent().ocupado = true
 		DishManager.dish_on_second_screen = false
 		DishManager.dish_on_third_screen = true
+		en_segunda=false
 		en_tercera=true
 	show_container()
 
@@ -262,5 +296,8 @@ func _on_to_back_pressed() -> void:
 	show_container()
 
 func _on_click_der_pressed() -> void:
-	if salsa_node and !en_tercera:
+	to_counter.disabled = !DishManager.empty_counters()
+	if en_segunda and !en_tercera:
 		show_container()
+
+#endregion

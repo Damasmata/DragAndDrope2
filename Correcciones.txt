@@ -105,11 +105,55 @@ y si se han usado las dos previamente, ya no funciona
 
 configurar los toppings en el item, para que almacene el nodo del toppin 
 (se me ocurre que un array puede funcionar)
+-SOLUCIONADO-
 
 el boton para mostrar el panel del script, tiene menos espacio si tiene un objeto encima
 hay que ponerlo hasta delante de todos lo que tenga encima
+-SOLUCIONADO-
 
 Encontrar una forma para que los botones de bebidas_spawner funcionen para detener y servir la bebida
+-SOLUCIONADO-
 
 Tambien para que al acabar de llenarse, el panel pueda mostrar la opcion de llenarse de nuevo
 si es que ya se sirvio la bebida
+-SOLUCIONADO-
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cambios hechos:
+
+dish_manager:
+-añadido un booleando para que detecte si tiene una bebida o no=drink_on_screen
+
+item_scene scene:
+-se añadió un area y color rect para poder colocar la bebida
+
+item_scene script:
+-se configuró para detectar la escene de bebidas
+-solucionado los errores que tenia antes
+
+bebida_spawner script:
+-configurado para aparecer y desaparecer en base si hay bebida y si ya se lleno
+-añadidas las caracteristicas antes pedidas
+
+bebida script:
+-añadida una señal para cuando es creada en el 
+-configurada con el stop y full para que se pueda detener, continuar y ya estar lista 
+
+freidora script:
+-tras poner la otra area del item scene, habia un error en los areas, pero ya quedo solucionado
+
+basura script:
+- al destruir la bebida pone la variable drink_on_screen en falso
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR:
+
+se pueden sobre poner los items en el counter incluso cuando ya estan ocupados
+
+acomodar la posicion de la bebida
+
+desarrollar un panel para el item para mandar y destruir
+
+si se destruye la bebida, no se puede volver a poner la bebida (culpa del booleano que tiene)

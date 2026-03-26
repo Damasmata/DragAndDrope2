@@ -10,6 +10,8 @@ func _process(delta: float) -> void:
 		destruir()
 
 func destruir():
+	if objeto.is_in_group("Bebida"):
+		DishManager.drink_on_screen=false
 	objeto.queue_free()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

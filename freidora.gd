@@ -36,21 +36,23 @@ func _friendo(tiempo:float):
 		print("YA SE QUEMO")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	var _item_node = area.get_parent()
-	if _item_node.is_in_group("item") and !ocupado:
-		_item_resource = _item_node.item_resource
-		_item_node.connect("freir",puede_freir)
-		_item_node.can_be_dropped = true
-		_item_node.new_pos = self.global_position
-		item_node = _item_node
+	if area.get_parent().is_in_group("item"):
+		var _item_node = area.get_parent()
+		if _item_node.is_in_group("item") and !ocupado:
+			_item_resource = _item_node.item_resource
+			_item_node.connect("freir",puede_freir)
+			_item_node.can_be_dropped = true
+			_item_node.new_pos = self.global_position
+			item_node = _item_node
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	var _item_node = area.get_parent()
-	if _item_node.item_resource == _item_resource:
-		_item_node.update_resource(_item_resource)
-		_item_node.can_be_dropped = false
-		friendo = false
-		_item_resource = null
-		_item_node.disconnect("freir",puede_freir)
-		item_node = null
-		ocupado = false
+	if area.get_parent().is_in_group("item"):
+		var _item_node = area.get_parent()
+		if _item_node.item_resource == _item_resource:
+			_item_node.update_resource(_item_resource)
+			_item_node.can_be_dropped = false
+			friendo = false
+			_item_resource = null
+			_item_node.disconnect("freir",puede_freir)
+			item_node = null
+			ocupado = false

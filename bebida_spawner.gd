@@ -21,14 +21,23 @@ var selected_size:bool=false
 var drink_in_spawn:bool
 
 
+
+
 func _process(delta: float) -> void:
-	if !selected_type and !drink_in_spawn:
-		$PanelTipo.show()
-	elif selected_type and !selected_size:
-		$PanelSize.show()
-		$PanelTipo.hide()
+	if !DishManager.drink_on_screen:
+		if !selected_type:
+			$PanelReady.hide()
+			$PanelTipo.show()
+		elif selected_type and !selected_size:
+			$PanelTipo.hide()
+			$PanelSize.show()
 	else:
-		$PanelReady.show()
+		$PanelSize.hide()
+		if drink_in_spawn:
+			if created_drink.full:
+				$PanelReady.hide()
+			else:
+				$PanelReady.show()
 
 func spawn_drink():
 	var _res_drink=drink_type.duplicate()
@@ -39,6 +48,11 @@ func spawn_drink():
 	new_drink.initialpos = new_drink.global_position
 	new_drink.new_pos = new_drink.initialpos
 	new_drink.set_info(_res_drink,_time_drink)
+
+func restart():
+	if DishManager.drink_on_screen:
+		selected_type=false
+		selected_size=false
 
 #region botones panelTipo
 
@@ -90,13 +104,13 @@ func _on_size_b_pressed() -> void:
 #region botones panelReady
 
 func _on_stop_pressed() -> void: #aqui detiene el llenado
-	pass
+	created_drink.stop=true
 
 func _on_continue_pressed() -> void: #si esta detenido, al presionar sigue llenando
-	pass # Replace with function body.
+	created_drink.stop=false
 
 func _on_ready_pressed() -> void: #se deja de llenar y se puede mover la bebida
-	pass # Replace with function body.
+	created_drink.full=true
 
 #endregion
 
@@ -104,13 +118,16 @@ func _on_ready_pressed() -> void: #se deja de llenar y se puede mover la bebida
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var drink_in_area=area.get_parent()
-	if drink_in_area.get_parent().is_in_group("Bebida"):
+	if drink_in_area.is_in_group("Bebida"):
 		drink_in_spawn=true
+		drink_in_area.connect("filled",restart)
 		created_drink=drink_in_area
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.get_parent().is_in_group("Bebida"):
+	var drink_in_area=area.get_parent()
+	if drink_in_area.is_in_group("Bebida"):
 		drink_in_spawn=false
+		drink_in_area.disconnect("filled",restart)
 		created_drink=null
 
 #endregion

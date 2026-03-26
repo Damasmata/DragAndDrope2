@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
 size = Vector2(77, 77)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1nqj"]
+size = Vector2(83, 82)
+
 [node name="ItemScene" type="Node2D" unique_id=1485117081 groups=["item"]]
 z_index = 1
 script = ExtResource("1_a127h")
@@ -49,6 +52,10 @@ unique_name_in_owner = true
 [node name="Tops" type="Node2D" parent="." unique_id=941940472]
 unique_name_in_owner = true
 
+[node name="Bebida" type="Node2D" parent="." unique_id=1326543815]
+unique_name_in_owner = true
+position = Vector2(0, 1)
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1013802270]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254869240]
@@ -68,7 +75,6 @@ offset_bottom = 50.0
 button_mask = 2
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = 8
@@ -106,6 +112,28 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Poner en medio"
 
+[node name="DrinkPlace" type="ColorRect" parent="." unique_id=1420430409]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = -45.0
+offset_right = 234.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(45, 45)
+color = Color(0.2, 1, 1, 1)
+
+[node name="Area2D2" type="Area2D" parent="DrinkPlace" unique_id=853935888]
+position = Vector2(45, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkPlace/Area2D2" unique_id=502244457]
+shape = SubResource("RectangleShape2D_p1nqj")
+
 [connection signal="button_down" from="BaseColor/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="BaseColor/Button" to="." method="_on_button_button_up"]
 [connection signal="mouse_entered" from="BaseColor/Button" to="." method="_on_button_mouse_entered"]
@@ -119,3 +147,5 @@ text = "Poner en medio"
 [connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]
+[connection signal="area_entered" from="DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]

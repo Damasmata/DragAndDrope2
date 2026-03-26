@@ -38,6 +38,7 @@ func segunda_pantalla(item_to_duplicate:Resource):
 	add_child(child_node)
 	global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
 	child_node.global_position = global_position
+	child_node.en_segunda=true
 	
 	#Codigo para duplicar el obj y mandarlo a la segunda pantalla
 	
@@ -54,6 +55,7 @@ func _on_area_container_area_entered(area: Area2D) -> void:
 		_item_resource = _item_node.item_resource
 		#print(_item_resource.cooked_time, " ", _item_resource.cooking_time)
 		if _item_resource.cooked_time < _item_resource.cooking_time:
+			
 			_item_node.connect("duplicar",puede_duplicar)
 			
 			_item_node.can_be_dropped = true

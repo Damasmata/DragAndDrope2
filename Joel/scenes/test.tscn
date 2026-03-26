@@ -54,7 +54,6 @@ position = Vector2(987, 317)
 
 [node name="Containers1" type="Node2D" parent="Estacion1" unique_id=572234013]
 unique_name_in_owner = true
-visible = false
 position = Vector2(34, -189)
 
 [node name="ContainerGenerator" parent="Estacion1/Containers1" unique_id=1167277551 instance=ExtResource("1_80ykp")]
