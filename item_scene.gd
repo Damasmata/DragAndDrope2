@@ -92,21 +92,7 @@ func _process(delta: float) -> void:
 		%ClickDer.show()
 	#if duplicar:
 		#pass
-	if DishManager.dish_on_second_screen:
-		to_back.disabled=true
-	else:
-		to_back.disabled=false
-	if en_guardaobjetos:
-		#to_counter.disabled=true
-		to_continue.disabled=true
-	else:
-		#to_counter.disabled=false
-		if DishManager.dish_on_third_screen or !with_sauce:
-			to_continue.disabled=true
-		else:
-			to_continue.disabled=false
-	if en_tercera:
-		%DrinkPlace.show()
+
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
 	base_color.color = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
@@ -254,8 +240,6 @@ func _on_button_stopper_mouse_exited() -> void:
 #region panel clck derecho 
 
 func _on_to_counter_pressed() -> void:
-
-	
 	if get_parent().is_in_group("servidores"):
 		var _counter:Node2D
 		for counter in DishManager.counters_in_level:
@@ -297,6 +281,23 @@ func _on_to_back_pressed() -> void:
 
 func _on_click_der_pressed() -> void:
 	to_counter.disabled = !DishManager.empty_counters()
+	
+	if DishManager.dish_on_second_screen:
+		to_back.disabled=true
+	else:
+		to_back.disabled=false
+	if en_guardaobjetos:
+		#to_counter.disabled=true
+		to_continue.disabled=true
+	else:
+		#to_counter.disabled=false
+		if DishManager.dish_on_third_screen or !with_sauce:
+			to_continue.disabled=true
+		else:
+			to_continue.disabled=false
+	if en_tercera:
+		%DrinkPlace.show()
+	
 	if en_segunda and !en_tercera:
 		show_container()
 

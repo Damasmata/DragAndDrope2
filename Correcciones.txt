@@ -131,6 +131,7 @@ item_scene scene:
 item_scene script:
 -se configuró para detectar la escene de bebidas
 -solucionado los errores que tenia antes
+-la logica para el panel click der paso a la funcion al presionar el boton clickder
 
 bebida_spawner script:
 -configurado para aparecer y desaparecer en base si hay bebida y si ya se lleno
@@ -151,9 +152,11 @@ basura script:
 COSAS POR REVISAR:
 
 se pueden sobre poner los items en el counter incluso cuando ya estan ocupados
+-SOLUCIONADO con otro problema-
+al poner el objeto en el counter, el boton de guardar no se desactiva
 
-acomodar la posicion de la bebida
+acomodar la posicion de la bebida al area de donde se entrega
 
-desarrollar un panel para el item para mandar y destruir
+desarrollar un panel para el item para destruir
 
 si se destruye la bebida, no se puede volver a poner la bebida (culpa del booleano que tiene)
