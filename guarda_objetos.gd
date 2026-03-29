@@ -28,3 +28,13 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 			_item_node.disconnect("ocupar",puede_ocuparse)
 			item_node = null
 			ocupado = false
+
+
+func _on_child_exiting_tree(node: Node) -> void:
+	if node.is_in_group("servidores"):
+		DishManager._counters_in_level.append(self)
+
+
+func _on_child_entered_tree(node: Node) -> void:
+	if node.is_in_group("servidores"):
+		DishManager._counters_in_level.erase(self)

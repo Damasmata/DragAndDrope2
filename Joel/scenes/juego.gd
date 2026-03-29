@@ -8,3 +8,4 @@ func _ready() -> void:
 	for counter in counters.get_children():
 		counters_in_level.append(counter)
 	DishManager.counters_in_level = counters_in_level.duplicate()
+	DishManager._counters_in_level = counters_in_level.duplicate()

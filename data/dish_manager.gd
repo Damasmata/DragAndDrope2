@@ -6,11 +6,10 @@ var dish_on_third_screen:bool
 var drink_on_screen:bool
 
 var counters_in_level:Array[Node2D] = []
+var _counters_in_level:Array[Node2D] = []
 
 
 func empty_counters() -> bool:
-	for counter in counters_in_level:
-		if !counter.ocupado:
+	if _counters_in_level.size() > 0:
 			return true
-			break
 	return false

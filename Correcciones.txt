@@ -154,9 +154,13 @@ COSAS POR REVISAR:
 se pueden sobre poner los items en el counter incluso cuando ya estan ocupados
 -SOLUCIONADO con otro problema-
 al poner el objeto en el counter, el boton de guardar no se desactiva
+-SOLUCIONADO- (Se cambio la logica del objeto, ahora es el mismo guarda objetos que se elimina 
+del array una vez que detecta el entra el platillo y se agrega una vez que el platillo sale)
 
 acomodar la posicion de la bebida al area de donde se entrega
+-SOLUCIONADO-
 
 desarrollar un panel para el item para destruir
 
 si se destruye la bebida, no se puede volver a poner la bebida (culpa del booleano que tiene)
+-SOLUCIONADO-

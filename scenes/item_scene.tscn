@@ -52,10 +52,6 @@ unique_name_in_owner = true
 [node name="Tops" type="Node2D" parent="." unique_id=941940472]
 unique_name_in_owner = true
 
-[node name="Bebida" type="Node2D" parent="." unique_id=1326543815]
-unique_name_in_owner = true
-position = Vector2(0, 1)
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1013802270]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254869240]
@@ -112,26 +108,45 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Poner en medio"
 
-[node name="DrinkPlace" type="ColorRect" parent="." unique_id=1420430409]
-unique_name_in_owner = true
+[node name="Control" type="Control" parent="." unique_id=258173852]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 144.0
+offset_left = 180.0
+offset_right = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="DrinkPlace" type="ColorRect" parent="Control" unique_id=1420430409]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
 offset_top = -45.0
-offset_right = 234.0
+offset_right = 45.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(45, 45)
 color = Color(0.2, 1, 1, 1)
 
-[node name="Area2D2" type="Area2D" parent="DrinkPlace" unique_id=853935888]
+[node name="Bebida" type="Node2D" parent="Control/DrinkPlace" unique_id=1326543815]
+unique_name_in_owner = true
 position = Vector2(45, 45)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkPlace/Area2D2" unique_id=502244457]
+[node name="Area2D2" type="Area2D" parent="Control/DrinkPlace" unique_id=853935888]
+position = Vector2(45, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DrinkPlace/Area2D2" unique_id=502244457]
 shape = SubResource("RectangleShape2D_p1nqj")
 
 [connection signal="button_down" from="BaseColor/Button" to="." method="_on_button_button_down"]
@@ -147,5 +162,5 @@ shape = SubResource("RectangleShape2D_p1nqj")
 [connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]
-[connection signal="area_entered" from="DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
-[connection signal="area_exited" from="DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]
+[connection signal="area_entered" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]
