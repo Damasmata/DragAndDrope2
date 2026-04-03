@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cq6gxcwrkmvh8"]
+
+[ext_resource type="Script" uid="uid://cywpsspmyss0f" path="res://ticket.gd" id="1_krxyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gjy7"]
+size = Vector2(111, 256)
+
+[node name="Ticket" type="Control" unique_id=1126839357 groups=["Ticket"]]
+layout_mode = 3
+anchor_left = -0.053000003
+anchor_right = 0.052
+anchor_bottom = 0.41000003
+offset_left = 0.05600357
+offset_right = 0.09600067
+offset_bottom = 0.3199768
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(61, 0)
+script = ExtResource("1_krxyo")
+
+[node name="Orden" type="PanelContainer" parent="." unique_id=2007613094]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.46300003
+offset_right = -1.0
+offset_bottom = 142.842
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Orden" unique_id=20316840]
+layout_mode = 2
+alignment = 2
+
+[node name="Numero" type="Label" parent="Orden/VBoxContainer" unique_id=1999396339]
+layout_mode = 2
+text = "Numero"
+
+[node name="BebidaTamaño" type="HBoxContainer" parent="Orden/VBoxContainer" unique_id=13071609]
+layout_mode = 2
+
+[node name="Bebida" type="Label" parent="Orden/VBoxContainer/BebidaTamaño" unique_id=1369593933]
+layout_mode = 2
+text = "Bebida"
+horizontal_alignment = 1
+
+[node name="Tamaño" type="Label" parent="Orden/VBoxContainer/BebidaTamaño" unique_id=1048663512]
+layout_mode = 2
+text = "Tamaño"
+horizontal_alignment = 1
+
+[node name="Extra5" type="Label" parent="Orden/VBoxContainer" unique_id=1371299435]
+layout_mode = 2
+text = "Extra5"
+horizontal_alignment = 1
+
+[node name="Extra4" type="Label" parent="Orden/VBoxContainer" unique_id=1730861158]
+layout_mode = 2
+text = "Extra4"
+horizontal_alignment = 1
+
+[node name="Extra3" type="Label" parent="Orden/VBoxContainer" unique_id=871031876]
+layout_mode = 2
+text = "Extra3"
+horizontal_alignment = 1
+
+[node name="Extra2" type="Label" parent="Orden/VBoxContainer" unique_id=1993915518]
+layout_mode = 2
+text = "Extra2"
+horizontal_alignment = 1
+
+[node name="Extra1" type="Label" parent="Orden/VBoxContainer" unique_id=1306676508]
+layout_mode = 2
+text = "Extra1"
+horizontal_alignment = 1
+
+[node name="Salsa" type="Label" parent="Orden/VBoxContainer" unique_id=13030546]
+layout_mode = 2
+text = "Salsa"
+horizontal_alignment = 1
+
+[node name="ChilaquilPlato" type="HBoxContainer" parent="Orden/VBoxContainer" unique_id=190169704]
+layout_mode = 2
+
+[node name="Chilaquil" type="Label" parent="Orden/VBoxContainer/ChilaquilPlato" unique_id=44936584]
+layout_mode = 2
+text = "Nombre"
+horizontal_alignment = 1
+
+[node name="Plato" type="Label" parent="Orden/VBoxContainer/ChilaquilPlato" unique_id=1021015214]
+layout_mode = 2
+text = "plato"
+horizontal_alignment = 1
+
+[node name="Coccion" type="Label" parent="Orden/VBoxContainer" unique_id=784922480]
+layout_mode = 2
+text = "coccion"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1058174216]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99600005
+offset_bottom = 0.06399536
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2031365537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1721968102]
+position = Vector2(60.5, 133)
+shape = SubResource("RectangleShape2D_2gjy7")
+
+[node name="ButtonStopper" type="PanelContainer" parent="." unique_id=1750466253]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

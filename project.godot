@@ -36,10 +36,10 @@ DishManager="*uid://no6wyn2blq30"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://Dialogic elements/personajes/character.dch",
-"character 2": "res://Dialogic elements/personajes/character 2.dch",
-"desconocido": "res://Dialogic elements/personajes/desconocido.dch",
-"patron": "res://Dialogic elements/personajes/patron.dch"
+"Cinthia": "res://Dialogic elements/personajes/personajes/Cinthia.dch",
+"Joshua": "res://Dialogic elements/personajes/personajes/Joshua.dch",
+"desconocido": "res://Dialogic elements/personajes/personajes/desconocido.dch",
+"patron": "res://Dialogic elements/personajes/personajes/patron.dch"
 }
 directories/dtl_directory={
 "timeline": "res://Dialogic elements/timelines/timeline.dtl"
@@ -86,6 +86,12 @@ layout/default_style="res://Dialogic elements/estilos/estilo visual 1.tres"
 variables={
 "sucio": false
 }
+translation/enabled=false
+translation/original_locale="es"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [editor_plugins]
 
@@ -105,6 +111,7 @@ dropingZone=""
 item=""
 salsa=""
 Bebida=""
+Ticket=""
 
 [godot_resource_groups]
 

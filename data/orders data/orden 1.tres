@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="orders" format=3 uid="uid://doqqksygtfpvt"]
+
+[ext_resource type="Script" uid="uid://tgjkjqkrnkw7" path="res://data/data_orders.gd" id="1_42v4u"]
+[ext_resource type="Resource" uid="uid://6mdg1xrgeqyc" path="res://data/drinks data/drink 1.tres" id="1_lgq7e"]
+[ext_resource type="Resource" uid="uid://bt71f4d7tde02" path="res://data/items data/chilaquil 1.tres" id="2_v4d4r"]
+[ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://data/extras data/extra 8.tres" id="3_b487v"]
+[ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="4_srlq4"]
+[ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://data/extras data/extra 6.tres" id="5_bss1i"]
+[ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://data/extras data/extra 5.tres" id="6_qalp1"]
+[ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://data/extras data/extra 4.tres" id="7_tt0cl"]
+[ext_resource type="Resource" uid="uid://cwr0mwtl00tpw" path="res://data/extras data/extra 1.tres" id="8_5hbv6"]
+[ext_resource type="Resource" uid="uid://c5gyb2waaabqe" path="res://data/lugares dropeables/servir 1.tres" id="10_0lbfy"]
+
+[resource]
+script = ExtResource("1_42v4u")
+chilaquil = ExtResource("2_v4d4r")
+coccion = 1
+servido = ExtResource("10_0lbfy")
+salsa = ExtResource("8_5hbv6")
+extras = Array[Resource]([ExtResource("3_b487v"), ExtResource("4_srlq4"), ExtResource("5_bss1i"), ExtResource("6_qalp1"), ExtResource("7_tt0cl")])
+bebida = ExtResource("1_lgq7e")
+tamano = 1
+metadata/_custom_type_script = "uid://tgjkjqkrnkw7"

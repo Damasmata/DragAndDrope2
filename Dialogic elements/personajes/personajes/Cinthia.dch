@@ -1,0 +1,49 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "Normal/Default",
+&"description": "Es la Romanceable",
+&"display_name": "Cinthia",
+&"mirror": false,
+&"nicknames": ["Cinthia"],
+&"offset": Vector2(0, 35),
+&"portraits": {
+"Normal/Default": {
+"export_overrides": {
+"image": "\"res://Dialogic elements/personajes/sprites/Cinthia/Cinthia.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 100),
+"scale": 1,
+"scene": ""
+},
+"Normal/Serious": {
+"export_overrides": {
+"image": "\"res://Dialogic elements/personajes/sprites/Cinthia/Cinthia_SERIOUS.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 100),
+"scale": 1,
+"scene": ""
+},
+"Normal/Smile": {
+"export_overrides": {
+"image": "\"res://Dialogic elements/personajes/sprites/Cinthia/Cinthia_SMILE.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 100),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

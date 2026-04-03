@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bcfaueodm3ck7"]
+
+[ext_resource type="Script" uid="uid://bunnsm5wrhxwo" path="res://cliente_spawner.gd" id="1_81bmf"]
+
+[node name="Cliente_spawner" type="Node2D" unique_id=1613963330]
+script = ExtResource("1_81bmf")
+
+[node name="SpawnPos" type="ColorRect" parent="." unique_id=1018704676]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0

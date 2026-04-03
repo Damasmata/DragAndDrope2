@@ -71,6 +71,7 @@ offset_bottom = 50.0
 button_mask = 2
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = 8
@@ -108,6 +109,21 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Poner en medio"
 
+[node name="LastMenu" type="PanelContainer" parent="." unique_id=311666751]
+visible = false
+offset_left = -65.5
+offset_top = -94.0
+offset_right = 65.5
+offset_bottom = -63.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LastMenu" unique_id=1547561503]
+layout_mode = 2
+
+[node name="ToClean" type="Button" parent="LastMenu/VBoxContainer" unique_id=997021661]
+unique_name_in_owner = true
+layout_mode = 2
+text = "destruir todo"
+
 [node name="Control" type="Control" parent="." unique_id=258173852]
 layout_mode = 3
 anchors_preset = 8
@@ -139,15 +155,15 @@ grow_vertical = 2
 pivot_offset = Vector2(45, 45)
 color = Color(0.2, 1, 1, 1)
 
-[node name="Bebida" type="Node2D" parent="Control/DrinkPlace" unique_id=1326543815]
-unique_name_in_owner = true
-position = Vector2(45, 45)
-
 [node name="Area2D2" type="Area2D" parent="Control/DrinkPlace" unique_id=853935888]
 position = Vector2(45, 45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DrinkPlace/Area2D2" unique_id=502244457]
 shape = SubResource("RectangleShape2D_p1nqj")
+
+[node name="Bebida" type="Node2D" parent="." unique_id=1326543815]
+unique_name_in_owner = true
+position = Vector2(180, 0)
 
 [connection signal="button_down" from="BaseColor/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="BaseColor/Button" to="." method="_on_button_button_up"]
@@ -162,5 +178,6 @@ shape = SubResource("RectangleShape2D_p1nqj")
 [connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]
+[connection signal="pressed" from="LastMenu/VBoxContainer/ToClean" to="." method="_on_to_clean_pressed"]
 [connection signal="area_entered" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
 [connection signal="area_exited" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]

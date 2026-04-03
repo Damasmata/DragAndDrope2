@@ -1,4 +1,4 @@
-# Esta es la prueba de la introduccion, checar su funcionamiento, posibilidades, y asi
+# Esta es la prueba de la introduccion, checar su funcionamiento, posibilidades, y asi, TAMBIEN MEJORAR CON MAS COHERENCIA, MAS MOVIMIENTO
 [background arg="#000000ff" fade="0.0"]
 En los primeros rayos de luz que se asoman en el rabillo sobre las colimas de la ciudad
 Un tintineante sonido rompe el silencio de la habitación.
@@ -25,8 +25,10 @@ Cuando mis mejillas se enfriaron por la brisa reaccione de inmediato, como si la
 Hoy es mi primer día de trabajo.
 Me preparo rapidamente, solo tomo mis cosas y salgo de casa.
 [background arg="#989898ff" fade="1.0" wait="true"]
+join Joshua center [mirrored="true"]
 Las calles de Guanajuato todavía guardan esa calma que desaparece más tarde.
 Algunas luces siguen encendidas en las casas, y uno que otro puesto comienza a prepararse para el día.
+update Joshua center [animation="Shake Y" length="2.5" wait="true" repeat_forever="true"]
 Comienzo a caminar hacia el local, no es particularmente largo, pero cada paso que doy se siente vibrante…
 Quizá porque todo es nuevo...
 Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar.
@@ -35,18 +37,20 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	Digo, tengo un poco de experiencia, y por eso me aceptaron en la chamba.
 	Pero a su vez, es mi primera vez.
 	Espero que me digan como es la movida primero eda.
-	pero que tal si la cago?
-	que tal si hago una receta mal?
-	me pueden correr, me pueden madrear, me la van a mentar
-	y si afecto a los demas?
-	pero tengo que hacerlo no?
-	VERGA
-	en lo que reflexiona tropiezo regacho
+	Pero que tal si la cago?
+	Que tal si hago una receta mal?
+	Me pueden correr, me pueden madrear, me la van a mentar.
+	Y si afecto a los demas?
+	Pero tengo que hacerlo no?
+	leave Joshua [animation="Slide Out Down"]
 	set {sucio} = true
-	verrrrrrrtebra, ya ni pedo, a ver si no me encuentro al patron o alguien mas
-	ando en la mierda
-	mejor me pongo trucha, ya dejo de pensar por un rato
-	en lo que me limpio de camino, ya llegue y habra esperar, a ver si me dan chance pa limpiarme
+	[wait time="2.0" skippable="true"]
+	VERGA
+	join Joshua center [mirrored="true"]
+	Ya ni pedo, a ver si no me encuentro al patron o alguien mas
+	Ando en la mierda.
+	Mejor me pongo trucha, ya dejo de pensar por un rato.
+	En lo que me limpio de camino, ya llegue y habra esperar, a ver si me dan chance pa limpiarme.
 - Imaginar cómo será el lugar.
 	Solo supe que habia chamba y la agarre
 	A lo mejor la instalacion esta bien perrona
@@ -56,12 +60,16 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	y en lo que reflexiono y me pongo nervioso, ya llegue y me toca esperar y aumentar los nervios
 - Disfrutar la tranquilidad de la mañana.
 	Voy a tratar de no pensarla mucho, porque tal vez mientras mas la piense peor me va
-	siempre me pasa que si pienso que si va a ir de la fregada
-	va a ir de la fregada
-	asi paso antes, asi llegue aqui
-	asi que pensemos en otra cosa
+	Siempre me pasa que si pienso que si va a ir de la fregada
+	Va a ir de la fregada
+	Asi paso antes, asi llegue aqui
+	Asi que pensemos en otra cosa
 	en lo que pienso en nada, ya llegue y ahora a esperar y me vuelven los nervios
-[background arg="#79765cff" fade="0.0"]
+leave Joshua [animation="Slide To Right"]
+[background arg="#79765cff" fade="1.0" wait="true"]
+[wait time="1.0"]
+join Joshua rightmost [animation="Slide From Right" length="1.0" wait="true"]
+[wait time="2.0" skippable="true"]
 En un callejón no tan estrecho pintado por tendederos de listones, paredes coloridas y un letrero desgastado por el tiempo.
 se encuentra un pequeño local de chilaquiles.
 No es grande ni pequeño, pero destacable por una calidez indescriptible.
@@ -71,20 +79,27 @@ Mis manos estan ligeramente tensas y sudorosas, mis ojos se sienten inquietos y 
 los nervios e impaciencia no me dejan en paz.
 YA QUIERO EMPEZAR, mientras mas rapido acabemos mejor
 El tiempo parece avanzar más lento cuando uno espera algo importante, o algo que sabes que va a cambiar algo.
-Unos minutos después, el sonido de pasos rompe el silencio.
-"character 2": Buenos días
+Unos minutos después, el sonido de pasos rompe el silencio
 A lo lejos veo llegar a una chica , deslumbrante, no por apariencia si no por una energía que contrasta con la tranquilidad de la mañana.
+Cinthia (Normal/Default): Buenos dias.
+join Cinthia (Normal/Default) leftmost [mirrored="true"]
 Su voz es dulce, pero firme, y su presencia llena el ambiente de una extraña sensación de confianza.
 Sin dudarlo, abre el local y veo que me sonrie. es una sonrisa... radiante
-"character 2": Debes ser Omar, ¿verdad? Bienvenido.
+Cinthia: Debes de  Joshua, ¿verdad?
 Asiento torpemente, sintiendo cómo los nervios invaden mi cuerpo .
-character: Si, por supuesto. ehhhh...
-Antes de que pueda decir algo más, Cyntia coloca suavemente su mano sobre mi hombro.
-"character 2": Relájate, todo estará bien. No te preocupes, yo te ayudo
-Su toque es breve, pero cálido a la vez.
-"character 2": te enseñare lo que se, no te preocupes, si?
+Joshua: Si, por supuesto. ehhhh...
+update Cinthia (Normal/Smile) right [move_time="0.5"]
+Cinthia: Bienvenido, supongo que es tu primera vez trabajando de cocinero asi que te ayudare.
+Antes de que pueda decir algo más, Cinthia coloca suavemente su mano sobre mi hombro
+Cinthia: Relájate, todo estará bien. No te preocupes, yo te ayudo
+Su toque es breve, pero cálido a la vez
+te enseñare lo que se, no te preocupes, si?
 Paso al interior del restaurante con cynthia.
+leave --All-- [animation="Slide To Left" length="1.0"]
+[wait time="1.0" skippable="true"]
 [background arg="#deba7bff" fade="0.0"]
+join Cinthia right
+join Joshua rightmost
 comienza a enseñarme el interior del local, colorido y agradable.
 Cada cosa con su lugar. La freidora, los utensilios, los ingredientes…
 todo parece formar parte de una rutina perfectamente organizada.
@@ -92,24 +107,28 @@ Me muestra cada rincón, explicando con paciencia, como si el lugar fuera comple
 Mientras recorremos el lugar, una puerta al fondo se abre lentamente.
 desconocido: AHHHHHHH, YA ESTAN AQUI
 Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar
-“EL PATRÓN”
+EL PATRÓN
 Viste sencillamente, me observa de pies a cabeza, aunque no de una forma hostil.
 if {sucio} == true:
-	patron: Oye cynthia, seguro que trajiste al nuevo o a un vagabundo?
+	patron: Oye cinthia, seguro que trajiste al nuevo o a un vagabundo?
+	Cinthia (Normal/Serious): HEY, NO SEA TAN CULERO
 	EN LA TORRE, si me veo bien jodido
-	Intento explicar que pasó pero cynthia me interrumpe
-	"character 2": Si lo es, me cae, nomas se embarro en el suelo
-	character: Exacto, si, fue eso...
+	Intento explicar que pasó pero cynthia me interrumpe.
+	Cinthia: Si lo es, me cae, nomas se embarro en el suelo
+	Joshua: Exacto, si, fue eso...
 	patron: Ok, igual cambiate de ropa al uniforme, no hay pedo
-	character: Simon, gracias..
+	Joshua: Simon, gracias..
 	Despues de cambiarme, todo esta listo para la chamba
 	patron: Bueno, olvidando eso, vamos a darle que es mole de olla
+update Cinthia (Normal/Default)
 patron: Tu debes de ser el nuevo verdad?
-Bienvenido. Espero mucho de ti, así que no me decepciones.
-Despues del comentario, veo que cynthia suelta una pequeña risa y me
-No le hagas caso, siempre dice eso el primer día.
+Joshua: Em...
+Joshua: Si... soy ese
+patron: Bienvenido. Espero mucho de ti, así que no me decepciones.
+update Cinthia (Normal/Smile)
+Despues del comentario, veo que cinthia suelta una pequeña risa
+Cinthia: No le hagas caso, siempre dice eso el primer día.
 El hombre solo se encoge de hombros antes de volver a lo suyo.
-Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir.
-"character 2": Oye...
-Igual si se te fue algo no te apures, yo te voy guiando por hoy
-"character 2": Hoy no va a haber mucha chamba, cerramos temprano, no te apures.
+Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir
+Cinthia: Igual si se te fue algo no te apures, yo te voy guiando por ahora
+Cinthia: Hoy no va a haber mucha chamba, cerramos temprano, no te apures.

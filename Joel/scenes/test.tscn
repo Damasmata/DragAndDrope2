@@ -25,6 +25,11 @@
 [ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="23_todrt"]
 [ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://data/extras data/extra 8.tres" id="24_12c6b"]
 [ext_resource type="PackedScene" uid="uid://40bffydya6p2" path="res://scenes/bebida_spawner.tscn" id="25_x1dsp"]
+[ext_resource type="PackedScene" uid="uid://bcfaueodm3ck7" path="res://scenes/cliente_spawner.tscn" id="26_vhtwk"]
+[ext_resource type="Resource" uid="uid://c8nn2uwqvmmg7" path="res://data/clientes data/cliente 1.tres" id="27_xano8"]
+[ext_resource type="Texture2D" uid="uid://be17yld8mahx3" path="res://Sprites/Interfaz/botones estacion/estacion de ordenes.png" id="28_8s4ss"]
+[ext_resource type="Texture2D" uid="uid://uo652gqug7sj" path="res://Sprites/Interfaz/botones estacion/boton freidora.png" id="30_2uy15"]
+[ext_resource type="Texture2D" uid="uid://bo4k2v50f2v1b" path="res://Sprites/Interfaz/botones estacion/boton de topping.png" id="32_iru3j"]
 
 [node name="Test" type="Node2D" unique_id=1005686427]
 script = ExtResource("1_jexln")
@@ -36,164 +41,216 @@ position = Vector2(576, 0)
 script = ExtResource("6_hr27k")
 speed = 500.0
 
-[node name="Estacion1" type="Node2D" parent="." unique_id=1079284251]
+[node name="Estacion1" type="Node2D" parent="." unique_id=371439791]
 
-[node name="freidoras" type="Node2D" parent="Estacion1" unique_id=2034035170]
+[node name="Cliente_spawner" parent="Estacion1" unique_id=1613963330 instance=ExtResource("26_vhtwk")]
+position = Vector2(806, 346)
+cliente_resource = ExtResource("27_xano8")
 
-[node name="Freidora" parent="Estacion1/freidoras" unique_id=1990810203 instance=ExtResource("3_r4pg6")]
-position = Vector2(378, 317)
+[node name="Estacion2" type="Node2D" parent="." unique_id=1079284251]
 
-[node name="Freidora2" parent="Estacion1/freidoras" unique_id=719853384 instance=ExtResource("3_r4pg6")]
-position = Vector2(577, 317)
+[node name="freidoras" type="Node2D" parent="Estacion2" unique_id=2034035170]
 
-[node name="Freidora3" parent="Estacion1/freidoras" unique_id=415786442 instance=ExtResource("3_r4pg6")]
-position = Vector2(775, 317)
+[node name="Freidora" parent="Estacion2/freidoras" unique_id=1990810203 instance=ExtResource("3_r4pg6")]
+position = Vector2(1532, 348)
 
-[node name="Freidora4" parent="Estacion1/freidoras" unique_id=946599085 instance=ExtResource("3_r4pg6")]
-position = Vector2(987, 317)
+[node name="Freidora2" parent="Estacion2/freidoras" unique_id=719853384 instance=ExtResource("3_r4pg6")]
+position = Vector2(1731, 348)
 
-[node name="Containers1" type="Node2D" parent="Estacion1" unique_id=572234013]
+[node name="Freidora3" parent="Estacion2/freidoras" unique_id=415786442 instance=ExtResource("3_r4pg6")]
+position = Vector2(1929, 348)
+
+[node name="Freidora4" parent="Estacion2/freidoras" unique_id=946599085 instance=ExtResource("3_r4pg6")]
+position = Vector2(2141, 348)
+
+[node name="Containers1" type="Node2D" parent="Estacion2" unique_id=572234013]
 unique_name_in_owner = true
-position = Vector2(34, -189)
+position = Vector2(1306, -164)
 
-[node name="ContainerGenerator" parent="Estacion1/Containers1" unique_id=1167277551 instance=ExtResource("1_80ykp")]
+[node name="ContainerGenerator" parent="Estacion2/Containers1" unique_id=1167277551 instance=ExtResource("1_80ykp")]
 visible = false
 position = Vector2(136, 105)
 
-[node name="Containers2" type="Node2D" parent="Estacion1" unique_id=261127337]
+[node name="Containers2" type="Node2D" parent="Estacion2" unique_id=261127337]
 
-[node name="ItemSpawner6" parent="Estacion1/Containers2" unique_id=1897312858 instance=ExtResource("2_14sds")]
-position = Vector2(151, 103)
+[node name="ItemSpawner6" parent="Estacion2/Containers2" unique_id=1897312858 instance=ExtResource("2_14sds")]
+position = Vector2(1302, 177)
 item_to_spawn = ExtResource("2_wdn7o")
 
-[node name="ItemSpawner7" parent="Estacion1/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
-position = Vector2(350, 103)
+[node name="ItemSpawner7" parent="Estacion2/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
+position = Vector2(1501, 177)
 item_to_spawn = ExtResource("5_ub0h2")
 
-[node name="ItemSpawner8" parent="Estacion1/Containers2" unique_id=1809689769 instance=ExtResource("2_14sds")]
-position = Vector2(559, 103)
+[node name="ItemSpawner8" parent="Estacion2/Containers2" unique_id=1809689769 instance=ExtResource("2_14sds")]
+position = Vector2(1710, 177)
 item_to_spawn = ExtResource("6_m8cnu")
 
-[node name="ItemSpawner9" parent="Estacion1/Containers2" unique_id=1350545268 instance=ExtResource("2_14sds")]
-position = Vector2(756, 103)
+[node name="ItemSpawner9" parent="Estacion2/Containers2" unique_id=1350545268 instance=ExtResource("2_14sds")]
+position = Vector2(1907, 177)
 item_to_spawn = ExtResource("7_jexln")
 
-[node name="ItemSpawner10" parent="Estacion1/Containers2" unique_id=572210886 instance=ExtResource("2_14sds")]
-position = Vector2(937, 103)
+[node name="ItemSpawner10" parent="Estacion2/Containers2" unique_id=572210886 instance=ExtResource("2_14sds")]
+position = Vector2(2088, 177)
 item_to_spawn = ExtResource("8_e07ha")
 
-[node name="Basura" parent="Estacion1" unique_id=627287397 instance=ExtResource("4_hvm2o")]
-position = Vector2(111, 317)
+[node name="Basura" parent="Estacion2" unique_id=627287397 instance=ExtResource("4_hvm2o")]
+position = Vector2(1265, 394)
 
-[node name="Guardadores" type="Node2D" parent="Estacion1" unique_id=1384179656]
-position = Vector2(111, 497)
+[node name="Guardadores" type="Node2D" parent="Estacion2" unique_id=1384179656]
+position = Vector2(1261, 523)
 
-[node name="Guarda_objetos" parent="Estacion1/Guardadores" unique_id=2119187363 instance=ExtResource("9_t23jg")]
+[node name="Guarda_objetos" parent="Estacion2/Guardadores" unique_id=2119187363 instance=ExtResource("9_t23jg")]
 
-[node name="Guarda_objetos2" parent="Estacion1/Guardadores" unique_id=1838289423 instance=ExtResource("9_t23jg")]
+[node name="Guarda_objetos2" parent="Estacion2/Guardadores" unique_id=1838289423 instance=ExtResource("9_t23jg")]
 position = Vector2(216, 0)
 
-[node name="ItemsPantallaUno" type="Node2D" parent="Estacion1" unique_id=418422926]
+[node name="ItemsPantallaUno" type="Node2D" parent="Estacion2" unique_id=418422926]
 
-[node name="ItemSpawner" parent="Estacion1/ItemsPantallaUno" unique_id=171770150 instance=ExtResource("2_14sds")]
-position = Vector2(548, 499)
+[node name="ItemSpawner" parent="Estacion2/ItemsPantallaUno" unique_id=171770150 instance=ExtResource("2_14sds")]
+position = Vector2(1698, 525)
 
-[node name="ItemSpawner2" parent="Estacion1/ItemsPantallaUno" unique_id=378561328 instance=ExtResource("2_14sds")]
-position = Vector2(670, 499)
+[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaUno" unique_id=378561328 instance=ExtResource("2_14sds")]
+position = Vector2(1820, 525)
 item_to_spawn = ExtResource("6_egwv0")
 
-[node name="ItemSpawner3" parent="Estacion1/ItemsPantallaUno" unique_id=1766254263 instance=ExtResource("2_14sds")]
-position = Vector2(792, 499)
+[node name="ItemSpawner3" parent="Estacion2/ItemsPantallaUno" unique_id=1766254263 instance=ExtResource("2_14sds")]
+position = Vector2(1942, 525)
 item_to_spawn = ExtResource("6_nw7gm")
 
-[node name="ItemSpawner4" parent="Estacion1/ItemsPantallaUno" unique_id=1058998379 instance=ExtResource("2_14sds")]
-position = Vector2(914, 499)
+[node name="ItemSpawner4" parent="Estacion2/ItemsPantallaUno" unique_id=1058998379 instance=ExtResource("2_14sds")]
+position = Vector2(2064, 525)
 item_to_spawn = ExtResource("3_cl3t6")
 
-[node name="ItemSpawner5" parent="Estacion1/ItemsPantallaUno" unique_id=1363502271 instance=ExtResource("2_14sds")]
-position = Vector2(1036, 499)
+[node name="ItemSpawner5" parent="Estacion2/ItemsPantallaUno" unique_id=1363502271 instance=ExtResource("2_14sds")]
+position = Vector2(2186, 525)
 item_to_spawn = ExtResource("8_wdn7o")
 
-[node name="Estacion2" type="Node2D" parent="." unique_id=347656830]
+[node name="Estacion3" type="Node2D" parent="." unique_id=347656830]
 
-[node name="ItemsPantallaDos" type="Node2D" parent="Estacion2" unique_id=1157931577]
+[node name="ItemsPantallaDos" type="Node2D" parent="Estacion3" unique_id=1157931577]
 
-[node name="salsas" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=727389297]
+[node name="salsas" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=727389297]
 
-[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos/salsas" unique_id=1681765797 instance=ExtResource("2_14sds")]
-position = Vector2(1270, 497)
+[node name="ItemSpawner" parent="Estacion3/ItemsPantallaDos/salsas" unique_id=1681765797 instance=ExtResource("2_14sds")]
+position = Vector2(2415, 497)
 item_to_spawn = ExtResource("5_3hgyu")
 
-[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos/salsas" unique_id=1900992696 instance=ExtResource("2_14sds")]
-position = Vector2(1999, 502)
+[node name="ItemSpawner2" parent="Estacion3/ItemsPantallaDos/salsas" unique_id=1900992696 instance=ExtResource("2_14sds")]
+position = Vector2(3333, 502)
 item_to_spawn = ExtResource("4_m8cnu")
 
-[node name="Counters" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=1466729372]
+[node name="Counters" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=1466729372]
 unique_name_in_owner = true
 
-[node name="Guarda_objetos3" parent="Estacion2/ItemsPantallaDos/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
-position = Vector2(1476, 266)
+[node name="Guarda_objetos3" parent="Estacion3/ItemsPantallaDos/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
+position = Vector2(2569, 317)
 
-[node name="Guarda_objetos4" parent="Estacion2/ItemsPantallaDos/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
-position = Vector2(1895, 264)
+[node name="Guarda_objetos4" parent="Estacion3/ItemsPantallaDos/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
+position = Vector2(3180, 327)
 
-[node name="Toppings" type="Node2D" parent="Estacion2/ItemsPantallaDos" unique_id=424987789]
+[node name="Toppings" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=424987789]
 
-[node name="ItemSpawner" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=1131100626 instance=ExtResource("2_14sds")]
-position = Vector2(1270, 103)
+[node name="ItemSpawner" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1131100626 instance=ExtResource("2_14sds")]
+position = Vector2(2415, 194)
 item_to_spawn = ExtResource("19_84ufs")
 
-[node name="ItemSpawner2" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=351036151 instance=ExtResource("2_14sds")]
-position = Vector2(1399, 103)
+[node name="ItemSpawner2" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=351036151 instance=ExtResource("2_14sds")]
+position = Vector2(2569, 194)
 item_to_spawn = ExtResource("20_x1dsp")
 
-[node name="ItemSpawner3" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=224362303 instance=ExtResource("2_14sds")]
-position = Vector2(1529, 103)
+[node name="ItemSpawner3" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=224362303 instance=ExtResource("2_14sds")]
+position = Vector2(2415, 317)
 item_to_spawn = ExtResource("21_vhtwk")
 
-[node name="ItemSpawner4" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=1612673092 instance=ExtResource("2_14sds")]
-position = Vector2(1665, 103)
+[node name="ItemSpawner4" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1612673092 instance=ExtResource("2_14sds")]
+position = Vector2(3333, 323)
 item_to_spawn = ExtResource("22_xano8")
 
-[node name="ItemSpawner5" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=964519219 instance=ExtResource("2_14sds")]
-position = Vector2(1801, 103)
+[node name="ItemSpawner5" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=964519219 instance=ExtResource("2_14sds")]
+position = Vector2(3180, 194)
 item_to_spawn = ExtResource("23_todrt")
 
-[node name="ItemSpawner6" parent="Estacion2/ItemsPantallaDos/Toppings" unique_id=169958800 instance=ExtResource("2_14sds")]
-position = Vector2(1927, 103)
+[node name="ItemSpawner6" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=169958800 instance=ExtResource("2_14sds")]
+position = Vector2(3333, 194)
 item_to_spawn = ExtResource("24_12c6b")
 
-[node name="Estacion 3" type="Node2D" parent="." unique_id=1173739083]
+[node name="Estacion 4" type="Node2D" parent="." unique_id=1173739083]
 
-[node name="Basura" parent="Estacion 3" unique_id=1166065893 instance=ExtResource("4_hvm2o")]
-position = Vector2(2454, 296)
+[node name="Basura" parent="Estacion 4" unique_id=1166065893 instance=ExtResource("4_hvm2o")]
+position = Vector2(3599, 296)
 
-[node name="BebidaSpawner" parent="Estacion 3" unique_id=21786761 instance=ExtResource("25_x1dsp")]
-position = Vector2(2906, 247)
+[node name="BebidaSpawner" parent="Estacion 4" unique_id=21786761 instance=ExtResource("25_x1dsp")]
+position = Vector2(4051, 247)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2099921199]
 
-[node name="Est1" type="Button" parent="CanvasLayer" unique_id=1496833201]
-offset_left = 284.0
-offset_top = 566.0
-offset_right = 422.0
-offset_bottom = 627.0
+[node name="Estacion1" type="Sprite2D" parent="CanvasLayer" unique_id=1247102141]
+position = Vector2(240.76138, 602.50006)
+scale = Vector2(0.2800047, 0.27739757)
+texture = ExtResource("28_8s4ss")
+
+[node name="Est1" type="Button" parent="CanvasLayer/Estacion1" unique_id=1195520967]
+anchors_preset = -1
+anchor_left = -0.112
+anchor_top = 0.284
+anchor_right = 1.054
+anchor_bottom = 0.87700003
+offset_left = -291.93884
+offset_top = -146.01453
+offset_right = -292.2222
+offset_bottom = -146.13368
 text = "Estacion 1"
+flat = true
 
-[node name="Est2" type="Button" parent="CanvasLayer" unique_id=1991317480]
-offset_left = 558.0
-offset_top = 566.0
-offset_right = 696.0
-offset_bottom = 627.0
+[node name="Estacion2" type="Sprite2D" parent="CanvasLayer" unique_id=378777795]
+position = Vector2(484.27832, 605.50006)
+scale = Vector2(0.3060788, 0.2752569)
+texture = ExtResource("30_2uy15")
+
+[node name="Est2" type="Button" parent="CanvasLayer/Estacion2" unique_id=1496833201]
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.25100002
+anchor_right = 0.929
+anchor_bottom = 0.86300004
+offset_left = -292.19598
+offset_top = -146.01862
+offset_right = -292.0039
+offset_bottom = -145.95871
 text = "Estacion 2"
+flat = true
 
-[node name="Est3" type="Button" parent="CanvasLayer" unique_id=1067223243]
-offset_left = 805.0
-offset_top = 566.0
-offset_right = 943.0
-offset_bottom = 627.0
+[node name="Estacion3" type="Sprite2D" parent="CanvasLayer" unique_id=271187828]
+position = Vector2(710.2783, 595.5)
+scale = Vector2(0.31164384, 0.31164384)
+texture = ExtResource("32_iru3j")
+
+[node name="Est3" type="Button" parent="CanvasLayer/Estacion3" unique_id=1991317480]
+anchors_preset = -1
+anchor_left = 0.055000003
+anchor_top = 0.43400002
+anchor_right = 0.934
+anchor_bottom = 0.97300005
+offset_left = -292.03198
+offset_top = -145.98067
+offset_right = -291.9615
+offset_bottom = -146.13797
 text = "Estacion 3"
+flat = true
 
-[connection signal="pressed" from="CanvasLayer/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
-[connection signal="pressed" from="CanvasLayer/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]
+[node name="Est4" type="Button" parent="CanvasLayer" unique_id=1067223243]
+anchors_preset = -1
+anchor_left = 0.82100004
+anchor_top = 0.896
+anchor_right = 0.94100004
+anchor_bottom = 0.99000007
+offset_left = -81.51373
+offset_top = -2.1080322
+offset_right = -64.59375
+offset_bottom = 1.4439697
+text = "Estacion 4"
+
+[connection signal="pressed" from="CanvasLayer/Estacion1/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Estacion2/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Estacion3/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est4" to="camara1/GameCamera" method="_on_est_4_pressed"]

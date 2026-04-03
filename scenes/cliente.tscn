@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dk8x5ndgvqp68"]
+
+[ext_resource type="Script" uid="uid://dj3uni6w0d5jw" path="res://cliente.gd" id="1_hthfg"]
+[ext_resource type="Texture2D" uid="uid://d0a2c0ovf5ywk" path="res://Sprites/Interfaz/Botones orden/boton normal.png" id="2_hthfg"]
+
+[node name="Cliente" type="Node2D" unique_id=897116874]
+script = ExtResource("1_hthfg")
+
+[node name="cliente_sprite" type="Sprite2D" parent="." unique_id=1303367264]
+
+[node name="Button_sprite" type="Sprite2D" parent="." unique_id=1441594304]
+position = Vector2(222, -179)
+texture = ExtResource("2_hthfg")
+
+[node name="Button" type="Button" parent="Button_sprite" unique_id=1864941146]
+anchors_preset = -1
+anchor_left = 0.209
+anchor_top = 0.24300002
+anchor_right = 0.711
+anchor_bottom = 0.54700005
+offset_left = -113.443
+offset_top = -126.479
+offset_right = -113.397
+offset_bottom = -126.39101
+text = "Pedir orden"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button_sprite/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button_sprite/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Button_sprite/Button" to="." method="_on_button_pressed"]

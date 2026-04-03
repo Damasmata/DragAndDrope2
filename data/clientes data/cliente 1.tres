@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="cliente" format=3 uid="uid://c8nn2uwqvmmg7"]
+
+[ext_resource type="Script" uid="uid://c4on5m4kiwepk" path="res://data/data_clientes.gd" id="1_7p8al"]
+[ext_resource type="Resource" uid="uid://doqqksygtfpvt" path="res://data/orders data/orden 1.tres" id="1_t3eam"]
+[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="3_pndlq"]
+
+[resource]
+script = ExtResource("1_7p8al")
+name = "Pepe"
+orden = ExtResource("1_t3eam")
+sprite = ExtResource("3_pndlq")
+metadata/_custom_type_script = "uid://c4on5m4kiwepk"

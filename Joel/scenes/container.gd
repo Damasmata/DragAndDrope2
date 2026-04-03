@@ -36,7 +36,7 @@ func segunda_pantalla(item_to_duplicate:Resource):
 	if child_node.get_parent():
 		child_node.get_parent().remove_child(child_node)
 	add_child(child_node)
-	global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
+	global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
 	child_node.global_position = global_position
 	child_node.en_segunda=true
 	

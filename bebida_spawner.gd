@@ -11,6 +11,7 @@ var drink_to_spawn:Resource
 var bebida_scene: PackedScene=preload("res://Joel/scenes/Bebida.tscn")
 
 var drink_time: float
+var drink_time_order:int
 var drink_type: Resource
 
 var created_drink:Node2D
@@ -19,8 +20,6 @@ var selected_type:bool=false
 var selected_size:bool=false
 
 var drink_in_spawn:bool
-
-
 
 
 func _process(delta: float) -> void:
@@ -47,7 +46,7 @@ func spawn_drink():
 	new_drink.global_position = spawn_pos.global_position + spawn_pos.pivot_offset
 	new_drink.initialpos = new_drink.global_position
 	new_drink.new_pos = new_drink.initialpos
-	new_drink.set_info(_res_drink,_time_drink)
+	new_drink.set_info(_res_drink,_time_drink,drink_time_order)
 
 func restart():
 	if DishManager.drink_on_screen:
@@ -87,16 +86,19 @@ func _on_bebida_6_pressed() -> void:
 func _on_size_s_pressed() -> void:
 	selected_size=true
 	drink_time=timers[0]
+	drink_time_order=0
 	spawn_drink()
 
 func _on_size_m_pressed() -> void:
 	selected_size=true
 	drink_time=timers[1]
+	drink_time_order=1
 	spawn_drink()
 
 func _on_size_b_pressed() -> void:
 	selected_size=true
 	drink_time=timers[2]
+	drink_time_order=2
 	spawn_drink()
 
 #endregion

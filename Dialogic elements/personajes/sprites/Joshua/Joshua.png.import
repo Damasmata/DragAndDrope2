@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsua7g1l4aysb"
-path="res://.godot/imported/place holder personaje 2.png-63d9e7d548edd71318aeab3879f440a1.ctex"
+uid="uid://b7l27tj5vbcad"
+path="res://.godot/imported/Joshua.png-cdf1c9273a71b94822b2c5c8f8d9e7f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogic elements/personajes/place holder personaje 2.png"
-dest_files=["res://.godot/imported/place holder personaje 2.png-63d9e7d548edd71318aeab3879f440a1.ctex"]
+source_file="res://Dialogic elements/personajes/sprites/Joshua/Joshua.png"
+dest_files=["res://.godot/imported/Joshua.png-cdf1c9273a71b94822b2c5c8f8d9e7f7.ctex"]
 
 [params]
 

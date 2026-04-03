@@ -9,3 +9,4 @@ extends  Resource
 
 var fill_time:float
 var act_fill_time:float
+var sizes: Array[int]=[1,2,3]

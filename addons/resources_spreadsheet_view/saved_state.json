@@ -55,6 +55,17 @@
         "visibility": 0.0
       }
     },
+    "res://data/orders data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
     "res://extras data/": {
       "metadata/_custom_type_script": {
         "visibility": 0.0
@@ -97,7 +108,8 @@
     "res://data/items data/",
     "res://data/lugares dropeables/",
     "res://addons/",
-    "res://data/drinks data/"
+    "res://data/drinks data/",
+    "res://data/orders data/"
   ],
   "table_functions": {
     "filter": [

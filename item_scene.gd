@@ -5,7 +5,6 @@ extends Node2D
 @onready var tops: Node2D = %Tops
 @onready var bebida: Node2D = %Bebida
 
-
 @onready var to_counter: Button = %toCounter
 
 @onready var base_color: ColorRect = %BaseColor #que reaccione el color(0,0)
@@ -14,6 +13,8 @@ extends Node2D
 @onready var to_continue: Button = %toContinue
 
 @onready var to_back: Button = %toBack
+
+var nivel_de_coccion:int
 
 var item_resource:Resource #el resource del objeto
 
@@ -67,6 +68,7 @@ var en_segunda:bool = false
 func _ready() -> void:
 	$Menu.hide()
 	drink_place.hide()
+	$LastMenu.hide()
 	
 
 #region setting the object
@@ -91,6 +93,8 @@ func _process(delta: float) -> void:
 		movement() 
 	elif !follow_mouse and mouse_in:
 		%ClickDer.show()
+	if en_tercera:
+		%DrinkPlace.show()
 	#if duplicar:
 		#pass
 
@@ -134,6 +138,7 @@ func conbebida():
 		child_node.get_parent().remove_child(child_node)
 	bebida.add_child(child_node)
 	child_node.global_position = bebida.global_position
+	child_node.button_stopper.show()
 	with_drink=true
 
 func check_topping(new_topping:Node2D) -> bool:
@@ -146,7 +151,12 @@ func check_topping(new_topping:Node2D) -> bool:
 	return true
 
 func show_container():
-	$Menu.visible = !$Menu.visible
+	if en_segunda:
+		$Menu.visible = !$Menu.visible
+	if en_tercera:
+		$Menu.visible = false
+		$LastMenu.visible = !$LastMenu.visible
+	
 
 #region button down/up-posiciones
 
@@ -251,38 +261,43 @@ func _on_to_counter_pressed() -> void:
 			en_guardaobjetos=true
 			_counter.ocupado = true
 			DishManager._counters_in_level.erase(_counter)
+			print("EN GUARDAOBJETOS= ",en_guardaobjetos)
+			print("DISH ON SECOND SCREEN= ",DishManager.dish_on_second_screen)
 	show_container()
 
 func _on_to_erase_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
-		_on_to_back_pressed()
+		#_on_to_back_pressed()
+		get_parent().reparent(get_parent().get_parent().get_parent())
 		#DishManager.counters_in_level.erase(get_parent())
+		if !en_guardaobjetos:
+			DishManager.dish_on_second_screen = false
+		else:
+			DishManager.dish_on_second_screen=true
 		get_parent().queue_free()
-		DishManager.dish_on_second_screen = false
+		print("DISH ON SECOND SCREEN= ",DishManager.dish_on_second_screen)
 	show_container()
 
 func _on_to_continue_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
-		get_parent().global_position = Vector2((get_viewport_rect().size.x - 250)+(1152*2),get_viewport_rect().size.y/2)
+		get_parent().global_position = Vector2((get_viewport_rect().size.x - 250)+(1152*3),get_viewport_rect().size.y/2)
 		get_parent().ocupado = true
 		DishManager.dish_on_second_screen = false
 		DishManager.dish_on_third_screen = true
 		en_segunda=false
 		en_tercera=true
-	show_container()
+	$Menu.visible=false
 
 func _on_to_back_pressed() -> void:
 	if get_parent().is_in_group("servidores"):
-		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+1152,get_viewport_rect().size.y/2)
+		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
 		DishManager.dish_on_second_screen = true
 		en_guardaobjetos=false
 		get_parent().reparent(get_parent().get_parent().get_parent())
-		#DishManager._counters_in_level.append(get_parent())
 	show_container()
 
 func _on_click_der_pressed() -> void:
 	to_counter.disabled = !DishManager.empty_counters()
-	
 	if DishManager.dish_on_second_screen:
 		to_back.disabled=true
 	else:
@@ -296,10 +311,13 @@ func _on_click_der_pressed() -> void:
 			to_continue.disabled=true
 		else:
 			to_continue.disabled=false
-	if en_tercera:
-		%DrinkPlace.show()
-	
-	if en_segunda and !en_tercera:
-		show_container()
+	show_container()
+
+func _on_to_clean_pressed() -> void:
+	DishManager.dish_on_third_screen = false
+	if drink_node:
+		DishManager.drink_on_screen = false
+	get_parent().queue_free()
+	print(DishManager.drink_on_screen)
 
 #endregion

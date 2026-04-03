@@ -7,6 +7,9 @@ var item_node:Node2D
 var _item_resource:Resource
 var coccion:int
 
+@onready var progress_bar: ProgressBar = $ProgressBar
+
+
 #func _ready() -> void:
 	#modulate=Color(Color.YELLOW,0.7)
 
@@ -16,6 +19,8 @@ func _process(delta: float) -> void:
 		timer -= delta
 		_item_resource.cooked_time = timer
 		_friendo(timer)
+	if !item_node:
+		progress_bar.value=0
 
 func puede_freir():
 	if !ocupado:
@@ -24,16 +29,18 @@ func puede_freir():
 
 func _friendo(tiempo:float):
 	item_node.color_grade()
+	progress_bar.value=tiempo*10 #cambiar a alguna forma que se adapte a todos los tiempos
 	if _item_resource.cooked_time >= (_item_resource.cooking_time)-(_item_resource.cooking_time/5):
-		print("CRUDO")
+		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[0]
 	elif _item_resource.cooked_time >= (_item_resource.cooking_time)-(_item_resource.cooking_time/5)*2:
-		print("BLANDO")
+		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[1]
 	elif _item_resource.cooked_time >= (_item_resource.cooking_time)-(_item_resource.cooking_time/5)*3:
-		print("DORADO")
+		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[2]
 	elif _item_resource.cooked_time >= (_item_resource.cooking_time)-(_item_resource.cooking_time/5)*4:
-		print("CRUJIENTE")
+		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[3]
 	else:
-		print("YA SE QUEMO")
+		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[4]
+	print(item_node.nivel_de_coccion)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_parent().is_in_group("item"):

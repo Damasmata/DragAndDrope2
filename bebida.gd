@@ -1,6 +1,9 @@
 extends Node2D
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
+@onready var button_stopper: PanelContainer = %ButtonStopper
+
+
 @export var tiempo_total: float
 var tiempo_actual: float = 0
 var full: bool = false
@@ -14,6 +17,8 @@ var follow_mouse:bool #siga el mouse
 var can_be_dropped:bool = false
 var dropped:bool=false
 
+var drink_size:int
+
 var initialpos:Vector2 #la posicion inicial
 var offset:Vector2 #para que el objeto se mueva donde se dio click para agarrlo
 var new_pos:Vector2 #la nueva posicion
@@ -23,6 +28,7 @@ signal placed
 
 func _ready() -> void:
 	DishManager.drink_on_screen=true
+	%Button.hide()
 
 func _process(delta: float) -> void:
 	if !full and !stop:
@@ -44,11 +50,13 @@ func filling():
 		texture_progress_bar.value = texture_progress_bar.max_value
 		full = true
 
-func set_info(resource, time):
+func set_info(resource, time, tipo):
 	drink_resource=resource
 	drink_resource.fill_time=time
 	texture_progress_bar.tint_progress=resource.colordrink
 	texture_progress_bar.texture_progress=resource.texture_progress
+	drink_size=drink_resource.sizes[tipo]
+	#print(drink_size)
 
 func movement(): #moverse
 	if Input.is_action_just_pressed("Click"):

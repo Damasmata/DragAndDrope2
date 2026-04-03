@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxyphwcp4no1g"
-path="res://.godot/imported/place holder personaje 1.png-751d31ed31139074d907894dd98f3471.ctex"
+uid="uid://yaadpikiax3j"
+path="res://.godot/imported/boton freidora presionado.png-c5b122cf920db62d4dafde20f412b1e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogic elements/personajes/place holder personaje 1.png"
-dest_files=["res://.godot/imported/place holder personaje 1.png-751d31ed31139074d907894dd98f3471.ctex"]
+source_file="res://Sprites/Interfaz/botones estacion/boton freidora presionado.png"
+dest_files=["res://.godot/imported/boton freidora presionado.png-c5b122cf920db62d4dafde20f412b1e7.ctex"]
 
 [params]
 

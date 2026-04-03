@@ -161,6 +161,96 @@ acomodar la posicion de la bebida al area de donde se entrega
 -SOLUCIONADO-
 
 desarrollar un panel para el item para destruir
+-SOLUCIONADO
 
 si se destruye la bebida, no se puede volver a poner la bebida (culpa del booleano que tiene)
 -SOLUCIONADO-
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Cambios hechos:
+
+test scene:
+-se fue añadida una 4/primera estacion, para las ordenes, las demas estaciones fueron desplazadas a la derecha
+-se fue añadido un boton para las 4 estaciones
+-añadido un nodo "estacion 1" para que ahi esten los elementos para pedir ordenes
+
+camera script:
+-se fue añadido al array una posicion mas y acomodado las demas posiciones
+-los botones colocan la camara en una nueva posicion
+
+item resource:
+-añadido un array de tipo int que indica el tipo de coccion del item 
+
+item_scene script:
+-Arreglado un error al borrar el item en la segunda escena, ya que permitia poner en medio
+a pesar que ya habia uno en medio, problema con el dishmanager y la funcion del boton
+-configurado para poder borrarse con la bebida en la tercera escena
+-muestra un segundo panel en la tercera escena
+-reacomodado por el cambio de posiciones a las respectitvas estaciones
+
+item_scene scene:
+-Añadido un panel con un boton para borrar en la tercera posicion, incluyendo la bebida
+
+freidora scene:
+-añadido una progress bar
+
+freidora script:
+-configurado para que muestre el proceso de coccion del chilaquil
+
+bebida resource:
+-contiene un array que indica el tamaño del item
+
+bebida scene:
+-añadido un buttonstopper, para dejar de moverse al estar en el item
+
+orders data:
+-contiene valores para crear ordenes, usando principalmente resources e ints
+
+cliente data:
+-contiene name, resource para la orden y sprites para mostrar
+
+cliente scene:
+-contiene un sprite2D
+-contiene un button para crear tickets
+
+cliente script:
+-permite designar un resource de cliente
+-asigna al ticket los elementos para que muestre la informacion
+
+cliente_spawner scene:
+-tiene un color rect para designar la posicion del cliente_scene
+
+cliente_spawner script:
+-configurado para que al inicio cree un cliente
+
+ticket scene:
+-contiene labels (por el momento) para mostrar lo que se pide
+-contiene un button para poder moverlo (CONFIGURAR PARA QUE FUNCIONE LA TIRITA DE ARRIBA)
+-contiene un button stopper para detenerlo cuando sea entregado
+
+ticket script:
+-permite el movimiento en base al mouse
+-configurado para mostrar la orden del cliente en base al resource de la orden
+
+visual novel:
+-añadido visuales de los personajes de cuerpo entero
+-animaciones para que sea mas "fluido"
+-nombres de personajes definidos
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR
+
+-crear una tira o una forma para poner ordenes arriba
+
+-al momento de crear el ticket en el test:
+	no se mueve
+	se mantiene en la primera estacion (no esta asignado al canvasLayer)
+	parte de la informacion no se actualiza (los nombres del item, container, salas, extras y bebida)
+
+-Pendiente por añadir/programar:
+	El entregar el platillo con el ticket
+	Que se pueda generar una fila de clientes
+	Forma de evaluacion de platillo
+	Añadir mas visuales
