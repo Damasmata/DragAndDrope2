@@ -11,6 +11,9 @@ extends Resource #es un recurso
 var cooked_time:float 
 var extras_en_platillo:Array[Resource] = []
 var estado_de_coccion:Array[int]=[1,2,3,4,5]
+var coccion:Array[String]= ["Crudo","Suave","Dorado","Crujiente","Quemado"]
+
+
 
 @export var sprites:Array[Texture2D] = []
 

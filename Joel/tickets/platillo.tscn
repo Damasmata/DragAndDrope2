@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bj3kw37xn3aso"]
+
+[ext_resource type="Script" uid="uid://jj7a0yvaqtho" path="res://Joel/tickets/platillo.gd" id="1_r8mik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8xk8"]
+size = Vector2(60, 60)
+
+[node name="Platillo" type="Node2D" unique_id=1519100996]
+script = ExtResource("1_r8mik")
+
+[node name="Orden" type="Area2D" parent="." unique_id=444613752]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orden" unique_id=118373971]
+shape = SubResource("RectangleShape2D_v8xk8")
+
+[node name="Agregar" type="Button" parent="." unique_id=1995162664]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.5
+offset_top = 42.0
+offset_right = 34.5
+offset_bottom = 73.0
+grow_horizontal = 2
+text = "Agregar"
+
+[connection signal="mouse_entered" from="Orden" to="." method="_on_orden_mouse_entered"]
+[connection signal="mouse_exited" from="Orden" to="." method="_on_orden_mouse_exited"]
+[connection signal="pressed" from="Agregar" to="." method="_on_agregar_pressed"]

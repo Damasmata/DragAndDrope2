@@ -19,7 +19,7 @@ func _on_button_pressed() -> void:
 	var new_item = ticket.instantiate()
 	add_child(new_item)
 	new_item.global_position=Vector2(0,0)
-	new_item.set_info(duplicate_res)
+	#new_item.set_info(duplicate_res)
 	$Button_sprite.hide()
 
 func _on_button_button_down() -> void:
