@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Extras" format=3 uid="uid://cmiq8tpo58y8j"]
+
+[ext_resource type="Texture2D" uid="uid://cb64pybqnd5du" path="res://Sprites/extras/toppings/Jitomate.png" id="1_sqxpj"]
+[ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_x7wwh"]
+
+[resource]
+script = ExtResource("1_x7wwh")
+name = "Jitomate"
+colorextra = Color(1, 1, 1, 1)
+group = "items dropeables"
+extra_texture = ExtResource("1_sqxpj")
+metadata/_custom_type_script = "uid://5qvuip1x0dga"

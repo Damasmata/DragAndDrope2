@@ -6,7 +6,7 @@
 script = ExtResource("1_gt0um")
 cooking_time = 10.0
 name = "Relleno"
-raw_color = Color(0.44, 0.2904, 0.41008002, 1)
+raw_color = Color(1, 1, 1, 1)
 cooked_color = Color(0.10920001, 0.021000003, 0.21, 1)
 group = "item"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

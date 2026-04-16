@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_uxu53")
 base_folder = "res://data/extras data"
-paths = Array[String](["res://data/extras data/extra 1.tres", "res://data/extras data/extra 2.tres", "res://data/extras data/extra 3.tres", "res://data/extras data/extra 4.tres", "res://data/extras data/extra 5.tres", "res://data/extras data/extra 6.tres", "res://data/extras data/extra 7.tres", "res://data/extras data/extra 8.tres"])
+paths = Array[String](["res://data/extras data/extra 1.tres", "res://data/extras data/extra 2.tres", "res://data/extras data/extra 3.tres", "res://data/extras data/extra 4.tres", "res://data/extras data/extra 5.tres", "res://data/extras data/extra 6.tres", "res://data/extras data/extra 7.tres", "res://data/extras data/extra 8.tres", "res://data/extras data/extra 9.tres", "res://data/extras data/extra 10.tres"])
 metadata/_custom_type_script = "uid://bkuuutktqtijg"

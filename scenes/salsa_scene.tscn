@@ -1,40 +1,50 @@
 [gd_scene format=3 uid="uid://dv8w1f6bw0sn4"]
 
 [ext_resource type="Script" uid="uid://bu17x7tfkmndp" path="res://salsa_scene.gd" id="1_00k22"]
+[ext_resource type="Texture2D" uid="uid://bthetpm14lxi" path="res://Sprites/extras/salsas/SalsaRoja.png" id="2_uch5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yj851"]
-size = Vector2(46, 46)
+size = Vector2(129, 46)
 
 [node name="Salsa_Scene" type="Node2D" unique_id=510108911 groups=["salsa"]]
 z_index = 2
 script = ExtResource("1_00k22")
 
+[node name="Salsa" type="Sprite2D" parent="." unique_id=1839563513]
+unique_name_in_owner = true
+scale = Vector2(0.17283955, 0.17283954)
+texture = ExtResource("2_uch5l")
+
+[node name="Button" type="Button" parent="Salsa" unique_id=12825157]
+offset_left = -376.07132
+offset_top = -144.64282
+offset_right = 381.85703
+offset_bottom = 138.85712
+
+[node name="ButtonStopper" type="PanelContainer" parent="Salsa" unique_id=61127886]
+unique_name_in_owner = true
+visible = false
+offset_left = -376.07132
+offset_top = -144.64282
+offset_right = 381.85703
+offset_bottom = 144.64282
+
 [node name="SColor" type="ColorRect" parent="." unique_id=1611163465]
 unique_name_in_owner = true
+visible = false
 offset_left = -25.0
 offset_top = -25.0
 offset_right = 25.0
 offset_bottom = 25.0
 
-[node name="Button" type="Button" parent="SColor" unique_id=12825157]
-layout_mode = 0
-offset_right = 50.0
-offset_bottom = 50.0
-
-[node name="ButtonStopper" type="PanelContainer" parent="SColor" unique_id=61127886]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_right = 50.0
-offset_bottom = 50.0
-
 [node name="Area2D" type="Area2D" parent="." unique_id=89916619]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1036179738]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_yj851")
 one_way_collision_margin = 0.0
 
-[connection signal="button_down" from="SColor/Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="SColor/Button" to="." method="_on_button_button_up"]
-[connection signal="mouse_entered" from="SColor/Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="SColor/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="button_down" from="Salsa/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Salsa/Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Salsa/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Salsa/Button" to="." method="_on_button_mouse_exited"]

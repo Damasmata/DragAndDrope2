@@ -5,14 +5,21 @@ extends Node2D
 @onready var tops: Node2D = %Tops
 @onready var bebida: Node2D = %Bebida
 
-@onready var to_counter: Button = %toCounter
+@onready var to_counter: TextureButton = %toCounter
 
-@onready var base_color: ColorRect = %BaseColor #que reaccione el color(0,0)
+@onready var to_continue: TextureButton = %toContinue
+
+@onready var to_back: TextureButton = %toBack
+
+
+
+#@onready var base_color: ColorRect = %BaseColor #que reaccione el color(0,0)
+
+@onready var chilaquil: Sprite2D = %chilaquil
+
+
 @onready var button_stopper: PanelContainer = %ButtonStopper
 
-@onready var to_continue: Button = %toContinue
-
-@onready var to_back: Button = %toBack
 
 var nivel_de_coccion:int
 
@@ -77,7 +84,10 @@ func set_info(resource): #establece la info en base al resource
 	if resource.cooked_time == 0.0:
 		resource.cooked_time = resource.cooking_time
 	item_resource = resource #el item pasa a ser el resource
-	base_color.color = resource.raw_color #color del resource 
+	
+	#base_color.color = resource.raw_color #color del resource 
+	chilaquil.texture=resource.itemtexture
+	
 	add_to_group(resource.group) #el grupo de donde esta el resource
 	color_grade()
 
@@ -100,7 +110,7 @@ func _process(delta: float) -> void:
 
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
-	base_color.color = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
+	chilaquil.modulate = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
 
 func update_resource(_item_resource:Resource):
 	item_resource = _item_resource

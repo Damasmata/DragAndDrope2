@@ -3,22 +3,24 @@ extends Camera2D
 @export var camera_positions:Array[Vector2] = [Vector2(1152/2,648/2),Vector2((1152/2)+1152,648/2),Vector2((1152/2)+(1152*2),648/2), Vector2((1152/2)+(1152*3),648/2)]
 @export var speed:float
 
-@onready var estacion_1: Sprite2D = $"../../CanvasLayer/Estacion1"
-@onready var estacion_2: Sprite2D = $"../../CanvasLayer/Estacion2"
-@onready var estacion_3: Sprite2D = $"../../CanvasLayer/Estacion3"
-
-const ESTACION_DE_ORDENES_PRESIONADO = preload("uid://q73mo8c2t2ld")
-const ESTACION_DE_ORDENES = preload("uid://be17yld8mahx3")
-
-const BOTON_FREIDORA_PRESIONADO = preload("uid://yaadpikiax3j")
-const BOTON_FREIDORA = preload("uid://uo652gqug7sj")
-
-const BOTON_DE_TOPPING_PRESIONADO = preload("uid://cslta4p5kva5p")
-const BOTON_DE_TOPPING = preload("uid://bo4k2v50f2v1b")
+@onready var estacion_1: Sprite2D = %Estacion1
+@onready var estacion_2: Sprite2D = %Estacion2
+@onready var estacion_3: Sprite2D = %Estacion3
+@onready var estacion_4: Sprite2D = %estacion4
 
 
 
+const NOTAS_PRES = preload("uid://buax101sbdlth")
+const NOTAS = preload("uid://31y2rdhnweq5")
 
+const FREIDORA_PRESS = preload("uid://dph2hdbxq238o")
+const FREIDORA = preload("uid://cxd2b2txxldbo")
+
+const TOPPINGS_PRES = preload("uid://u6ususxytx1o")
+const TOPPINGS = preload("uid://cg8w8o7vpkhm2")
+
+const BEBIDAS_PRES = preload("uid://dg8i45bice87e")
+const BEBIDAS = preload("uid://3qg13tilsa81")
 
 var moving_camera:bool
 var next_pos
@@ -44,21 +46,26 @@ func change_camera_pos(_delta:float):
 
 func change_buttons():
 	if global_position == camera_positions[0]:
-		estacion_1.texture=ESTACION_DE_ORDENES_PRESIONADO
-		estacion_2.texture=BOTON_FREIDORA
-		estacion_3.texture=BOTON_DE_TOPPING
+		estacion_1.texture=NOTAS_PRES
+		estacion_2.texture=FREIDORA
+		estacion_3.texture=TOPPINGS
+		estacion_4.texture=BEBIDAS
 	elif global_position == camera_positions[1]:
-		estacion_1.texture=ESTACION_DE_ORDENES
-		estacion_2.texture=BOTON_FREIDORA_PRESIONADO
-		estacion_3.texture=BOTON_DE_TOPPING
+		estacion_1.texture=NOTAS
+		estacion_2.texture=FREIDORA_PRESS
+		estacion_3.texture=TOPPINGS
+		estacion_4.texture=BEBIDAS
 	elif global_position == camera_positions[2]:
-		estacion_1.texture=ESTACION_DE_ORDENES
-		estacion_2.texture=BOTON_FREIDORA
-		estacion_3.texture=BOTON_DE_TOPPING_PRESIONADO
+		estacion_1.texture=NOTAS
+		estacion_2.texture=FREIDORA
+		estacion_3.texture=TOPPINGS_PRES
+		estacion_4.texture=BEBIDAS
+
 	else:
-		estacion_1.texture=ESTACION_DE_ORDENES
-		estacion_2.texture=BOTON_FREIDORA
-		estacion_3.texture=BOTON_DE_TOPPING
+		estacion_1.texture=NOTAS
+		estacion_2.texture=FREIDORA
+		estacion_3.texture=TOPPINGS
+		estacion_4.texture=BEBIDAS_PRES
 
 func _on_est_1_pressed() -> void:
 	if global_position != camera_positions[0]:

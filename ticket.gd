@@ -3,6 +3,15 @@ extends Control
 var follow_mouse:bool #siga el mouse
 var offset:Vector2 #para que el objeto se mueva donde se dio click para agarrlo
 
+var new_pos:Vector2
+var initial_pos:Vector2
+
+
+var can_be_dropped:bool
+
+
+signal tira_pos
+
 var order_resource:Resource
 @onready var extras: VBoxContainer = %Extras
 
@@ -10,6 +19,9 @@ var order_resource:Resource
 @export var orden_entregada:Resource
 
 var orden_final:Orden
+
+
+
 @onready var numero: Label = %Numero
 
 @onready var bebida: Label = %Bebida
@@ -21,17 +33,15 @@ var orden_final:Orden
 #@onready var extra_3: Label = $Orden/VBoxContainer/Extra3
 #@onready var extra_2: Label = $Orden/VBoxContainer/Extra2
 #@onready var extra_1: Label = $Orden/VBoxContainer/Extra1
+
 @onready var salsa: Label = %Salsa
 @onready var chilaquil: Label = %Chilaquil
 @onready var plato: Label = %Plato
 @onready var coccion: Label = %Coccion
 
 #@onready var salsa: Label = $Orden/VBoxContainer/Salsa
-
 #@onready var chilaquil: Label = $Orden/VBoxContainer/ChilaquilPlato/Chilaquil
-
 #@onready var plato: Label = $Orden/VBoxContainer/ChilaquilPlato/Plato
-
 #@onready var coccion: Label = $Orden/VBoxContainer/Coccion
 
 @export var numero_de_orden:int = 0
@@ -44,12 +54,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if follow_mouse:
 		movement()
+	else:
+		tira_pos.emit()
 
 func crear_orden():
 	var new_order = Orden.new()
 	var orden_temp = Orden.new()
 	
-	var extras_random_number = randi_range(1,2)
+	var extras_random_number = randi_range(1,5)
 	orden_temp.numero_orden = numero_de_orden +1
 	#var extras_en_orden:Array[String] = []
 	orden_temp.extras.clear()
@@ -119,6 +131,9 @@ func _on_button_button_down() -> void:
 
 func _on_button_button_up() -> void:
 	follow_mouse=false
+	if initial_pos != new_pos and can_be_dropped:
+		initial_pos =new_pos
+	global_position=initial_pos
 
 
 #func _on_button_mouse_entered() -> void:

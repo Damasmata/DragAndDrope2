@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="Extras" format=3 uid="uid://ddq30xefwqf51"]
 
 [ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_kk3ha"]
+[ext_resource type="Texture2D" uid="uid://b5or3klndndrm" path="res://Sprites/extras/salsas/SalsaVerde.png" id="1_ogwkm"]
 
 [resource]
 script = ExtResource("1_kk3ha")
 name = "Salsa verde"
 colorextra = Color(0, 0.16078432, 0, 1)
 group = "salsa"
+extra_texture = ExtResource("1_ogwkm")
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

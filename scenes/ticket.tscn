@@ -7,24 +7,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gjy7"]
 size = Vector2(134, 256)
 
-[node name="Ticket" type="Control" unique_id=1126839357 groups=["Ticket"]]
+[node name="TicketParent" type="Node2D" unique_id=1799167313]
+
+[node name="Ticket" type="Control" parent="." unique_id=1126839357 groups=["Ticket"]]
 layout_mode = 3
-anchor_left = -0.0625
-anchor_right = 0.061631944
+anchor_right = 0.124000005
 anchor_bottom = 0.41049382
-offset_left = 72.0
-offset_right = 72.0
+offset_right = 0.1519928
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(61, 0)
+pivot_offset = Vector2(0, -1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_krxyo")
 extra_scene = ExtResource("2_7yqn5")
 orden_entregada = ExtResource("3_rn5ye")
-numero_de_orden = 20
 
-[node name="Orden" type="PanelContainer" parent="." unique_id=2007613094]
+[node name="Orden" type="PanelContainer" parent="Ticket" unique_id=2007613094]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,90 +31,90 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Orden" unique_id=20316840]
+[node name="VBoxContainer" type="VBoxContainer" parent="Ticket/Orden" unique_id=20316840]
 layout_mode = 2
 
-[node name="Header" type="VBoxContainer" parent="Orden/VBoxContainer" unique_id=1549190501]
+[node name="Header" type="VBoxContainer" parent="Ticket/Orden/VBoxContainer" unique_id=1549190501]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="Numero" type="Label" parent="Orden/VBoxContainer/Header" unique_id=1999396339]
+[node name="Numero" type="Label" parent="Ticket/Orden/VBoxContainer/Header" unique_id=1999396339]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Numero"
 
-[node name="BebidaTamaño" type="HBoxContainer" parent="Orden/VBoxContainer/Header" unique_id=13071609]
+[node name="BebidaTamaño" type="HBoxContainer" parent="Ticket/Orden/VBoxContainer/Header" unique_id=13071609]
 layout_mode = 2
 
-[node name="Bebida" type="Label" parent="Orden/VBoxContainer/Header/BebidaTamaño" unique_id=1369593933]
+[node name="Bebida" type="Label" parent="Ticket/Orden/VBoxContainer/Header/BebidaTamaño" unique_id=1369593933]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Bebida"
 horizontal_alignment = 1
 
-[node name="Tamaño" type="Label" parent="Orden/VBoxContainer/Header/BebidaTamaño" unique_id=1048663512]
+[node name="Tamaño" type="Label" parent="Ticket/Orden/VBoxContainer/Header/BebidaTamaño" unique_id=1048663512]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Tamaño"
 horizontal_alignment = 1
 
-[node name="Extras" type="VBoxContainer" parent="Orden/VBoxContainer" unique_id=685788945]
+[node name="Extras" type="VBoxContainer" parent="Ticket/Orden/VBoxContainer" unique_id=685788945]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Chilaquil" type="VBoxContainer" parent="Orden/VBoxContainer" unique_id=348215807]
+[node name="Chilaquil" type="VBoxContainer" parent="Ticket/Orden/VBoxContainer" unique_id=348215807]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Salsa" type="Label" parent="Orden/VBoxContainer/Chilaquil" unique_id=13030546]
+[node name="Salsa" type="Label" parent="Ticket/Orden/VBoxContainer/Chilaquil" unique_id=13030546]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Salsa"
 horizontal_alignment = 1
 
-[node name="ChilaquilPlato" type="HBoxContainer" parent="Orden/VBoxContainer/Chilaquil" unique_id=190169704]
+[node name="ChilaquilPlato" type="HBoxContainer" parent="Ticket/Orden/VBoxContainer/Chilaquil" unique_id=190169704]
 layout_mode = 2
 
-[node name="Chilaquil" type="Label" parent="Orden/VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=44936584]
+[node name="Chilaquil" type="Label" parent="Ticket/Orden/VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=44936584]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Nombre"
 horizontal_alignment = 1
 
-[node name="Plato" type="Label" parent="Orden/VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=1021015214]
+[node name="Plato" type="Label" parent="Ticket/Orden/VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=1021015214]
 unique_name_in_owner = true
 layout_mode = 2
 text = "plato"
 horizontal_alignment = 1
 
-[node name="Coccion" type="Label" parent="Orden/VBoxContainer/Chilaquil" unique_id=784922480]
+[node name="Coccion" type="Label" parent="Ticket/Orden/VBoxContainer/Chilaquil" unique_id=784922480]
 unique_name_in_owner = true
 layout_mode = 2
 text = "coccion"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Orden" unique_id=1058174216]
+[node name="Button" type="Button" parent="Ticket/Orden" unique_id=1058174216]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2031365537]
+[node name="Area2D" type="Area2D" parent="Ticket" unique_id=2031365537]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1721968102]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ticket/Area2D" unique_id=1721968102]
 visible = false
 position = Vector2(72, 133)
 shape = SubResource("RectangleShape2D_2gjy7")
 
-[node name="ButtonStopper" type="PanelContainer" parent="." unique_id=1750466253]
+[node name="ButtonStopper" type="PanelContainer" parent="Ticket" unique_id=1750466253]
 visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="ButtonTest" type="Button" parent="." unique_id=1128441453]
+[node name="ButtonTest" type="Button" parent="Ticket" unique_id=1128441453]
 visible = false
 layout_mode = 0
 offset_left = 213.0
@@ -124,8 +123,8 @@ offset_right = 340.0
 offset_bottom = 148.0
 text = "Imprimir orden"
 
-[connection signal="button_down" from="Orden/Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="Orden/Button" to="." method="_on_button_button_up"]
-[connection signal="mouse_entered" from="Orden/Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Orden/Button" to="." method="_on_button_mouse_exited"]
-[connection signal="pressed" from="ButtonTest" to="." method="_on_button_test_pressed"]
+[connection signal="button_down" from="Ticket/Orden/Button" to="Ticket" method="_on_button_button_down"]
+[connection signal="button_up" from="Ticket/Orden/Button" to="Ticket" method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Ticket/Orden/Button" to="Ticket" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Ticket/Orden/Button" to="Ticket" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Ticket/ButtonTest" to="Ticket" method="_on_button_test_pressed"]

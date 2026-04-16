@@ -200,9 +200,11 @@ freidora script:
 
 bebida resource:
 -contiene un array que indica el tamaño del item
+-fue cambiado para contener ya todas las, siendo solo 3 (chico, mediano, grande) con un diccionario
 
 bebida scene:
 -añadido un buttonstopper, para dejar de moverse al estar en el item
+-programado para que funcione con el diccionario
 
 orders data:
 -contiene valores para crear ordenes, usando principalmente resources e ints
@@ -238,19 +240,39 @@ visual novel:
 -animaciones para que sea mas "fluido"
 -nombres de personajes definidos
 
+-----------------------------------------------------
+
+tira_scene:
+-sirve para que el ticket se pueda mantener solo arriba
+-contiene el sprite, el area y un container para los tickets
+
+se han implementado visuales en los items, toppings, salsas, panel del topping del item, bebidas
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-COSAS POR REVISAR
+COSAS POR REVISAR 1
 
 -crear una tira o una forma para poner ordenes arriba
 
 -al momento de crear el ticket en el test:
 	no se mueve
-	se mantiene en la primera estacion (no esta asignado al canvasLayer)
+	-SOLUCIONADO-
+	
+	se mantiene en la primera estacion y no se mueve de ahi
+	-SOLUCIONADO (si esta colocado en la tira antes)-
+	
 	parte de la informacion no se actualiza (los nombres del item, container, salas, extras y bebida)
+	-solucionado a medias-
 
 -Pendiente por añadir/programar:
 	El entregar el platillo con el ticket
 	Que se pueda generar una fila de clientes
 	Forma de evaluacion de platillo
-	Añadir mas visuales
+	Añadir visuales faltantes
+
+-----------------------------------------------------
+
+
+-El ticket no se mueve por la tira
+
+-implementar de forma correcta los sprites de las bebidas

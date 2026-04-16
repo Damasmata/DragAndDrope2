@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://chpe5fim08ihd"]
 
 [ext_resource type="Script" uid="uid://dhwa13mkgrrw5" path="res://item_scene.gd" id="1_a127h"]
+[ext_resource type="Texture2D" uid="uid://cp2lwsp6s4twh" path="res://Sprites/Chilaquiles/Tortilla Nixtamalizado.png" id="2_p1nqj"]
+[ext_resource type="Texture2D" uid="uid://br4jmydsqk1i8" path="res://Sprites/Estacion Toppings panel/siguiente.png" id="3_4jctv"]
+[ext_resource type="Texture2D" uid="uid://22fq85kw813k" path="res://Sprites/Estacion Toppings panel/guardar.png" id="4_ww4ix"]
+[ext_resource type="Texture2D" uid="uid://c4e08lx0p8id8" path="res://Sprites/Estacion Toppings panel/en medio.png" id="5_h10ke"]
+[ext_resource type="Texture2D" uid="uid://dti5l87kvtf" path="res://Sprites/Estacion Toppings panel/Borrar.png" id="6_mxa2e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
-size = Vector2(77, 77)
+size = Vector2(172, 77)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1nqj"]
 size = Vector2(83, 82)
@@ -12,39 +17,52 @@ size = Vector2(83, 82)
 z_index = 1
 script = ExtResource("1_a127h")
 
+[node name="chilaquil" type="Sprite2D" parent="." unique_id=1479366597]
+unique_name_in_owner = true
+position = Vector2(4.7683716e-07, -2.3841858e-07)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_p1nqj")
+
+[node name="Button" type="Button" parent="chilaquil" unique_id=2134318984]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -504.7619
+offset_top = -204.76192
+offset_right = -496.7619
+offset_bottom = -196.76192
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="ButtonStopper" type="PanelContainer" parent="chilaquil" unique_id=966444943]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -200.00002
+offset_right = -500.0
+offset_bottom = -200.00002
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="BaseColor" type="ColorRect" parent="." unique_id=631274058]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(90, 90)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -45.0
 offset_top = -45.0
-offset_right = 45.0
-offset_bottom = 45.0
+offset_right = 45.000015
+offset_bottom = 45.000015
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 1, 1, 1)
-
-[node name="Button" type="Button" parent="BaseColor" unique_id=2134318984]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="ButtonStopper" type="PanelContainer" parent="BaseColor" unique_id=966444943]
-unique_name_in_owner = true
-visible = false
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Extras" type="Node2D" parent="." unique_id=929427142]
 unique_name_in_owner = true
@@ -55,7 +73,6 @@ unique_name_in_owner = true
 [node name="Area2D" type="Area2D" parent="." unique_id=1013802270]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254869240]
-position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_a127h")
 debug_color = Color(3.85046e-06, 0.55265814, 0.20658872, 0.41960785)
 
@@ -64,14 +81,13 @@ unique_name_in_owner = true
 visible = false
 modulate = Color(0, 0.7666669, 1, 1)
 z_index = 20
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -97.0
+offset_top = -39.0
+offset_right = 90.0
+offset_bottom = 39.0
 button_mask = 2
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = 8
@@ -79,35 +95,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -65.5
-offset_top = -196.0
-offset_right = 65.5
-offset_bottom = -50.0
+offset_left = -52.000004
+offset_top = 51.0
+offset_right = 548.0
+offset_bottom = 663.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.17430976, 0.17430976)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu" unique_id=33800695]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="toCounter" type="Button" parent="Menu/VBoxContainer" unique_id=372995041]
+[node name="toContinue" type="TextureButton" parent="Menu/VBoxContainer" unique_id=902968990]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Guardar"
+texture_normal = ExtResource("3_4jctv")
 
-[node name="toErase" type="Button" parent="Menu/VBoxContainer" unique_id=634951618]
+[node name="toCounter" type="TextureButton" parent="Menu/VBoxContainer" unique_id=72380732]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Borrar"
+texture_normal = ExtResource("4_ww4ix")
 
-[node name="toContinue" type="Button" parent="Menu/VBoxContainer" unique_id=311493308]
+[node name="toBack" type="TextureButton" parent="Menu/VBoxContainer" unique_id=773476676]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Siguiente"
+texture_normal = ExtResource("5_h10ke")
 
-[node name="toBack" type="Button" parent="Menu/VBoxContainer" unique_id=41344991]
+[node name="toErase" type="TextureButton" parent="Menu/VBoxContainer" unique_id=839730758]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Poner en medio"
+texture_normal = ExtResource("6_mxa2e")
 
 [node name="LastMenu" type="PanelContainer" parent="." unique_id=311666751]
 visible = false
@@ -165,19 +183,19 @@ shape = SubResource("RectangleShape2D_p1nqj")
 unique_name_in_owner = true
 position = Vector2(180, 0)
 
-[connection signal="button_down" from="BaseColor/Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="BaseColor/Button" to="." method="_on_button_button_up"]
-[connection signal="mouse_entered" from="BaseColor/Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="BaseColor/Button" to="." method="_on_button_mouse_exited"]
-[connection signal="mouse_entered" from="BaseColor/ButtonStopper" to="." method="_on_button_stopper_mouse_entered"]
-[connection signal="mouse_exited" from="BaseColor/ButtonStopper" to="." method="_on_button_stopper_mouse_exited"]
+[connection signal="button_down" from="chilaquil/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="chilaquil/Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="chilaquil/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="chilaquil/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="mouse_entered" from="chilaquil/ButtonStopper" to="." method="_on_button_stopper_mouse_entered"]
+[connection signal="mouse_exited" from="chilaquil/ButtonStopper" to="." method="_on_button_stopper_mouse_exited"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="ClickDer" to="." method="_on_click_der_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/toCounter" to="." method="_on_to_counter_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toContinue" to="." method="_on_to_continue_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/toCounter" to="." method="_on_to_counter_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="LastMenu/VBoxContainer/ToClean" to="." method="_on_to_clean_pressed"]
 [connection signal="area_entered" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
 [connection signal="area_exited" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]

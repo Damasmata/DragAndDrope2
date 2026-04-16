@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="item" format=3 uid="uid://dw6sp4q1ytfch"]
 
 [ext_resource type="Script" uid="uid://btpn8ossyybhc" path="res://data/data items.gd" id="1_bkdt7"]
+[ext_resource type="Texture2D" uid="uid://cp2lwsp6s4twh" path="res://Sprites/Chilaquiles/Tortilla Nixtamalizado.png" id="1_h6t5j"]
 
 [resource]
 script = ExtResource("1_bkdt7")
 cooking_time = 10.0
+itemtexture = ExtResource("1_h6t5j")
 name = "Nixtamalizado"
-raw_color = Color(0.4514, 0.74, 0.67746997, 1)
+raw_color = Color(1, 1, 1, 1)
 cooked_color = Color(0.002199998, 0.016719982, 0.22, 1)
 group = "item"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

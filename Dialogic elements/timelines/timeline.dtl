@@ -15,7 +15,7 @@ Mis dedos rozan las sábanas mientras busca aquel tintineo entre la tela arrugad
 	... ... ...
 	Ya cuanto tiempo pasó?
 	PTM YA SE ME HIZO TARDE POR WEY
-[background arg="#3d3d3dff" fade="0.5" wait="true"]
+[background arg="res://Dialogic elements/fondos/cuarto.png" fade="2.0" wait="true"]
 El aire de la mañana entra por la ventana entreabierta, fresco y ligeramente frío.
 Desde afuera se escuchan los primeros sonidos de la ciudad despertando.
 Una puerta que se abre, pasos lejanos, el murmullo de algún vehículo pasando a lo lejos, lo de siempre.
@@ -24,7 +24,8 @@ El aire fresco entra con más fuerza.
 Cuando mis mejillas se enfriaron por la brisa reaccione de inmediato, como si la mañana misma me empujara a empezar el día.
 Hoy es mi primer día de trabajo.
 Me preparo rapidamente, solo tomo mis cosas y salgo de casa.
-[background arg="#989898ff" fade="1.0" wait="true"]
+[background arg="#ffffffff" fade="1.0" wait="true"]
+[background arg="res://Dialogic elements/fondos/callejon chamba.png" fade="1.0" transition="Simple Fade"]
 join Joshua center [mirrored="true"]
 Las calles de Guanajuato todavía guardan esa calma que desaparece más tarde.
 Algunas luces siguen encendidas en las casas, y uno que otro puesto comienza a prepararse para el día.
@@ -108,7 +109,7 @@ Mientras recorremos el lugar, una puerta al fondo se abre lentamente.
 desconocido: AHHHHHHH, YA ESTAN AQUI
 Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar
 EL PATRÓN
-Viste sencillamente, me observa de pies a cabeza, aunque no de una forma hostil.
+join patron center
 if {sucio} == true:
 	patron: Oye cinthia, seguro que trajiste al nuevo o a un vagabundo?
 	Cinthia (Normal/Serious): HEY, NO SEA TAN CULERO

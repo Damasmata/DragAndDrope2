@@ -21,6 +21,7 @@ var selected_size:bool=false
 
 var drink_in_spawn:bool
 
+var sabor_bebida:int
 
 func _process(delta: float) -> void:
 	if !DishManager.drink_on_screen:
@@ -40,13 +41,14 @@ func _process(delta: float) -> void:
 
 func spawn_drink():
 	var _res_drink=drink_type.duplicate()
-	var _time_drink=drink_time
+	#var _time_drink=drink_time
 	var new_drink=bebida_scene.instantiate()
 	add_child(new_drink)
 	new_drink.global_position = spawn_pos.global_position + spawn_pos.pivot_offset
 	new_drink.initialpos = new_drink.global_position
 	new_drink.new_pos = new_drink.initialpos
-	new_drink.set_info(_res_drink,_time_drink,drink_time_order)
+	#new_drink.set_info(_res_drink,_time_drink,drink_time_order)
+	new_drink.set_info(sabor_bebida,drink_type)
 
 func restart():
 	if DishManager.drink_on_screen:
@@ -54,6 +56,11 @@ func restart():
 		selected_size=false
 
 #region botones panelTipo
+
+
+func bebida(tipo_de_bebida):
+	selected_type=true
+	drink_type=tipo_de_bebida
 
 func _on_bebida_1_pressed() -> void:
 	selected_type=true
@@ -64,16 +71,23 @@ func _on_bebida_2_pressed() -> void:
 	drink_type=drink_resource[1]
 
 func _on_bebida_3_pressed() -> void:
-	selected_type=true
-	drink_type=drink_resource[2]
+	bebida(drink_resource[2])
+	sabor_bebida = 0
+	#selected_type=true
+	#drink_type=drink_resource[2]
 
 func _on_bebida_4_pressed() -> void:
-	selected_type=true
-	drink_type=drink_resource[3]
+	bebida(drink_resource[3])
+	sabor_bebida = 1
+	#selected_type=true
+	#drink_type=drink_resource[3]
 
 func _on_bebida_5_pressed() -> void:
-	selected_type=true
-	drink_type=drink_resource[4]
+	bebida(drink_resource[4])
+	sabor_bebida = 2
+	
+	#selected_type=true
+	#drink_type=drink_resource[4]
 
 func _on_bebida_6_pressed() -> void:
 	selected_type=true
@@ -85,20 +99,23 @@ func _on_bebida_6_pressed() -> void:
 
 func _on_size_s_pressed() -> void:
 	selected_size=true
-	drink_time=timers[0]
+	#drink_time=timers[0]
 	drink_time_order=0
+	drink_type = drink_resource[6]
 	spawn_drink()
 
 func _on_size_m_pressed() -> void:
 	selected_size=true
-	drink_time=timers[1]
+	#drink_time=timers[1]
 	drink_time_order=1
+	drink_type = drink_resource[7]
 	spawn_drink()
 
 func _on_size_b_pressed() -> void:
 	selected_size=true
-	drink_time=timers[2]
+	#drink_time=timers[2]
 	drink_time_order=2
+	drink_type = drink_resource[8]
 	spawn_drink()
 
 #endregion

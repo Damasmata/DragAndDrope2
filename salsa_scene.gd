@@ -3,6 +3,7 @@ extends Node2D
 @onready var s_color: ColorRect = %SColor
 
 @onready var button_stopper: PanelContainer = %ButtonStopper
+@onready var salsa: Sprite2D = %Salsa
 
 var item_resource:Resource #el resource del objeto
 
@@ -29,8 +30,9 @@ var dropped:bool=false
 
 func set_info(resource): #establece la info en base al resource
 	item_resource = resource #el item pasa a ser el resource
-	s_color.color = resource.colorextra #color del resource 
+	#s_color.color = resource.colorextra #color del resource 
 	add_to_group(resource.group) #el grupo de donde esta el resource
+	salsa.texture=resource.extra_texture
 	#color_grade()
 
 #endregion

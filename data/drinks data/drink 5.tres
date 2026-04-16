@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="drink" format=3 uid="uid://di408m58foiyy"]
 
 [ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_ke5d1"]
-[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_pooby"]
+[ext_resource type="Texture2D" uid="uid://bl74du6ljvjbn" path="res://Sprites/bebidas/sabores/chico/Naranja_CH.png" id="2_r53wl"]
+[ext_resource type="Texture2D" uid="uid://b0qq8edv6d2qf" path="res://Sprites/bebidas/sabores/grande/Naranja_G.png" id="3_eu7in"]
+[ext_resource type="Texture2D" uid="uid://c3yggprf05xog" path="res://Sprites/bebidas/sabores/mediano/Naranja_M.png" id="4_ni3f5"]
 
 [resource]
 script = ExtResource("1_ke5d1")
 name = "Naranja"
 colordrink = Color(0.8129525, 0.4045753, 0.13519838, 1)
-texture_progress = ExtResource("2_pooby")
+texture_ch = ExtResource("2_r53wl")
+texture_m = ExtResource("4_ni3f5")
+texture_g = ExtResource("3_eu7in")
 metadata/_custom_type_script = "uid://dpik8c0i45d6m"

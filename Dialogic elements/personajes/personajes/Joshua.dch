@@ -25,6 +25,24 @@
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
+},
+"Normal/exited": {
+"export_overrides": {
+"image": "\"res://Dialogic elements/personajes/sprites/Joshua/Joshua_EXITED.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Normal/think": {
+"export_overrides": {
+"image": "\"res://Dialogic elements/personajes/sprites/Joshua/Joshua_THINK.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 }
 },
 &"scale": 1.0

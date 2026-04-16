@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="drink" format=3 uid="uid://bkv00c47vfvua"]
 
 [ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_hnhkf"]
-[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_xibi7"]
+[ext_resource type="Texture2D" uid="uid://b74fad4ia8bgc" path="res://Sprites/bebidas/sabores/chico/Jamaica_CH.png" id="2_4ovyd"]
+[ext_resource type="Texture2D" uid="uid://b451i6je6facm" path="res://Sprites/bebidas/sabores/grande/Jamaica_G.png" id="3_6vlmj"]
+[ext_resource type="Texture2D" uid="uid://bqbthmqyulsvr" path="res://Sprites/bebidas/sabores/mediano/Jamaica_M.png" id="4_287ma"]
 
 [resource]
 script = ExtResource("1_hnhkf")
 name = "Jamaica"
 colordrink = Color(0.27730417, 0, 0, 1)
-texture_progress = ExtResource("2_xibi7")
+texture_ch = ExtResource("2_4ovyd")
+texture_m = ExtResource("4_287ma")
+texture_g = ExtResource("3_6vlmj")
 metadata/_custom_type_script = "uid://dpik8c0i45d6m"

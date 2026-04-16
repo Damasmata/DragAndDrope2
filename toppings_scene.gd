@@ -4,6 +4,8 @@ extends Node2D
 
 @onready var button_stopper: PanelContainer = %ButtonStopper
 
+@onready var topping: Sprite2D = %Topping
+
 var item_resource: Resource
 
 signal  droppedtoping
@@ -31,6 +33,7 @@ func set_info(resource): #establece la info en base al resource
 	item_resource = resource #el item pasa a ser el resource
 	colorrect.color = resource.colorextra #color del resource 
 	add_to_group(resource.group) #el grupo de donde esta el resource
+	topping.texture=resource.extra_texture
 
 #endregion
 

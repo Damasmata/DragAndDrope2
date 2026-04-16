@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Extras" format=3 uid="uid://dshho4blrnviw"]
+
+[ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_o51kj"]
+[ext_resource type="Texture2D" uid="uid://3vk2238sskh1" path="res://Sprites/extras/toppings/Cebollas.png" id="1_xqunw"]
+
+[resource]
+script = ExtResource("1_o51kj")
+name = "Cebolla"
+colorextra = Color(1, 1, 1, 1)
+group = "items dropeables"
+extra_texture = ExtResource("1_xqunw")
+metadata/_custom_type_script = "uid://5qvuip1x0dga"

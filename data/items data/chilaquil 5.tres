@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="item" format=3 uid="uid://cr40j1l5m1pk0"]
 
+[ext_resource type="Texture2D" uid="uid://dxbnwfjpgdm07" path="res://Sprites/Chilaquiles/Tortilla Deshidratada.png" id="1_3bswn"]
 [ext_resource type="Script" uid="uid://btpn8ossyybhc" path="res://data/data items.gd" id="1_jc7ue"]
 
 [resource]
 script = ExtResource("1_jc7ue")
 cooking_time = 10.0
+itemtexture = ExtResource("1_3bswn")
 name = "Deshidratado"
-raw_color = Color(0.715428, 0.8009272, 0.9810068, 1)
+raw_color = Color(1, 1, 1, 1)
 cooked_color = Color(0.1168, 0.13048, 0.16, 1)
 group = "item"
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

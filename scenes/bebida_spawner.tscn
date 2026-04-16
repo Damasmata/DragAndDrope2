@@ -7,17 +7,19 @@
 [ext_resource type="Resource" uid="uid://bkv00c47vfvua" path="res://data/drinks data/drink 4.tres" id="5_rt0mj"]
 [ext_resource type="Resource" uid="uid://di408m58foiyy" path="res://data/drinks data/drink 5.tres" id="6_npfkl"]
 [ext_resource type="Resource" uid="uid://cw278ahvfc1xm" path="res://data/drinks data/drink 6.tres" id="7_gl3yf"]
+[ext_resource type="Resource" uid="uid://dic6mbd76hfb4" path="res://data/drinks data/chica.tres" id="8_y2g20"]
+[ext_resource type="Resource" uid="uid://0lmkrknu8vhl" path="res://data/drinks data/mediana.tres" id="9_vw1s8"]
+[ext_resource type="Resource" uid="uid://e0a31aac2tvh" path="res://data/drinks data/grande.tres" id="10_rt0mj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuqne"]
 size = Vector2(95, 94)
 
 [node name="BebidaSpawner" type="Node2D" unique_id=21786761]
 script = ExtResource("1_x8aco")
-drink_resource = Array[Resource]([ExtResource("2_ddyrr"), ExtResource("3_y2g20"), ExtResource("4_vw1s8"), ExtResource("5_rt0mj"), ExtResource("6_npfkl"), ExtResource("7_gl3yf")])
+drink_resource = Array[Resource]([ExtResource("2_ddyrr"), ExtResource("3_y2g20"), ExtResource("4_vw1s8"), ExtResource("5_rt0mj"), ExtResource("6_npfkl"), ExtResource("7_gl3yf"), ExtResource("8_y2g20"), ExtResource("9_vw1s8"), ExtResource("10_rt0mj")])
 timers = Array[float]([5.0, 10.0, 15.0])
 
 [node name="PanelTipo" type="PanelContainer" parent="." unique_id=967652169]
-visible = false
 offset_left = -70.0
 offset_top = -103.0
 offset_right = 70.0
@@ -28,33 +30,36 @@ layout_mode = 2
 
 [node name="Bebida1" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1373022155]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
-text = "1"
+text = "Refresco"
 
 [node name="Bebida2" type="Button" parent="PanelTipo/VBoxContainer" unique_id=410058213]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
-text = "2"
+text = "Cafe"
 
 [node name="Bebida3" type="Button" parent="PanelTipo/VBoxContainer" unique_id=127563396]
 unique_name_in_owner = true
 layout_mode = 2
-text = "3"
+text = "Horchata"
 
 [node name="Bebida4" type="Button" parent="PanelTipo/VBoxContainer" unique_id=186903355]
 unique_name_in_owner = true
 layout_mode = 2
-text = "4"
+text = "Jamaica"
 
 [node name="Bebida5" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1684697909]
 unique_name_in_owner = true
 layout_mode = 2
-text = "5"
+text = "Naranja"
 
 [node name="Bebida6" type="Button" parent="PanelTipo/VBoxContainer" unique_id=852327079]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
-text = "6"
+text = "Piña"
 
 [node name="PanelSize" type="PanelContainer" parent="." unique_id=789242813]
 visible = false
@@ -69,7 +74,7 @@ layout_mode = 2
 [node name="sizeS" type="Button" parent="PanelSize/VBoxContainer" unique_id=78045089]
 unique_name_in_owner = true
 layout_mode = 2
-text = "S"
+text = "CH"
 
 [node name="SizeM" type="Button" parent="PanelSize/VBoxContainer" unique_id=1917881776]
 unique_name_in_owner = true
@@ -78,7 +83,7 @@ text = "M"
 
 [node name="SizeB" type="Button" parent="PanelSize/VBoxContainer" unique_id=2133694359]
 layout_mode = 2
-text = "B"
+text = "G"
 
 [node name="PanelReady" type="PanelContainer" parent="." unique_id=1152291176]
 visible = false

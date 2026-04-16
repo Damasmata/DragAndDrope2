@@ -1,38 +1,49 @@
 [gd_scene format=3 uid="uid://0q6qhjcs8w8s"]
 
 [ext_resource type="Script" uid="uid://cowp1x6nbbcmo" path="res://toppings_scene.gd" id="1_7ipdg"]
+[ext_resource type="Texture2D" uid="uid://cm4gw0yjd1fhk" path="res://Sprites/extras/toppings/Aguacate.png" id="2_a0g5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0g5o"]
-size = Vector2(36, 36)
+size = Vector2(51, 36)
 
 [node name="Toppings_scene" type="Node2D" unique_id=666755212 groups=["items dropeables"]]
 z_index = 3
 script = ExtResource("1_7ipdg")
 
+[node name="Topping" type="Sprite2D" parent="." unique_id=1230736816]
+unique_name_in_owner = true
+position = Vector2(1.000001, 0)
+scale = Vector2(0.13666669, 0.13666667)
+texture = ExtResource("2_a0g5o")
+
+[node name="Button" type="Button" parent="Topping" unique_id=387364934]
+offset_left = -175.60973
+offset_top = -124.390236
+offset_right = 182.92677
+offset_bottom = 124.390236
+
+[node name="ButtonStopper" type="PanelContainer" parent="Topping" unique_id=1701004582]
+unique_name_in_owner = true
+visible = false
+offset_left = -175.60973
+offset_top = -124.390236
+offset_right = 182.92677
+offset_bottom = 124.390236
+
 [node name="colorrect" type="ColorRect" parent="." unique_id=1118187874]
 unique_name_in_owner = true
+visible = false
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="colorrect" unique_id=387364934]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ButtonStopper" type="PanelContainer" parent="colorrect" unique_id=1701004582]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1582970450]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2114239178]
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_a0g5o")
 
-[connection signal="button_down" from="colorrect/Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="colorrect/Button" to="." method="_on_button_button_up"]
+[connection signal="button_down" from="Topping/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Topping/Button" to="." method="_on_button_button_up"]

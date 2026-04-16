@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://86uxqjuyeuo0"]
+
+[ext_resource type="Texture2D" uid="uid://bmc6pps3upua0" path="res://Sprites/Interfaz/ticket y tira/tira.png" id="1_bhqp3"]
+[ext_resource type="Script" uid="uid://clbpahyq4kc5v" path="res://tira_scene.gd" id="1_wvko3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhqp3"]
+size = Vector2(1153, 38)
+
+[node name="Tira_scene" type="Control" unique_id=1293431002]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.127
+offset_bottom = -0.29600525
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 41)
+script = ExtResource("1_wvko3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=66324781]
+position = Vector2(0, -0.20027623)
+scale = Vector2(0.5994475, 0.5994475)
+texture = ExtResource("1_bhqp3")
+offset = Vector2(960, 90)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=341438977]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=466938450]
+position = Vector2(575.5, 42)
+shape = SubResource("RectangleShape2D_bhqp3")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1272068144]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0487804
+anchor_right = 0.9965278
+anchor_bottom = 2.0365853
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="tickets" type="HBoxContainer" parent="PanelContainer" unique_id=1913208587]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

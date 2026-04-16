@@ -1,5 +1,16 @@
 {
   "column_properties": {
+    "res://Joel/tickets/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
     "res://addons/": {
       "metadata/_custom_type_script": {
         "visibility": 0.0
@@ -109,7 +120,8 @@
     "res://data/lugares dropeables/",
     "res://addons/",
     "res://data/drinks data/",
-    "res://data/orders data/"
+    "res://data/orders data/",
+    "res://Joel/tickets/"
   ],
   "table_functions": {
     "filter": [

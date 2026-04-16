@@ -18,7 +18,7 @@ func _on_button_pressed() -> void:
 	var duplicate_res = customer.orden.duplicate()
 	var new_item = ticket.instantiate()
 	add_child(new_item)
-	new_item.global_position=Vector2(0,0)
+	new_item.global_position= get_viewport_rect().size/2
 	#new_item.set_info(duplicate_res)
 	$Button_sprite.hide()
 

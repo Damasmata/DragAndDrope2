@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="drink" format=3 uid="uid://bmd7grgu7x3ak"]
 
 [ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_nwfal"]
-[ext_resource type="Texture2D" uid="uid://4luijhybcfr0" path="res://icon.svg" id="2_7fmdi"]
+[ext_resource type="Texture2D" uid="uid://dhnk8rtvfsx4r" path="res://Sprites/bebidas/sabores/chico/Horchata_CH.png" id="2_1vhl2"]
+[ext_resource type="Texture2D" uid="uid://cgttrfwkhlp6w" path="res://Sprites/bebidas/sabores/grande/Horchata_G.png" id="3_ngaxt"]
+[ext_resource type="Texture2D" uid="uid://3266bx5ryplt" path="res://Sprites/bebidas/sabores/mediano/Horchata_M.png" id="4_bawet"]
 
 [resource]
 script = ExtResource("1_nwfal")
 name = "Horchata"
 colordrink = Color(0.4383134, 0.4364797, 0.4383134, 1)
-texture_progress = ExtResource("2_7fmdi")
+texture_ch = ExtResource("2_1vhl2")
+texture_m = ExtResource("4_bawet")
+texture_g = ExtResource("3_ngaxt")
 metadata/_custom_type_script = "uid://dpik8c0i45d6m"

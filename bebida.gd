@@ -1,8 +1,12 @@
 extends Node2D
-@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+#@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+@onready var texture_progress_bar: TextureProgressBar = %TextureProgressBar
 
 @onready var button_stopper: PanelContainer = %ButtonStopper
 
+const VASO_CH = preload("uid://pxpnmustq7qf")
+const VASO_G = preload("uid://62qxqq6drii5")
+const VASO_M = preload("uid://bnhsrd8w24wdr")
 
 @export var tiempo_total: float
 var tiempo_actual: float = 0
@@ -44,18 +48,37 @@ func _process(delta: float) -> void:
 		movement() 
 
 func filling():
-	var progreso = (drink_resource.act_fill_time / drink_resource.fill_time) * texture_progress_bar.max_value
+	var progreso = (drink_resource.act_fill_time / drink_resource._fill_time) * texture_progress_bar.max_value
 	texture_progress_bar.value = progreso
-	if drink_resource.act_fill_time >= drink_resource.fill_time:
+	if drink_resource.act_fill_time >= drink_resource._fill_time:
 		texture_progress_bar.value = texture_progress_bar.max_value
 		full = true
 
-func set_info(resource, time, tipo):
+func set_info(sabor:int,resource):
 	drink_resource=resource
-	drink_resource.fill_time=time
-	texture_progress_bar.tint_progress=resource.colordrink
-	texture_progress_bar.texture_progress=resource.texture_progress
-	drink_size=drink_resource.sizes[tipo]
+	texture_progress_bar.texture_progress = drink_resource.sabores[sabor]
+	#drink_resource.fill_time=time
+	##texture_progress_bar.tint_progress=resource.colordrink
+	##texture_progress_bar.texture_progress=resource.texture_progress
+
+#func set_info(resource, time, tipo):
+	#drink_resource=resource
+	#drink_resource.fill_time=time
+	##texture_progress_bar.tint_progress=resource.colordrink
+	##texture_progress_bar.texture_progress=resource.texture_progress
+	#drink_size=drink_resource.sizes[tipo]
+	#match drink_size:
+		#1:
+			#texture_progress_bar.texture_over=VASO_CH
+			#texture_progress_bar.texture_progress=resource.texture_ch
+		#2:
+			#texture_progress_bar.texture_over=VASO_M
+			#texture_progress_bar.texture_progress=resource.texture_m
+		#3:
+			#texture_progress_bar.texture_over=VASO_G
+			#texture_progress_bar.texture_progress=resource.texture_g
+	
+	
 	#print(drink_size)
 
 func movement(): #moverse

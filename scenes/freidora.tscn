@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://civho5vfk2eni"]
 
 [ext_resource type="Script" uid="uid://bj4gr8baxqrg5" path="res://freidora.gd" id="1_ruttr"]
+[ext_resource type="Texture2D" uid="uid://drx560ncmsdmq" path="res://Sprites/estacion freidoras/coccion progress.png" id="2_ydcfu"]
+[ext_resource type="Texture2D" uid="uid://dur1g4cbdimax" path="res://Sprites/estacion freidoras/coccion top.png" id="3_shw61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dixhf"]
 size = Vector2(80, 80)
@@ -29,12 +31,17 @@ color = Color(0.78431374, 0.78431374, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=720977388]
 shape = SubResource("RectangleShape2D_dixhf")
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=574377286]
-offset_left = -60.0
-offset_top = 78.0
-offset_right = 60.0
-offset_bottom = 105.0
+[node name="Coccion bar" type="TextureProgressBar" parent="." unique_id=668083896]
+offset_left = -62.999996
+offset_top = 48.0
+offset_right = 4732.0
+offset_bottom = 1915.0
+scale = Vector2(0.026170326, 0.026170326)
 fill_mode = 1
+texture_under = ExtResource("2_ydcfu")
+texture_over = ExtResource("3_shw61")
+texture_progress = ExtResource("2_ydcfu")
+tint_under = Color(0.43, 0.43, 0.43, 1)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

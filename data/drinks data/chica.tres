@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="drink" format=3 uid="uid://dic6mbd76hfb4"]
+
+[ext_resource type="Texture2D" uid="uid://dhnk8rtvfsx4r" path="res://Sprites/bebidas/sabores/chico/Horchata_CH.png" id="1_7pnex"]
+[ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_ubne3"]
+[ext_resource type="Texture2D" uid="uid://b74fad4ia8bgc" path="res://Sprites/bebidas/sabores/chico/Jamaica_CH.png" id="2_de6gv"]
+[ext_resource type="Texture2D" uid="uid://bl74du6ljvjbn" path="res://Sprites/bebidas/sabores/chico/Naranja_CH.png" id="3_v6b7h"]
+
+[resource]
+script = ExtResource("1_ubne3")
+nombre = "Chicas"
+_fill_time = 5.0
+sabores = Array[Texture2D]([ExtResource("1_7pnex"), ExtResource("2_de6gv"), ExtResource("3_v6b7h")])
+textures = null
+metadata/_custom_type_script = "uid://dpik8c0i45d6m"
