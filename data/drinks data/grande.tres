@@ -1,8 +1,16 @@
 [gd_resource type="Resource" script_class="drink" format=3 uid="uid://e0a31aac2tvh"]
 
 [ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_s32hm"]
+[ext_resource type="Texture2D" uid="uid://cgttrfwkhlp6w" path="res://Sprites/bebidas/sabores/grande/Horchata_G.png" id="1_ytpfw"]
+[ext_resource type="Texture2D" uid="uid://b451i6je6facm" path="res://Sprites/bebidas/sabores/grande/Jamaica_G.png" id="2_4hypq"]
+[ext_resource type="Texture2D" uid="uid://b0qq8edv6d2qf" path="res://Sprites/bebidas/sabores/grande/Naranja_G.png" id="3_ew6rp"]
+[ext_resource type="Texture2D" uid="uid://62qxqq6drii5" path="res://Sprites/bebidas/vasos/Vaso_G.png" id="5_y2tvf"]
 
 [resource]
 script = ExtResource("1_s32hm")
+nombre = "Grandes"
+_fill_time = 15.0
+sabores = Array[Texture2D]([ExtResource("1_ytpfw"), ExtResource("2_4hypq"), ExtResource("3_ew6rp")])
+vaso = ExtResource("5_y2tvf")
 textures = null
 metadata/_custom_type_script = "uid://dpik8c0i45d6m"

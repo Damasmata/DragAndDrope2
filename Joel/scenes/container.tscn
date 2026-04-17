@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bv7t4uda3bsjy"]
 
 [ext_resource type="Script" uid="uid://byq8p6ty6la6x" path="res://Joel/scenes/container.gd" id="1_1to8g"]
+[ext_resource type="Texture2D" uid="uid://cyrlev0gh3p2f" path="res://Sprites/containers/Charola_BACK.png" id="2_ql4ji"]
+[ext_resource type="Texture2D" uid="uid://bwrrsr66qp463" path="res://Sprites/containers/Charola_FRONT.png" id="3_b11ej"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1to8g"]
-size = Vector2(84, 83)
+size = Vector2(141.00003, 64.50001)
 
 [node name="Container" type="Node2D" unique_id=500065366 groups=["servidores"]]
 script = ExtResource("1_1to8g")
@@ -11,6 +13,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=832877793]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(90, 90)
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,13 +29,26 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="AreaContainer" type="Area2D" parent="ColorRect" unique_id=208235576]
-position = Vector2(45, 45)
+[node name="Texture down" type="Sprite2D" parent="." unique_id=1715356012]
+unique_name_in_owner = true
+position = Vector2(-9.094947e-13, 4.7683716e-07)
+scale = Vector2(0.20125003, 0.20125003)
+texture = ExtResource("2_ql4ji")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/AreaContainer" unique_id=1298903140]
-position = Vector2(5, 5)
+[node name="AreaContainer" type="Area2D" parent="Texture down" unique_id=208235576]
+position = Vector2(-24.844639, -49.689423)
+scale = Vector2(4.968943, 4.968943)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texture down/AreaContainer" unique_id=1298903140]
+position = Vector2(4.4999785, 0.74999905)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_1to8g")
 debug_color = Color(0.527264, 0.5724676, 0, 0.41960785)
 
-[connection signal="area_entered" from="ColorRect/AreaContainer" to="." method="_on_area_container_area_entered"]
-[connection signal="area_exited" from="ColorRect/AreaContainer" to="." method="_on_area_container_area_exited"]
+[node name="Texture up" type="Sprite2D" parent="." unique_id=1876030076]
+unique_name_in_owner = true
+scale = Vector2(0.20499998, 0.20499998)
+texture = ExtResource("3_b11ej")
+
+[connection signal="area_entered" from="Texture down/AreaContainer" to="." method="_on_area_container_area_entered"]
+[connection signal="area_exited" from="Texture down/AreaContainer" to="." method="_on_area_container_area_exited"]

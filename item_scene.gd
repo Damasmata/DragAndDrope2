@@ -260,6 +260,7 @@ func _on_button_stopper_mouse_exited() -> void:
 #region panel clck derecho 
 
 func _on_to_counter_pressed() -> void:
+	print("COUNTER")
 	if get_parent().is_in_group("servidores"):
 		var _counter:Node2D
 		if DishManager.empty_counters():
@@ -276,6 +277,7 @@ func _on_to_counter_pressed() -> void:
 	show_container()
 
 func _on_to_erase_pressed() -> void:
+	print("ERASE")
 	if get_parent().is_in_group("servidores"):
 		#_on_to_back_pressed()
 		get_parent().reparent(get_parent().get_parent().get_parent())
@@ -289,6 +291,8 @@ func _on_to_erase_pressed() -> void:
 	show_container()
 
 func _on_to_continue_pressed() -> void:
+	print("CONTINUE")
+	
 	if get_parent().is_in_group("servidores"):
 		get_parent().global_position = Vector2((get_viewport_rect().size.x - 250)+(1152*3),get_viewport_rect().size.y/2)
 		get_parent().ocupado = true
@@ -297,8 +301,10 @@ func _on_to_continue_pressed() -> void:
 		en_segunda=false
 		en_tercera=true
 	$Menu.visible=false
+	
 
 func _on_to_back_pressed() -> void:
+	print("BACK")
 	if get_parent().is_in_group("servidores"):
 		get_parent().global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
 		DishManager.dish_on_second_screen = true

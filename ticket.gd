@@ -8,7 +8,7 @@ var initial_pos:Vector2
 
 
 var can_be_dropped:bool
-
+var dropped:bool
 
 signal tira_pos
 
@@ -27,22 +27,10 @@ var orden_final:Orden
 @onready var bebida: Label = %Bebida
 @onready var tamaño: Label = %Tamaño
 
-
-#@onready var extra_5: Label = $Orden/VBoxContainer/Extra5
-#@onready var extra_4: Label = $Orden/VBoxContainer/Extra4
-#@onready var extra_3: Label = $Orden/VBoxContainer/Extra3
-#@onready var extra_2: Label = $Orden/VBoxContainer/Extra2
-#@onready var extra_1: Label = $Orden/VBoxContainer/Extra1
-
 @onready var salsa: Label = %Salsa
 @onready var chilaquil: Label = %Chilaquil
 @onready var plato: Label = %Plato
 @onready var coccion: Label = %Coccion
-
-#@onready var salsa: Label = $Orden/VBoxContainer/Salsa
-#@onready var chilaquil: Label = $Orden/VBoxContainer/ChilaquilPlato/Chilaquil
-#@onready var plato: Label = $Orden/VBoxContainer/ChilaquilPlato/Plato
-#@onready var coccion: Label = $Orden/VBoxContainer/Coccion
 
 @export var numero_de_orden:int = 0
 
@@ -50,12 +38,15 @@ func _ready() -> void:
 	crear_orden()
 	reparent(get_parent(),)
 	print(orden_final.extras)
+	new_pos=global_position
+	initial_pos=global_position
 
 func _process(delta: float) -> void:
 	if follow_mouse:
 		movement()
-	else:
+	if can_be_dropped and dropped:
 		tira_pos.emit()
+		dropped=false
 
 func crear_orden():
 	var new_order = Orden.new()
@@ -127,13 +118,14 @@ func movement():
 
 func _on_button_button_down() -> void:
 	follow_mouse=true
-
+	dropped=false
 
 func _on_button_button_up() -> void:
-	follow_mouse=false
+	dropped = true
 	if initial_pos != new_pos and can_be_dropped:
-		initial_pos =new_pos
-	global_position=initial_pos
+		initial_pos = new_pos
+	global_position = initial_pos
+	follow_mouse = false
 
 
 #func _on_button_mouse_entered() -> void:

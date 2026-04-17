@@ -1,6 +1,10 @@
 extends Node2D
+#
+#@onready var color_rect: ColorRect = %ColorRect
 
-@onready var color_rect: ColorRect = %ColorRect
+@onready var texture_down: Sprite2D = %"Texture down"
+
+@onready var texture_up: Sprite2D = %"Texture up"
 
 var item_scene:PackedScene = preload("uid://chpe5fim08ihd")
 
@@ -13,7 +17,9 @@ var item_node:Node2D
 var item_duplicated:Node2D
 
 func _ready() -> void:
-	color_rect.color = container_resource.colorrect
+	#color_rect.color = container_resource.colorrect
+	texture_down.texture=container_resource.texture_down
+	texture_up.texture=container_resource.texture_up
 
 func _process(delta: float) -> void:
 	if duplicar and !DishManager.dish_on_second_screen:
@@ -29,6 +35,7 @@ func puede_duplicar():
 		duplicar = true
 		ocupado = true
 		item_node.button_stopper.show()
+		texture_up.z_index=1
 
 func segunda_pantalla(item_to_duplicate:Resource):
 	var child_node = item_node

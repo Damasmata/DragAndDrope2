@@ -1,10 +1,14 @@
 [gd_resource type="Resource" script_class="Places" format=3 uid="uid://c5gyb2waaabqe"]
 
 [ext_resource type="Script" uid="uid://bvii4xwuaj3yd" path="res://data/data places.gd" id="1_s8rsg"]
+[ext_resource type="Texture2D" uid="uid://cyrlev0gh3p2f" path="res://Sprites/containers/Charola_BACK.png" id="2_5a0gq"]
+[ext_resource type="Texture2D" uid="uid://bwrrsr66qp463" path="res://Sprites/containers/Charola_FRONT.png" id="3_3qt45"]
 
 [resource]
 script = ExtResource("1_s8rsg")
 name = "Plato"
 group = "servidores"
 colorrect = Color(0.5137255, 0, 0.9019608, 1)
+texture_down = ExtResource("2_5a0gq")
+texture_up = ExtResource("3_3qt45")
 metadata/_custom_type_script = "uid://bvii4xwuaj3yd"

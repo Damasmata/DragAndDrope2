@@ -23,8 +23,8 @@
 [ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://data/extras data/extra 6.tres" id="22_xano8"]
 [ext_resource type="Resource" uid="uid://dshho4blrnviw" path="res://data/extras data/extra 10.tres" id="23_8s4ss"]
 [ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="23_todrt"]
-[ext_resource type="Resource" uid="uid://x0wig6abwlyi" path="res://data/extras data/extra 8.tres" id="24_12c6b"]
 [ext_resource type="PackedScene" uid="uid://40bffydya6p2" path="res://scenes/bebida_spawner.tscn" id="25_x1dsp"]
+[ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://data/extras data/extra 5.tres" id="26_8s4ss"]
 [ext_resource type="PackedScene" uid="uid://bcfaueodm3ck7" path="res://scenes/cliente_spawner.tscn" id="26_vhtwk"]
 [ext_resource type="Resource" uid="uid://c8nn2uwqvmmg7" path="res://data/clientes data/cliente 1.tres" id="27_xano8"]
 [ext_resource type="Texture2D" uid="uid://31y2rdhnweq5" path="res://Sprites/Interfaz/botones estacion/notas.png" id="28_47av7"]
@@ -93,18 +93,22 @@ position = Vector2(1302, 177)
 item_to_spawn = ExtResource("2_wdn7o")
 
 [node name="ItemSpawner7" parent="Estacion2/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
+visible = false
 position = Vector2(1501, 177)
 item_to_spawn = ExtResource("5_ub0h2")
 
 [node name="ItemSpawner8" parent="Estacion2/Containers2" unique_id=1809689769 instance=ExtResource("2_14sds")]
+visible = false
 position = Vector2(1710, 177)
 item_to_spawn = ExtResource("6_m8cnu")
 
 [node name="ItemSpawner9" parent="Estacion2/Containers2" unique_id=1350545268 instance=ExtResource("2_14sds")]
+visible = false
 position = Vector2(1907, 177)
 item_to_spawn = ExtResource("7_jexln")
 
 [node name="ItemSpawner10" parent="Estacion2/Containers2" unique_id=572210886 instance=ExtResource("2_14sds")]
+visible = false
 position = Vector2(2088, 177)
 item_to_spawn = ExtResource("8_e07ha")
 
@@ -172,7 +176,6 @@ position = Vector2(2415, 194)
 item_to_spawn = ExtResource("21_47av7")
 
 [node name="ItemSpawner2" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=351036151 instance=ExtResource("2_14sds")]
-visible = false
 position = Vector2(2569, 194)
 item_to_spawn = ExtResource("20_x1dsp")
 
@@ -188,10 +191,9 @@ item_to_spawn = ExtResource("22_xano8")
 position = Vector2(3180, 194)
 item_to_spawn = ExtResource("23_todrt")
 
-[node name="ItemSpawner6" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=169958800 instance=ExtResource("2_14sds")]
-visible = false
+[node name="ItemSpawner6" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1872337223 instance=ExtResource("2_14sds")]
 position = Vector2(3333, 194)
-item_to_spawn = ExtResource("24_12c6b")
+item_to_spawn = ExtResource("26_8s4ss")
 
 [node name="Estacion 4" type="Node2D" parent="." unique_id=1173739083]
 

@@ -113,14 +113,15 @@ text = "Ready"
 [node name="SpawnPos" type="ColorRect" parent="." unique_id=1275559422]
 unique_name_in_owner = true
 offset_left = -50.0
-offset_top = 135.0
+offset_top = 221.0
 offset_right = 50.0
-offset_bottom = 235.0
+offset_bottom = 321.0
 pivot_offset = Vector2(50, 50)
+color = Color(1, 1, 1, 0.09411765)
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1354661732]
-position = Vector2(-50, 135)
+position = Vector2(-50, 221)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1244124790]
 position = Vector2(50, 50)

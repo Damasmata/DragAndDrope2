@@ -248,6 +248,8 @@ tira_scene:
 
 se han implementado visuales en los items, toppings, salsas, panel del topping del item, bebidas
 
+se han corregido errores que ocurrieron por cambios en el resource y por implementar visuales
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 COSAS POR REVISAR 1
@@ -259,20 +261,29 @@ COSAS POR REVISAR 1
 	-SOLUCIONADO-
 	
 	se mantiene en la primera estacion y no se mueve de ahi
-	-SOLUCIONADO (si esta colocado en la tira antes)-
+	-SOLUCIONADO
 	
 	parte de la informacion no se actualiza (los nombres del item, container, salas, extras y bebida)
 	-solucionado a medias-
 
 -Pendiente por añadir/programar:
-	El entregar el platillo con el ticket
-	Que se pueda generar una fila de clientes
-	Forma de evaluacion de platillo
-	Añadir visuales faltantes
+	El entregar el platillo con el ticket -PENDIENTE-
+	Que se pueda generar una fila de clientes -PENDIENTE-
+	Forma de evaluacion de platillo -PENDIENTE-
+	Añadir visuales faltantes -AVANZADO-
 
 -----------------------------------------------------
 
+COSAS POR REVISAR 2
 
--El ticket no se mueve por la tira
+El ticket no se mueve por la tira
 
--implementar de forma correcta los sprites de las bebidas
+implementar de forma correcta los sprites de las bebidas
+-SOLUCIONADO-
+
+implementar visuales en los containers
+-solucionado para el plato-
+
+crear mas ordenes y que estas sean especificas
+
+cambiar los label del ticket por las texturas del objeto que debe tener 

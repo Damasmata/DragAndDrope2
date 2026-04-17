@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://db4a3ta4ve5vg" path="res://Joel/tickets/orden_debug.tres" id="3_rn5ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gjy7"]
-size = Vector2(134, 256)
+size = Vector2(121, 225)
 
 [node name="TicketParent" type="Node2D" unique_id=1799167313]
 
@@ -89,6 +89,8 @@ layout_mode = 2
 text = "plato"
 horizontal_alignment = 1
 
+[node name="Sprite2D" type="Sprite2D" parent="Ticket/Orden/VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=1947598681]
+
 [node name="Coccion" type="Label" parent="Ticket/Orden/VBoxContainer/Chilaquil" unique_id=784922480]
 unique_name_in_owner = true
 layout_mode = 2
@@ -100,11 +102,9 @@ layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="Ticket" unique_id=2031365537]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ticket/Area2D" unique_id=1721968102]
-visible = false
-position = Vector2(72, 133)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_2gjy7")
 
 [node name="ButtonStopper" type="PanelContainer" parent="Ticket" unique_id=1750466253]

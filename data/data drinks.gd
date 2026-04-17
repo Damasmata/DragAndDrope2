@@ -4,6 +4,7 @@ extends  Resource
 @export var nombre:String
 @export var _fill_time:float
 @export var sabores:Array[Texture2D]
+@export var vaso:Texture2D
 
 
 @export var name:String

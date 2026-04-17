@@ -4,4 +4,6 @@ extends Resource
 @export var name:String
 @export var group:String
 @export var colorrect:Color
-@export var texturedrop:Texture2D
+@export var texture_down:Texture2D
+@export var texture_up:Texture2D
+@export var other_texture:Texture2D

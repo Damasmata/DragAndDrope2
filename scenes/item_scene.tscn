@@ -14,7 +14,6 @@ size = Vector2(172, 77)
 size = Vector2(83, 82)
 
 [node name="ItemScene" type="Node2D" unique_id=1485117081 groups=["item"]]
-z_index = 1
 script = ExtResource("1_a127h")
 
 [node name="chilaquil" type="Sprite2D" parent="." unique_id=1479366597]

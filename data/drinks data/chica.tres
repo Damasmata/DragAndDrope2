@@ -4,11 +4,13 @@
 [ext_resource type="Script" uid="uid://dpik8c0i45d6m" path="res://data/data drinks.gd" id="1_ubne3"]
 [ext_resource type="Texture2D" uid="uid://b74fad4ia8bgc" path="res://Sprites/bebidas/sabores/chico/Jamaica_CH.png" id="2_de6gv"]
 [ext_resource type="Texture2D" uid="uid://bl74du6ljvjbn" path="res://Sprites/bebidas/sabores/chico/Naranja_CH.png" id="3_v6b7h"]
+[ext_resource type="Texture2D" uid="uid://pxpnmustq7qf" path="res://Sprites/bebidas/vasos/Vaso_CH.png" id="5_de6gv"]
 
 [resource]
 script = ExtResource("1_ubne3")
 nombre = "Chicas"
 _fill_time = 5.0
 sabores = Array[Texture2D]([ExtResource("1_7pnex"), ExtResource("2_de6gv"), ExtResource("3_v6b7h")])
-textures = null
+vaso = ExtResource("5_de6gv")
+textures = {}
 metadata/_custom_type_script = "uid://dpik8c0i45d6m"

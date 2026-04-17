@@ -1,10 +1,16 @@
 [gd_resource type="Resource" script_class="Places" format=3 uid="uid://nj3m4oddi7xa"]
 
 [ext_resource type="Script" uid="uid://bvii4xwuaj3yd" path="res://data/data places.gd" id="1_81hsb"]
+[ext_resource type="Texture2D" uid="uid://2u4ciqwclk0x" path="res://Sprites/containers/Plato.png" id="1_krsea"]
+[ext_resource type="Texture2D" uid="uid://cta2b10ucdqmr" path="res://Sprites/containers/Bolillo_Down.png" id="3_r4wkq"]
+[ext_resource type="Texture2D" uid="uid://e1isgf6etqla" path="res://Sprites/containers/Bolillo_Up.png" id="4_sjft1"]
 
 [resource]
 script = ExtResource("1_81hsb")
 name = "Bolillo"
 group = "servidores"
 colorrect = Color(0.8980392, 0.11372549, 0.39215687, 1)
+texture_down = ExtResource("3_r4wkq")
+texture_up = ExtResource("4_sjft1")
+other_texture = ExtResource("1_krsea")
 metadata/_custom_type_script = "uid://bvii4xwuaj3yd"

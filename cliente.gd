@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 @onready var cliente_sprite: Sprite2D = $cliente_sprite
 @onready var button_sprite: Sprite2D = $Button_sprite
 
@@ -19,6 +21,8 @@ func _on_button_pressed() -> void:
 	var new_item = ticket.instantiate()
 	add_child(new_item)
 	new_item.global_position= get_viewport_rect().size/2
+	#new_item.new_pos=get_viewport_rect().size/2
+	#new_item.inital_pos=get_viewport_rect().size/2
 	#new_item.set_info(duplicate_res)
 	$Button_sprite.hide()
 

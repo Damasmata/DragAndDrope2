@@ -1,15 +1,12 @@
 extends Node2D
-#@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+
 @onready var texture_progress_bar: TextureProgressBar = %TextureProgressBar
 
 @onready var button_stopper: PanelContainer = %ButtonStopper
 
-const VASO_CH = preload("uid://pxpnmustq7qf")
-const VASO_G = preload("uid://62qxqq6drii5")
-const VASO_M = preload("uid://bnhsrd8w24wdr")
+#@onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 
-@export var tiempo_total: float
-var tiempo_actual: float = 0
+
 var full: bool = false
 var stop:bool = false #implementar al rato------------------------
 var finish:bool = false
@@ -57,7 +54,12 @@ func filling():
 func set_info(sabor:int,resource):
 	drink_resource=resource
 	texture_progress_bar.texture_progress = drink_resource.sabores[sabor]
-	#drink_resource.fill_time=time
+	texture_progress_bar.texture_over=drink_resource.vaso
+	drink_resource.act_fill_time=0
+	
+	
+	
+	#drink_resource._fill_time=time
 	##texture_progress_bar.tint_progress=resource.colordrink
 	##texture_progress_bar.texture_progress=resource.texture_progress
 

@@ -38,6 +38,12 @@ func _process(delta: float) -> void:
 				$PanelReady.hide()
 			else:
 				$PanelReady.show()
+			if created_drink.stop:
+				%Stop.disabled=true
+				%Continue.disabled=false
+			else:
+				%Stop.disabled=false
+				%Continue.disabled=true
 
 func spawn_drink():
 	var _res_drink=drink_type.duplicate()
