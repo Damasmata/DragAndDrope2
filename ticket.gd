@@ -1,5 +1,4 @@
-extends Control
-
+extends PanelContainer
 var follow_mouse:bool #siga el mouse
 var offset:Vector2 #para que el objeto se mueva donde se dio click para agarrlo
 
@@ -20,7 +19,7 @@ var order_resource:Resource
 
 var orden_final:Orden
 
-
+var new_parent:Control
 
 @onready var numero: Label = %Numero
 
@@ -40,6 +39,9 @@ func _ready() -> void:
 	print(orden_final.extras)
 	new_pos=global_position
 	initial_pos=global_position
+	$Area2D/CollisionShape2D.shape.size = size
+	$Area2D.position = $Area2D/CollisionShape2D.shape.size/2
+	#$Area2D/CollisionShape2D.shape.size = size
 
 func _process(delta: float) -> void:
 	if follow_mouse:
@@ -121,12 +123,15 @@ func _on_button_button_down() -> void:
 	dropped=false
 
 func _on_button_button_up() -> void:
+	reparent(new_parent)
 	dropped = true
 	if initial_pos != new_pos and can_be_dropped:
 		initial_pos = new_pos
 	global_position = initial_pos
+	if global_position.x > get_viewport_rect().size.x:
+		global_position.x = get_viewport_rect().size.x/2
 	follow_mouse = false
-
+	
 
 #func _on_button_mouse_entered() -> void:
 	#scale=Vector2(1.0,1.0)

@@ -17,10 +17,10 @@ var pos:Vector2
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var new_ticket=area.get_parent()
 	if new_ticket.is_in_group("Ticket"):
-		new_ticket.reparent(tickets)
+		new_ticket.new_parent = self
 		new_ticket.can_be_dropped=true
 		#new_ticket.connect("tira_pos",ticket_pos)
-		new_ticket.new_pos= Vector2(600,global_position.y+(new_ticket.size.y/2)) #Vector2(global_position.x-new_ticket.global_position.x, global_position.y)
+		new_ticket.new_pos= Vector2(get_global_mouse_position().x,0)#Vector2(600,global_position.y+(new_ticket.size.y/2)) 
 		print("ENTRA")
 
 
