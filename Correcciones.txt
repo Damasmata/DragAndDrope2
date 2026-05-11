@@ -264,26 +264,51 @@ COSAS POR REVISAR 1
 	-SOLUCIONADO
 	
 	parte de la informacion no se actualiza (los nombres del item, container, salas, extras y bebida)
-	-solucionado a medias-
-
--Pendiente por añadir/programar:
-	El entregar el platillo con el ticket -PENDIENTE-
-	Que se pueda generar una fila de clientes -PENDIENTE-
-	Forma de evaluacion de platillo -PENDIENTE-
-	Añadir visuales faltantes -AVANZADO-
+	-SOLUCIONADO-
 
 -----------------------------------------------------
 
 COSAS POR REVISAR 2
 
 El ticket no se mueve por la tira
+-SOLUCIONADO-
 
 implementar de forma correcta los sprites de las bebidas
 -SOLUCIONADO-
 
-implementar visuales en los containers
--solucionado para el plato-
+implementar visuales
+-SOLUCIONADO-
 
-crear mas ordenes y que estas sean especificas
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-cambiar los label del ticket por las texturas del objeto que debe tener 
+CAMBIOS HECHOS
+
+Ticket script:
+-La orden tiene todo aleatorizado, usando el recurso orden debug 3
+-el codigo para actualizar la informacion es similar al que tenia en anteriores versiones antes de ser modificado
+-la orden temp se limpia, usando el new order para asignarle datos, y la orden final es igual a la orden temp
+
+Bandeja scene:
+-Contiene dos areas y color rects, uno para el chilaquil, otro para el ticket
+
+Bandeja script:
+-tiene una variable de tipo Orden, para que al colocar el objeto se actualice su informacion
+-funciones para reiniciarse y para actualizar la informacion
+
+cliente script:
+-contiene una variable que es igual a la orden del ticket que crea
+
+Item_scene script
+-tiene un recurso de orden que se actualiza con cada objeto para ser pasado a la bandeja
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR
+
+-mejorar la forma en crear ordenes aleatorias
+
+-hacer que el ticket se pueda poner en la bandeja
+
+-al colocar el ticket se compara la orden del respectivo cliente
+
+-hacer que el cliente spawner spawnee cada cierto tiempo otro cliente

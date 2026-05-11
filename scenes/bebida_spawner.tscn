@@ -10,6 +10,14 @@
 [ext_resource type="Resource" uid="uid://dic6mbd76hfb4" path="res://data/drinks data/chica.tres" id="8_y2g20"]
 [ext_resource type="Resource" uid="uid://0lmkrknu8vhl" path="res://data/drinks data/mediana.tres" id="9_vw1s8"]
 [ext_resource type="Resource" uid="uid://e0a31aac2tvh" path="res://data/drinks data/grande.tres" id="10_rt0mj"]
+[ext_resource type="Texture2D" uid="uid://cbg3yi68yp6ce" path="res://Sprites/Estacion Bebidas/Maquina.png" id="11_npfkl"]
+[ext_resource type="Texture2D" uid="uid://dgx4ncbrt03k3" path="res://Sprites/Estacion Bebidas/Vasos.png" id="12_gl3yf"]
+[ext_resource type="Texture2D" uid="uid://b1feact8uy7i0" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas.png" id="12_x226y"]
+[ext_resource type="Texture2D" uid="uid://b8p748f1sqko" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas presión.png" id="13_mdu3v"]
+[ext_resource type="Texture2D" uid="uid://bjafu71ye5xcv" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasoso.png" id="15_i35xr"]
+[ext_resource type="Texture2D" uid="uid://dtlb8ad7rtrml" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasoso presion .png" id="16_kmxdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl3yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuqne"]
 size = Vector2(95, 94)
@@ -19,73 +27,116 @@ script = ExtResource("1_x8aco")
 drink_resource = Array[Resource]([ExtResource("2_ddyrr"), ExtResource("3_y2g20"), ExtResource("4_vw1s8"), ExtResource("5_rt0mj"), ExtResource("6_npfkl"), ExtResource("7_gl3yf"), ExtResource("8_y2g20"), ExtResource("9_vw1s8"), ExtResource("10_rt0mj")])
 timers = Array[float]([5.0, 10.0, 15.0])
 
-[node name="PanelTipo" type="PanelContainer" parent="." unique_id=967652169]
-offset_left = -70.0
-offset_top = -103.0
-offset_right = 70.0
-offset_bottom = 103.0
+[node name="Maquina" type="Sprite2D" parent="." unique_id=1854846189]
+position = Vector2(4.9999986, 109)
+scale = Vector2(0.31857905, 0.31857902)
+texture = ExtResource("11_npfkl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelTipo" unique_id=130136932]
+[node name="PanelTipo" type="PanelContainer" parent="Maquina" unique_id=967652169]
+unique_name_in_owner = true
+visible = false
+offset_left = -188.3844
+offset_top = -484.4171
+offset_right = -48.3844
+offset_bottom = -278.4171
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gl3yf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Maquina/PanelTipo" unique_id=130136932]
 layout_mode = 2
 
-[node name="Bebida1" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1373022155]
+[node name="Bebida1" type="Button" parent="Maquina/PanelTipo/VBoxContainer" unique_id=1373022155]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Refresco"
 
-[node name="Bebida2" type="Button" parent="PanelTipo/VBoxContainer" unique_id=410058213]
+[node name="Bebida2" type="Button" parent="Maquina/PanelTipo/VBoxContainer" unique_id=410058213]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Cafe"
 
-[node name="Bebida3" type="Button" parent="PanelTipo/VBoxContainer" unique_id=127563396]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Horchata"
-
-[node name="Bebida4" type="Button" parent="PanelTipo/VBoxContainer" unique_id=186903355]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Jamaica"
-
-[node name="Bebida5" type="Button" parent="PanelTipo/VBoxContainer" unique_id=1684697909]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Naranja"
-
-[node name="Bebida6" type="Button" parent="PanelTipo/VBoxContainer" unique_id=852327079]
+[node name="Bebida6" type="Button" parent="Maquina/PanelTipo/VBoxContainer" unique_id=852327079]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Piña"
 
-[node name="PanelSize" type="PanelContainer" parent="." unique_id=789242813]
+[node name="Bebida5" type="TextureButton" parent="Maquina" unique_id=615690870]
+unique_name_in_owner = true
+offset_left = -536.7585
+offset_top = -282.50446
+offset_right = -271.75848
+offset_bottom = -147.50446
+texture_normal = ExtResource("12_x226y")
+texture_pressed = ExtResource("13_mdu3v")
+texture_disabled = ExtResource("13_mdu3v")
+
+[node name="Bebida4" type="TextureButton" parent="Maquina" unique_id=715429526]
+unique_name_in_owner = true
+offset_left = 298.72388
+offset_top = -282.5045
+offset_right = 563.7239
+offset_bottom = -147.50449
+texture_normal = ExtResource("12_x226y")
+texture_pressed = ExtResource("13_mdu3v")
+texture_disabled = ExtResource("13_mdu3v")
+
+[node name="Bebida3" type="TextureButton" parent="Maquina" unique_id=829429293]
+unique_name_in_owner = true
+offset_left = -121.10431
+offset_top = -282.5045
+offset_right = 143.89569
+offset_bottom = -147.50449
+texture_normal = ExtResource("12_x226y")
+texture_pressed = ExtResource("13_mdu3v")
+texture_disabled = ExtResource("13_mdu3v")
+
+[node name="Vasos" type="Sprite2D" parent="." unique_id=1503730391]
+position = Vector2(-459.00003, 151)
+scale = Vector2(0.25393546, 0.25393552)
+texture = ExtResource("12_gl3yf")
+
+[node name="PanelSize" type="PanelContainer" parent="Vasos" unique_id=789242813]
+unique_name_in_owner = true
 visible = false
-offset_left = -70.0
-offset_top = -50.5
-offset_right = 70.0
-offset_bottom = 50.5
+offset_left = 1531.8853
+offset_top = -793.5085
+offset_right = 1671.8853
+offset_bottom = -692.5085
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelSize" unique_id=1647154145]
-layout_mode = 2
-
-[node name="sizeS" type="Button" parent="PanelSize/VBoxContainer" unique_id=78045089]
+[node name="SizeM" type="TextureButton" parent="Vasos" unique_id=371449783]
 unique_name_in_owner = true
-layout_mode = 2
-text = "CH"
+offset_left = -208.71437
+offset_top = 397.73874
+offset_right = 90.28563
+offset_bottom = 602.7388
+texture_normal = ExtResource("15_i35xr")
+texture_pressed = ExtResource("16_kmxdd")
+texture_disabled = ExtResource("16_kmxdd")
 
-[node name="SizeM" type="Button" parent="PanelSize/VBoxContainer" unique_id=1917881776]
+[node name="sizeS" type="TextureButton" parent="Vasos" unique_id=1886560486]
 unique_name_in_owner = true
-layout_mode = 2
-text = "M"
+offset_left = -614.3291
+offset_top = 409.55283
+offset_right = -315.3291
+offset_bottom = 614.55286
+texture_normal = ExtResource("15_i35xr")
+texture_pressed = ExtResource("16_kmxdd")
+texture_disabled = ExtResource("16_kmxdd")
 
-[node name="SizeB" type="Button" parent="PanelSize/VBoxContainer" unique_id=2133694359]
-layout_mode = 2
-text = "G"
+[node name="SizeB" type="TextureButton" parent="Vasos" unique_id=1862495177]
+unique_name_in_owner = true
+offset_left = 177.21043
+offset_top = 389.86276
+offset_right = 476.21045
+offset_bottom = 602.51526
+texture_normal = ExtResource("15_i35xr")
+texture_pressed = ExtResource("16_kmxdd")
+texture_disabled = ExtResource("16_kmxdd")
 
 [node name="PanelReady" type="PanelContainer" parent="." unique_id=1152291176]
+unique_name_in_owner = true
 visible = false
 offset_left = -70.0
 offset_top = -50.5
@@ -112,6 +163,7 @@ text = "Ready"
 
 [node name="SpawnPos" type="ColorRect" parent="." unique_id=1275559422]
 unique_name_in_owner = true
+visible = false
 offset_left = -50.0
 offset_top = 221.0
 offset_right = 50.0
@@ -127,15 +179,15 @@ position = Vector2(-50, 221)
 position = Vector2(50, 50)
 shape = SubResource("RectangleShape2D_iuqne")
 
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida1" to="." method="_on_bebida_1_pressed"]
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida2" to="." method="_on_bebida_2_pressed"]
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida3" to="." method="_on_bebida_3_pressed"]
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida4" to="." method="_on_bebida_4_pressed"]
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida5" to="." method="_on_bebida_5_pressed"]
-[connection signal="pressed" from="PanelTipo/VBoxContainer/Bebida6" to="." method="_on_bebida_6_pressed"]
-[connection signal="pressed" from="PanelSize/VBoxContainer/sizeS" to="." method="_on_size_s_pressed"]
-[connection signal="pressed" from="PanelSize/VBoxContainer/SizeM" to="." method="_on_size_m_pressed"]
-[connection signal="pressed" from="PanelSize/VBoxContainer/SizeB" to="." method="_on_size_b_pressed"]
+[connection signal="pressed" from="Maquina/PanelTipo/VBoxContainer/Bebida1" to="." method="_on_bebida_1_pressed"]
+[connection signal="pressed" from="Maquina/PanelTipo/VBoxContainer/Bebida2" to="." method="_on_bebida_2_pressed"]
+[connection signal="pressed" from="Maquina/PanelTipo/VBoxContainer/Bebida6" to="." method="_on_bebida_6_pressed"]
+[connection signal="pressed" from="Maquina/Bebida5" to="." method="_on_bebida_5_pressed"]
+[connection signal="pressed" from="Maquina/Bebida4" to="." method="_on_bebida_4_pressed"]
+[connection signal="pressed" from="Maquina/Bebida3" to="." method="_on_bebida_3_pressed"]
+[connection signal="pressed" from="Vasos/SizeM" to="." method="_on_size_m_pressed"]
+[connection signal="pressed" from="Vasos/sizeS" to="." method="_on_size_s_pressed"]
+[connection signal="pressed" from="Vasos/SizeB" to="." method="_on_size_b_pressed"]
 [connection signal="pressed" from="PanelReady/VBoxContainer/Stop" to="." method="_on_stop_pressed"]
 [connection signal="pressed" from="PanelReady/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PanelReady/VBoxContainer/Ready" to="." method="_on_ready_pressed"]

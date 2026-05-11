@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://civho5vfk2eni"]
 
 [ext_resource type="Script" uid="uid://bj4gr8baxqrg5" path="res://freidora.gd" id="1_ruttr"]
+[ext_resource type="Texture2D" uid="uid://v116jtugle27" path="res://Sprites/estacion freidoras/freidoras/Parrilla izquierda.png" id="2_shw61"]
 [ext_resource type="Texture2D" uid="uid://drx560ncmsdmq" path="res://Sprites/estacion freidoras/coccion progress.png" id="2_ydcfu"]
 [ext_resource type="Texture2D" uid="uid://dur1g4cbdimax" path="res://Sprites/estacion freidoras/coccion top.png" id="3_shw61"]
 
@@ -10,7 +11,14 @@ size = Vector2(80, 80)
 [node name="Freidora" type="Node2D" unique_id=719853384 groups=["freidora"]]
 script = ExtResource("1_ruttr")
 
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1962856801]
+unique_name_in_owner = true
+position = Vector2(-6.7762636e-21, 15)
+scale = Vector2(0.20873013, 0.2087301)
+texture = ExtResource("2_shw61")
+
 [node name="Placeholder" type="ColorRect" parent="." unique_id=588861116]
+visible = false
 custom_minimum_size = Vector2(90, 90)
 anchors_preset = 8
 anchor_left = 0.5
@@ -32,10 +40,10 @@ color = Color(0.78431374, 0.78431374, 0, 1)
 shape = SubResource("RectangleShape2D_dixhf")
 
 [node name="Coccion bar" type="TextureProgressBar" parent="." unique_id=668083896]
-offset_left = -62.999996
-offset_top = 48.0
-offset_right = 4732.0
-offset_bottom = 1915.0
+offset_left = -61.999996
+offset_top = 57.0
+offset_right = 4733.0
+offset_bottom = 1924.0
 scale = Vector2(0.026170326, 0.026170326)
 fill_mode = 1
 texture_under = ExtResource("2_ydcfu")

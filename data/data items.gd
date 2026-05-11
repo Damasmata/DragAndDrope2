@@ -7,10 +7,11 @@ extends Resource #es un recurso
 @export var raw_color:Color #color
 @export var cooked_color:Color #color
 @export var group:String #a que grupo puede ser asignado 
+@export var order_int:int
 
 var cooked_time:float 
 var extras_en_platillo:Array[Resource] = []
-var estado_de_coccion:Array[int]=[1,2,3,4,5]
+var estado_de_coccion:Array[int]=[0,1,2,3,4]
 var coccion:Array[String]= ["Crudo","Suave","Dorado","Crujiente","Quemado"]
 
 

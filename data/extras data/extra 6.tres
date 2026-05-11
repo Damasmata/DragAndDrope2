@@ -9,4 +9,5 @@ name = "Huevo estrellado"
 colorextra = Color(0.9411765, 0.84705883, 0, 1)
 group = "items dropeables"
 extra_texture = ExtResource("1_imjed")
+order_int = 5
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

@@ -7,3 +7,4 @@ extends Resource
 @export var group:String
 @export var extra_texture:Texture2D
 @export var extra_texture_put:Texture2D
+@export var order_int:int

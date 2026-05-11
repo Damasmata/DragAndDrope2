@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br4jmydsqk1i8"
-path="res://.godot/imported/siguiente.png-9c63ae0efc03e3ae46b363cec4244036.ctex"
+uid="uid://c4e08lx0p8id8"
+path="res://.godot/imported/en medio.png-523458b334428708011ed9193a056fd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Estacion Toppings panel/siguiente.png"
-dest_files=["res://.godot/imported/siguiente.png-9c63ae0efc03e3ae46b363cec4244036.ctex"]
+source_file="res://Sprites/Estacion Toppings/panel/en medio.png"
+dest_files=["res://.godot/imported/en medio.png-523458b334428708011ed9193a056fd3.ctex"]
 
 [params]
 

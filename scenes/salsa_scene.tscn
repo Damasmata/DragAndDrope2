@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bu17x7tfkmndp" path="res://salsa_scene.gd" id="1_00k22"]
 [ext_resource type="Texture2D" uid="uid://bthetpm14lxi" path="res://Sprites/extras/salsas/SalsaRoja.png" id="2_uch5l"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00k22"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yj851"]
 size = Vector2(129, 46)
 
@@ -12,7 +14,7 @@ script = ExtResource("1_00k22")
 
 [node name="Salsa" type="Sprite2D" parent="." unique_id=1839563513]
 unique_name_in_owner = true
-scale = Vector2(0.17283955, 0.17283954)
+scale = Vector2(0.16400678, 0.16400677)
 texture = ExtResource("2_uch5l")
 
 [node name="Button" type="Button" parent="Salsa" unique_id=12825157]
@@ -20,6 +22,7 @@ offset_left = -376.07132
 offset_top = -144.64282
 offset_right = 381.85703
 offset_bottom = 138.85712
+flat = true
 
 [node name="ButtonStopper" type="PanelContainer" parent="Salsa" unique_id=61127886]
 unique_name_in_owner = true
@@ -28,10 +31,12 @@ offset_left = -376.07132
 offset_top = -144.64282
 offset_right = 381.85703
 offset_bottom = 144.64282
+theme_override_styles/panel = SubResource("StyleBoxEmpty_00k22")
 
 [node name="SColor" type="ColorRect" parent="." unique_id=1611163465]
 unique_name_in_owner = true
 visible = false
+z_index = -7
 offset_left = -25.0
 offset_top = -25.0
 offset_right = 25.0

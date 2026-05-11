@@ -1,38 +1,38 @@
 [gd_scene format=3 uid="uid://dk8x5ndgvqp68"]
 
 [ext_resource type="Script" uid="uid://dj3uni6w0d5jw" path="res://cliente.gd" id="1_hthfg"]
-[ext_resource type="Texture2D" uid="uid://d0a2c0ovf5ywk" path="res://Sprites/Interfaz/Botones orden/boton normal.png" id="2_hthfg"]
-[ext_resource type="Texture2D" uid="uid://bomnj7eqxqs1" path="res://Sprites/Interfaz/Botones orden/boton presionado.png" id="3_0rqpr"]
+[ext_resource type="Texture2D" uid="uid://bklj81g6wfljh" path="res://Sprites/Interfaz/Botones orden/boton normal.png" id="2_0rqpr"]
+[ext_resource type="Texture2D" uid="uid://v5wvyr20nw5u" path="res://Sprites/Interfaz/Botones orden/boton presionado.png" id="3_f1txe"]
 
 [node name="Cliente" type="Node2D" unique_id=897116874]
 script = ExtResource("1_hthfg")
 
 [node name="cliente_sprite" type="Sprite2D" parent="." unique_id=1303367264]
+position = Vector2(0, 127.99999)
+scale = Vector2(0.35814318, 0.35814318)
 
-[node name="Button_sprite" type="Sprite2D" parent="." unique_id=1441594304]
-position = Vector2(222, -179)
-texture = ExtResource("2_hthfg")
-
-[node name="Button" type="Button" parent="Button_sprite" unique_id=1864941146]
+[node name="Button" type="TextureButton" parent="." unique_id=1660375723]
 anchors_preset = -1
 anchor_left = 0.209
 anchor_top = 0.24300002
 anchor_right = 0.711
 anchor_bottom = 0.54700005
-offset_left = -113.443
-offset_top = -126.479
-offset_right = -113.397
-offset_bottom = -126.39101
-text = "Pedir orden"
+offset_left = 41.0
+offset_top = -234.0
+offset_right = 1057.0
+offset_bottom = 931.0
+scale = Vector2(0.1705177, 0.1705177)
+texture_normal = ExtResource("2_0rqpr")
+texture_pressed = ExtResource("3_f1txe")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=395936646]
+[node name="Nombre" type="Label" parent="." unique_id=286187488]
+unique_name_in_owner = true
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("2_hthfg")
-texture_pressed = ExtResource("3_0rqpr")
+offset_left = -35.0
+offset_top = 250.0
+offset_right = 35.0
+offset_bottom = 273.0
+text = "NOMBRE"
 
-[connection signal="button_down" from="Button_sprite/Button" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="Button_sprite/Button" to="." method="_on_button_button_up"]
-[connection signal="pressed" from="Button_sprite/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

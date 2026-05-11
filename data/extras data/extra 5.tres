@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="Extras" format=3 uid="uid://n3o0cweljvrd"]
 
 [ext_resource type="Script" uid="uid://5qvuip1x0dga" path="res://data/data_extras.gd" id="1_lho0v"]
+[ext_resource type="Texture2D" uid="uid://ea61y3xjv1wt" path="res://Sprites/extras/toppings/Pollo.png" id="1_x7wbs"]
 
 [resource]
 script = ExtResource("1_lho0v")
 name = "Pollo"
 colorextra = Color(1, 0.6627451, 0, 1)
 group = "items dropeables"
+extra_texture = ExtResource("1_x7wbs")
+order_int = 3
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cywpsspmyss0f" path="res://ticket.gd" id="1_krxyo"]
 [ext_resource type="PackedScene" uid="uid://bgakfi8dtc1ya" path="res://Joel/tickets/extra_scene.tscn" id="2_7yqn5"]
-[ext_resource type="Resource" uid="uid://db4a3ta4ve5vg" path="res://Joel/tickets/orden_debug.tres" id="3_rn5ye"]
+[ext_resource type="Resource" uid="uid://1mkpwhuo28cq" path="res://data/orden base data/orden debug 3.tres" id="3_rn5ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gjy7"]
 size = Vector2(121, 135)
@@ -11,8 +11,6 @@ size = Vector2(121, 135)
 z_index = 2
 offset_right = 121.0
 offset_bottom = 135.0
-grow_horizontal = 2
-grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_krxyo")
@@ -117,4 +115,6 @@ shape = SubResource("RectangleShape2D_2gjy7")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Ticket/ButtonTest" to="Ticket" method="_on_button_test_pressed"]

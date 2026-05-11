@@ -9,4 +9,5 @@ name = "Cebolla"
 colorextra = Color(1, 1, 1, 1)
 group = "items dropeables"
 extra_texture = ExtResource("1_xqunw")
+order_int = 2
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

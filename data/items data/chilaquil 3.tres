@@ -11,4 +11,5 @@ name = "Nixtamalizado"
 raw_color = Color(1, 1, 1, 1)
 cooked_color = Color(0.002199998, 0.016719982, 0.22, 1)
 group = "item"
+order_int = 1
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

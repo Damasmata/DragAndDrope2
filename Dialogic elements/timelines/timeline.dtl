@@ -1,8 +1,10 @@
 # Esta es la prueba de la introduccion, checar su funcionamiento, posibilidades, y asi, TAMBIEN MEJORAR CON MAS COHERENCIA, MAS MOVIMIENTO
 [background arg="#000000ff" fade="0.0"]
+Miercoles 6\:00 am
+Hace bastante sueño
+No me quiero mover...
 En los primeros rayos de luz que se asoman en el rabillo sobre las colimas de la ciudad
 Un tintineante sonido rompe el silencio de la habitación.
-# COLOCAR AQUI SONIDO DE ALARMA (aun no trabajamos audio)
 Abro los ojos lentamente, con la vista entre nublada
 Por un momento mis ojos se clavan en el techo, tratando de acoplar mi mente a la mañana
 Siento  una corriente que recorre mi cuerpo, como si se tratara de una descarga eléctrica; no es algo desagradable, sino una mezcla extraña de nervios y emoción.
@@ -25,7 +27,7 @@ Cuando mis mejillas se enfriaron por la brisa reaccione de inmediato, como si la
 Hoy es mi primer día de trabajo.
 Me preparo rapidamente, solo tomo mis cosas y salgo de casa.
 [background arg="#ffffffff" fade="1.0" wait="true"]
-[background arg="res://Dialogic elements/fondos/callejon chamba.png" fade="1.0" transition="Simple Fade"]
+[background arg="res://Dialogic elements/fondos/callejon chamba.png" fade="1.0" transition="Simple Fade" wait="true"]
 join Joshua center [mirrored="true"]
 Las calles de Guanajuato todavía guardan esa calma que desaparece más tarde.
 Algunas luces siguen encendidas en las casas, y uno que otro puesto comienza a prepararse para el día.
@@ -43,6 +45,7 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	Me pueden correr, me pueden madrear, me la van a mentar.
 	Y si afecto a los demas?
 	Pero tengo que hacerlo no?
+	jump timeline/Cacho que no puedo armar
 	leave Joshua [animation="Slide Out Down"]
 	set {sucio} = true
 	[wait time="2.0" skippable="true"]
@@ -50,6 +53,7 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	join Joshua center [mirrored="true"]
 	Ya ni pedo, a ver si no me encuentro al patron o alguien mas
 	Ando en la mierda.
+	label Cacho que no puedo armar (Cacho)
 	Mejor me pongo trucha, ya dejo de pensar por un rato.
 	En lo que me limpio de camino, ya llegue y habra esperar, a ver si me dan chance pa limpiarme.
 - Imaginar cómo será el lugar.
@@ -67,10 +71,11 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	Asi que pensemos en otra cosa
 	en lo que pienso en nada, ya llegue y ahora a esperar y me vuelven los nervios
 leave Joshua [animation="Slide To Right"]
-[background arg="#79765cff" fade="1.0" wait="true"]
+[wait time="1.5"]
+[background arg="res://Dialogic elements/fondos/fachada del local .png" fade="1.5" wait="true"]
 [wait time="1.0"]
 join Joshua rightmost [animation="Slide From Right" length="1.0" wait="true"]
-[wait time="2.0" skippable="true"]
+[wait time="1.5" skippable="true"]
 En un callejón no tan estrecho pintado por tendederos de listones, paredes coloridas y un letrero desgastado por el tiempo.
 se encuentra un pequeño local de chilaquiles.
 No es grande ni pequeño, pero destacable por una calidez indescriptible.
@@ -78,15 +83,17 @@ Las paredes, iluminadas suavemente por la luz del amanecer, van iluminando el ca
 Ojala pudiera apreciarlo sin tantos nervios
 Mis manos estan ligeramente tensas y sudorosas, mis ojos se sienten inquietos y no puedo evitar recorrer el lugar con la mirada, con una mezcla de curiosidad y nerviosismo.
 los nervios e impaciencia no me dejan en paz.
+update Joshua (Normal/exited)
 YA QUIERO EMPEZAR, mientras mas rapido acabemos mejor
 El tiempo parece avanzar más lento cuando uno espera algo importante, o algo que sabes que va a cambiar algo.
 Unos minutos después, el sonido de pasos rompe el silencio
 A lo lejos veo llegar a una chica , deslumbrante, no por apariencia si no por una energía que contrasta con la tranquilidad de la mañana.
-Cinthia (Normal/Default): Buenos dias.
+desconocido: Buenos dias.
 join Cinthia (Normal/Default) leftmost [mirrored="true"]
 Su voz es dulce, pero firme, y su presencia llena el ambiente de una extraña sensación de confianza.
 Sin dudarlo, abre el local y veo que me sonrie. es una sonrisa... radiante
 Cinthia: Debes de  Joshua, ¿verdad?
+update Joshua (Normal/think)
 Asiento torpemente, sintiendo cómo los nervios invaden mi cuerpo .
 Joshua: Si, por supuesto. ehhhh...
 update Cinthia (Normal/Smile) right [move_time="0.5"]
@@ -94,13 +101,13 @@ Cinthia: Bienvenido, supongo que es tu primera vez trabajando de cocinero asi qu
 Antes de que pueda decir algo más, Cinthia coloca suavemente su mano sobre mi hombro
 Cinthia: Relájate, todo estará bien. No te preocupes, yo te ayudo
 Su toque es breve, pero cálido a la vez
-te enseñare lo que se, no te preocupes, si?
+Cinthia: te enseñare lo que se, no te preocupes, si?
 Paso al interior del restaurante con cynthia.
 leave --All-- [animation="Slide To Left" length="1.0"]
 [wait time="1.0" skippable="true"]
-[background arg="#deba7bff" fade="0.0"]
-join Cinthia right
-join Joshua rightmost
+[background arg="res://Sprites/estacion orden/Ilustración.png" fade="0.5" wait="true"]
+join Cinthia right [animation="Slide From Right"]
+join Joshua (Normal/exited) rightmost [animation="Slide From Right"]
 comienza a enseñarme el interior del local, colorido y agradable.
 Cada cosa con su lugar. La freidora, los utensilios, los ingredientes…
 todo parece formar parte de una rutina perfectamente organizada.
@@ -109,7 +116,7 @@ Mientras recorremos el lugar, una puerta al fondo se abre lentamente.
 desconocido: AHHHHHHH, YA ESTAN AQUI
 Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar
 EL PATRÓN
-join patron center
+join patron leftmost [mirrored="true"]
 if {sucio} == true:
 	patron: Oye cinthia, seguro que trajiste al nuevo o a un vagabundo?
 	Cinthia (Normal/Serious): HEY, NO SEA TAN CULERO
@@ -123,6 +130,7 @@ if {sucio} == true:
 	patron: Bueno, olvidando eso, vamos a darle que es mole de olla
 update Cinthia (Normal/Default)
 patron: Tu debes de ser el nuevo verdad?
+update Joshua (Normal/think)
 Joshua: Em...
 Joshua: Si... soy ese
 patron: Bienvenido. Espero mucho de ti, así que no me decepciones.
@@ -130,6 +138,7 @@ update Cinthia (Normal/Smile)
 Despues del comentario, veo que cinthia suelta una pequeña risa
 Cinthia: No le hagas caso, siempre dice eso el primer día.
 El hombre solo se encoge de hombros antes de volver a lo suyo.
+leave patron [animation="Slide To Left"]
 Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir
 Cinthia: Igual si se te fue algo no te apures, yo te voy guiando por ahora
 Cinthia: Hoy no va a haber mucha chamba, cerramos temprano, no te apures.

@@ -32,6 +32,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 DishManager="*uid://no6wyn2blq30"
+ClienteManager="*uid://rpljioylmfjj"
 
 [dialogic]
 

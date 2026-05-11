@@ -15,6 +15,9 @@ extends  Resource
 
 @export var textures:Dictionary = {"Jaimaica": ["textura_ch","textura_med","textura_gran"],"Horchata": [load("res://Sprites/bebidas/sabores/chico/Horchata_CH.png")]}
 #textures["Jamaica"][0]
+
 var fill_time:float
 var act_fill_time:float
-var sizes: Array[int]=[1,2,3]
+var sizes: Array[int]=[0,1,2]
+
+var tipos: Array[int]=[0,1,2]

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cowp1x6nbbcmo" path="res://toppings_scene.gd" id="1_7ipdg"]
 [ext_resource type="Texture2D" uid="uid://cm4gw0yjd1fhk" path="res://Sprites/extras/toppings/Aguacate.png" id="2_a0g5o"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ipdg"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0g5o"]
 size = Vector2(51, 36)
 
@@ -12,8 +14,8 @@ script = ExtResource("1_7ipdg")
 
 [node name="Topping" type="Sprite2D" parent="." unique_id=1230736816]
 unique_name_in_owner = true
-position = Vector2(1.000001, 0)
-scale = Vector2(0.13666669, 0.13666667)
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.16453232, 0.1645323)
 texture = ExtResource("2_a0g5o")
 
 [node name="Button" type="Button" parent="Topping" unique_id=387364934]
@@ -21,6 +23,7 @@ offset_left = -175.60973
 offset_top = -124.390236
 offset_right = 182.92677
 offset_bottom = 124.390236
+flat = true
 
 [node name="ButtonStopper" type="PanelContainer" parent="Topping" unique_id=1701004582]
 unique_name_in_owner = true
@@ -29,6 +32,7 @@ offset_left = -175.60973
 offset_top = -124.390236
 offset_right = 182.92677
 offset_bottom = 124.390236
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7ipdg")
 
 [node name="colorrect" type="ColorRect" parent="." unique_id=1118187874]
 unique_name_in_owner = true

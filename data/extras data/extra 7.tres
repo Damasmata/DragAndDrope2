@@ -9,4 +9,5 @@ name = "Aguacate"
 colorextra = Color(0, 0.73333335, 0, 1)
 group = "items dropeables"
 extra_texture = ExtResource("1_iqbdk")
+order_int = 1
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

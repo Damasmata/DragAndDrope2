@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://22fq85kw813k"
-path="res://.godot/imported/guardar.png-22d76a02d5736a6b4fb604a86a1ba4f0.ctex"
+uid="uid://b60hhsqrf3po"
+path="res://.godot/imported/Huevo.png-f3727293b901de8b3dc8a9f594803b8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Estacion Toppings panel/guardar.png"
-dest_files=["res://.godot/imported/guardar.png-22d76a02d5736a6b4fb604a86a1ba4f0.ctex"]
+source_file="res://Sprites/Estacion Toppings/spawners/Huevo.png"
+dest_files=["res://.godot/imported/Huevo.png-f3727293b901de8b3dc8a9f594803b8a.ctex"]
 
 [params]
 

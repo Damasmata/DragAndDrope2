@@ -3,12 +3,20 @@ extends Node2D
 @onready var spawn_pos: ColorRect = %SpawnPos
 
 @export var item_to_spawn:Resource
+
+@export var sprite:Texture2D
+
+@onready var texture: Sprite2D = $texture
+
 var item_scene:PackedScene = preload("res://scenes/item_scene.tscn")
 var container_scene:PackedScene = preload("res://Joel/scenes/container.tscn")
 var salsa_scene:PackedScene = preload("res://scenes/salsa_scene.tscn")
 var topping_scene:PackedScene = preload("res://scenes/toppings_scene.tscn")
 
 var item_in_spawner:bool = false
+
+func _ready() -> void:
+	texture.texture=sprite
 
 func spawn_item():
 	if item_to_spawn.group == "item":
@@ -26,7 +34,6 @@ func spawn_item():
 		get_parent().add_child.call_deferred(new_container)
 		new_container.global_position = global_position
 		new_container.set_info(duplicate_res)
-		#new_container.name = container.name
 		
 	elif item_to_spawn.group == "salsa":
 		var duplicate_res = item_to_spawn.duplicate()

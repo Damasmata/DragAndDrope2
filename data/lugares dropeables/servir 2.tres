@@ -13,4 +13,5 @@ colorrect = Color(0.8980392, 0.11372549, 0.39215687, 1)
 texture_down = ExtResource("3_r4wkq")
 texture_up = ExtResource("4_sjft1")
 other_texture = ExtResource("1_krsea")
+order_int = 1
 metadata/_custom_type_script = "uid://bvii4xwuaj3yd"

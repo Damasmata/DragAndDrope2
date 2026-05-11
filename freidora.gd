@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var texture:Texture2D
+@onready var sprite: Sprite2D = %Sprite
+
 var ocupado:bool 
 var friendo:bool 
 
@@ -10,8 +13,9 @@ var coccion:int
 @onready var coccion_bar: TextureProgressBar = $"Coccion bar"
 
 
-#func _ready() -> void:
+func _ready() -> void:
 	#modulate=Color(Color.YELLOW,0.7)
+	sprite.texture=texture
 
 func _process(delta: float) -> void:
 	if friendo and !item_node.follow_mouse:
@@ -45,7 +49,8 @@ func _friendo(tiempo:float):
 	else:
 		item_node.nivel_de_coccion=_item_resource.estado_de_coccion[4]
 		coccion_bar.tint_progress=Color(0.34, 0.017, 0.0, 1.0)
-	print(item_node.nivel_de_coccion)
+	item_node.orden_hecha.cocciones[0]=item_node.orden_filler.cocciones[item_node.nivel_de_coccion]
+	print(item_node.orden_hecha.cocciones)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_parent().is_in_group("item"):

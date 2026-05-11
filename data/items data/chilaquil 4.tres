@@ -9,4 +9,5 @@ name = "Relleno"
 raw_color = Color(1, 1, 1, 1)
 cooked_color = Color(0.10920001, 0.021000003, 0.21, 1)
 group = "item"
+order_int = 4
 metadata/_custom_type_script = "uid://btpn8ossyybhc"

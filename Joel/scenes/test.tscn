@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://c667rxvr4jdgh" path="res://Joel/scenes/generator.tscn" id="1_80ykp"]
 [ext_resource type="Script" uid="uid://bweouuol0mxoc" path="res://Joel/scenes/juego.gd" id="1_jexln"]
 [ext_resource type="PackedScene" uid="uid://cdseqkfxigxbm" path="res://Joel/scenes/item_spawner.tscn" id="2_14sds"]
+[ext_resource type="Texture2D" uid="uid://bp0m3qye1nxxt" path="res://Sprites/Fondote.png" id="2_d1m4l"]
 [ext_resource type="Resource" uid="uid://c5gyb2waaabqe" path="res://data/lugares dropeables/servir 1.tres" id="2_wdn7o"]
+[ext_resource type="Texture2D" uid="uid://yxnh2r0vt417" path="res://Sprites/estacion orden/Fondo estacion 1.png" id="3_0rqn4"]
 [ext_resource type="Resource" uid="uid://csd7wsw87bgjc" path="res://data/items data/chilaquil 4.tres" id="3_cl3t6"]
 [ext_resource type="PackedScene" uid="uid://civho5vfk2eni" path="res://scenes/freidora.tscn" id="3_r4pg6"]
 [ext_resource type="PackedScene" uid="uid://vrrmg8qlmu5c" path="res://scenes/basura.tscn" id="4_hvm2o"]
@@ -15,39 +17,62 @@
 [ext_resource type="Resource" uid="uid://cdlwapx3dyhdb" path="res://data/lugares dropeables/servir 3.tres" id="6_m8cnu"]
 [ext_resource type="Resource" uid="uid://dw6sp4q1ytfch" path="res://data/items data/chilaquil 3.tres" id="6_nw7gm"]
 [ext_resource type="Resource" uid="uid://dep0cdk18bkfc" path="res://data/lugares dropeables/servir 4.tres" id="7_jexln"]
+[ext_resource type="Texture2D" uid="uid://v116jtugle27" path="res://Sprites/estacion freidoras/freidoras/Parrilla izquierda.png" id="8_2t53i"]
 [ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://data/lugares dropeables/servir 5.tres" id="8_e07ha"]
 [ext_resource type="Resource" uid="uid://cr40j1l5m1pk0" path="res://data/items data/chilaquil 5.tres" id="8_wdn7o"]
+[ext_resource type="Texture2D" uid="uid://bov8sfmcqu2xs" path="res://Sprites/estacion freidoras/Spawners/Pila Charolas.png" id="9_iru3j"]
 [ext_resource type="PackedScene" uid="uid://s13j14hw64ph" path="res://scenes/guarda_objetos.tscn" id="9_t23jg"]
+[ext_resource type="Texture2D" uid="uid://n8s4tqq8k0di" path="res://Sprites/estacion freidoras/Spawners/Tortilla amarillapng.png" id="16_d1m4l"]
+[ext_resource type="Texture2D" uid="uid://dl5aln5dh6s1k" path="res://Sprites/estacion freidoras/Spawners/Tortilla Negra.png" id="19_0rqn4"]
 [ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://data/extras data/extra 4.tres" id="20_x1dsp"]
 [ext_resource type="Resource" uid="uid://cmiq8tpo58y8j" path="res://data/extras data/extra 9.tres" id="21_47av7"]
+[ext_resource type="Texture2D" uid="uid://rf6vhsq4t6bf" path="res://Sprites/estacion freidoras/Spawners/Tortilla deshidratada.png" id="22_2t53i"]
 [ext_resource type="Resource" uid="uid://cqvaouwklm7eq" path="res://data/extras data/extra 6.tres" id="22_xano8"]
 [ext_resource type="Resource" uid="uid://dshho4blrnviw" path="res://data/extras data/extra 10.tres" id="23_8s4ss"]
 [ext_resource type="Resource" uid="uid://dshj6ogrn7wmh" path="res://data/extras data/extra 7.tres" id="23_todrt"]
 [ext_resource type="PackedScene" uid="uid://40bffydya6p2" path="res://scenes/bebida_spawner.tscn" id="25_x1dsp"]
 [ext_resource type="Resource" uid="uid://n3o0cweljvrd" path="res://data/extras data/extra 5.tres" id="26_8s4ss"]
 [ext_resource type="PackedScene" uid="uid://bcfaueodm3ck7" path="res://scenes/cliente_spawner.tscn" id="26_vhtwk"]
+[ext_resource type="Texture2D" uid="uid://dvihpjrw8e3pp" path="res://Sprites/Estacion Toppings/spawners/Salsa Roja.png" id="27_87qso"]
 [ext_resource type="Resource" uid="uid://c8nn2uwqvmmg7" path="res://data/clientes data/cliente 1.tres" id="27_xano8"]
 [ext_resource type="Texture2D" uid="uid://31y2rdhnweq5" path="res://Sprites/Interfaz/botones estacion/notas.png" id="28_47av7"]
+[ext_resource type="Texture2D" uid="uid://c6sdo7vma3cy0" path="res://Sprites/Estacion Toppings/spawners/Salsa verde.png" id="29_5epjm"]
 [ext_resource type="Texture2D" uid="uid://cxd2b2txxldbo" path="res://Sprites/Interfaz/botones estacion/freidora.png" id="29_8s4ss"]
 [ext_resource type="Texture2D" uid="uid://cg8w8o7vpkhm2" path="res://Sprites/Interfaz/botones estacion/toppings.png" id="30_exde0"]
 [ext_resource type="Texture2D" uid="uid://3qg13tilsa81" path="res://Sprites/Interfaz/botones estacion/bebidas.png" id="31_2uy15"]
+[ext_resource type="Texture2D" uid="uid://tyeoo0mttgye" path="res://Sprites/Estacion Toppings/spawners/Jitomate.png" id="31_ueyyl"]
 [ext_resource type="PackedScene" uid="uid://86uxqjuyeuo0" path="res://scenes/tira_scene.tscn" id="32_8s4ss"]
+[ext_resource type="Texture2D" uid="uid://bkysu683vxf1x" path="res://Sprites/Estacion Toppings/spawners/Queso Asadero.png" id="33_2ob25"]
+[ext_resource type="Texture2D" uid="uid://bghiewxl6pvi4" path="res://Sprites/Estacion Toppings/spawners/cebolla.png" id="35_t6r7w"]
+[ext_resource type="Texture2D" uid="uid://b60hhsqrf3po" path="res://Sprites/Estacion Toppings/spawners/Huevo.png" id="37_jplsi"]
+[ext_resource type="Texture2D" uid="uid://b2iqn0b2btr6y" path="res://Sprites/Estacion Toppings/spawners/Aguacate.png" id="39_idy8e"]
+[ext_resource type="Texture2D" uid="uid://dr2oqkca1uaey" path="res://Sprites/Estacion Toppings/spawners/Pollo Deshebrado.png" id="41_yk4sd"]
+[ext_resource type="PackedScene" uid="uid://deucetjt0fuyq" path="res://scenes/Bandeja.tscn" id="48_5epjm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t53i"]
 
 [node name="Test" type="Node2D" unique_id=1005686427]
 script = ExtResource("1_jexln")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1490997681]
+[node name="fondo general" type="PanelContainer" parent="." unique_id=1490997681]
+offset_right = 7687.597
+offset_bottom = 1081.0684
+scale = Vector2(0.599407, 0.599407)
+
+[node name="TextureRect" type="TextureRect" parent="fondo general" unique_id=742227490]
+layout_mode = 2
+texture = ExtResource("2_d1m4l")
+
+[node name="estacion1" type="PanelContainer" parent="." unique_id=1208242792]
 offset_right = 4608.0
 offset_bottom = 648.0
+scale = Vector2(0.25005412, 0.6008491)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2t53i")
 
-[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=671532983]
+[node name="TextureRect" type="TextureRect" parent="estacion1" unique_id=895797453]
+z_index = 1
 layout_mode = 2
-color = Color(0.48237306, 0.645481, 0.8333585, 1)
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=742227490]
-layout_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1221933132]
+texture = ExtResource("3_0rqn4")
 
 [node name="camara1" type="Node2D" parent="." unique_id=196732181]
 
@@ -59,7 +84,7 @@ speed = 500.0
 [node name="Estacion1" type="Node2D" parent="." unique_id=371439791]
 
 [node name="Cliente_spawner" parent="Estacion1" unique_id=1613963330 instance=ExtResource("26_vhtwk")]
-position = Vector2(806, 346)
+position = Vector2(528, 263)
 cliente_resource = ExtResource("27_xano8")
 
 [node name="Estacion2" type="Node2D" parent="." unique_id=1079284251]
@@ -68,18 +93,23 @@ cliente_resource = ExtResource("27_xano8")
 
 [node name="Freidora" parent="Estacion2/freidoras" unique_id=1990810203 instance=ExtResource("3_r4pg6")]
 position = Vector2(1532, 348)
+texture = ExtResource("8_2t53i")
 
 [node name="Freidora2" parent="Estacion2/freidoras" unique_id=719853384 instance=ExtResource("3_r4pg6")]
 position = Vector2(1731, 348)
+texture = ExtResource("8_2t53i")
 
 [node name="Freidora3" parent="Estacion2/freidoras" unique_id=415786442 instance=ExtResource("3_r4pg6")]
 position = Vector2(1929, 348)
+texture = ExtResource("8_2t53i")
 
 [node name="Freidora4" parent="Estacion2/freidoras" unique_id=946599085 instance=ExtResource("3_r4pg6")]
 position = Vector2(2141, 348)
+texture = ExtResource("8_2t53i")
 
 [node name="Containers1" type="Node2D" parent="Estacion2" unique_id=572234013]
 unique_name_in_owner = true
+visible = false
 position = Vector2(1306, -164)
 
 [node name="ContainerGenerator" parent="Estacion2/Containers1" unique_id=1167277551 instance=ExtResource("1_80ykp")]
@@ -89,8 +119,9 @@ position = Vector2(136, 105)
 [node name="Containers2" type="Node2D" parent="Estacion2" unique_id=261127337]
 
 [node name="ItemSpawner6" parent="Estacion2/Containers2" unique_id=1897312858 instance=ExtResource("2_14sds")]
-position = Vector2(1302, 177)
+position = Vector2(1754, 101)
 item_to_spawn = ExtResource("2_wdn7o")
+sprite = ExtResource("9_iru3j")
 
 [node name="ItemSpawner7" parent="Estacion2/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
 visible = false
@@ -113,7 +144,7 @@ position = Vector2(2088, 177)
 item_to_spawn = ExtResource("8_e07ha")
 
 [node name="Basura" parent="Estacion2" unique_id=627287397 instance=ExtResource("4_hvm2o")]
-position = Vector2(1265, 394)
+position = Vector2(1265, 318)
 
 [node name="Guardadores" type="Node2D" parent="Estacion2" unique_id=1384179656]
 position = Vector2(1261, 523)
@@ -127,6 +158,7 @@ position = Vector2(216, 0)
 
 [node name="ItemSpawner" parent="Estacion2/ItemsPantallaUno" unique_id=171770150 instance=ExtResource("2_14sds")]
 position = Vector2(1698, 525)
+sprite = ExtResource("16_d1m4l")
 
 [node name="ItemSpawner2" parent="Estacion2/ItemsPantallaUno" unique_id=378561328 instance=ExtResource("2_14sds")]
 visible = false
@@ -136,6 +168,7 @@ item_to_spawn = ExtResource("6_egwv0")
 [node name="ItemSpawner3" parent="Estacion2/ItemsPantallaUno" unique_id=1766254263 instance=ExtResource("2_14sds")]
 position = Vector2(1942, 525)
 item_to_spawn = ExtResource("6_nw7gm")
+sprite = ExtResource("19_0rqn4")
 
 [node name="ItemSpawner4" parent="Estacion2/ItemsPantallaUno" unique_id=1058998379 instance=ExtResource("2_14sds")]
 visible = false
@@ -145,6 +178,7 @@ item_to_spawn = ExtResource("3_cl3t6")
 [node name="ItemSpawner5" parent="Estacion2/ItemsPantallaUno" unique_id=1363502271 instance=ExtResource("2_14sds")]
 position = Vector2(2186, 525)
 item_to_spawn = ExtResource("8_wdn7o")
+sprite = ExtResource("22_2t53i")
 
 [node name="Estacion3" type="Node2D" parent="." unique_id=347656830]
 
@@ -153,55 +187,63 @@ item_to_spawn = ExtResource("8_wdn7o")
 [node name="salsas" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=727389297]
 
 [node name="ItemSpawner" parent="Estacion3/ItemsPantallaDos/salsas" unique_id=1681765797 instance=ExtResource("2_14sds")]
-position = Vector2(2415, 497)
+position = Vector2(2415, 525)
 item_to_spawn = ExtResource("5_3hgyu")
+sprite = ExtResource("27_87qso")
 
 [node name="ItemSpawner2" parent="Estacion3/ItemsPantallaDos/salsas" unique_id=1900992696 instance=ExtResource("2_14sds")]
-position = Vector2(3333, 502)
+position = Vector2(3324, 530)
 item_to_spawn = ExtResource("4_m8cnu")
+sprite = ExtResource("29_5epjm")
 
 [node name="Counters" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=1466729372]
 unique_name_in_owner = true
 
 [node name="Guarda_objetos3" parent="Estacion3/ItemsPantallaDos/Counters" unique_id=1749092842 instance=ExtResource("9_t23jg")]
-position = Vector2(2569, 317)
+position = Vector2(2569, 414)
 
 [node name="Guarda_objetos4" parent="Estacion3/ItemsPantallaDos/Counters" unique_id=8733756 instance=ExtResource("9_t23jg")]
-position = Vector2(3180, 327)
+position = Vector2(3171, 424)
 
 [node name="Toppings" type="Node2D" parent="Estacion3/ItemsPantallaDos" unique_id=424987789]
 
 [node name="ItemSpawner" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1131100626 instance=ExtResource("2_14sds")]
-position = Vector2(2415, 194)
+position = Vector2(2415, 291)
 item_to_spawn = ExtResource("21_47av7")
+sprite = ExtResource("31_ueyyl")
 
 [node name="ItemSpawner2" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=351036151 instance=ExtResource("2_14sds")]
-position = Vector2(2569, 194)
+position = Vector2(2569, 291)
 item_to_spawn = ExtResource("20_x1dsp")
+sprite = ExtResource("33_2ob25")
 
 [node name="ItemSpawner3" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=224362303 instance=ExtResource("2_14sds")]
-position = Vector2(2415, 317)
+position = Vector2(2415, 414)
 item_to_spawn = ExtResource("23_8s4ss")
+sprite = ExtResource("35_t6r7w")
 
 [node name="ItemSpawner4" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1612673092 instance=ExtResource("2_14sds")]
-position = Vector2(3333, 323)
+position = Vector2(3324, 420)
 item_to_spawn = ExtResource("22_xano8")
+sprite = ExtResource("37_jplsi")
 
 [node name="ItemSpawner5" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=964519219 instance=ExtResource("2_14sds")]
-position = Vector2(3180, 194)
+position = Vector2(3171, 291)
 item_to_spawn = ExtResource("23_todrt")
+sprite = ExtResource("39_idy8e")
 
 [node name="ItemSpawner6" parent="Estacion3/ItemsPantallaDos/Toppings" unique_id=1872337223 instance=ExtResource("2_14sds")]
-position = Vector2(3333, 194)
+position = Vector2(3324, 291)
 item_to_spawn = ExtResource("26_8s4ss")
+sprite = ExtResource("41_yk4sd")
 
 [node name="Estacion 4" type="Node2D" parent="." unique_id=1173739083]
 
 [node name="Basura" parent="Estacion 4" unique_id=1166065893 instance=ExtResource("4_hvm2o")]
-position = Vector2(3599, 296)
+position = Vector2(3586, 513)
 
 [node name="BebidaSpawner" parent="Estacion 4" unique_id=21786761 instance=ExtResource("25_x1dsp")]
-position = Vector2(4051, 247)
+position = Vector2(4183, 106)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2099921199]
 
@@ -281,7 +323,9 @@ offset_bottom = -174.427
 flat = true
 
 [node name="Tira_scene" parent="CanvasLayer" unique_id=1293431002 instance=ExtResource("32_8s4ss")]
-offset_bottom = 0.0
+
+[node name="Bandeja" parent="." unique_id=867403190 instance=ExtResource("48_5epjm")]
+position = Vector2(4104, 511)
 
 [connection signal="pressed" from="CanvasLayer/Estacion1/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/Estacion2/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]

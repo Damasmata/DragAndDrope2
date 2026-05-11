@@ -8,6 +8,8 @@ extends Node2D
 
 var item_scene:PackedScene = preload("uid://chpe5fim08ihd")
 
+var orden_filler=Orden.new()
+
 var ocupado:bool
 var duplicar:bool
 var container_resource:Resource
@@ -35,7 +37,10 @@ func puede_duplicar():
 		duplicar = true
 		ocupado = true
 		item_node.button_stopper.show()
-		texture_up.z_index=1
+		item_node.orden_hecha.presentacion.append(orden_filler.presentacion[container_resource.order_int])
+		print(item_node.orden_hecha.presentacion)
+		texture_up.z_index=2
+		#orden_hecha.chilaquil.append(orden_filler.chilaquil[resource.order_int])
 
 func segunda_pantalla(item_to_duplicate:Resource):
 	var child_node = item_node
@@ -46,7 +51,7 @@ func segunda_pantalla(item_to_duplicate:Resource):
 	global_position = Vector2((get_viewport_rect().size.x/2)+(1152*2),get_viewport_rect().size.y/2)
 	child_node.global_position = global_position
 	child_node.en_segunda=true
-	
+	scale=Vector2(2,2)
 	#Codigo para duplicar el obj y mandarlo a la segunda pantalla
 	
 	#var new_item = item_scene.instantiate()

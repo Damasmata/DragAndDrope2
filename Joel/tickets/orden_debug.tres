@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_7msq3")
-extras = Array[String](["Queso"])
+extras = Array[String](["Queso", "Aguacate", "Cebolla", "Pollo", "Huevo"])
+cocciones = Array[String](["Dorado"])
+salsas = Array[String](["Verde"])
+sabor = Array[String](["N"])
+tamano = Array[String](["M"])
+chilaquil = Array[String](["Fria"])
+presentacion = Array[String](["Plato"])
 metadata/_custom_type_script = "uid://1tnj4k7menxr"

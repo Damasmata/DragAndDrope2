@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Orden" format=3 uid="uid://1mkpwhuo28cq"]
+
+[ext_resource type="Script" uid="uid://1tnj4k7menxr" path="res://Joel/tickets/orden_base.gd" id="1_w3nya"]
+
+[resource]
+script = ExtResource("1_w3nya")
+metadata/_custom_type_script = "uid://1tnj4k7menxr"

@@ -22,6 +22,17 @@
         "visibility": 0.0
       }
     },
+    "res://data/clientes data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
     "res://data/drinks data/": {
       "metadata/_custom_type_script": {
         "visibility": 0.0
@@ -121,7 +132,8 @@
     "res://addons/",
     "res://data/drinks data/",
     "res://data/orders data/",
-    "res://Joel/tickets/"
+    "res://Joel/tickets/",
+    "res://data/clientes data/"
   ],
   "table_functions": {
     "filter": [

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Orden" format=3 uid="uid://dnqmmpunk8nc6"]
+
+[ext_resource type="Script" uid="uid://1tnj4k7menxr" path="res://Joel/tickets/orden_base.gd" id="1_a4g0u"]
+
+[resource]
+script = ExtResource("1_a4g0u")
+extras = Array[String](["Cebolla", "Queso", "Pollo", "Jitomate", "Huevo"])
+cocciones = Array[String](["Suave"])
+salsas = Array[String](["Roja"])
+sabor = Array[String](["J"])
+tamano = Array[String](["M"])
+chilaquil = Array[String](["Nixtamalizados"])
+presentacion = Array[String](["Plato"])
+metadata/_custom_type_script = "uid://1tnj4k7menxr"

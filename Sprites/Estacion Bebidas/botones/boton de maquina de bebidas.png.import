@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4e08lx0p8id8"
-path="res://.godot/imported/en medio.png-01016284b9f17d23c18fd23d849a3f13.ctex"
+uid="uid://b1feact8uy7i0"
+path="res://.godot/imported/boton de maquina de bebidas.png-61dbc9edbb93485ce6f03cebd8d906ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Estacion Toppings panel/en medio.png"
-dest_files=["res://.godot/imported/en medio.png-01016284b9f17d23c18fd23d849a3f13.ctex"]
+source_file="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas.png"
+dest_files=["res://.godot/imported/boton de maquina de bebidas.png-61dbc9edbb93485ce6f03cebd8d906ad.ctex"]
 
 [params]
 

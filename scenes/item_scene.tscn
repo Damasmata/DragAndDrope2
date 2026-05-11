@@ -2,10 +2,18 @@
 
 [ext_resource type="Script" uid="uid://dhwa13mkgrrw5" path="res://item_scene.gd" id="1_a127h"]
 [ext_resource type="Texture2D" uid="uid://cp2lwsp6s4twh" path="res://Sprites/Chilaquiles/Tortilla Nixtamalizado.png" id="2_p1nqj"]
-[ext_resource type="Texture2D" uid="uid://br4jmydsqk1i8" path="res://Sprites/Estacion Toppings panel/siguiente.png" id="3_4jctv"]
-[ext_resource type="Texture2D" uid="uid://22fq85kw813k" path="res://Sprites/Estacion Toppings panel/guardar.png" id="4_ww4ix"]
-[ext_resource type="Texture2D" uid="uid://c4e08lx0p8id8" path="res://Sprites/Estacion Toppings panel/en medio.png" id="5_h10ke"]
-[ext_resource type="Texture2D" uid="uid://dti5l87kvtf" path="res://Sprites/Estacion Toppings panel/Borrar.png" id="6_mxa2e"]
+[ext_resource type="Texture2D" uid="uid://br4jmydsqk1i8" path="res://Sprites/Estacion Toppings/panel/siguiente.png" id="3_4jctv"]
+[ext_resource type="Texture2D" uid="uid://4efaj08jpq46" path="res://Sprites/Estacion Toppings/panel/siguiente pres.png" id="4_kdv52"]
+[ext_resource type="Texture2D" uid="uid://22fq85kw813k" path="res://Sprites/Estacion Toppings/panel/guardar.png" id="4_ww4ix"]
+[ext_resource type="Texture2D" uid="uid://dekdtdad37u0j" path="res://Sprites/Estacion Toppings/panel/siguiente des.png" id="5_avctt"]
+[ext_resource type="Texture2D" uid="uid://c4e08lx0p8id8" path="res://Sprites/Estacion Toppings/panel/en medio.png" id="5_h10ke"]
+[ext_resource type="Texture2D" uid="uid://dti5l87kvtf" path="res://Sprites/Estacion Toppings/panel/Borrar.png" id="6_mxa2e"]
+[ext_resource type="Texture2D" uid="uid://d3ykbn8b2f53a" path="res://Sprites/Estacion Toppings/panel/guardar pres.png" id="7_cc1jc"]
+[ext_resource type="Texture2D" uid="uid://3pb6jveqlfia" path="res://Sprites/Estacion Toppings/panel/guardar des.png" id="8_yasws"]
+[ext_resource type="Texture2D" uid="uid://cibdlwhxp6chk" path="res://Sprites/Estacion Toppings/panel/en medio pres.png" id="10_sgfjc"]
+[ext_resource type="Texture2D" uid="uid://c1sy0xntvm3wf" path="res://Sprites/Estacion Toppings/panel/en medio des.png" id="11_gb8db"]
+[ext_resource type="Texture2D" uid="uid://1ro6pg7wuwf1" path="res://Sprites/Estacion Toppings/panel/Borrar pres.png" id="13_5507t"]
+[ext_resource type="Texture2D" uid="uid://d1y3u8eedbt31" path="res://Sprites/Estacion Toppings/panel/Borrar des.png" id="14_4e1fd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
 size = Vector2(90, 90)
@@ -14,12 +22,13 @@ size = Vector2(90, 90)
 size = Vector2(83, 82)
 
 [node name="ItemScene" type="Node2D" unique_id=1485117081 groups=["item"]]
+z_index = 1
 script = ExtResource("1_a127h")
 
 [node name="chilaquil" type="Sprite2D" parent="." unique_id=1479366597]
 unique_name_in_owner = true
 position = Vector2(4.7683716e-07, -2.3841858e-07)
-scale = Vector2(0.1, 0.23)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_p1nqj")
 
 [node name="Button" type="Button" parent="chilaquil" unique_id=2134318984]
@@ -38,18 +47,21 @@ flat = true
 unique_name_in_owner = true
 visible = false
 modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = -0.020000001
+anchor_top = -0.022000002
+anchor_right = 1.0200001
+anchor_bottom = 1.033
 offset_left = -500.0
-offset_top = -200.00002
-offset_right = -500.0
-offset_bottom = -200.00002
+offset_top = -199.89565
+offset_right = -500.00012
+offset_bottom = -200.15652
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BaseColor" type="ColorRect" parent="." unique_id=631274058]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(90, 90)
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,6 +96,7 @@ offset_top = -39.0
 offset_right = 90.0
 offset_bottom = 39.0
 button_mask = 2
+flat = true
 
 [node name="Menu" type="PanelContainer" parent="." unique_id=1919795723]
 self_modulate = Color(1, 1, 1, 0)
@@ -93,13 +106,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.000004
-offset_top = 51.0
-offset_right = 548.0
-offset_bottom = 663.0
+offset_left = -299.00003
+offset_top = -227.00002
+offset_right = 300.99997
+offset_bottom = 385.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.17430976, 0.17430976)
+scale = Vector2(0.10307222, 0.10307222)
+pivot_offset = Vector2(299.17017, 308.87207)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu" unique_id=33800695]
 custom_minimum_size = Vector2(100, 0)
@@ -109,36 +123,47 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("3_4jctv")
+texture_pressed = ExtResource("4_kdv52")
+texture_disabled = ExtResource("5_avctt")
 
 [node name="toCounter" type="TextureButton" parent="Menu/VBoxContainer" unique_id=72380732]
 unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("4_ww4ix")
+texture_pressed = ExtResource("7_cc1jc")
+texture_disabled = ExtResource("8_yasws")
 
 [node name="toBack" type="TextureButton" parent="Menu/VBoxContainer" unique_id=773476676]
 unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("5_h10ke")
+texture_pressed = ExtResource("10_sgfjc")
+texture_disabled = ExtResource("11_gb8db")
 
 [node name="toErase" type="TextureButton" parent="Menu/VBoxContainer" unique_id=839730758]
 unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("6_mxa2e")
+texture_pressed = ExtResource("13_5507t")
+texture_disabled = ExtResource("14_4e1fd")
 
 [node name="LastMenu" type="PanelContainer" parent="." unique_id=311666751]
-visible = false
-offset_left = -65.5
-offset_top = -94.0
-offset_right = 65.5
-offset_bottom = -63.0
+offset_left = -43.0
+offset_top = -80.99999
+offset_right = 557.0
+offset_bottom = 69.00001
+scale = Vector2(0.1431365, 0.1431365)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LastMenu" unique_id=1547561503]
 layout_mode = 2
 
-[node name="ToClean" type="Button" parent="LastMenu/VBoxContainer" unique_id=997021661]
+[node name="ToClean" type="TextureButton" parent="LastMenu/VBoxContainer" unique_id=1743244010]
 unique_name_in_owner = true
+z_index = 2
 layout_mode = 2
-text = "destruir todo"
+texture_normal = ExtResource("6_mxa2e")
+texture_pressed = ExtResource("13_5507t")
+texture_disabled = ExtResource("14_4e1fd")
 
 [node name="Control" type="Control" parent="." unique_id=258173852]
 layout_mode = 3
@@ -169,7 +194,7 @@ offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(45, 45)
-color = Color(0.2, 1, 1, 1)
+color = Color(0.19999999, 1, 1, 0.11372549)
 
 [node name="Area2D2" type="Area2D" parent="Control/DrinkPlace" unique_id=853935888]
 position = Vector2(45, 45)
@@ -179,7 +204,7 @@ shape = SubResource("RectangleShape2D_p1nqj")
 
 [node name="Bebida" type="Node2D" parent="." unique_id=1326543815]
 unique_name_in_owner = true
-position = Vector2(180, 0)
+position = Vector2(181, 45)
 
 [connection signal="button_down" from="chilaquil/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="chilaquil/Button" to="." method="_on_button_button_up"]

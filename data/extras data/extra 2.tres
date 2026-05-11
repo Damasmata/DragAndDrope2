@@ -9,4 +9,5 @@ name = "Salsa verde"
 colorextra = Color(0, 0.16078432, 0, 1)
 group = "salsa"
 extra_texture = ExtResource("1_ogwkm")
+order_int = 1
 metadata/_custom_type_script = "uid://5qvuip1x0dga"

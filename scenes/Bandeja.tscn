@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://deucetjt0fuyq"]
+
+[ext_resource type="Script" uid="uid://bd0r2tb46c5ah" path="res://scenes/bandeja.gd" id="1_q74ss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpput"]
+size = Vector2(476, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q74ss"]
+size = Vector2(137.5, 128.5)
+
+[node name="Bandeja" type="Node2D" unique_id=867403190]
+script = ExtResource("1_q74ss")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1752239196]
+offset_left = -139.0
+offset_top = -65.0
+offset_right = 339.0
+offset_bottom = 65.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1880471435]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=634616713]
+position = Vector2(100, 0)
+shape = SubResource("RectangleShape2D_bpput")
+
+[node name="TicketPlace" type="ColorRect" parent="." unique_id=702353741]
+unique_name_in_owner = true
+offset_left = -386.0
+offset_top = -65.0
+offset_right = -246.40985
+offset_bottom = 66.0
+pivot_offset = Vector2(70, 65)
+color = Color(0, 0.63254416, 0.43994483, 1)
+
+[node name="Area2D2" type="Area2D" parent="TicketPlace" unique_id=1529185428]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TicketPlace/Area2D2" unique_id=42830427]
+position = Vector2(69.75, 65.25)
+shape = SubResource("RectangleShape2D_q74ss")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="TicketPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="TicketPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]

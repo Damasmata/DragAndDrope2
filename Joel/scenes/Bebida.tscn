@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cyn4e1sbl6b0"]
 
 [ext_resource type="Script" uid="uid://bsp2gvvjtoyq4" path="res://bebida.gd" id="1_hiamc"]
-[ext_resource type="Texture2D" uid="uid://b74fad4ia8bgc" path="res://Sprites/bebidas/sabores/chico/Jamaica_CH.png" id="2_hiamc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hiamc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1trir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hiamc"]
 size = Vector2(116, 114)
@@ -12,6 +13,7 @@ size = Vector2(116, 114)
 script = ExtResource("1_hiamc")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=935667204]
+z_index = 8
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -35,7 +37,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 fill_mode = 3
-texture_under = ExtResource("2_hiamc")
 
 [node name="Button" type="Button" parent="PanelContainer/TextureProgressBar" unique_id=1997891562]
 unique_name_in_owner = true
@@ -46,6 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+flat = true
 
 [node name="ButtonStopper" type="PanelContainer" parent="PanelContainer/TextureProgressBar" unique_id=1563459215]
 unique_name_in_owner = true
@@ -60,6 +62,7 @@ offset_left = -0.051997185
 offset_top = 0.046002388
 offset_right = 0.051971436
 offset_bottom = -0.046020508
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1trir")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=563633573]
 
