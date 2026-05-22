@@ -12,6 +12,7 @@ position = Vector2(0, 127.99999)
 scale = Vector2(0.35814318, 0.35814318)
 
 [node name="Button" type="TextureButton" parent="." unique_id=1660375723]
+visible = false
 anchors_preset = -1
 anchor_left = 0.209
 anchor_top = 0.24300002
@@ -29,10 +30,16 @@ metadata/_edit_use_anchors_ = true
 [node name="Nombre" type="Label" parent="." unique_id=286187488]
 unique_name_in_owner = true
 visible = false
+z_index = 3
 offset_left = -35.0
-offset_top = 250.0
+offset_top = 142.0
 offset_right = 35.0
-offset_bottom = 273.0
+offset_bottom = 165.0
 text = "NOMBRE"
 
+[node name="Timer" type="Timer" parent="." unique_id=1173343476]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

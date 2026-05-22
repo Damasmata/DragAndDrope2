@@ -45,7 +45,6 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	Me pueden correr, me pueden madrear, me la van a mentar.
 	Y si afecto a los demas?
 	Pero tengo que hacerlo no?
-	jump timeline/Cacho que no puedo armar
 	leave Joshua [animation="Slide Out Down"]
 	set {sucio} = true
 	[wait time="2.0" skippable="true"]
@@ -53,7 +52,6 @@ Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar
 	join Joshua center [mirrored="true"]
 	Ya ni pedo, a ver si no me encuentro al patron o alguien mas
 	Ando en la mierda.
-	label Cacho que no puedo armar (Cacho)
 	Mejor me pongo trucha, ya dejo de pensar por un rato.
 	En lo que me limpio de camino, ya llegue y habra esperar, a ver si me dan chance pa limpiarme.
 - Imaginar cómo será el lugar.

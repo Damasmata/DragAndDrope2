@@ -356,6 +356,7 @@ func _on_to_back_pressed() -> void:
 
 func _on_click_der_pressed() -> void:
 	to_counter.disabled = !DishManager.empty_counters()
+	print("LO DETECTA")
 	if DishManager.dish_on_second_screen:
 		to_back.disabled=true
 	else:

@@ -1,0 +1,5 @@
+[background arg="#000000ff" fade="0.0"]
+if {historia} == 1.0:
+	LA FALLASTE RE GACHO
+elif {historia} == 3.0:
+	LE ATINASTE RE BIEN

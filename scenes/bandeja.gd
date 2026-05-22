@@ -1,20 +1,20 @@
 extends Node2D
 
-@onready var ticket_place: ColorRect = %TicketPlace
-
 
 var platillo_final=Node2D
 
 var orden_hecha=Orden.new() #el platillo ya completo
 
-var orden_ticket=Orden.new()
+var orden_ticket=Orden.new() #la orden del ticket
 
-var orden_en_ticket:PanelContainer
+var orden_en_ticket:PanelContainer #el nodo del ticket
+
+@onready var game_camera: Camera2D = %GameCamera
+
 
 
 func _ready() -> void:
 	reiniciar()
-	ticket_place.hide()
 
 func reiniciar():
 	platillo_final=null
@@ -25,7 +25,9 @@ func reiniciar():
 	orden_hecha.sabor.clear()
 	orden_hecha.salsas.clear()
 	orden_hecha.tamano.clear()
-	ticket_place.hide()
+	print("SE REINICIA")
+	print(platillo_final)
+	DishManager.order_finish=false
 
 func actualizar():
 	orden_hecha=platillo_final.orden_hecha
@@ -36,14 +38,15 @@ func actualizar():
 	print(orden_hecha.extras)
 	print(orden_hecha.tamano)
 	print(orden_hecha.sabor)
-	
-	ticket_place.show()
+	DishManager.order_finish=true
 
 func check():
 	#self.get_property_list()
-	orden_en_ticket.button_stopper.show()
+	orden_en_ticket.queue_free()
 	ClienteManager.bandeja_usada=self
 	ClienteManager.buscar()
+	game_camera.global_position=game_camera.camera_positions[0]
+	game_camera.change_buttons()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -58,22 +61,3 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if platillo.is_in_group("item"):
 		platillo.disconnect("servido",actualizar)
 		reiniciar()
-
-
-func _on_area_2d_2_area_entered(area: Area2D) -> void:
-	var ticket_on_area=area.get_parent()
-	if ticket_on_area.is_in_group("Ticket"):
-		print("ENTRA")
-		ticket_on_area.connect("comparar",check)
-		ticket_on_area.new_pos=global_position
-		orden_en_ticket=ticket_on_area
-		orden_ticket=ticket_on_area.orden_hecha
-
-
-func _on_area_2d_2_area_exited(area: Area2D) -> void:
-	var ticket_on_area=area.get_parent()
-	if ticket_on_area.is_in_group("Ticket"):
-		print("SALE")
-		ticket_on_area.disconnect("comparar",check)
-		orden_en_ticket=null
-		orden_ticket=null

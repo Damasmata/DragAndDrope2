@@ -16,12 +16,14 @@
 [ext_resource type="Script" uid="uid://ce485i7v2wsx1" path="res://Joel/scenes/game_camera.gd" id="6_hr27k"]
 [ext_resource type="Resource" uid="uid://cdlwapx3dyhdb" path="res://data/lugares dropeables/servir 3.tres" id="6_m8cnu"]
 [ext_resource type="Resource" uid="uid://dw6sp4q1ytfch" path="res://data/items data/chilaquil 3.tres" id="6_nw7gm"]
+[ext_resource type="Resource" uid="uid://ct55vo4na07c0" path="res://data/all_clientes.tres" id="7_2ob25"]
 [ext_resource type="Resource" uid="uid://dep0cdk18bkfc" path="res://data/lugares dropeables/servir 4.tres" id="7_jexln"]
 [ext_resource type="Texture2D" uid="uid://v116jtugle27" path="res://Sprites/estacion freidoras/freidoras/Parrilla izquierda.png" id="8_2t53i"]
 [ext_resource type="Resource" uid="uid://dw80qspjs4l8i" path="res://data/lugares dropeables/servir 5.tres" id="8_e07ha"]
 [ext_resource type="Resource" uid="uid://cr40j1l5m1pk0" path="res://data/items data/chilaquil 5.tres" id="8_wdn7o"]
 [ext_resource type="Texture2D" uid="uid://bov8sfmcqu2xs" path="res://Sprites/estacion freidoras/Spawners/Pila Charolas.png" id="9_iru3j"]
 [ext_resource type="PackedScene" uid="uid://s13j14hw64ph" path="res://scenes/guarda_objetos.tscn" id="9_t23jg"]
+[ext_resource type="Texture2D" uid="uid://b3j0ypr147etr" path="res://Sprites/estacion freidoras/Spawners/Canasta bolillos.png" id="14_ueyyl"]
 [ext_resource type="Texture2D" uid="uid://n8s4tqq8k0di" path="res://Sprites/estacion freidoras/Spawners/Tortilla amarillapng.png" id="16_d1m4l"]
 [ext_resource type="Texture2D" uid="uid://dl5aln5dh6s1k" path="res://Sprites/estacion freidoras/Spawners/Tortilla Negra.png" id="19_0rqn4"]
 [ext_resource type="Resource" uid="uid://dxwe3180jfylq" path="res://data/extras data/extra 4.tres" id="20_x1dsp"]
@@ -51,6 +53,9 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t53i"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5epjm"]
+size = Vector2(138.5, 138.5)
+
 [node name="Test" type="Node2D" unique_id=1005686427]
 script = ExtResource("1_jexln")
 
@@ -77,6 +82,7 @@ texture = ExtResource("3_0rqn4")
 [node name="camara1" type="Node2D" parent="." unique_id=196732181]
 
 [node name="GameCamera" type="Camera2D" parent="camara1" unique_id=237577396]
+unique_name_in_owner = true
 position = Vector2(576, 0)
 script = ExtResource("6_hr27k")
 speed = 500.0
@@ -86,6 +92,7 @@ speed = 500.0
 [node name="Cliente_spawner" parent="Estacion1" unique_id=1613963330 instance=ExtResource("26_vhtwk")]
 position = Vector2(528, 263)
 cliente_resource = ExtResource("27_xano8")
+_clientes_del_dia = ExtResource("7_2ob25")
 
 [node name="Estacion2" type="Node2D" parent="." unique_id=1079284251]
 
@@ -119,14 +126,15 @@ position = Vector2(136, 105)
 [node name="Containers2" type="Node2D" parent="Estacion2" unique_id=261127337]
 
 [node name="ItemSpawner6" parent="Estacion2/Containers2" unique_id=1897312858 instance=ExtResource("2_14sds")]
-position = Vector2(1754, 101)
+position = Vector2(1743, 101)
 item_to_spawn = ExtResource("2_wdn7o")
 sprite = ExtResource("9_iru3j")
 
 [node name="ItemSpawner7" parent="Estacion2/Containers2" unique_id=1245228712 instance=ExtResource("2_14sds")]
 visible = false
-position = Vector2(1501, 177)
+position = Vector2(1884, 101)
 item_to_spawn = ExtResource("5_ub0h2")
+sprite = ExtResource("14_ueyyl")
 
 [node name="ItemSpawner8" parent="Estacion2/Containers2" unique_id=1809689769 instance=ExtResource("2_14sds")]
 visible = false
@@ -324,10 +332,30 @@ flat = true
 
 [node name="Tira_scene" parent="CanvasLayer" unique_id=1293431002 instance=ExtResource("32_8s4ss")]
 
-[node name="Bandeja" parent="." unique_id=867403190 instance=ExtResource("48_5epjm")]
-position = Vector2(4104, 511)
+[node name="lugar de ticket" type="Node2D" parent="CanvasLayer" unique_id=842701086]
+unique_name_in_owner = true
+
+[node name="ticket pos" type="ColorRect" parent="CanvasLayer/lugar de ticket" unique_id=318444511]
+unique_name_in_owner = true
+offset_left = 288.0
+offset_top = 437.0
+offset_right = 428.0
+offset_bottom = 577.0
+pivot_offset = Vector2(70, 70)
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/lugar de ticket/ticket pos" unique_id=137343196]
+position = Vector2(70, 70)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/lugar de ticket/ticket pos/Area2D" unique_id=1032767334]
+shape = SubResource("RectangleShape2D_5epjm")
+
+[node name="Bandeja" parent="CanvasLayer" unique_id=867403190 instance=ExtResource("48_5epjm")]
+unique_name_in_owner = true
+position = Vector2(4212, 511)
 
 [connection signal="pressed" from="CanvasLayer/Estacion1/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/Estacion2/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Estacion3/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/estacion4/Est4" to="camara1/GameCamera" method="_on_est_4_pressed"]
+[connection signal="area_entered" from="CanvasLayer/lugar de ticket/ticket pos/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="CanvasLayer/lugar de ticket/ticket pos/Area2D" to="." method="_on_area_2d_area_exited"]

@@ -43,7 +43,8 @@ directories/dch_directory={
 "patron": "res://Dialogic elements/personajes/personajes/patron.dch"
 }
 directories/dtl_directory={
-"timeline": "res://Dialogic elements/timelines/timeline.dtl"
+"dia1_2": "res://Dialogic elements/timelines/dia1_2.dtl",
+"timeline": "res://Dialogic elements/timelines/dia1_1.dtl"
 }
 layout/style_directory={
 "": "res://Dialogic elements/estilos/estilo visual 1.tres",
@@ -85,6 +86,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogic elements/estilos/estilo visual 1.tres"]
 layout/default_style="res://Dialogic elements/estilos/estilo visual 1.tres"
 variables={
+"historia": 0,
 "sucio": false
 }
 translation/enabled=false

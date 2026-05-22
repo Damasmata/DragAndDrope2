@@ -308,7 +308,54 @@ COSAS POR REVISAR
 -mejorar la forma en crear ordenes aleatorias
 
 -hacer que el ticket se pueda poner en la bandeja
+-SOLUCIONADO-
 
 -al colocar el ticket se compara la orden del respectivo cliente
+-SOLUCIONADO-
 
 -hacer que el cliente spawner spawnee cada cierto tiempo otro cliente
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CAMBIOS HECHOS
+
+test scene:
+-se añadio un area para el ticket
+
+juego script:
+-al colocar el ticket en el area, su orden se asigna a la bandeja y se ejecuta la funcion de chequeo
+-solo aparece si la bandeja tiene una orden y si esta en la cuarta estacion
+
+cliente_manager:
+-contiene un array de todos los clientes
+-el cliente a calificar
+-la bandeja a usar
+-funciones para encontrar el cliente a calificar, modificar su estado y calificar la orden
+-contiene una funcion para aumentar un valor en la variable de la historia del dialogic
+
+cliente scene:
+-añadido un timer, con proposito solo visual para el futuro
+
+cliente script:
+-contiene estados para esperar a ser atendido, para pedir la orden, esperar la orden y entregada la orden
+-ejecuta las funciones del cliente manager para calificar
+
+cliente_spawner scene:
+-contiene un timer para crear clientes cada cierto tiempo
+
+cliente_spawner script:
+-crea clientes en base a un packedResource con los clientes del clientes data
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR
+
+-mejorar la forma en crear ordenes aleatorias
+
+-hacer que el cliente spawner spawnee cada cierto tiempo otro cliente
+
+-que al entregar la orden al cliente, el platillo de la bandeja sea destruido
+
+-cuando todos los clientes tienen el mismo estado, iniciar la timeline
+
+-mejorar funcionamiento de los ticket

@@ -37,7 +37,7 @@ var new_parent:Control
 @onready var plato: Label = %Plato
 @onready var coccion: Label = %Coccion
 
-@export var numero_de_orden:int = 0
+var numero_de_orden:int = 0
 
 func _ready() -> void:
 	crear_orden()
@@ -54,7 +54,6 @@ func _process(delta: float) -> void:
 	if follow_mouse:
 		movement()
 	if can_be_dropped and dropped:
-		#tira_pos.emit()
 		comparar.emit()
 		dropped=false
 
@@ -64,7 +63,7 @@ func crear_orden():
 	var orden_temp = Orden.new()
 	
 	var extras_random_number = randi_range(1,5)
-	orden_temp.numero_orden = numero_de_orden +1
+	orden_temp.numero_orden = ClienteManager.ticket_number
 	#var extras_en_orden:Array[String] = []
 	orden_temp.extras.clear()
 	orden_temp.chilaquil.clear()
@@ -152,7 +151,7 @@ func _on_button_button_up() -> void:
 	if global_position.x > get_viewport_rect().size.x:
 		global_position.x = get_viewport_rect().size.x/2
 	follow_mouse = false
-	
+
 
 func _on_button_mouse_entered() -> void:
 	scale=Vector2(1.0,1.0)
