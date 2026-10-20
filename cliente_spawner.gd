@@ -11,11 +11,14 @@ var clientes_del_dia:Array[Resource]=[]
 
 @onready var timer: Timer = $Timer
 
+var show_next:int=0
+
 func _ready() -> void:
 	_clientes_del_dia.load_all_into(clientes_del_dia)
 	#_clientes_del_dia.load_all_into(ClienteManager.clientes)
 	for clientela in clientes_del_dia:
 		spawn_cliente(clientela)
+	mostrar_cliente()
 
 func spawn_cliente(_cliente:Resource):
 	var duplicate_res=_cliente.duplicate()
@@ -24,9 +27,14 @@ func spawn_cliente(_cliente:Resource):
 	ClienteManager.clientes.append(new_cliente)
 	new_cliente.global_position=spawn_pos.global_position
 	new_cliente.set_info(duplicate_res)
+	new_cliente.hide()
 	#print(ClienteManager.clientes[0].customer.name)
 
-
-
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	mostrar_cliente()
+
+func mostrar_cliente():
+	if show_next<ClienteManager.clientes.size():
+		ClienteManager.clientes[show_next].show()
+		show_next+=1
+		timer.start()

@@ -11,6 +11,13 @@ var bandeja_usada:Node2D
 
 var cliente_ordenando: bool = false
 
+var cliente_en_espera:bool=false
+
+var cliente_calificando: bool=false
+
+var game_camera: Camera2D
+
+
 
 func buscar():
 	for clientela in clientes.size():
@@ -20,7 +27,20 @@ func buscar():
 			cliente_calificado.change_state()
 			print("LO ENCONTRÓ")
 
+#func disable_cam():
+	#if game_camera.est_1.disabled==false:
+		#game_camera.est_1.disabled=true
+		#game_camera.est_2.disabled=true
+		#game_camera.est_3.disabled=true
+		#game_camera.est_4.disabled=true
+	#else:
+		#game_camera.est_1.disabled=false
+		#game_camera.est_2.disabled=false
+		#game_camera.est_3.disabled=false
+		#game_camera.est_4.disabled=false
+
 func calificar():
+	
 	var calf_est2: float =0
 	var calf_est3: float =0
 	var calf_est4: float =0
@@ -49,8 +69,14 @@ func calificar():
 	
 	if bandeja_usada.orden_hecha.tamano==cliente_calificado.orden_cliente.tamano:
 		calf_est4+=33
-		if bandeja_usada.platillo_final.drink_node.texture_progress_bar.value==bandeja_usada.platillo_final.drink_node.texture_progress_bar.max_value/7:
-			calf_est4+=34
+		if bandeja_usada.platillo_final.drink_node.texture_progress_bar.value<=(bandeja_usada.platillo_final.drink_node.texture_progress_bar.max_value/10)*7:
+			var suma_tamano=bandeja_usada.platillo_final.drink_node.texture_progress_bar.value*0.4857
+			calf_est4+=suma_tamano
+			print("LA SUMA ES: ",suma_tamano)
+		else:
+			var resta_tamano=(bandeja_usada.platillo_final.drink_node.texture_progress_bar.value*1.13)
+			calf_est4+=34-resta_tamano
+			print("LA RESTA ES: ",resta_tamano)
 		print(bandeja_usada.platillo_final.drink_node.texture_progress_bar.value)
 	
 	if bandeja_usada.orden_hecha.sabor==cliente_calificado.orden_cliente.sabor:
@@ -61,27 +87,33 @@ func calificar():
 	
 	print(calf_final)
 	
-	cliente_calificado.hide()
+	#cliente_calificado.hide()
+	cliente_calificado.change_state()
 	if calf_final>=200:
 		Dialogic.VAR.set_variable("historia",+3)
 		print("QUE BIEN")
+		cliente_calificado.cliente_sprite.texture=cliente_calificado.text_bien
 	elif calf_final>=100:
-		print("QUE BIEN")
 		Dialogic.VAR.set_variable("historia",+2)
+		cliente_calificado.cliente_sprite.texture=cliente_calificado.text_maso
 		print("MAS O MENOS")
 	else:
 		Dialogic.VAR.set_variable("historia",+1)
+		cliente_calificado.cliente_sprite.texture=cliente_calificado.text_mal
 		print("QUE MAL")
 		
-	terminar_dia()
+		DishManager.platillo_final.queue_free()
+		
+	#terminar_dia()
+	DishManager.platillo_final.queue_free()
+	game_camera.est_1.button_pressed=true
+	game_camera.est_4.button_pressed=false
+
+func comparar_estado(client:Node2D):
+	return client.estado==4
 
 func terminar_dia():
-	pass
-	
-	#if clientes.all()
-	
-	#get_tree().change_scene_to_file("res://Dialogic elements/timelines/dia1_2.dtl")
-	#Dialogic.start("dia1_2")
-	
-	#cualquiera de las dos formas funciona
-	#si todos los clientes estan en el ultimo estado, se inicia dia1_2.dtl
+	if clientes.all(comparar_estado):
+		
+		NovelaManager.next_scene="dia1_2"
+		get_tree().change_scene_to_file("res://scenes/novela.tscn")

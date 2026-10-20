@@ -1,14 +1,13 @@
 # Esta es la prueba de la introduccion, checar su funcionamiento, posibilidades, y asi, TAMBIEN MEJORAR CON MAS COHERENCIA, MAS MOVIMIENTO
 [background arg="#000000ff" fade="0.0"]
-Miercoles 6\:00 am
-Hace bastante sueño
+Miercoles 6\:00 am.
+Hace bastante sueño.
 No me quiero mover...
-En los primeros rayos de luz que se asoman en el rabillo sobre las colimas de la ciudad
-Un tintineante sonido rompe el silencio de la habitación.
-Abro los ojos lentamente, con la vista entre nublada
-Por un momento mis ojos se clavan en el techo, tratando de acoplar mi mente a la mañana
-Siento  una corriente que recorre mi cuerpo, como si se tratara de una descarga eléctrica; no es algo desagradable, sino una mezcla extraña de nervios y emoción.
-Mis dedos rozan las sábanas mientras busca aquel tintineo entre la tela arrugada, todavía medio perdido entre el sueño y la realidad.
+En los primeros rayos de luz que se asoman en el rabillo sobre las colimas de la ciudad.
+intento abrir los ojos lentamente, con la vista entre nublada.
+Por un momento mis ojos se clavan en el techo, tratando de acoplar mi mente a la mañana.
+Siento  una corriente que recorre mi cuerpo,es una mezcla extraña de nervios y emoción, pero mas nervios que emoción.
+Mis dedos rozan las sábanas mientras trato de escapar de ellas, todavía medio perdido entre el sueño y la realidad.
 - Levantarse inmediatamente
 	Tomo un suspiro y me levanto rápidamente, tratando de sacudirme los nervios antes de que estos me invadieran
 - Apagar la alarma y quedarse unos minutos más en la cama
@@ -16,14 +15,14 @@ Mis dedos rozan las sábanas mientras busca aquel tintineo entre la tela arrugad
 	...
 	... ... ...
 	Ya cuanto tiempo pasó?
-	PTM YA SE ME HIZO TARDE POR WEY
+	YA SE ME HIZO TARDE QUE WEY.
 [background arg="res://Dialogic elements/fondos/cuarto.png" fade="2.0" wait="true"]
 El aire de la mañana entra por la ventana entreabierta, fresco y ligeramente frío.
 Desde afuera se escuchan los primeros sonidos de la ciudad despertando.
 Una puerta que se abre, pasos lejanos, el murmullo de algún vehículo pasando a lo lejos, lo de siempre.
-Me acerco a la ventana, y observo las calles que aun seguían tranquilas, casi vacías
+Me acerco a la ventana, y observo las calles que aun siguen tranquilas, casi vacías
 El aire fresco entra con más fuerza.
-Cuando mis mejillas se enfriaron por la brisa reaccione de inmediato, como si la mañana misma me empujara a empezar el día.
+Cuando mis mejillas se enfriaron por la brisa reacciono de inmediato, como si la mañana misma me empujara a empezar el día.
 Hoy es mi primer día de trabajo.
 Me preparo rapidamente, solo tomo mis cosas y salgo de casa.
 [background arg="#ffffffff" fade="1.0" wait="true"]
@@ -31,36 +30,37 @@ Me preparo rapidamente, solo tomo mis cosas y salgo de casa.
 join Joshua center [mirrored="true"]
 Las calles de Guanajuato todavía guardan esa calma que desaparece más tarde.
 Algunas luces siguen encendidas en las casas, y uno que otro puesto comienza a prepararse para el día.
-update Joshua center [animation="Shake Y" length="2.5" wait="true" repeat_forever="true"]
-Comienzo a caminar hacia el local, no es particularmente largo, pero cada paso que doy se siente vibrante…
+update Joshua [animation="Shake Y" length="2.5" wait="true" repeat_forever="true"]
+Comienzo a caminar hacia el local, no es particularmente largo, pero cada paso que doy se siente eterno…
 Quizá porque todo es nuevo...
 Observo en movimiento de mis pies, mientras mi mente no deja de deja de imaginar.
 - Pensar en que haré.
-	Siento que a lo mejor si la armo
-	Digo, tengo un poco de experiencia, y por eso me aceptaron en la chamba.
+	Siento que a lo mejor si la armo.
+	Digo, tengo un poco de experiencia, y por eso me aceptaron.
 	Pero a su vez, es mi primera vez.
-	Espero que me digan como es la movida primero eda.
-	Pero que tal si la cago?
-	Que tal si hago una receta mal?
+	Ojala me digan como es la movida primero.
+	¿Pero qué tal si la cago?
+	¿Qué tal si hago TODO mal?
 	Me pueden correr, me pueden madrear, me la van a mentar.
-	Y si afecto a los demas?
-	Pero tengo que hacerlo no?
+	¿Y sí afecto a los demas?
+	Pero tengo que hacerlo ¿no?
+	jump SALTAR
 	leave Joshua [animation="Slide Out Down"]
 	set {sucio} = true
 	[wait time="2.0" skippable="true"]
-	VERGA
+	CHANGOS
 	join Joshua center [mirrored="true"]
 	Ya ni pedo, a ver si no me encuentro al patron o alguien mas
-	Ando en la mierda.
+	label SALTAR
+	Ando fatal, tengo que hacerlo.
 	Mejor me pongo trucha, ya dejo de pensar por un rato.
-	En lo que me limpio de camino, ya llegue y habra esperar, a ver si me dan chance pa limpiarme.
 - Imaginar cómo será el lugar.
-	Solo supe que habia chamba y la agarre
-	A lo mejor la instalacion esta bien perrona
+	Solo supe que habia chamba y la agarre.
+	A lo mejor la instalacion esta bien perrona.
 	O a lo mejor pagan bien para la renta
-	Espero que el ambiente laboral no este tan de la mierda como la ultima vez
-	ya veremos con quien me relacionare en la chamba
-	y en lo que reflexiono y me pongo nervioso, ya llegue y me toca esperar y aumentar los nervios
+	Espero que el ambiente laboral no este tan... mal como la ultima vez.
+	ya veremos con quien me relacionare en la chamba.
+	y en lo que reflexiono y me pongo nervioso, ya llegue y me toca esperar y aumentar los nervios.
 - Disfrutar la tranquilidad de la mañana.
 	Voy a tratar de no pensarla mucho, porque tal vez mientras mas la piense peor me va
 	Siempre me pasa que si pienso que si va a ir de la fregada
@@ -87,34 +87,93 @@ El tiempo parece avanzar más lento cuando uno espera algo importante, o algo qu
 Unos minutos después, el sonido de pasos rompe el silencio
 A lo lejos veo llegar a una chica , deslumbrante, no por apariencia si no por una energía que contrasta con la tranquilidad de la mañana.
 desconocido: Buenos dias.
-join Cinthia (Normal/Default) leftmost [mirrored="true"]
+join Cinthia (Normal/Default) leftmost [animation="Slide From Left" mirrored="true"]
 Su voz es dulce, pero firme, y su presencia llena el ambiente de una extraña sensación de confianza.
-Sin dudarlo, abre el local y veo que me sonrie. es una sonrisa... radiante
-Cinthia: Debes de  Joshua, ¿verdad?
+Sin dudarlo, abre el local y veo que me sonrie. es una sonrisa... radiante.
+Cinthia: Debes de ser Joshua, ¿verdad?
 update Joshua (Normal/think)
-Asiento torpemente, sintiendo cómo los nervios invaden mi cuerpo .
+Asiento torpemente, sintiendo cómo los nervios invaden mi cuerpo.
 Joshua: Si, por supuesto. ehhhh...
 update Cinthia (Normal/Smile) right [move_time="0.5"]
 Cinthia: Bienvenido, supongo que es tu primera vez trabajando de cocinero asi que te ayudare.
-Antes de que pueda decir algo más, Cinthia coloca suavemente su mano sobre mi hombro
-Cinthia: Relájate, todo estará bien. No te preocupes, yo te ayudo
-Su toque es breve, pero cálido a la vez
-Cinthia: te enseñare lo que se, no te preocupes, si?
+Antes de que pueda decir algo más, Cinthia coloca suavemente su mano sobre mi hombro.
+Cinthia: Relájate, todo estará bien. No te preocupes, yo te ayudo.
+Su toque es breve, pero cálido a la vez.
+Cinthia: Te enseñare lo que se, no te preocupes, si?
 Paso al interior del restaurante con cynthia.
-leave --All-- [animation="Slide To Left" length="1.0"]
+leave --All-- [animation="Slide To Left" length="1.0" wait="true"]
 [wait time="1.0" skippable="true"]
 [background arg="res://Sprites/estacion orden/Ilustración.png" fade="0.5" wait="true"]
-join Cinthia right [animation="Slide From Right"]
-join Joshua (Normal/exited) rightmost [animation="Slide From Right"]
-comienza a enseñarme el interior del local, colorido y agradable.
-Cada cosa con su lugar. La freidora, los utensilios, los ingredientes…
-todo parece formar parte de una rutina perfectamente organizada.
+join Cinthia right [animation="Slide From Right" wait="true"]
+join Joshua (Normal/exited) rightmost [animation="Slide From Right" wait="true"]
+Comienza a enseñarme el interior del local, colorido y agradable.
 Me muestra cada rincón, explicando con paciencia, como si el lugar fuera completamente suyo.
-Mientras recorremos el lugar, una puerta al fondo se abre lentamente.
+Hasta que llegamos a la zona de la chamba.
+update Cinthia [mirrored="true"]
+Cinthia: Aqui es donde te la vas a pasar todo el tiempo.
+Cinthia: Iniciando primero con lo primero.
+Cinthia: El mostrador.
+Cinthia: Aqui te van a estar llegando los clientes, y te van a pedir las comidas y a criticarlas.
+Cinthia: Toma sus ordenes, Toño con Carmela y Nadia con Priscila.
+Joshua (Normal/think): Cómo?
+Cinthia: Osea tenles paciencia, no te muevas cuando estes con un cliente.
+Joshua (Normal/exited): Sale y vale.
+Cinthia: Cuando terminen de darte su orden, tendras un ticket
+Cinthia (Normal/Serious): La maquina del ticket ha estado fallando mucho, asi que muestra puro texto.
+Cinthia: Pero no te apures, luego se reparará.
+Cinthia (Normal/Default): Recuerda ponerlo arriba, en el mecate pa no perderlo, que luego pasa que se te queda ahi en el mostrador y el cliente bien gracias.
+Cinthia: Y una vez que tengas el ticket, toca prepararlo.
+Me empieza a llevar a la zona donde se preparan los chilaquiles.
+[background arg="res://Sprites/estacion freidoras/estacion 2.png" fade="1.0" transition="Push Left" wait="true"]
+Cinthia: En esta vas a freir en comal los chilaquiles.
+Cinthia: Primero pues tienes que sacar una buena cantidad de totopos.
+Cinthia: Luego toca ponerlos a freir.
+Cinthia: A puro color te puedes dar cuenta que tan cocinados estan.
+Cinthia: Crudos, suaves, dorados, crujientes o ya quemadisimo.
+Cinthia: Lo puedes tirar en el lugar de la izquierda o guardarlo para luego en los de abajo, tu decides.
+Cinthia: Y para servirlo, agarras una de las charolas y lo pones ahi.
+Cinthia: Ahorita no ha llegado el de los bolillos asi que por ahora va a ser pura charola.
+Cinthia: Y vas a ocupar espacio en la siguiente estacion para que puedas trabajar.
+Ahora para la tercera.
+[background arg="res://Sprites/Estacion Toppings/estacion 3.png" fade="1.0" transition="Push Left" wait="true"]
+Cinthia (Normal/Serious): Aquí es donde se hacen las maldades.
+Joshua (Normal/think): Por qué o qué?
+Cinthia: Por nada...
+Cinthia (Normal/Default): En esta parte le echas la salsa y lo demas, como deben der ser los chilaquiles
+update Joshua (Normal/exited)
+Cinthia: Y aqui viene el truco.
+Cinthia: Tu decides si guardar el plato para luego, si tirarlo a la basura, si agarrar el que estaba guardado o mandar los chilaquiles a la siguiente estacion
+Cinthia: Cómo hacer todo esto?
+Cinthia: Imaginalo como un panel que lo activas dando un click derecho en el chilaquil.
+Joshua (Normal/think): Suena... Curioso.
+Cinthia: Suena medio raro, pero pues a mi me sirvio para chambear en eso.
+Joshua (Normal/exited): Te creo, no pasa nada... lo recordare.
+update Cinthia (Normal/Smile)
+Veo que sonríe bastante mas, casi como de alivio que no sea vista...diferente.
+Y luego me lleva a la ultima estación.
+[background arg="res://Sprites/Estacion Bebidas/estacion 4.png" fade="1.0" transition="Push Left" wait="true"]
+Cinthia (Normal/Default): Ahora si la ultima.
+Cinthia: Cuando acabes el chilaquil, aqui haces la bebida a acompañar.
+Cinthia: Presiona los botones de la maquina para el sabor y para el tamaño del vaso.
+Cinthia: Y AGUAS.
+Cinthia: Sirve el vaso cerca de la linea marcada, para evitar derrames luego, y tambien es una buena cantidad de agua.
+Cinthia: Y ya lo sirves con el platillo, y lo entregas al cliente con su ticket.
+Cinthia: Y despues te va a criticar por tu servicio, nomas dale tantita chance para que sigas.
+Cinthia: Por si te sirve el dato\: dependiendo el resultado tambien nos afectas a todos.
+Cinthia: Y con eso seria la guia general de todo.
+Cinthia: Asi que pues por una la llevan todos.
+[background arg="res://Sprites/estacion orden/Ilustración.png" fade="1.0" transition="Push Right" wait="true"]
+Cinthia: Facilisimo verdad?
+Joshua (Normal/Default): Supongo que si...
+Fue demasiada información a absorver.
+Todo parece formar parte de una rutina perfectamente organizada.
+Quiero pensar que en practica es bastante intuitivo.
+En eso se escucha la puerta de atras abriendose.
 desconocido: AHHHHHHH, YA ESTAN AQUI
-Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar
-EL PATRÓN
-join patron leftmost [mirrored="true"]
+update Cinthia [mirrored="false"]
+Un hombre mayor aparece desde la cocina trasera. No parece particularmente serio, pero por su apariencia deja claro que es quien dirige el lugar.
+EL PATRÓN.
+join patron leftmost [animation="Slide From Left" wait="true" mirrored="true"]
 if {sucio} == true:
 	patron: Oye cinthia, seguro que trajiste al nuevo o a un vagabundo?
 	Cinthia (Normal/Serious): HEY, NO SEA TAN CULERO
@@ -130,13 +189,21 @@ update Cinthia (Normal/Default)
 patron: Tu debes de ser el nuevo verdad?
 update Joshua (Normal/think)
 Joshua: Em...
-Joshua: Si... soy ese
+Joshua: Si... soy ese.
 patron: Bienvenido. Espero mucho de ti, así que no me decepciones.
 update Cinthia (Normal/Smile)
-Despues del comentario, veo que cinthia suelta una pequeña risa
+Despues del comentario, veo que cinthia suelta una pequeña risa.
 Cinthia: No le hagas caso, siempre dice eso el primer día.
 El hombre solo se encoge de hombros antes de volver a lo suyo.
 leave patron [animation="Slide To Left"]
-Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir
-Cinthia: Igual si se te fue algo no te apures, yo te voy guiando por ahora
+Cinthia: Con todo lo aprendido creo que es hora de cocinar, ya hay que abrir.
+update Cinthia [mirrored="true" move_time="0.5" move_ease="out_in"]
+Cinthia: Igual si se te fue algo no te apures, tienes inmunidad por ser nuevo.
 Cinthia: Hoy no va a haber mucha chamba, cerramos temprano, no te apures.
+Cinthia: Sirve que agarras practica.
+leave Cinthia [animation="Slide To Left"]
+Ya se fue a hacer su labor de mesera.
+Vientos, hoy puedo tomarlo como de practica.
+Como algun tipo de rito de iniciación.
+PUES A DARLE!
+[signal arg="gameplay1"]

@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var drink_place: ColorRect = %DrinkPlace
+#@onready var drink_place: ColorRect = %DrinkPlace
+@onready var lugar_vaso: Sprite2D = %LugarVaso
 
 @onready var extras: Node2D = %Extras
 @onready var tops: Node2D = %Tops
@@ -84,7 +85,7 @@ var en_segunda:bool = false
 
 func _ready() -> void:
 	$Menu.hide()
-	drink_place.hide()
+	lugar_vaso.hide()
 	$LastMenu.hide()
 	
 
@@ -120,16 +121,15 @@ func _process(delta: float) -> void:
 	elif !follow_mouse and en_segunda:
 		%ClickDer.show()
 	if en_tercera:
-		%DrinkPlace.show()
+		lugar_vaso.show()
 	if Input.is_action_just_released("Click"):
 		$Menu.hide()
 		$LastMenu.hide()
 	#if duplicar:
-		#pass
-
+		#pass.
 func color_grade():
 	var cooked_time:float = remap(item_resource.cooked_time,item_resource.cooking_time,0.0,0.0,1.0)
-	chilaquil.modulate = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time)
+	chilaquil.modulate = lerp(item_resource.raw_color,item_resource.cooked_color,cooked_time*1.2)
 
 func update_resource(_item_resource:Resource):
 	item_resource = _item_resource

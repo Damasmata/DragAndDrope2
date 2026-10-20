@@ -33,6 +33,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 DishManager="*uid://no6wyn2blq30"
 ClienteManager="*uid://rpljioylmfjj"
+NovelaManager="*uid://c37h6ev7oym5u"
 
 [dialogic]
 
@@ -87,6 +88,7 @@ layout/style_list=["res://Dialogic elements/estilos/estilo visual 1.tres"]
 layout/default_style="res://Dialogic elements/estilos/estilo visual 1.tres"
 variables={
 "historia": 0,
+"love": "",
 "sucio": false
 }
 translation/enabled=false

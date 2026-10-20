@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_bkdt7")
-cooking_time = 10.0
+cooking_time = 30.0
 itemtexture = ExtResource("1_h6t5j")
 name = "Nixtamalizado"
 raw_color = Color(1, 1, 1, 1)

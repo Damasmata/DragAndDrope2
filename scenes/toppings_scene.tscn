@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://0q6qhjcs8w8s"]
 
 [ext_resource type="Script" uid="uid://cowp1x6nbbcmo" path="res://toppings_scene.gd" id="1_7ipdg"]
-[ext_resource type="Texture2D" uid="uid://cm4gw0yjd1fhk" path="res://Sprites/extras/toppings/Aguacate.png" id="2_a0g5o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ipdg"]
 
@@ -16,7 +15,6 @@ script = ExtResource("1_7ipdg")
 unique_name_in_owner = true
 position = Vector2(9.536743e-07, 0)
 scale = Vector2(0.16453232, 0.1645323)
-texture = ExtResource("2_a0g5o")
 
 [node name="Button" type="Button" parent="Topping" unique_id=387364934]
 offset_left = -175.60973
@@ -51,3 +49,5 @@ shape = SubResource("RectangleShape2D_a0g5o")
 
 [connection signal="button_down" from="Topping/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Topping/Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Topping/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Topping/Button" to="." method="_on_button_mouse_exited"]

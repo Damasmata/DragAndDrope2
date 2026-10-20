@@ -1,12 +1,22 @@
 [gd_resource type="Resource" script_class="cliente" format=3 uid="uid://bt23f5ht6ti5i"]
 
 [ext_resource type="Resource" uid="uid://1mkpwhuo28cq" path="res://data/orden base data/orden debug 3.tres" id="1_j6imv"]
+[ext_resource type="Texture2D" uid="uid://1e3tkonatsbj" path="res://Sprites/clientes/Diego/Matata_Aprueba.png" id="1_s51fq"]
+[ext_resource type="Texture2D" uid="uid://d2wwkm7gh2l3o" path="res://Sprites/clientes/Diego/Matata_Analiza.png" id="2_057xe"]
 [ext_resource type="Script" uid="uid://c4on5m4kiwepk" path="res://data/data_clientes.gd" id="2_poqag"]
-[ext_resource type="Texture2D" uid="uid://ddosm5dpdnht8" path="res://Sprites/clientes/Lou.png" id="3_uy1kn"]
+[ext_resource type="Texture2D" uid="uid://8gr2bg0bhtca" path="res://Sprites/clientes/Diego/Matata_Waiting.png" id="3_4vpkc"]
+[ext_resource type="Texture2D" uid="uid://1pv0kucw1agr" path="res://Sprites/clientes/Diego/Matata_Molesto.png" id="4_exfes"]
+[ext_resource type="Texture2D" uid="uid://dy3j5m5lb4oi5" path="res://Sprites/clientes/Diego/Matata_Default.png" id="5_hbr21"]
 
 [resource]
 script = ExtResource("2_poqag")
-name = "OTRO LOU"
+name = "Diego"
 orden = ExtResource("1_j6imv")
-sprite = ExtResource("3_uy1kn")
+sprite = ExtResource("5_hbr21")
+calificando = ExtResource("2_057xe")
+esperando = ExtResource("3_4vpkc")
+mal = ExtResource("4_exfes")
+bien = ExtResource("1_s51fq")
+maso = ExtResource("5_hbr21")
+ordenando = ExtResource("2_057xe")
 metadata/_custom_type_script = "uid://c4on5m4kiwepk"

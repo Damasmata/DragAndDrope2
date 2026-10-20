@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b3hbcpkrl05hf"]
+
+[ext_resource type="Script" uid="uid://e7bchkxjw6h4" path="res://pantalla_final.gd" id="1_n8jvp"]
+[ext_resource type="Texture2D" uid="uid://crn30mk3trbh0" path="res://Sprites/Menus y pantallas/fondo.png" id="2_1syfe"]
+[ext_resource type="Texture2D" uid="uid://dljyecexkriy6" path="res://Sprites/Menus y pantallas/menu salir.png" id="2_342is"]
+[ext_resource type="Texture2D" uid="uid://5sonlyy5sd2i" path="res://Sprites/Menus y pantallas/menu salir pres.png" id="3_1syfe"]
+[ext_resource type="Texture2D" uid="uid://jn6xi1vu5dy2" path="res://Sprites/Menus y pantallas/menu salir hover.png" id="4_rm883"]
+
+[node name="Pantalla final" type="Control" unique_id=601881899]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n8jvp")
+
+[node name="fondo" type="TextureRect" parent="." unique_id=491844675]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6026735, 0.6026735)
+texture = ExtResource("2_1syfe")
+
+[node name="Texto 1" type="Label" parent="." unique_id=178925490]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Esta fue una beta bien simplecita, esperemos que te haya gustado.
+
+Si esperas que haya mas contenido, calmantes montes, en un futuro tendra aun mas cosas
+
+Mas historia
+Mas ingredientes
+Mas bebidas
+Mas chilaquiles
+Mas clientes
+Y mas visuales mas chidas
+En general, mas contenido
+
+Si quieres apoyar, con que lo jueges, califiques, des tu opinion y sugerencias.
+Mantenerte al tanto de las actualizaciones que hagamos
+
+Si encuentras un bug, glitch, error, etc. nos ayudaria mucho que nos dijeras como pasó
+asi lo correjiremos y te daremos las gracias en el juego
+
+Queremos que este juego este lo mas pulido posible y entregarles una muy buena experiencia
+
+Muchas gracias por jugarlo
+
+Atte. Equipo Chilovequilero (pendiente nombre de estudio)
+
+"
+horizontal_alignment = 1
+
+[node name="Texto 2" type="Label" parent="." unique_id=713665853]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 105.0
+offset_right = 1143.0
+offset_bottom = 310.0
+text = "Programador y director: DEMF
+Programador (sin el no sale el juego): Joel Dario
+Director de arte, comida, clientes y personajes: Lou Raygoza
+Diseñador de interfaces: Chicken
+Historia y fondos: Chimichangas de patas de pollo
+Musica, ambiente y SFX: G4 records
+
+"
+horizontal_alignment = 1
+
+[node name="Button" type="TextureButton" parent="." unique_id=2019532267]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = 39.0
+offset_right = 559.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5270041, 0.5270041)
+pivot_offset = Vector2(202.92188, 93.555725)
+texture_normal = ExtResource("2_342is")
+texture_pressed = ExtResource("3_1syfe")
+texture_hover = ExtResource("4_rm883")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

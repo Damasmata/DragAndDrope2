@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_jc7ue")
-cooking_time = 10.0
+cooking_time = 30.0
 itemtexture = ExtResource("1_3bswn")
 name = "Deshidratado"
 raw_color = Color(1, 1, 1, 1)

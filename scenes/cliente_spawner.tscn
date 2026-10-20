@@ -6,12 +6,13 @@
 script = ExtResource("1_81bmf")
 
 [node name="SpawnPos" type="ColorRect" parent="." unique_id=1018704676]
+visible = false
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
 
 [node name="Timer" type="Timer" parent="." unique_id=357697432]
-wait_time = 5.0
+wait_time = 20.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

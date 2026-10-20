@@ -35,7 +35,8 @@ func _ready() -> void:
 	initialpos=global_position
 	new_pos=global_position
 	%Button.hide()
-	print(new_pos)
+	#print(new_pos)
+	#print(texture_progress_bar.max_value)
 
 func _process(delta: float) -> void:
 	if !full and !stop:
@@ -70,6 +71,8 @@ func set_info(sabor:int,resource,size:int):
 	
 	texture_progress_bar.texture_over=drink_resource.vaso
 	drink_resource.act_fill_time=0
+	#print(drink_resource._fill_time)
+	
 
 func movement(): #moverse
 	if Input.is_action_just_pressed("Click"):

@@ -7,13 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://22fq85kw813k" path="res://Sprites/Estacion Toppings/panel/guardar.png" id="4_ww4ix"]
 [ext_resource type="Texture2D" uid="uid://dekdtdad37u0j" path="res://Sprites/Estacion Toppings/panel/siguiente des.png" id="5_avctt"]
 [ext_resource type="Texture2D" uid="uid://c4e08lx0p8id8" path="res://Sprites/Estacion Toppings/panel/en medio.png" id="5_h10ke"]
+[ext_resource type="Texture2D" uid="uid://c1k1fbr6cik2e" path="res://Sprites/Estacion Toppings/panel/siguiente hover.png" id="5_sgfjc"]
 [ext_resource type="Texture2D" uid="uid://dti5l87kvtf" path="res://Sprites/Estacion Toppings/panel/Borrar.png" id="6_mxa2e"]
 [ext_resource type="Texture2D" uid="uid://d3ykbn8b2f53a" path="res://Sprites/Estacion Toppings/panel/guardar pres.png" id="7_cc1jc"]
 [ext_resource type="Texture2D" uid="uid://3pb6jveqlfia" path="res://Sprites/Estacion Toppings/panel/guardar des.png" id="8_yasws"]
+[ext_resource type="Texture2D" uid="uid://dwfh0md8jn46f" path="res://Sprites/Estacion Toppings/panel/guardar hover.png" id="9_gb8db"]
 [ext_resource type="Texture2D" uid="uid://cibdlwhxp6chk" path="res://Sprites/Estacion Toppings/panel/en medio pres.png" id="10_sgfjc"]
 [ext_resource type="Texture2D" uid="uid://c1sy0xntvm3wf" path="res://Sprites/Estacion Toppings/panel/en medio des.png" id="11_gb8db"]
+[ext_resource type="Texture2D" uid="uid://dtwg420am8ekm" path="res://Sprites/Estacion Toppings/panel/en medio hover.png" id="13_4e1fd"]
 [ext_resource type="Texture2D" uid="uid://1ro6pg7wuwf1" path="res://Sprites/Estacion Toppings/panel/Borrar pres.png" id="13_5507t"]
 [ext_resource type="Texture2D" uid="uid://d1y3u8eedbt31" path="res://Sprites/Estacion Toppings/panel/Borrar des.png" id="14_4e1fd"]
+[ext_resource type="Texture2D" uid="uid://ch60fsbdgucxu" path="res://Sprites/Estacion Toppings/panel/Borrar hover.png" id="17_x0x0y"]
+[ext_resource type="Texture2D" uid="uid://c5v4b6f5isqvn" path="res://Sprites/Estacion Bebidas/lugar vaso.png" id="19_gb8db"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a127h"]
 size = Vector2(90, 90)
@@ -124,6 +129,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("3_4jctv")
 texture_pressed = ExtResource("4_kdv52")
+texture_hover = ExtResource("5_sgfjc")
 texture_disabled = ExtResource("5_avctt")
 
 [node name="toCounter" type="TextureButton" parent="Menu/VBoxContainer" unique_id=72380732]
@@ -131,6 +137,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("4_ww4ix")
 texture_pressed = ExtResource("7_cc1jc")
+texture_hover = ExtResource("9_gb8db")
 texture_disabled = ExtResource("8_yasws")
 
 [node name="toBack" type="TextureButton" parent="Menu/VBoxContainer" unique_id=773476676]
@@ -138,6 +145,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("5_h10ke")
 texture_pressed = ExtResource("10_sgfjc")
+texture_hover = ExtResource("13_4e1fd")
 texture_disabled = ExtResource("11_gb8db")
 
 [node name="toErase" type="TextureButton" parent="Menu/VBoxContainer" unique_id=839730758]
@@ -145,6 +153,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture_normal = ExtResource("6_mxa2e")
 texture_pressed = ExtResource("13_5507t")
+texture_hover = ExtResource("17_x0x0y")
 texture_disabled = ExtResource("14_4e1fd")
 
 [node name="LastMenu" type="PanelContainer" parent="." unique_id=311666751]
@@ -163,6 +172,7 @@ z_index = 2
 layout_mode = 2
 texture_normal = ExtResource("6_mxa2e")
 texture_pressed = ExtResource("13_5507t")
+texture_hover = ExtResource("17_x0x0y")
 texture_disabled = ExtResource("14_4e1fd")
 
 [node name="Control" type="Control" parent="." unique_id=258173852]
@@ -179,32 +189,22 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="DrinkPlace" type="ColorRect" parent="Control" unique_id=1420430409]
+[node name="LugarVaso" type="Sprite2D" parent="Control" unique_id=519937864]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = -45.0
-offset_right = 45.0
-offset_bottom = 45.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(45, 45)
-color = Color(0.19999999, 1, 1, 0.11372549)
+position = Vector2(0.9999999, 32)
+scale = Vector2(0.45454547, 0.45454547)
+texture = ExtResource("19_gb8db")
 
-[node name="Area2D2" type="Area2D" parent="Control/DrinkPlace" unique_id=853935888]
-position = Vector2(45, 45)
+[node name="Area2D2" type="Area2D" parent="Control/LugarVaso" unique_id=853935888]
+position = Vector2(2.2000122, -59.399998)
+scale = Vector2(2.1999998, 2.1999998)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/DrinkPlace/Area2D2" unique_id=502244457]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/LugarVaso/Area2D2" unique_id=502244457]
 shape = SubResource("RectangleShape2D_p1nqj")
 
 [node name="Bebida" type="Node2D" parent="." unique_id=1326543815]
 unique_name_in_owner = true
-position = Vector2(181, 45)
+position = Vector2(181, 41)
 
 [connection signal="button_down" from="chilaquil/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="chilaquil/Button" to="." method="_on_button_button_up"]
@@ -220,5 +220,5 @@ position = Vector2(181, 45)
 [connection signal="pressed" from="Menu/VBoxContainer/toBack" to="." method="_on_to_back_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/toErase" to="." method="_on_to_erase_pressed"]
 [connection signal="pressed" from="LastMenu/VBoxContainer/ToClean" to="." method="_on_to_clean_pressed"]
-[connection signal="area_entered" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_entered"]
-[connection signal="area_exited" from="Control/DrinkPlace/Area2D2" to="." method="_on_area_2d_2_area_exited"]
+[connection signal="area_entered" from="Control/LugarVaso/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="Control/LugarVaso/Area2D2" to="." method="_on_area_2d_2_area_exited"]

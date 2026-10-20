@@ -15,6 +15,8 @@ var order_resource:Resource
 
 signal comparar
 
+
+
 @onready var button_stopper: PanelContainer = $Button/ButtonStopper
 
 
@@ -39,6 +41,8 @@ var new_parent:Control
 
 var numero_de_orden:int = 0
 
+
+
 func _ready() -> void:
 	crear_orden()
 	reparent(get_parent(),)
@@ -62,6 +66,8 @@ func crear_orden():
 	var new_order = Orden.new()
 	var orden_temp = Orden.new()
 	
+	var temp_ingredients:Array[String]=new_order.extras.duplicate()
+	
 	var extras_random_number = randi_range(1,5)
 	orden_temp.numero_orden = ClienteManager.ticket_number
 	#var extras_en_orden:Array[String] = []
@@ -72,18 +78,22 @@ func crear_orden():
 	orden_temp.tamano.clear()
 	orden_temp.sabor.clear()
 	orden_temp.salsas.clear()
-	for _extra in extras_random_number:
+	for _extra in range(extras_random_number):
 		var new_extra_scene = extra_scene.instantiate()
-		var rand_extra=randi_range(0,orden_temp.extras.size()-1)
-		if !orden_temp.extras.has(new_order.extras[rand_extra]):
-			extras.add_child(new_extra_scene)
-			new_extra_scene.text = new_order.extras[rand_extra]
-			orden_temp.extras.push_front(new_order.extras[rand_extra])
-		else:
-			break
+		var new_ingredient= temp_ingredients.pick_random() #randi_range(0,orden_temp.extras.size()-1)
+		
+		extras.add_child(new_extra_scene)
+		orden_temp.extras.push_front(new_ingredient)
+		new_extra_scene.text=new_ingredient
+		temp_ingredients.erase(new_ingredient)
+		#if !orden_temp.extras.has(new_order.extras[rand_extra]):
+			#extras.add_child(new_extra_scene)
+			#new_extra_scene.text = new_order.extras[rand_extra]
+			#orden_temp.extras.push_front(new_order.extras[rand_extra])
+		#else:
+			#break
+	print(orden_temp.extras)
 	numero.text = "Numero de orden: " + str(orden_temp.numero_orden)
-	
-	
 	
 	
 	coccion.text=new_order.cocciones[randi_range(1,3)]
@@ -92,7 +102,7 @@ func crear_orden():
 	chilaquil.text=new_order.chilaquil[randi_range(0,2)]
 	orden_temp.chilaquil.append(chilaquil.text)
 	
-	plato.text=new_order.presentacion[randi_range(0,1)]
+	plato.text=new_order.presentacion[0]# hasta que queden las visuales del bolillo
 	orden_temp.presentacion.append(plato.text)
 	
 	salsa.text=new_order.salsas[randi_range(0,1)]
@@ -125,11 +135,11 @@ func crear_orden():
 	#
 	#orden_final = orden_temp.duplicate()
 
-func comparar_orden():
-	var extras_iguales:bool 
-	extras_iguales = orden_final.extras == orden_entregada.extras
-	orden_final.coccion == orden_entregada.coccion
-	print("of: ", orden_final, " ", "oe: ", orden_entregada, " ", extras_iguales)
+#func comparar_orden():
+	#var extras_iguales:bool 
+	#extras_iguales = orden_final.extras == orden_entregada.extras
+	#orden_final.coccion == orden_entregada.coccion
+	#print("of: ", orden_final, " ", "oe: ", orden_entregada, " ", extras_iguales)
 
 func movement():
 	if Input.is_action_just_pressed("Click"):
@@ -160,6 +170,6 @@ func _on_button_mouse_entered() -> void:
 func _on_button_mouse_exited() -> void:
 	scale=Vector2(0.5,0.5)
 
-
-func _on_button_test_pressed() -> void:
-	comparar_orden()
+#
+#func _on_button_test_pressed() -> void:
+	#comparar_orden()

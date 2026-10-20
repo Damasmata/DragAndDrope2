@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://cywpsspmyss0f" path="res://ticket.gd" id="1_krxyo"]
 [ext_resource type="PackedScene" uid="uid://bgakfi8dtc1ya" path="res://Joel/tickets/extra_scene.tscn" id="2_7yqn5"]
 [ext_resource type="Resource" uid="uid://1mkpwhuo28cq" path="res://data/orden base data/orden debug 3.tres" id="3_rn5ye"]
+[ext_resource type="Texture2D" uid="uid://dmxrkt3xv0baa" path="res://Sprites/Interfaz/ticket y tira/Ticket 1.png" id="4_o7y5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gjy7"]
 size = Vector2(121, 135)
 
 [node name="Orden" type="PanelContainer" unique_id=2007613094 groups=["Ticket"]]
-z_index = 2
+z_index = 13
 offset_right = 121.0
 offset_bottom = 135.0
 size_flags_horizontal = 0
@@ -16,6 +17,11 @@ size_flags_vertical = 0
 script = ExtResource("1_krxyo")
 extra_scene = ExtResource("2_7yqn5")
 orden_entregada = ExtResource("3_rn5ye")
+
+[node name="Ticket1" type="Sprite2D" parent="." unique_id=610226018]
+position = Vector2(74.06194, 99.705185)
+scale = Vector2(0.4682174, 0.3696374)
+texture = ExtResource("4_o7y5v")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=20316840]
 z_index = 2
@@ -75,8 +81,6 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "plato"
 horizontal_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Chilaquil/ChilaquilPlato" unique_id=1947598681]
 
 [node name="Coccion" type="Label" parent="VBoxContainer/Chilaquil" unique_id=784922480]
 unique_name_in_owner = true

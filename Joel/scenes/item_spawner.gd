@@ -58,6 +58,7 @@ func _on_spawn_pressed() -> void:
 		return
 	else:
 		spawn_item()
+		texture.self_modulate=(Color.DIM_GRAY)
 
 func _on_spawn_area_area_entered(area: Area2D) -> void:
 	if area.get_parent().is_in_group("item") or area.get_parent().is_in_group("servidores") or area.get_parent().is_in_group("salsa") or area.get_parent().is_in_group("items dropeables"):
@@ -66,3 +67,11 @@ func _on_spawn_area_area_entered(area: Area2D) -> void:
 func _on_spawn_area_area_exited(area: Area2D) -> void:
 	if area.get_parent().is_in_group("item") or area.get_parent().is_in_group("servidores") or area.get_parent().is_in_group("salsa") or area.get_parent().is_in_group("items dropeables"):
 		item_in_spawner = false
+
+
+func _on_spawn_mouse_entered() -> void:
+	texture.self_modulate=(Color.GRAY)
+
+func _on_spawn_mouse_exited() -> void:
+	if !item_in_spawner:
+		texture.self_modulate=(Color.WHITE)

@@ -56,6 +56,8 @@ mouse_filter = 2
 shape = SubResource("RectangleShape2D_6quaa")
 debug_color = Color(0.9954594, 0, 0.21283907, 0.41960785)
 
+[connection signal="mouse_entered" from="Spawn" to="." method="_on_spawn_mouse_entered"]
+[connection signal="mouse_exited" from="Spawn" to="." method="_on_spawn_mouse_exited"]
 [connection signal="pressed" from="Spawn" to="." method="_on_spawn_pressed"]
 [connection signal="area_entered" from="SpawnArea" to="." method="_on_spawn_area_area_entered"]
 [connection signal="area_exited" from="SpawnArea" to="." method="_on_spawn_area_area_exited"]

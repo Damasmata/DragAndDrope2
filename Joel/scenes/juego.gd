@@ -5,7 +5,7 @@ extends Node2D
 @onready var bandeja: Node2D = %Bandeja
 
 @onready var lugar_de_ticket: Node2D = %"lugar de ticket"
-@onready var ticket_pos: ColorRect = %"ticket pos"
+@onready var ticket_pos: Sprite2D = %"ticket pos"
 
 var counters_in_level:Array[Node2D]
 # Called when the node enters the scene tree for the first time.

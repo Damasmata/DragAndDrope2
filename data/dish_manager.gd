@@ -9,6 +9,8 @@ var order_finish:bool
 var counters_in_level:Array[Node2D] = []
 var _counters_in_level:Array[Node2D] = []
 
+var platillo_final:Node2D
+
 
 func empty_counters() -> bool:
 	if _counters_in_level.size() > 0:

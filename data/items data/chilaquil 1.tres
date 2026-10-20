@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_w04hp")
-cooking_time = 10.0
+cooking_time = 30.0
 itemtexture = ExtResource("1_7wpg8")
 name = "Frio"
 raw_color = Color(1, 1, 1, 1)

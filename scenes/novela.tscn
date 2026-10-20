@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://btstfnj4kyy68"]
+
+[ext_resource type="Script" uid="uid://c852d83xmmn0n" path="res://novela.gd" id="1_5o341"]
+
+[node name="Novela" type="Node2D" unique_id=1972722825]
+script = ExtResource("1_5o341")
+
+[node name="dia1" type="Node" parent="." unique_id=1665430776]

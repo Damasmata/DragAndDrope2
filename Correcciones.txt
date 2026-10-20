@@ -351,11 +351,19 @@ cliente_spawner script:
 COSAS POR REVISAR
 
 -mejorar la forma en crear ordenes aleatorias
+-SOLUCIONADO-
 
 -hacer que el cliente spawner spawnee cada cierto tiempo otro cliente
+-SOLUCIONADO-
 
 -que al entregar la orden al cliente, el platillo de la bandeja sea destruido
+-SOLUCIONADO-
 
--cuando todos los clientes tienen el mismo estado, iniciar la timeline
+-cuando todos los clientes tienen el mismo estado, iniciar la timeline 
+-SOLUCIONADO-
 
--mejorar funcionamiento de los ticket
+-mejorar funcionamiento de los ticket -pendiente despues de entrega-
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+COSAS POR REVISAR 2

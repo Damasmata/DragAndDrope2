@@ -1,12 +1,22 @@
 [gd_resource type="Resource" script_class="cliente" format=3 uid="uid://c8nn2uwqvmmg7"]
 
 [ext_resource type="Script" uid="uid://c4on5m4kiwepk" path="res://data/data_clientes.gd" id="1_7p8al"]
+[ext_resource type="Texture2D" uid="uid://h2ugiip8w75y" path="res://Sprites/clientes/Lou/Lou Aprueba.png" id="1_mbvh3"]
 [ext_resource type="Resource" uid="uid://1mkpwhuo28cq" path="res://data/orden base data/orden debug 3.tres" id="1_pndlq"]
-[ext_resource type="Texture2D" uid="uid://ddosm5dpdnht8" path="res://Sprites/clientes/Lou.png" id="3_pndlq"]
+[ext_resource type="Texture2D" uid="uid://cd5f1qdyprjot" path="res://Sprites/clientes/Lou/Lou Analiza.png" id="2_q05b4"]
+[ext_resource type="Texture2D" uid="uid://cemst0vme4dic" path="res://Sprites/clientes/Lou/Lou Waiting.png" id="3_t6wd7"]
+[ext_resource type="Texture2D" uid="uid://bq5cs82qcwvh5" path="res://Sprites/clientes/Lou/Lou Molesto.png" id="4_bc0kg"]
+[ext_resource type="Texture2D" uid="uid://dq68eyx5g4hbd" path="res://Sprites/clientes/Lou/Lou Default.png" id="7_3vj8p"]
 
 [resource]
 script = ExtResource("1_7p8al")
 name = "Lou"
 orden = ExtResource("1_pndlq")
-sprite = ExtResource("3_pndlq")
+sprite = ExtResource("7_3vj8p")
+calificando = ExtResource("2_q05b4")
+esperando = ExtResource("3_t6wd7")
+mal = ExtResource("4_bc0kg")
+bien = ExtResource("1_mbvh3")
+maso = ExtResource("7_3vj8p")
+ordenando = ExtResource("2_q05b4")
 metadata/_custom_type_script = "uid://c4on5m4kiwepk"

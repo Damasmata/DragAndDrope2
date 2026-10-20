@@ -64,3 +64,13 @@ func _on_button_button_up() -> void:
 		initialpos = new_pos
 	global_position = initialpos
 	follow_mouse = false #que no pueda seguir el mouse
+
+
+
+
+func _on_button_mouse_entered() -> void:
+	scale=(Vector2(1.2,1.2))
+
+
+func _on_button_mouse_exited() -> void:
+	scale=(Vector2(1.0,1.0))

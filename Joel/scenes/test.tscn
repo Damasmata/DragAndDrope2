@@ -49,7 +49,20 @@
 [ext_resource type="Texture2D" uid="uid://b60hhsqrf3po" path="res://Sprites/Estacion Toppings/spawners/Huevo.png" id="37_jplsi"]
 [ext_resource type="Texture2D" uid="uid://b2iqn0b2btr6y" path="res://Sprites/Estacion Toppings/spawners/Aguacate.png" id="39_idy8e"]
 [ext_resource type="Texture2D" uid="uid://dr2oqkca1uaey" path="res://Sprites/Estacion Toppings/spawners/Pollo Deshebrado.png" id="41_yk4sd"]
+[ext_resource type="Texture2D" uid="uid://buax101sbdlth" path="res://Sprites/Interfaz/botones estacion/notas pres.png" id="46_t6r7w"]
+[ext_resource type="Texture2D" uid="uid://didnnwse8u0hl" path="res://Sprites/Interfaz/botones estacion/notas hover.png" id="47_jplsi"]
 [ext_resource type="PackedScene" uid="uid://deucetjt0fuyq" path="res://scenes/Bandeja.tscn" id="48_5epjm"]
+[ext_resource type="Texture2D" uid="uid://bgmx5g2mdrd33" path="res://Sprites/Interfaz/botones estacion/notas des.png" id="48_l01r7"]
+[ext_resource type="Texture2D" uid="uid://dph2hdbxq238o" path="res://Sprites/Interfaz/botones estacion/freidora pres.png" id="49_vfg0q"]
+[ext_resource type="Texture2D" uid="uid://b5twg12w12e1c" path="res://Sprites/Interfaz/botones estacion/freidora hover.png" id="50_srdri"]
+[ext_resource type="Texture2D" uid="uid://ds334i310d42v" path="res://Sprites/Interfaz/botones estacion/freidora des.png" id="52_7lwqw"]
+[ext_resource type="Texture2D" uid="uid://b83elvpaeybef" path="res://Sprites/Interfaz/botones estacion/toppings pres.png" id="52_srdri"]
+[ext_resource type="Texture2D" uid="uid://cx4uei0nqe12h" path="res://Sprites/Interfaz/botones estacion/toppings hover.png" id="53_5pqlt"]
+[ext_resource type="Texture2D" uid="uid://dg8i45bice87e" path="res://Sprites/Interfaz/botones estacion/bebidas pres.png" id="55_vonch"]
+[ext_resource type="Texture2D" uid="uid://d35i1f2u4ftah" path="res://Sprites/Interfaz/botones estacion/bebidas hover.png" id="56_l01r7"]
+[ext_resource type="Texture2D" uid="uid://dmbrxwdvctd7q" path="res://Sprites/Interfaz/botones estacion/toppings des.png" id="56_uc8ds"]
+[ext_resource type="Texture2D" uid="uid://watwe2dlv82" path="res://Sprites/Estacion Bebidas/lugar ticket.png" id="58_srdri"]
+[ext_resource type="Texture2D" uid="uid://x1mwd0inl0t4" path="res://Sprites/Interfaz/botones estacion/bebidas des.png" id="60_5n6rj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t53i"]
 
@@ -75,7 +88,7 @@ scale = Vector2(0.25005412, 0.6008491)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2t53i")
 
 [node name="TextureRect" type="TextureRect" parent="estacion1" unique_id=895797453]
-z_index = 1
+z_index = 10
 layout_mode = 2
 texture = ExtResource("3_0rqn4")
 
@@ -90,7 +103,7 @@ speed = 500.0
 [node name="Estacion1" type="Node2D" parent="." unique_id=371439791]
 
 [node name="Cliente_spawner" parent="Estacion1" unique_id=1613963330 instance=ExtResource("26_vhtwk")]
-position = Vector2(528, 263)
+position = Vector2(582, 263)
 cliente_resource = ExtResource("27_xano8")
 _clientes_del_dia = ExtResource("7_2ob25")
 
@@ -255,96 +268,72 @@ position = Vector2(4183, 106)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2099921199]
 
-[node name="Estacion1" type="Sprite2D" parent="CanvasLayer" unique_id=1247102141]
+[node name="Est1" type="TextureButton" parent="CanvasLayer" unique_id=912123966]
 unique_name_in_owner = true
-position = Vector2(240.76138, 602.50006)
-scale = Vector2(0.29, 0.287)
-texture = ExtResource("28_47av7")
+offset_left = 156.0
+offset_top = 553.0
+offset_right = 740.0
+offset_bottom = 891.0
+scale = Vector2(0.28854716, 0.28854716)
+toggle_mode = true
+texture_normal = ExtResource("28_47av7")
+texture_pressed = ExtResource("46_t6r7w")
+texture_hover = ExtResource("47_jplsi")
+texture_disabled = ExtResource("48_l01r7")
 
-[node name="Est1" type="Button" parent="CanvasLayer/Estacion1" unique_id=1195520967]
-anchors_preset = -1
-anchor_left = 0.037
-anchor_top = 0.17500001
-anchor_right = 0.966
-anchor_bottom = 0.94500005
-offset_left = -292.17978
-offset_top = -169.10075
-offset_right = -291.8678
-offset_bottom = -169.11765
-flat = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Estacion2" type="Sprite2D" parent="CanvasLayer" unique_id=378777795]
+[node name="Est2" type="TextureButton" parent="CanvasLayer" unique_id=754250390]
 unique_name_in_owner = true
-position = Vector2(479.81924, 602.0894)
-scale = Vector2(0.3054598, 0.27470025)
-texture = ExtResource("29_8s4ss")
+offset_left = 395.0
+offset_top = 558.0
+offset_right = 979.0
+offset_bottom = 879.0
+scale = Vector2(0.28564906, 0.28564906)
+toggle_mode = true
+texture_normal = ExtResource("29_8s4ss")
+texture_pressed = ExtResource("49_vfg0q")
+texture_hover = ExtResource("50_srdri")
+texture_disabled = ExtResource("52_7lwqw")
 
-[node name="Est2" type="Button" parent="CanvasLayer/Estacion2" unique_id=1496833201]
-anchors_preset = -1
-anchor_left = 0.023254082
-anchor_top = 0.10999999
-anchor_right = 0.9741889
-anchor_bottom = 0.99100006
-offset_left = -292.19598
-offset_top = -160.63481
-offset_right = -292.12933
-offset_bottom = -160.4808
-flat = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Estacion3" type="Sprite2D" parent="CanvasLayer" unique_id=271187828]
+[node name="Est3" type="TextureButton" parent="CanvasLayer" unique_id=156522539]
 unique_name_in_owner = true
-position = Vector2(700.44696, 606.50006)
-scale = Vector2(0.2779748, 0.2705478)
-texture = ExtResource("30_exde0")
+offset_left = 614.0
+offset_top = 562.00006
+offset_right = 1198.0
+offset_bottom = 883.00006
+scale = Vector2(0.29287162, 0.29287162)
+toggle_mode = true
+texture_normal = ExtResource("30_exde0")
+texture_pressed = ExtResource("52_srdri")
+texture_hover = ExtResource("53_5pqlt")
+texture_disabled = ExtResource("56_uc8ds")
 
-[node name="Est3" type="Button" parent="CanvasLayer/Estacion3" unique_id=1991317480]
-anchors_preset = -1
-anchor_left = 0.03530027
-anchor_top = 0.050565485
-anchor_right = 0.9591816
-anchor_bottom = 0.9730001
-offset_left = -292.03198
-offset_top = -145.98067
-offset_right = -291.9615
-offset_bottom = -146.13797
-flat = true
-metadata/_edit_use_anchors_ = true
-
-[node name="estacion4" type="Sprite2D" parent="CanvasLayer" unique_id=1028561824]
+[node name="Est4" type="TextureButton" parent="CanvasLayer" unique_id=1161386565]
 unique_name_in_owner = true
-position = Vector2(896.1769, 597.9062)
-scale = Vector2(0.27453446, 0.27453443)
-texture = ExtResource("31_2uy15")
-
-[node name="Est4" type="Button" parent="CanvasLayer/estacion4" unique_id=1067223243]
-anchors_preset = -1
-anchor_left = 0.031000001
-anchor_top = 0.209
-anchor_right = 0.96000004
-anchor_bottom = 0.96000004
-offset_left = -291.93802
-offset_top = -174.59021
-offset_right = -291.73697
-offset_bottom = -174.427
-flat = true
+offset_left = 814.0
+offset_top = 546.0
+offset_right = 1398.0
+offset_bottom = 895.0
+scale = Vector2(0.28564906, 0.28564906)
+toggle_mode = true
+texture_normal = ExtResource("31_2uy15")
+texture_pressed = ExtResource("55_vonch")
+texture_hover = ExtResource("56_l01r7")
+texture_disabled = ExtResource("60_5n6rj")
 
 [node name="Tira_scene" parent="CanvasLayer" unique_id=1293431002 instance=ExtResource("32_8s4ss")]
 
 [node name="lugar de ticket" type="Node2D" parent="CanvasLayer" unique_id=842701086]
 unique_name_in_owner = true
 
-[node name="ticket pos" type="ColorRect" parent="CanvasLayer/lugar de ticket" unique_id=318444511]
+[node name="ticket pos" type="Sprite2D" parent="CanvasLayer/lugar de ticket" unique_id=1812922828]
 unique_name_in_owner = true
-offset_left = 288.0
-offset_top = 437.0
-offset_right = 428.0
-offset_bottom = 577.0
-pivot_offset = Vector2(70, 70)
+position = Vector2(359, 490)
+scale = Vector2(0.58283633, 0.58283633)
+texture = ExtResource("58_srdri")
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer/lugar de ticket/ticket pos" unique_id=137343196]
-position = Vector2(70, 70)
+position = Vector2(-1.5264282, 4.5792236)
+scale = Vector2(1.5264068, 1.5264068)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/lugar de ticket/ticket pos/Area2D" unique_id=1032767334]
 shape = SubResource("RectangleShape2D_5epjm")
@@ -353,9 +342,9 @@ shape = SubResource("RectangleShape2D_5epjm")
 unique_name_in_owner = true
 position = Vector2(4212, 511)
 
-[connection signal="pressed" from="CanvasLayer/Estacion1/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
-[connection signal="pressed" from="CanvasLayer/Estacion2/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Estacion3/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]
-[connection signal="pressed" from="CanvasLayer/estacion4/Est4" to="camara1/GameCamera" method="_on_est_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est1" to="camara1/GameCamera" method="_on_est_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est2" to="camara1/GameCamera" method="_on_est_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est3" to="camara1/GameCamera" method="_on_est_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Est4" to="camara1/GameCamera" method="_on_est_4_pressed"]
 [connection signal="area_entered" from="CanvasLayer/lugar de ticket/ticket pos/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="CanvasLayer/lugar de ticket/ticket pos/Area2D" to="." method="_on_area_2d_area_exited"]

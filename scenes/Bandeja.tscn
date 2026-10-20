@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://deucetjt0fuyq"]
 
-[ext_resource type="Script" uid="uid://bd0r2tb46c5ah" path="res://scenes/bandeja.gd" id="1_q74ss"]
+[ext_resource type="Script" uid="uid://bd0r2tb46c5ah" path="res://bandeja.gd" id="1_q74ss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpput"]
 size = Vector2(476, 128)

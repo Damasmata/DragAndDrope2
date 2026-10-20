@@ -13,9 +13,23 @@
 [ext_resource type="Texture2D" uid="uid://cbg3yi68yp6ce" path="res://Sprites/Estacion Bebidas/Maquina.png" id="11_npfkl"]
 [ext_resource type="Texture2D" uid="uid://dgx4ncbrt03k3" path="res://Sprites/Estacion Bebidas/Vasos.png" id="12_gl3yf"]
 [ext_resource type="Texture2D" uid="uid://b1feact8uy7i0" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas.png" id="12_x226y"]
-[ext_resource type="Texture2D" uid="uid://b8p748f1sqko" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas presión.png" id="13_mdu3v"]
-[ext_resource type="Texture2D" uid="uid://bjafu71ye5xcv" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasoso.png" id="15_i35xr"]
-[ext_resource type="Texture2D" uid="uid://dtlb8ad7rtrml" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasoso presion .png" id="16_kmxdd"]
+[ext_resource type="Texture2D" uid="uid://b8p748f1sqko" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas pres.png" id="13_mdu3v"]
+[ext_resource type="Texture2D" uid="uid://d2g01h0j5cgnm" path="res://Sprites/Estacion Bebidas/botones/boton de maquina de bebidas hover.png" id="14_p7o6e"]
+[ext_resource type="Texture2D" uid="uid://bjafu71ye5xcv" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasos.png" id="15_i35xr"]
+[ext_resource type="Texture2D" uid="uid://dtlb8ad7rtrml" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasos pres .png" id="16_kmxdd"]
+[ext_resource type="Texture2D" uid="uid://3vbahf120m2f" path="res://Sprites/Estacion Bebidas/panel/stop.png" id="17_8fgvc"]
+[ext_resource type="Texture2D" uid="uid://cllp3ab2w17us" path="res://Sprites/Estacion Bebidas/panel/stop press.png" id="18_l285e"]
+[ext_resource type="Texture2D" uid="uid://dx84ahtvtmcpj" path="res://Sprites/Estacion Bebidas/panel/stop hover.png" id="19_bqhec"]
+[ext_resource type="Texture2D" uid="uid://5b0nnaact6en" path="res://Sprites/Estacion Bebidas/botones/boton del porta vasos hover.png" id="19_u3esj"]
+[ext_resource type="Texture2D" uid="uid://bbqel5l4ne2lu" path="res://Sprites/Estacion Bebidas/panel/seguir.png" id="20_1i3bs"]
+[ext_resource type="Texture2D" uid="uid://dh5li7k2lwyix" path="res://Sprites/Estacion Bebidas/panel/stop des.png" id="20_o5ppm"]
+[ext_resource type="Texture2D" uid="uid://bjri77ytnwy1a" path="res://Sprites/Estacion Bebidas/panel/seguir press.png" id="21_o5ppm"]
+[ext_resource type="Texture2D" uid="uid://cedq85qtyiia1" path="res://Sprites/Estacion Bebidas/panel/seguir hover.png" id="22_nxadi"]
+[ext_resource type="Texture2D" uid="uid://bmrml342ssnmh" path="res://Sprites/Estacion Bebidas/panel/listo.png" id="23_p7o6e"]
+[ext_resource type="Texture2D" uid="uid://n01udo3oviee" path="res://Sprites/Estacion Bebidas/panel/listo press.png" id="24_ik7wc"]
+[ext_resource type="Texture2D" uid="uid://dntlrnxbhwmit" path="res://Sprites/Estacion Bebidas/panel/seguir des.png" id="24_nxadi"]
+[ext_resource type="Texture2D" uid="uid://cl2fu26gqwn8j" path="res://Sprites/Estacion Bebidas/panel/listo hover.png" id="25_u3esj"]
+[ext_resource type="Texture2D" uid="uid://c6s8mxd0no0hc" path="res://Sprites/Estacion Bebidas/panel/listo des.png" id="28_p7o6e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl3yf"]
 
@@ -64,12 +78,14 @@ text = "Piña"
 
 [node name="Bebida5" type="TextureButton" parent="Maquina" unique_id=615690870]
 unique_name_in_owner = true
-offset_left = -536.7585
+offset_left = -533.6195
 offset_top = -282.50446
-offset_right = -271.75848
+offset_right = -268.6195
 offset_bottom = -147.50446
+pivot_offset = Vector2(134.97433, 65.917694)
 texture_normal = ExtResource("12_x226y")
 texture_pressed = ExtResource("13_mdu3v")
+texture_hover = ExtResource("14_p7o6e")
 texture_disabled = ExtResource("13_mdu3v")
 
 [node name="Bebida4" type="TextureButton" parent="Maquina" unique_id=715429526]
@@ -78,8 +94,10 @@ offset_left = 298.72388
 offset_top = -282.5045
 offset_right = 563.7239
 offset_bottom = -147.50449
+pivot_offset = Vector2(134.44962, 65.91771)
 texture_normal = ExtResource("12_x226y")
 texture_pressed = ExtResource("13_mdu3v")
+texture_hover = ExtResource("14_p7o6e")
 texture_disabled = ExtResource("13_mdu3v")
 
 [node name="Bebida3" type="TextureButton" parent="Maquina" unique_id=829429293]
@@ -88,8 +106,10 @@ offset_left = -121.10431
 offset_top = -282.5045
 offset_right = 143.89569
 offset_bottom = -147.50449
+pivot_offset = Vector2(133.66005, 65.91771)
 texture_normal = ExtResource("12_x226y")
 texture_pressed = ExtResource("13_mdu3v")
+texture_hover = ExtResource("14_p7o6e")
 texture_disabled = ExtResource("13_mdu3v")
 
 [node name="Vasos" type="Sprite2D" parent="." unique_id=1503730391]
@@ -133,33 +153,43 @@ offset_right = 476.21045
 offset_bottom = 602.51526
 texture_normal = ExtResource("15_i35xr")
 texture_pressed = ExtResource("16_kmxdd")
+texture_hover = ExtResource("19_u3esj")
 texture_disabled = ExtResource("16_kmxdd")
 
 [node name="PanelReady" type="PanelContainer" parent="." unique_id=1152291176]
 unique_name_in_owner = true
-visible = false
-offset_left = -70.0
-offset_top = -50.5
-offset_right = 70.0
-offset_bottom = 50.5
+offset_left = 76.0
+offset_top = 122.0
+offset_right = 216.0
+offset_bottom = 223.0
+scale = Vector2(0.22080933, 0.22080933)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelReady" unique_id=920920939]
 layout_mode = 2
 
-[node name="Stop" type="Button" parent="PanelReady/VBoxContainer" unique_id=385076829]
+[node name="Stop" type="TextureButton" parent="PanelReady/VBoxContainer" unique_id=1453279486]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Stop"
+texture_normal = ExtResource("17_8fgvc")
+texture_pressed = ExtResource("18_l285e")
+texture_hover = ExtResource("19_bqhec")
+texture_disabled = ExtResource("20_o5ppm")
 
-[node name="Continue" type="Button" parent="PanelReady/VBoxContainer" unique_id=1410083300]
+[node name="Continue" type="TextureButton" parent="PanelReady/VBoxContainer" unique_id=1115889180]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Continue"
+texture_normal = ExtResource("20_1i3bs")
+texture_pressed = ExtResource("21_o5ppm")
+texture_hover = ExtResource("22_nxadi")
+texture_disabled = ExtResource("24_nxadi")
 
-[node name="Ready" type="Button" parent="PanelReady/VBoxContainer" unique_id=373567009]
+[node name="Ready" type="TextureButton" parent="PanelReady/VBoxContainer" unique_id=553462]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Ready"
+texture_normal = ExtResource("23_p7o6e")
+texture_pressed = ExtResource("24_ik7wc")
+texture_hover = ExtResource("25_u3esj")
+texture_disabled = ExtResource("28_p7o6e")
 
 [node name="SpawnPos" type="ColorRect" parent="." unique_id=1275559422]
 unique_name_in_owner = true

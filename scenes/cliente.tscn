@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dk8x5ndgvqp68"]
 
 [ext_resource type="Script" uid="uid://dj3uni6w0d5jw" path="res://cliente.gd" id="1_hthfg"]
-[ext_resource type="Texture2D" uid="uid://bklj81g6wfljh" path="res://Sprites/Interfaz/Botones orden/boton normal.png" id="2_0rqpr"]
-[ext_resource type="Texture2D" uid="uid://v5wvyr20nw5u" path="res://Sprites/Interfaz/Botones orden/boton presionado.png" id="3_f1txe"]
+[ext_resource type="Texture2D" uid="uid://bklj81g6wfljh" path="res://Sprites/Interfaz/Botones orden/pedir.png" id="2_0rqpr"]
+[ext_resource type="Texture2D" uid="uid://v5wvyr20nw5u" path="res://Sprites/Interfaz/Botones orden/pedir press.png" id="3_f1txe"]
+[ext_resource type="Texture2D" uid="uid://bs0d1r0gwir8" path="res://Sprites/Interfaz/Botones orden/pedir hover.png" id="4_f1txe"]
 
 [node name="Cliente" type="Node2D" unique_id=897116874]
 script = ExtResource("1_hthfg")
@@ -25,6 +26,7 @@ offset_bottom = 931.0
 scale = Vector2(0.1705177, 0.1705177)
 texture_normal = ExtResource("2_0rqpr")
 texture_pressed = ExtResource("3_f1txe")
+texture_hover = ExtResource("4_f1txe")
 metadata/_edit_use_anchors_ = true
 
 [node name="Nombre" type="Label" parent="." unique_id=286187488]

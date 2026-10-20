@@ -1,5 +1,160 @@
-[background arg="#000000ff" fade="0.0"]
-if {historia} == 1.0:
-	LA FALLASTE RE GACHO
-elif {historia} == 3.0:
-	LE ATINASTE RE BIEN
+[background arg="res://Sprites/estacion orden/Ilustración.png" fade="0.0"]
+Veo que Cinthia ya empieza a guardar y limpiar todo.
+Cinthia: Ya eso fue todo.
+Joshua: ¿Ya? ¿solo 3 clientes?
+Cinthia: Si lo que quieres es mas chamba, luego habran mas clientes.
+Cinthia: Luego hay dias que hay como 20 o 30 o mas clientes.
+Ingaturroña.
+Tuve suerte de que fueran 3 clientes nomas.
+Cinthia: Mejor ayudame a limpiar y ya cerrar todo.
+Se siente todo apagandose y una calma rara...
+Me acostumbre rapidamente al olor de los chilaquiles que ahora es raro volver a respirar aire puro.
+No me habia dado cuenta de lo cansado que estan mis hombros.
+Me duelen los pies tambien.
+Me acerco Cinthia para acabar de limpiar todo, empezando por la barra del mostrador.
+join Cinthia leftmost [animation="Slide From Left" length="1.0" wait="true" mirrored="true"]
+join Joshua center [animation="Slide From Right" length="1.0" wait="true"]
+Nos quedamos limpiando un rato sin hablar.
+Hasta que...
+Cinthia: Oye...
+Levanto la vista y veo su sonrisa tan habitual, su calida y dulce sonrisa.
+Cinthia: Note que... le echaste ganas... o por lo menos te esforzaste.
+[background arg="res://Dialogic elements/fondos/Ilustración oscura.png" fade="1.0" wait="true"]
+update Joshua [animation="Shake X" repeat_forever="true"]
+Me quedo congelado y temblando, todo se ha bloqueado.
+Me agarra de bajada el comentario.
+Joshua (Normal/Default): ¿E-en serio?
+Ella asiente mientras apoya sus brazon en la barra.
+¿Apoco si me veo bien jodido?
+Si solo me duelen los hombros, estoy cansado, me duelen los pies, huelo a puro totopo y ...
+...
+Que pena.
+Cinthia (Normal/Smile): No te preocupes tanto.
+Cinthia: Despues todo sera mas facil.
+Su voz es ligera, lo dice con una confianza que por alguna razon...
+update Joshua [animation="Shake X" length="2.0" wait="true"]
+[background arg="res://Sprites/estacion orden/Ilustración.png" fade="1.0" wait="true"]
+Eso me tranquiliza...
+Joshua (Normal/think): Supongo que me falta mucho.
+Cinthia (Normal/Default): Claro, pero ya no pareces alguien alguien que quiere salir corriendo.
+Cinthia: Aunque tengas el miedo del aceite saltando.
+Lo dice riendose un poco.
+No puedo evitar soltar una pequeña risa tambien.
+update Joshua (Normal/Default)
+Cinthia: Vamos, hay que terminar de limpiar bien
+Ella toma un trapo y comienza a limpiar la barra tambien.
+Yo en cambio empiezo a limpiar unas mesas.
+Mientras limpio, ella comienza a hablar.
+Cinthia: ¿Sabes? Este local tiene muchísimo tiempo aquí.
+Cinthia: Antes era de la madre del patrón.
+Cinthia: Y no tenia ese letrero de afuera que ya esta algo viejo.
+Joshua: No se ve tan viejo.
+Cinthia: Porque a cada rato le echan talacha.
+Continua acomodando cosas y mientras lo hace parece emocionarse mientras habla.
+Cinthia: Cuando era mas chica, venia seguido aquí...
+Cinthia: Bueno...
+Cinthia (Normal/Serious): No tan seguido porque luego seguido porque luego me daba miedo el patrón.
+Cinthia: Me daba miedo por su brazo, ademas que luego se veia medio enojado.
+Cinthia: Ahorita ya se aligero mucho y pues me cae muy bien.
+Cinthia: Aunque jamas lo admitira enfrente de el...
+Cinthia (Normal/Default): Ahora me pregunto porque no tendra su brazo...
+update Cinthia [animation="Bounce" length="1.0" repeat_forever="true"]
+update Joshua (Normal/think) [fade="Fade Cross"]
+Sin darme cuenta, dejo de limpiar por un segundo.
+Y empiezo a ponerle mucha atencion.
+[background arg="res://Dialogic elements/fondos/Ilustración oscura.png" fade="1.0" wait="true"]
+Sobre sus teorias sobre como el patrón perdió el brazo.
+update Cinthia (Normal/Smile) [animation="Shake X" repeat_forever="true" fade="Fade Cross"]
+Si con un machete, si se le fue al freir chiaquiles y otras teorias dignas de una leyenda.
+La luz de la tarde entra por la puerta y cae sobre su cabello.
+Sus manos se mueven rapido mientras acomoda las charolas.
+Sus ojos brillan cuando recuerdan algo gracioso.
+Su sonrisa se cambia cuando habla del local, se vuelve mas viva y sincera.
+Hay algo extraño en verla asi.
+Como si por un momento el lugar se iluminara junto con ella.
+Parpadeo, no me habia dado cuenta de que llevaba varios segundos observandola.
+Enronces ella levanta la vista, y por un instante nuestras miradas de cruzan.
+update Cinthia [animation="Shake X"]
+Me quedo pasmado y no muevo la mirada rato despues.
+El momento es posible de ignorar.
+Cinthia (Normal/Default): ¿Qué?
+Joshua: ¿Eh?
+Me aguanto las ganas de decirle -SO
+Cinthia: ¿Por qué me ves así?
+Joshua: Eh... yo... eh...
+update Joshua [mirrored="true"]
+- "Nada... te veias feliz."
+	Me pongo rojo, no puedo mirarla fijamente antes de la babosada que voy a decir.
+	Joshua: No es nada... solo...
+	Joshua: Te veías muy feliz.
+	update Cinthia [animation="Bounce" length="1.0" wait="true"]
+	[wait time="1.0"]
+	update Cinthia (Normal/Smile) [mirrored="false" fade="Fade Cross"]
+	[wait time="1.0"]
+	Cinthia: Que raro eres.
+	Deja escapar una pequeña risa, no es burlona ni pesada, solo suave, ligera...
+	De esas que salen sin pensarlo demasiado.
+	QUE VERGÜENZAAAAA.
+	Bajo la mirada como un reflejo natural, cuando la mesa ya esta limpia.
+	Escucho como ella sigue acomodando cosas detras del mostrador.
+	Todavia tiene la sonrisa en la cara, puedo sentirlo.
+- "Perdón... me distraje."
+	Joshua: Perdon... estaba en otra... parte...
+	El momento me golpea de repente...
+	Cinthia: ¿Ah si?
+	Asiento y sigo limpiando mesas.
+	Cinthia: mhm... claro
+	No parece tan convencida, pero tampoco insiste...
+- "No te estaba viendo."
+	El calor me sube de golpe...
+	Joshua: No te estaba viendo.
+	Se escuchó muy seco verdad?
+	Cinthia (Normal/Serious): Ah.
+	Su sonrisa desaparece...
+	Ahora solo queda un silencio sepulcral...
+Mejor me cambio a otra mesa, ya para acabar de un avestruz.
+update Joshua rightmost [move_time="0.5"]
+Termino de limpiar y ella comienza a apagar luces, ya para irnos.
+Cinthia: Bueno, hora de cerrar.
+leave --All-- [animation="Slide To Right" wait="true"]
+[background arg="res://Dialogic elements/fondos/fachada del local .png" fade="1.0" wait="true"]
+join Joshua (Normal/exited) right [mirrored="true"]
+Ya afuera al fin.
+join Cinthia (Normal/Default) left [mirrored="true"]
+Cinthia: Te voy a ser sincera Joshua,,,
+Cinthia: Sobre tu desempeño de hoy...
+update Joshua (Normal/Default) [mirrored="false"]
+EL JUICIO FINAL.
+if {historia} <= 4.0:
+	Cinthia (Normal/Serious): Pues estuvo pesado.
+	Joshua: Si...
+	Cinthia: La verdad... si te equivocaste mucho.
+	Cinthia: Pero no te martirices castigues mucho.
+	Joshua (Normal/Default): Si esta bien, perdon.
+	Cinthia (Normal/Default): Aunque lo intentas.
+	Cinthia: Y eso ya es algo.
+elif {historia} <= 7.0:
+	Cinthia: Lo hiciste... bien
+	Joshua (Normal/Default): En serio?
+	Cinthia: Bueno....
+	Cinthia: Todavia te falta bastante.
+	Cinthia: Pero no estuvo mal.
+else:
+	Cinthia (Normal/Smile): SE VE QUE SI LE SABES JOSHI.
+	¿Me dijo joshi?
+	Cinthia: Lo hiciste muy bien, espero que sigas asi.
+	Cinthia: Me alegra mucho tenerte de compañero.
+	update Joshua (Normal/exited)
+	Me emociono y sonrojo, esta raro...
+	Joshua (Normal/Default): Lo mismo digo...
+Hay un silencio por un rato, reflexionando lo que me dijo.
+Cinthia: Bueno... nos vemos mañana.
+Joshua: Si... hasta mañana.
+update Cinthia [mirrored="false"]
+leave Cinthia [animation="Slide To Left"]
+Me espera un largo camino.
+update Joshua [mirrored="true"]
+Y con este dolor aun mas....
+leave Joshua [animation="Slide To Right"]
+[clear time="1.0"]
+[signal arg="Pantalla de inicio"]

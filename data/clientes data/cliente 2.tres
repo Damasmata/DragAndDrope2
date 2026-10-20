@@ -1,12 +1,22 @@
 [gd_resource type="Resource" script_class="cliente" format=3 uid="uid://cth3n0tkte1fn"]
 
+[ext_resource type="Texture2D" uid="uid://coso1rq7ibltn" path="res://Sprites/clientes/Alo/Alo Aprueba.png" id="1_i3g48"]
 [ext_resource type="Resource" uid="uid://1mkpwhuo28cq" path="res://data/orden base data/orden debug 3.tres" id="1_l25hr"]
 [ext_resource type="Script" uid="uid://c4on5m4kiwepk" path="res://data/data_clientes.gd" id="1_lipua"]
-[ext_resource type="Texture2D" uid="uid://b7mm7rdjkiryh" path="res://Sprites/clientes/Alo.png" id="3_iemla"]
+[ext_resource type="Texture2D" uid="uid://cnnagxjqlakgt" path="res://Sprites/clientes/Alo/Alo Analiza.png" id="2_ls4xw"]
+[ext_resource type="Texture2D" uid="uid://w4hgm6f4x71w" path="res://Sprites/clientes/Alo/Alo Waiting.png" id="3_itso4"]
+[ext_resource type="Texture2D" uid="uid://b5gg24ik3ikox" path="res://Sprites/clientes/Alo/Alo Default.png" id="3_l25hr"]
+[ext_resource type="Texture2D" uid="uid://bgmkgh6px7007" path="res://Sprites/clientes/Alo/Alo Molesta.png" id="4_qlphi"]
 
 [resource]
 script = ExtResource("1_lipua")
 name = "Alo"
 orden = ExtResource("1_l25hr")
-sprite = ExtResource("3_iemla")
+sprite = ExtResource("3_l25hr")
+calificando = ExtResource("2_ls4xw")
+esperando = ExtResource("3_itso4")
+mal = ExtResource("4_qlphi")
+bien = ExtResource("1_i3g48")
+maso = ExtResource("3_l25hr")
+ordenando = ExtResource("2_ls4xw")
 metadata/_custom_type_script = "uid://c4on5m4kiwepk"
